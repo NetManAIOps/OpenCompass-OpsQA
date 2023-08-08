@@ -32,7 +32,7 @@ opsqa_eval_cfg = dict(
     evaluator=dict(type=AccEvaluator),
     pred_postprocessor=dict(type=first_capital_postprocess))
 
-triviaqa_datasets = [
+opsqa_datasets = [
     dict(
         type=OpsQADataset,
         abbr='opsqa',
