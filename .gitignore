@@ -9,8 +9,11 @@ configs/secrets.py
 configs/datasets/log.json
 configs/eval_debug*.py
 configs/viz_*.py
-data
+data/*
 work_dirs
+
+# not ignoring OpsQA dataset
+!data/OpsQA/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

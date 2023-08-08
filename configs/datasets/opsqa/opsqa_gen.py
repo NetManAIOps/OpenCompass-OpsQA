@@ -34,10 +34,10 @@ opsqa_eval_cfg = dict(
 
 triviaqa_datasets = [
     dict(
-        type=TriviaQADataset,
-        abbr='triviaqa',
-        path='./data/triviaqa/',
-        reader_cfg=triviaqa_reader_cfg,
-        infer_cfg=triviaqa_infer_cfg,
-        eval_cfg=triviaqa_eval_cfg)
+        type=OpsQADataset,
+        abbr='opsqa',
+        path='./data/OpsQA/',       # for OpsQADataset load function
+        reader_cfg=opsqa_reader_cfg,
+        infer_cfg=opsqa_infer_cfg,
+        eval_cfg=opsqa_eval_cfg)
 ]

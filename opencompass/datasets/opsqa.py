@@ -1,7 +1,7 @@
 import csv
 import os.path as osp
 
-from datasets import Dataset, DatasetDict
+from datasets import Dataset, DatasetDict  # noqa
 
 from opencompass.registry import LOAD_DATASET
 
