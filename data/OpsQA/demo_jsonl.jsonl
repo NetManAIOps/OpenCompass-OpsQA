@@ -1,0 +1,5 @@
+{"passage": null,"question": "什么是运维的主要职责？","options": ["确保系统稳定运行","编写代码","设计图形界面","进行市场调研"],"label": "A","answer":"确保系统稳定运行","other":null}
+{"passage": null,"question":"下列哪项不属于常见的运维工具？","options":["Photoshop", "Kubernetes", "Docker",  "Ansible"],"label":"A","answer":"Photoshop","other":null}
+{"passage": null,"question":"在云计算中，IaaS代表什么?",'options':["Internet as a Service", "Infrastructure as a Service ",  "Information as a Software ",   "Interface as a System"],'label':"B",'answer':"Infrastructure as a Service ",'other':null}
+{'passage': null,'question':'DevOps 是指什么?','options':[ '一种新型编程语言。 ',  '开发和运营团队紧密合作以加快软件交付速度的实践和文化理念。 ',    '一种数据库管理系统。 ',     '一个特定的软件开发流程。'],'label':'B','answer':'开发和运营团队紧密合作以加快软件交付速度的实践和文化理念。','other':null}
+{'passage': null, 'question':'Nagios用于做什么？', 'options':['数据分析 ','项目管理 ','网络监控 ','自动驾驶技术开发'], 'label':'C', 'answer':'网络监控', 'other':null }
