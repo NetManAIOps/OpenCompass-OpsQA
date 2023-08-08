@@ -27,4 +27,4 @@ class OpsQADataset(BaseDataset):
                     'D': row[4],
                     'target': row[5],
                 })
-        return Dataset.from_dict(raw_data)
+        return Dataset.from_list(raw_data)
