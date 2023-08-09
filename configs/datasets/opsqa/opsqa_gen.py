@@ -38,7 +38,7 @@ opsqa_infer_cfg = dict(
             ice_token="</E>",
         ),
         retriever=dict(type=ZeroRetriever),
-        inferencer=dict(type=GenInferencer, fix_id_list=[0, 1, 2, 3, 4]),
+        inferencer=dict(type=GenInferencer),
     )
 
 opsqa_eval_cfg = dict(
