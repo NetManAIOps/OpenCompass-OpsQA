@@ -49,7 +49,7 @@ opsqa_datasets = [
     dict(
         type=OpsQADataset,
         abbr='opsqa',
-        path='./data/OpsQA/',       # for OpsQADataset load function
+        path='/mnt/mfs/opsgpt/OpsQA/',       # for OpsQADataset load function
         reader_cfg=opsqa_reader_cfg,
         infer_cfg=opsqa_infer_cfg,
         eval_cfg=opsqa_eval_cfg)

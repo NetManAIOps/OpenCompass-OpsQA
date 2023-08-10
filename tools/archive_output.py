@@ -25,7 +25,7 @@ if __name__ == '__main__':
             'Usage: python move_outputs.py <folder_name> <target_folder_path>')
         sys.exit(1)
 
-    default_folder = '/workspace/opencompass/outputs'  # 默认文件夹路径
+    default_folder = '/mnt/mfs/opsgpt/opencompass/outputs'  # 默认文件夹路径
     folder_name = sys.argv[1]
     target_folder = sys.argv[2]
 

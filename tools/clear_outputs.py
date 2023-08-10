@@ -1,5 +1,6 @@
 import os
 import shutil
+import sys
 
 
 def delete_all_subfolders(folder_path):
@@ -15,5 +16,9 @@ def delete_all_subfolders(folder_path):
 
 
 if __name__ == '__main__':
-    target_folder = input('请输入目标文件夹的路径：')
+    if len(sys.argv) != 2:
+        print('Usage: python clear_outputs.py <folder_name>')
+        sys.exit(1)
+
+    target_folder = sys.argv[1]
     delete_all_subfolders(target_folder)
