@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 from typing import Dict, List, Optional, Union
 
+import numpy as np
 import requests
 
 from opencompass.registry import MODELS
@@ -220,3 +221,9 @@ class OpenAIPeiqi(BaseAPIModel):
         """
         enc = self.tiktoken.encoding_for_model(self.path)
         return len(enc.encode(prompt))
+
+    def get_ppl(self,
+                inputs: List[PromptType],
+                mask_length: Optional[List[int]] = None) -> List[float]:
+        """API cannot have PPL."""
+        return np.zeros(len(inputs))
