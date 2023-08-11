@@ -29,12 +29,17 @@
 
 ## 🚀 最新进展 <a><img width="35" height="20" src="https://user-images.githubusercontent.com/12782558/212848161-5e783dd6-11e8-4fe0-bbba-39ffb77730be.png"></a>
 
-- **\[2023.08.07\]** 新增了 [MMBench 评测脚本](tools/eval_mmbench.py) 以支持用户自行获取 [MMBench](https://opencompass.org.cn/MMBench)-dev 的测试结果. 🔥🔥🔥.
-- **\[2023.08.05\]** [GPT-4](https://openai.com/gpt-4) 与 [Qwen-7B](https://github.com/QwenLM/Qwen-7B) 的评测结果已更新在 OpenCompass [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm)! 🔥🔥🔥.
-- **\[2023.07.27\]** 新增了 [CMMLU](https://github.com/haonan-li/CMMLU)! 欢迎更多的数据集加入 OpenCompass. 🔥🔥🔥.
-- **\[2023.07.21\]** Llama-2 的评测结果已更新在 OpenCompass [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm)!  🔥🔥🔥.
-- **\[2023.07.19\]** 新增了 [Llama-2](https://ai.meta.com/llama/)！我们近期将会公布其评测结果。\[[文档](./docs/zh_cn/get_started.md#安装)\] 🔥🔥🔥。
-- **\[2023.07.13\]** 发布了 [MMBench](https://opencompass.org.cn/MMBench)，该数据集经过细致整理，用于评测多模态模型全方位能力 🔥🔥🔥。
+- **\[2023.08.11\]** 官网榜单上新增了[模型对比](https://opencompass.org.cn/model-compare/GPT-4,ChatGPT,LLaMA-2-70B,LLaMA-65B)功能，希望该功能可以协助提供更多发现！🔥🔥🔥.
+- **\[2023.08.11\]** 新增了 [LEval](https://github.com/OpenLMLab/LEval) 评测支持. 🔥🔥🔥.
+- **\[2023.08.10\]** OpenCompass 现已适配 [LMDeploy](https://github.com/InternLM/lmdeploy). 请参考 [评测指南](https://opencompass.readthedocs.io/zh_CN/latest/advanced_guides/evaluation_turbomind.html) 对 **Turbomind** 加速后的模型进行评估.
+- **\[2023.08.10\]**  [Qwen-7B](https://github.com/QwenLM/Qwen-7B) 和 [XVERSE-13B](https://github.com/xverse-ai/XVERSE-13B)的评测结果已更新在 OpenCompass [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm)!
+- **\[2023.08.09\]** 更新更多评测数据集(**CMMLU, TydiQA, SQuAD2.0, DROP**) ，请登录 [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm) 查看更多结果! 欢迎添加你的评测数据集到OpenCompass.
+- **\[2023.08.07\]** 新增了 [MMBench 评测脚本](tools/eval_mmbench.py) 以支持用户自行获取 [MMBench](https://opencompass.org.cn/MMBench)-dev 的测试结果.
+- **\[2023.08.05\]** [GPT-4](https://openai.com/gpt-4) 的评测结果已更新在 OpenCompass [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm)!
+- **\[2023.07.27\]** 新增了 [CMMLU](https://github.com/haonan-li/CMMLU)! 欢迎更多的数据集加入 OpenCompass.
+- **\[2023.07.21\]** Llama-2 的评测结果已更新在 OpenCompass [大语言模型评测榜单](https://opencompass.org.cn/leaderboard-llm)!
+- **\[2023.07.19\]** 新增了 [Llama-2](https://ai.meta.com/llama/)！我们近期将会公布其评测结果。\[[文档](./docs/zh_cn/get_started.md#安装)\]。
+- **\[2023.07.13\]** 发布了 [MMBench](https://opencompass.org.cn/MMBench)，该数据集经过细致整理，用于评测多模态模型全方位能力。
 
 ## ✨ 介绍
 
@@ -321,6 +326,10 @@ unzip OpenCompassData.zip
 确保按照上述步骤正确安装 OpenCompass 并准备好数据集后，请阅读[快速上手](https://opencompass.readthedocs.io/zh_CN/latest/get_started.html#id3)了解如何运行一个评测任务。
 
 更多教程请查看我们的[文档](https://opencompass.readthedocs.io/zh_CN/latest/index.html)。
+
+## 👷‍♂️ 贡献
+
+我们感谢所有的贡献者为改进和提升 OpenCompass 所作出的努力。请参考[贡献指南](https://opencompass.readthedocs.io/zh_CN/latest/notes/contribution_guide.html)来了解参与项目贡献的相关指引。
 
 ## 🤝 致谢
 
