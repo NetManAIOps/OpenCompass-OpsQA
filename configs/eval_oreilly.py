@@ -1,4 +1,7 @@
 from mmengine.config import read_base
+from opencompass.partitioners import SizePartitioner
+from opencompass.runners import LocalRunner
+from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     from .datasets.opsqa.opsqa_demo_summary import opsqa_datasets as summary
@@ -25,7 +28,20 @@ from opencompass.models import HuggingFaceCausalLM
 models = [ 
             *peiqi,
             # *llama2_7b, 
-            *baichuan_7b,
-            *chatglm_6b,
-            *chatglm2_6b
+            # *baichuan_7b,
+            # *chatglm_6b,
+            # *chatglm2_6b
         ]
+
+infer = dict(
+    partitioner=dict(
+        type=SizePartitioner,
+        max_task_size = 100,
+        gen_task_coef = 1,
+    ),
+    runner=dict(
+        type=LocalRunner,
+        max_num_workers=4,
+        task=dict(type=OpenICLInferTask),
+    ),
+)

@@ -28,9 +28,10 @@ class OReillyChoiceDataset(BaseDataset):
             ])
             item = {
                 'question': data['question'],
-                'topic': data['topic'],
+                'topic':
+                ','.join(data['topic']) if len(data['topic']) else 'Ops',
                 'solution': data['solution'],
-                'answer': data['answer'].replace(',', ''),
+                'answer': data['answer'],  # data['answer'].replace(',', ''),
                 'sol_len': len(data['solution']),
                 'choices': choices_prompt
             }
@@ -58,3 +59,18 @@ class OReillyEvaluator(BaseEvaluator):
         }
         bleu_score.update(rouge_score)
         return bleu_score
+
+
+@TEXT_POSTPROCESSORS.register_module('oreilly-choice')
+def oreilly_choice_postprocess(text: str) -> str:
+    ans = []
+    s = text.strip()
+    while s and s[0].isalpha():
+        nxt = s[1:].strip()
+        if not nxt or not nxt[0].isalnum():
+            ans.append(s[0])
+        if not nxt or nxt[0] != ',' or len(nxt) <= 1:
+            break
+        s = nxt[1:].strip()
+    ans.sort()
+    return ','.join(ans)

@@ -45,7 +45,7 @@ class OpsQASummaryDemoDataset(BaseDataset):
 
     @staticmethod
     def load(path: str):
-        with open(path) as f:
+        with open(path, encoding='utf-8') as f:
             data = json.load(f)
         return Dataset.from_list(data)
 
@@ -56,7 +56,7 @@ class OpsQAComprDemoDataset(BaseDataset):
 
     @staticmethod
     def load(path: str):
-        with open(path) as f:
+        with open(path, encoding='utf-8') as f:
             data = json.load(f)
         # 将原始数据转换为所需的格式
         rows = []

@@ -14,7 +14,7 @@ from opencompass.models import HuggingFaceCausalLM
 
 
 
-models = [ # *peiqi_models,
+models = [  *peiqi_models,
             # *llama2_7b, 
             *baichuan_7b,
             *chatglm_6b,
