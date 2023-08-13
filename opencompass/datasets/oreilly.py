@@ -63,6 +63,8 @@ class OReillyEvaluator(BaseEvaluator):
 
 @TEXT_POSTPROCESSORS.register_module('oreilly-choice')
 def oreilly_choice_postprocess(text: str) -> str:
+    text = text.replace('The answer is', '').replace('Answer',
+                                                     '').replace(':', '')
     ans = []
     s = text.strip()
     while s and s[0].isalpha():
