@@ -1,6 +1,7 @@
 import csv  # noqa
 import json
 import os.path as osp  # noqa
+import re
 
 from datasets import Dataset, DatasetDict  # noqa
 
@@ -27,6 +28,8 @@ class OReillyChoiceDataset(BaseDataset):
                 for idx, choice in enumerate(data['choices'])
             ])
             item = {
+                'type':
+                'single choice' if data['type'] == 0 else 'multiple choice',
                 'question': data['question'],
                 'topic':
                 ','.join(data['topic']) if len(data['topic']) else 'Ops',
@@ -63,16 +66,25 @@ class OReillyEvaluator(BaseEvaluator):
 
 @TEXT_POSTPROCESSORS.register_module('oreilly-choice')
 def oreilly_choice_postprocess(text: str) -> str:
-    text = text.replace('The answer is', '').replace('Answer',
-                                                     '').replace(':', '')
-    ans = []
-    s = text.strip()
-    while s and s[0].isalpha():
-        nxt = s[1:].strip()
-        if not nxt or not nxt[0].isalnum():
-            ans.append(s[0])
-        if not nxt or nxt[0] != ',' or len(nxt) <= 1:
-            break
-        s = nxt[1:].strip()
+    s = text
+    s += ' '
+    if s and not re.match('[a-zA-Z][^\w]', s):  # noqa
+        matched = re.search(r'answer.+?[^\w]([a-zA-Z][^\w])', s.lower())
+        if matched:
+            s = s[matched.span()[0]:]
+
+        matched = re.search(r'[^\w][a-zA-Z][^\w]', s)
+        if matched:
+            s = s[matched.span()[0] + 1:]
+
+    s = s.strip() + ' '
+    pattern = r'([a-zA-Z][\s,]+(and)?[\s,]*)*[a-zA-Z][^\w]'
+    matched = re.match(pattern, s, re.S)
+    prefix = matched.group() if matched else ''
+    ans = list(
+        set([
+            c.upper() for c in re.split('[^a-zA-Z]', prefix)
+            if len(c) == 1 and c.isalpha()
+        ]))
     ans.sort()
     return ','.join(ans)
