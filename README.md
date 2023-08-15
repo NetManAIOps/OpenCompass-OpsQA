@@ -22,18 +22,18 @@ python run.py configs/eval_demo.py -w outputs/test [--debug]
 
 # 主要目录说明
 
-configs: 配置文件夹，这里面的配置脚本不包含类的定义，而是导入对应的类并制定类的参数、评估方式等
-datasets: 数据集配置文件夹
-models: 模型配置文件夹
-local_models: 我新建的，专门放/mnt/mfs/opsgpt/models里的模型的配置文件
-eval_xxx.py: 运行评测任务的文件，参考eval_oreilly.py, eval_opsqa.py等
-opencompass: 本框架的主要源码文件夹
-datasets: 数据集的类定义
-models: 定义了几个基础模型类包括huggingface, openai_api等，我加了个chatanywhere_api(peiqi)
-openicl:
-icl_evaluator: icl_hf_evaluator.py中定义了几个我们最常用的Evaluator（Acc, BLEU, Rouge等，后两个都依赖hf的库，需要安装依赖）
-icl_inferencer: 包括gen, ppl, sc等，涉及模型推理答案的方式
-icl_retriever: ZeroRetriever以及其他few-shot需要用到的retrieve方式
+- configs: 配置文件夹，这里面的配置脚本不包含类的定义，而是导入对应的类并制定类的参数、评估方式等
+  - datasets: 数据集配置文件夹
+  - models: 模型配置文件夹
+  - local_models: 我新建的，专门放/mnt/mfs/opsgpt/models里的模型的配置文件
+  - eval_xxx.py: 运行评测任务的文件，参考eval_oreilly.py, eval_opsqa.py等
+- opencompass: 本框架的主要源码文件夹
+  - datasets: 数据集的类定义
+  - models: 定义了几个基础模型类包括huggingface, openai_api等，我加了个chatanywhere_api(peiqi)
+  - openicl:
+    - icl_evaluator: icl_hf_evaluator.py中定义了几个我们最常用的Evaluator（Acc, BLEU, Rouge等，后两个都依赖hf的库，需要安装依赖）
+    - icl_inferencer: 包括gen, ppl, sc等，涉及模型推理答案的方式
+    - icl_retriever: ZeroRetriever以及其他few-shot需要用到的retrieve方式
 
 其他地方我也不太熟悉
 

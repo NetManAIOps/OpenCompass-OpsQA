@@ -91,7 +91,8 @@ class GenInferencer(BaseInferencer):
             ice_idx_list = retriever.retrieve()
 
         # 3. Generate prompts for testing input
-        prompt_list = self.get_generation_prompt_list_from_retriever_indices(
+        # TODO: 另写函数来提取reference而不是这里使用，我知道在推理阶段的脚本里拿reference好像确实不太好
+        prompt_list, reference_list = self.get_generation_prompt_list_from_retriever_indices(  # noqa: E501
             ice_idx_list,
             retriever,
             self.gen_field_replace_token,
@@ -111,21 +112,33 @@ class GenInferencer(BaseInferencer):
             index = len(tmp_result_dict)
 
         # 4. Wrap prompts with Dataloader
-        dataloader = self.get_dataloader(prompt_list[index:], self.batch_size)
+        dataloader = self.get_dataloader(
+            list(zip(prompt_list[index:], reference_list[index:])),
+            self.batch_size)
+
+        # test_labels = retriever.get_test_labels()
+        # logger.info("DEBUG: "+str(test_labels))
 
         # 5. Inference for prompts in each batch
         logger.info('Starting inference process...')
         for entry in tqdm(dataloader, disable=not self.is_main_process):
+
+            template_entries = [t[0] for t in entry]
+            reference_entries = [t[1] for t in entry]
+
             # 5-1. Inference with local model
             with torch.no_grad():
-                parsed_entries = self.model.parse_template(entry, mode='gen')
+                parsed_entries = self.model.parse_template(template_entries,
+                                                           mode='gen')
                 results = self.model.generate_from_template(
-                    entry, max_out_len=self.max_out_len)
+                    template_entries, max_out_len=self.max_out_len)
                 generated = results
 
             # 5-3. Save current output
-            for prompt, prediction in zip(parsed_entries, generated):
-                output_handler.save_results(prompt, prediction, index)
+            for prompt, prediction, reference in zip(parsed_entries, generated,
+                                                     reference_entries):
+                output_handler.save_results(prompt, prediction, reference,
+                                            index)
                 index = index + 1
 
             # 5-4. Save intermediate results
@@ -156,8 +169,11 @@ class GenInferencer(BaseInferencer):
             ice_template: Optional[PromptTemplate] = None,
             prompt_template: Optional[PromptTemplate] = None):
         prompt_list = []
+        reference_list = []
         for idx, ice_idx in enumerate(ice_idx_list):
             ice = retriever.generate_ice(ice_idx, ice_template=ice_template)
+            reference = retriever.get_label_by_idx(idx)
+            reference_list.append(reference)
             prompt = retriever.generate_prompt_for_generate_task(
                 idx,
                 ice,
@@ -180,7 +196,7 @@ class GenInferencer(BaseInferencer):
                     prompt_token_num = self.model.get_token_len_from_template(
                         prompt, mode='gen')
             prompt_list.append(prompt)
-        return prompt_list
+        return prompt_list, reference_list
 
 
 @ICL_INFERENCERS.register_module()

@@ -108,10 +108,11 @@ class GenInferencerOutputHandler:
         """Dump the result to a json file."""
         dump_results_dict(self.results_dict, Path(save_dir) / filename)
 
-    def save_results(self, origin_prompt, prediction, idx):
+    def save_results(self, origin_prompt, prediction, reference, idx):
         self.results_dict[str(idx)] = {
             'origin_prompt': origin_prompt,
             'prediction': prediction,
+            'reference': reference
         }
 
 

@@ -70,6 +70,10 @@ class BaseRetriever:
             labels = list(set(self.test_ds[self.dataset_reader.output_column]))
         return labels
 
+    def get_test_labels(self):
+        labels = self.test_ds[self.dataset_reader.output_column]
+        return labels
+
     def generate_ice(self,
                      idx_list: List[int],
                      ice_template: Optional[PromptTemplate] = None) -> str:
@@ -153,6 +157,15 @@ class BaseRetriever:
         else:
             raise NotImplementedError(
                 'Leaving prompt as empty is not supported')
+
+    def get_label_by_idx(self, idx):
+        # TODO: make this more elegant
+        return {
+            self.dataset_reader.output_column:
+            self.test_ds[self.dataset_reader.output_column][idx],
+            'id':
+            self.test_ds['id'][idx] if 'id' in self.test_ds.features else None
+        }
 
     def generate_prompt_for_generate_task(
             self,

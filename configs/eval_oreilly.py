@@ -15,7 +15,7 @@ with read_base():
     from .models.gpt_3dot5_turbo_peiqi import models as peiqi
 
 datasets = [
-    *oreilly 
+    *oreilly[:1] 
     # *summary, 
     # *choice_gen, 
     # *choice_ppl
@@ -33,15 +33,15 @@ models = [
             # *chatglm2_6b
         ]
 
-infer = dict(
-    partitioner=dict(
-        type=SizePartitioner,
-        max_task_size = 100,
-        gen_task_coef = 1,
-    ),
-    runner=dict(
-        type=LocalRunner,
-        max_num_workers=4,
-        task=dict(type=OpenICLInferTask),
-    ),
-)
+# infer = dict(
+#     partitioner=dict(
+#         type=SizePartitioner,
+#         max_task_size = 100,
+#         gen_task_coef = 1,
+#     ),
+#     runner=dict(
+#         type=LocalRunner,
+#         max_num_workers=4,
+#         task=dict(type=OpenICLInferTask),
+#     ),
+# )

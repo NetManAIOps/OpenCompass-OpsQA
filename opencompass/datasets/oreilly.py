@@ -1,6 +1,7 @@
 import csv  # noqa
 import json
 import os.path as osp  # noqa
+import random
 import re
 
 from datasets import Dataset, DatasetDict  # noqa
@@ -17,9 +18,37 @@ from .base import BaseDataset
 class OReillyChoiceDataset(BaseDataset):
 
     @staticmethod
-    def load(path: str):
-        with open(path) as f:
+    def load(path: str, filename: str, sample_setting: dict = None):
+        with open(osp.join(path, filename)) as f:
             json_data = json.load(f)
+
+        sample_ids = None
+        if sample_setting:
+            if 'seed' in sample_setting:
+                random.seed(sample_setting['seed'])
+            else:
+                random.seed(0)
+            if 'load_list' in sample_setting:
+                with open(sample_setting['load_list'], 'r',
+                          encoding='utf-8') as f:
+                    sample_ids = json.load(f)
+            elif 'sample_size' in sample_setting:
+                sample_size = sample_setting['sample_size']
+                sample_ids = random.sample(list(range(len(json_data))),
+                                           sample_size)
+            elif 'sample_frac' in sample_setting:
+                sample_frac = sample_setting['sample_frac']
+                assert sample_frac <= 1, 'Sample Frac must be equal or lesser to 1!'  # noqa: E501
+                sample_len = int(len(json_data) * sample_frac)
+                sample_len = 1 if sample_len == 0 else sample_len
+                sample_ids = random.sample(list(range(len(json_data))),
+                                           sample_len)
+
+        if sample_ids:
+            json_data = [
+                item for idx, item in enumerate(json_data) if idx in sample_ids
+            ]
+
         raw_data = []
         for data in json_data:
             assert (data['type'] in [0, 1])
@@ -28,7 +57,8 @@ class OReillyChoiceDataset(BaseDataset):
                 for idx, choice in enumerate(data['choices'])
             ])
             item = {
-                'type':
+                'id': data['id'],
+                'qtype':
                 'single choice' if data['type'] == 0 else 'multiple choice',
                 'question': data['question'],
                 'topic':
