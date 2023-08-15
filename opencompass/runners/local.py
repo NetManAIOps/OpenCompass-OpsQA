@@ -70,12 +70,15 @@ class LocalRunner(BaseRunner):
                 ]
             else:
                 all_gpu_ids = list(range(torch.cuda.device_count()))
+            print('DEBUG: ', all_gpu_ids)
 
             if len(all_gpu_ids) > 0:
                 gpus = np.zeros(max(all_gpu_ids) + 1, dtype=np.uint)
                 gpus[all_gpu_ids] = self.max_workers_per_gpu
             else:
                 gpus = np.array([], dtype=np.uint)
+
+            print('DEBUG: ', gpus)
 
             pbar = tqdm(total=len(tasks))
             lock = Lock()

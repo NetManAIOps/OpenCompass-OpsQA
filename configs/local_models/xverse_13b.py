@@ -1,12 +1,12 @@
-from opencompass.models import HuggingFace
+from opencompass.models import HuggingFace, HuggingFaceCausalLM
 
 
 models = [
     dict(
-        type=HuggingFace,
-        abbr='chatglm2-6b',
-        path="/mnt/mfs/opsgpt/models/chatglm/chatglm2-6b",
-        tokenizer_path='/mnt/mfs/opsgpt/models/chatglm/chatglm2-6b',
+        type=HuggingFaceCausalLM,
+        abbr='xverse_13b',
+        path="/mnt/mfs/opsgpt/models/xverse/XVERSE-13B",
+        tokenizer_path='/mnt/mfs/opsgpt/models/xverse/XVERSE-13B',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,

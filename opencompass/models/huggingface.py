@@ -48,18 +48,21 @@ class HuggingFace(BaseModel):
         whitespaces, which is harmful for Python programming tasks.
     """
 
-    def __init__(self,
-                 path: str,
-                 hf_cache_dir: Optional[str] = None,
-                 max_seq_len: int = 2048,
-                 tokenizer_path: Optional[str] = None,
-                 tokenizer_kwargs: dict = dict(),
-                 peft_path: Optional[str] = None,
-                 tokenizer_only: bool = False,
-                 model_kwargs: dict = dict(device_map='auto'),
-                 meta_template: Optional[Dict] = None,
-                 extract_pred_after_decode: bool = False,
-                 batch_padding: bool = False):
+    def __init__(
+        self,
+        path: str,
+        hf_cache_dir: Optional[str] = None,
+        max_seq_len: int = 2048,
+        tokenizer_path: Optional[str] = None,
+        tokenizer_kwargs: dict = dict(),
+        peft_path: Optional[str] = None,
+        tokenizer_only: bool = False,
+        model_kwargs: dict = dict(device_map='auto'),
+        meta_template: Optional[Dict] = None,
+        extract_pred_after_decode: bool = False,
+        batch_padding: bool = False,
+        generate_kwargs: dict = None,
+    ):
         super().__init__(path=path,
                          max_seq_len=max_seq_len,
                          tokenizer_only=tokenizer_only,
@@ -74,6 +77,7 @@ class HuggingFace(BaseModel):
                              tokenizer_kwargs=tokenizer_kwargs)
         self.batch_padding = batch_padding
         self.extract_pred_after_decode = extract_pred_after_decode
+        self.generate_kwargs = generate_kwargs if generate_kwargs else dict()
         if not tokenizer_only:
             self._load_model(path=path,
                              model_kwargs=model_kwargs,
@@ -132,6 +136,8 @@ class HuggingFace(BaseModel):
         Returns:
             List[str]: A list of generated strings.
         """
+        kwargs = {**kwargs, **self.generate_kwargs}
+
         if self.batch_padding and len(inputs) > 1:
             return self._batch_generate(inputs=inputs,
                                         max_out_len=max_out_len,
