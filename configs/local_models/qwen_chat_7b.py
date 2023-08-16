@@ -1,5 +1,11 @@
 from opencompass.models import HuggingFace, HuggingFaceCausalLM
 
+_meta_template = dict(
+    round=[
+        dict(role='HUMAN', begin='<|im_start|> ', end='<|im_end|><|endoftext|>\n'),
+        dict(role='BOT', begin='<|im_start|> ', end='', generate=True),
+    ],
+)
 
 models = [
     dict(
@@ -14,6 +20,7 @@ models = [
         max_out_len=100,
         max_seq_len=2048,
         batch_size=8,
+        meta_template=_meta_template, 
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
         # generate_kwargs=dict(
         #     temperature=0

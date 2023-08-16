@@ -14,14 +14,15 @@ with read_base():
     from .local_models.xverse_13b import models as xverse_13b
     from .local_models.qwen_chat_7b import models as qwen_chat_7b
     from .local_models.llama2_7b_chat import models as llama2_chat_7b
-    from .local_models.baichuan_7b import models as baichuan_7b
+    from .local_models.llama2_13b_chat import models as llama2_chat_13b
+    from .local_models.baichuan_13b_chat import models as baichuan_13b_chat
     from .models.hf_llama2_7b import models as hf_llama2_7b
     from .models.hf_chatglm2_6b import models as hf_chatglm2_6b
     from .models.hf_internlm_chat_7b import models as hf_internlm_chat_7b
     
 
 datasets = [
-    *oreilly[:1] 
+    *oreilly
     ]
 
 from opencompass.models import HuggingFaceCausalLM
@@ -31,12 +32,13 @@ from opencompass.models import HuggingFaceCausalLM
 models = [ 
     # *gpt_4,                 # demo pass
     # *chatgpt_3dot5_turbo,   # demo pass
-    # *baichuan_7b, 
     # *chatglm2_6b,           # demo pass
-    # *internlm_chat_7b,      # demo pass?
-    *xverse_13b,            # demo pass?
-    *qwen_chat_7b,            
-    *llama2_chat_7b,
+    *internlm_chat_7b,      # demo pass?
+    # *xverse_13b,            # demo pass?
+    *qwen_chat_7b,        
+    # *baichuan_13b_chat,
+    *llama2_chat_13b,    
+    # *llama2_chat_7b,
     # *hf_llama2_7b,
     # *hf_chatglm2_6b,
     # *hf_internlm_chat_7b,
@@ -50,6 +52,7 @@ infer = dict(
     ),
     runner=dict(
         type=LocalRunner,
+        max_num_workers=3,
         max_workers_per_gpu=1,
         task=dict(type=OpenICLInferTask),
     ),
