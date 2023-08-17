@@ -18,7 +18,7 @@ oreilly_infer_cfg = dict(
                 dict(
                     role="HUMAN",
                     prompt=
-                    f"Here is a {{qtype}} question about {{topic}}.\n\n{{question}}\n{{choices}}\n\n{{hint}}\n\nAnswer: "
+                    f"Here is a {{qtype}} question about {{topic}}.\n\n{{question}}\n{{choices}}\n\n{{hint}}\n\nAnswer:\n"
                 ),
                 dict(role="BOT", prompt="{answer}")
             ]
@@ -42,9 +42,10 @@ oreilly_datasets = [
     dict(
         type=OReillyChoiceDataset,
         abbr='oreilly',
-        # path='/mnt/mfs/opsgpt/OpsQA/opsqa_demo/demo_oreilly.json', 
-        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval', 
-        filename='all.json',
+        path='/home/v-xll22/OpsGPT', 
+        filename='subset.json',
+        # path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval', 
+        # filename='all.json',
         reader_cfg=oreilly_reader_cfg,
         infer_cfg=oreilly_infer_cfg,
         eval_cfg=oreilly_eval_cfg)

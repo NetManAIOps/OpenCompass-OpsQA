@@ -12,6 +12,7 @@ with read_base():
     from .datasets.oreilly.oreilly_sc import oreilly_datasets as oreilly_sc
     from .local_models.chatglm_6b import models as chatglm_6b
     from .local_models.chatglm2_6b import models as chatglm2_6b
+    from .local_models.qwen_chat_7b import models as qwen_chat_7b
     from .local_models.baichuan_7b import models as baichuan_7b
     from .local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
     from .local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
@@ -26,7 +27,8 @@ datasets = [
 
 ]
 models = [ 
-    *chinese_llama_2_13b,
+    *qwen_chat_7b,
+    # *chinese_llama_2_13b,
     # *chinese_alpaca_2_13b,
     # *llama2_7b, 
     # *baichuan_7b,
@@ -37,12 +39,12 @@ models = [
 infer = dict(
     partitioner=dict(
         type=SizePartitioner,
-        max_task_size = 20000,
-        gen_task_coef = 1,
+        max_task_size=100,
+        gen_task_coef=1,
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=4,
+        max_num_workers=8,
         max_workers_per_gpu=1,
         task=dict(type=OpenICLInferTask),
     ),
