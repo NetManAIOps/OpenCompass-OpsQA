@@ -20,7 +20,7 @@ oreilly_infer_cfg = dict(
                 dict(
                     role="HUMAN",
                     prompt=
-                    f"Here is a {{qtype}} question about {{topic}}.\n\n{{question}}\n{{choices}}\n\n{{hint}}\n\nAnswer: "
+                    f"Here is a {{qtype}} question about {{topic}}.\n\n{{question}}\n{{choices}}\n\n{{hint}}\n\nAnswer:\n"
                 ),
                 dict(role="BOT", prompt="{answer}")
             ]
@@ -30,7 +30,8 @@ oreilly_infer_cfg = dict(
     retriever=dict(type=ZeroRetriever),
     inferencer=dict(
         type=SCInferencer,
-        generation_kwargs=dict(do_sample=True, temperature=0.7, top_k=40),
+        # generation_kwargs=dict(do_sample=True, temperature=0.7, top_k=40),
+        generation_kwargs=dict(temperature=0.7),
         infer_type='SC',
         sc_size = SAMPLE_SIZE
     ),

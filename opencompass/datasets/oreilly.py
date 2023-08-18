@@ -19,12 +19,16 @@ multiple_ans_hint = 'You should select all appropriate option letters separated 
 single_ans_hint_zh = '请选择正确答案的选项进行回答，例如：A、B、C、D'
 multiple_ans_hint_zh = "请选出其中正确的选项，用空格或英文逗号分隔，例如：'A,B'、'A B C'"
 
+single_ans_example = 'Question: You are configuring the mail app on an iPhone to use an `[Outlook.com](http://outlook.com)` email address. What configuration information do you need to enter to establish connectivity?\nA: Email address and password\nB: Email address, password, and server name\nC: Email address, password, server name, and mail protocol\nD: Email address, password, server name or IP address, and mail protocol\nAnswer:A\n\nQuestion: Which type of smartphone display has fewer layers, providing more flexibility, a better viewing angle, and excellent color as compared to other technologies?\nA: IPS\nB: OLED\nC: LED\nD: TN\nAnswer:B\n\nQuestion: You are purchasing a mobile device that allows you to use multi-finger gestures to interact with the device. What type of touchscreen technology does this device most likely use?\nA: Capacitive\nB: Infrared\nC: SAW\nD: Resistive\nAnswer:A\n\n'
+multiple_ans_example = "Question: A coworker is having a problem with their laptop and has asked you to fix it. When an external keyboard is plugged in, the laptop works just fine, but without it strange characters appear on the screen when typing. Which of the following are likely causes? (Choose two.)\nA: The driver is corrupted and needs to be updated/replaced.\nB: The ribbon cable is partially disconnected and needs to be reseated.\nC: The laptop needs to be replaced.\nD: There is debris under the keys.\nAnswer:A,B\n\nQuestion: Your boss has asked you to make sure that each of the company's laptops has a biometric scanner as an extra measure of security. Which of the following are biometric devices that are commonly found and can be configured on laptops? (Choose two.)\nA: ID card scanner\nB: Face ID\nC: Fingerprint reader\nD: Retina scanner\nAnswer:B,C\n\nQuestion: Your customer has an iPhone 8 and wants to read and write NFC tags with it. What advice will you give them? (Choose two.)\nA: Their iPhone will only work with Apple Pay.\nB: They need to upgrade to iPhone X to write NFC tags.\nC: With iOS 13 or better on their device, they'll be able to read and write NFC tags using a third-party app.\nD: iPhone 12 and iPhone 13 can read NFC tags simply by holding the phone over the tag.\nAnswer:C,D\n\n"
+
+
 
 @LOAD_DATASET.register_module()
 class OReillyChoiceDataset(BaseDataset):
 
     @staticmethod
-    def load(path: str, filename: str, sample_setting: dict = None):
+    def load(path: str, filename: str, sample_setting: dict = None, few_shot: bool = False):
         with open(osp.join(path, filename), encoding='utf-8') as f:
             json_data = json.load(f)
 
@@ -63,6 +67,13 @@ class OReillyChoiceDataset(BaseDataset):
                 f"{chr(ord('A')+idx)}: {choice}"
                 for idx, choice in enumerate(data['choices'])
             ])
+            if few_shot:
+                if data['type'] == 0:
+                    example_str = single_ans_example
+                else:
+                    example_str = multiple_ans_example
+            else:
+                example_str = ''
             item = {
                 'id': data['id'],
                 'qtype': 'single-answer multiple choice'
@@ -75,7 +86,8 @@ class OReillyChoiceDataset(BaseDataset):
                 'sol_len': len(data['solution']),
                 'choices': choices_prompt,
                 'hint':
-                single_ans_hint if data['type'] == 0 else multiple_ans_hint
+                single_ans_hint if data['type'] == 0 else multiple_ans_hint,
+                'examples': example_str
             }
             raw_data.append(item)
         return Dataset.from_list(raw_data)
