@@ -28,7 +28,7 @@ from opencompass.models import HuggingFaceCausalLM
 
 
 models = [ 
-    *gpt_4,                 # demo pass
+    # *gpt_4,                 # demo pass
     *chatgpt_3dot5_turbo,   # demo pass
     # *chatglm2_6b,           # demo pass
     # *internlm_chat_7b,      # demo pass?
