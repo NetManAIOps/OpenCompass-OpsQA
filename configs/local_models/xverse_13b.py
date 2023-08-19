@@ -18,6 +18,6 @@ models = [
         # generate_kwargs=dict(
         #     temperature=0
         # ), 
-        run_cfg=dict(num_gpus=4, num_procs=1),
+        run_cfg=dict(num_gpus=2, num_procs=1),
     )
 ]

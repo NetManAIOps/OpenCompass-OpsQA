@@ -40,14 +40,16 @@ def gen_accuracy(input_path, out_path, sc=False, sample=False, sample_path=''):
     if sample:
         with open(sample_path, 'r') as f:
             sample_ids = json.load(f)
-        print(f"Using sample, all {len(sample_ids)} samples.")
 
     book_all, book_correct, book_acc = {}, {}, {}
     correct_num = 0
+    sample_num = 0
     for res in res_list:
         question_id = res['reference']['id']
         if sample and question_id not in sample_ids:
                 continue
+        if sample:
+            sample_num += 1
         if sc:
             predictions = [oreilly_choice_postprocess(pred) for pred in res['prediction']]
             prediction = Counter(predictions).most_common(1)[0][0]
@@ -63,9 +65,11 @@ def gen_accuracy(input_path, out_path, sc=False, sample=False, sample_path=''):
         else:
             book_all[book] = 1
             book_correct[book] = cor
+    if sample:
+        print(f"Using sample, all {sample_num} samples.")
     for key in book_all.keys():
         book_acc[key] = book_correct[key] / book_all[key] * 100
-    all_acc = correct_num / len(res_list) * 100 if not sample else correct_num / len(sample_ids) * 100
+    all_acc = correct_num / len(res_list) * 100 if not sample else correct_num / sample_num * 100
     print(f"Accuracy: {all_acc}")
     sorted_book_acc = dict(sorted(book_acc.items(), key=lambda x: x[0]))
     for key in sorted_book_acc.keys():

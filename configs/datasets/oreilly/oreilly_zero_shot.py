@@ -6,7 +6,7 @@ from opencompass.utils.text_postprocessors import first_capital_postprocess_mult
 from opencompass.datasets import OReillyChoiceDataset, OReillyEvaluator, oreilly_choice_postprocess
 
 oreilly_reader_cfg = dict(
-    input_columns=['topic','question','choices','qtype','examples'],
+    input_columns=['topic','question','choices','qtype'],
     output_column='answer'
 )
 
@@ -18,7 +18,7 @@ oreilly_infer_cfg = dict(
                 dict(
                     role="HUMAN",
                     prompt=
-                    f"{{examples}}Answer the following {{qtype}} question about {{topic}}.\nQuestion: {{question}}\n{{choices}}\nAnswer:"
+                    f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
                 ),
                 dict(role="BOT", prompt="{answer}")
             ]
@@ -41,11 +41,15 @@ oreilly_eval_cfg = dict(
 oreilly_datasets = [
     dict(
         type=OReillyChoiceDataset,
-        abbr='oreilly-few-shot',
-        path='/home/v-xll22/OpsGPT',
-        # path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval',
-        filename='fewshot.json',
-        few_shot=True,
+        abbr='oreilly-zero-shot',
+        # path='/home/v-xll22/OpsGPT', 
+        # filename='unused.json',
+        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval', 
+        filename='all.json',
+        sample_setting=dict(
+            seed=233,
+            sample_size=500,
+        ),
         reader_cfg=oreilly_reader_cfg,
         infer_cfg=oreilly_infer_cfg,
         eval_cfg=oreilly_eval_cfg)
