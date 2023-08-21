@@ -9,7 +9,7 @@ from opencompass.openicl.icl_evaluator import (BaseEvaluator, BleuEvaluator,
 from opencompass.registry import (ICL_EVALUATORS, LOAD_DATASET,
                                   TEXT_POSTPROCESSORS)
 
-from ..base import BaseDataset
+from .base import BaseDataset
 
 
 @LOAD_DATASET.register_module()
