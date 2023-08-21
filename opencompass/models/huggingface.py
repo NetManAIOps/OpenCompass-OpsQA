@@ -8,6 +8,7 @@ from opencompass.models.base import BaseModel
 from opencompass.registry import MODELS
 from opencompass.utils.logging import get_logger
 from opencompass.utils.prompt import PromptList
+from transformers import GenerationConfig
 
 PromptType = Union[PromptList, str]
 
@@ -372,4 +373,47 @@ class HuggingFaceCausalLM(HuggingFace):
             self.model = PeftModel.from_pretrained(self.model,
                                                    peft_path,
                                                    is_trainable=False)
+        self.model.eval()
+
+
+@MODELS.register_module()
+class QwenLM(HuggingFace):
+    """Model wrapper around QwenLM.
+
+    Args:
+        path (str): The name or path to HuggingFace's model.
+        hf_cache_dir: Set the cache dir to HF model cache dir. If None, it will
+            use the env variable HF_MODEL_HUB. Defaults to None.
+        max_seq_len (int): The maximum length of the input sequence. Defaults
+            to 2048.
+        tokenizer_path (str): The path to the tokenizer. Defaults to None.
+        tokenizer_kwargs (dict): Keyword arguments for the tokenizer.
+            Defaults to {}.
+        tokenizer_only (bool): If True, only the tokenizer will be initialized.
+            Defaults to False.
+        model_kwargs (dict): Keyword arguments for the model, used in loader.
+            Defaults to dict(device_map='auto').
+        meta_template (Dict, optional): The model's meta prompt
+            template if needed, in case the requirement of injecting or
+            wrapping of any meta instructions.
+        batch_padding (bool): If False, inference with be performed in for-loop
+            without batch padding.
+    """
+
+    def _load_model(self,
+                    path: str,
+                    model_kwargs: dict,
+                    peft_path: Optional[str] = None):
+        from transformers import AutoModelForCausalLM
+
+        model_kwargs.setdefault('torch_dtype', torch.float16)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            path,
+            load_in_8bit=False,
+            low_cpu_mem_usage=True,
+            device_map='auto',
+            trust_remote_code=True,
+        )
+        # self.model = AutoModelForCausalLM.from_pretrained(path, **model_kwargs)
+        self.model.generation_config = GenerationConfig.from_pretrained(path, trust_remote_code=True)
         self.model.eval()
