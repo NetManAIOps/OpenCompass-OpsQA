@@ -3,9 +3,9 @@ from opencompass.models.turbomind import TurboMindModel
 
 with read_base():
     # choose a list of datasets
-    from .datasets.SuperGLUE_CB.SuperGLUE_CB_gen import CB_datasets
+    from ..datasets.others.SuperGLUE_CB.SuperGLUE_CB_gen import CB_datasets
     # and output the results in a choosen format
-    from .summarizers.medium import summarizer
+    from ..summarizers.medium import summarizer
 
 datasets = [*CB_datasets]
 

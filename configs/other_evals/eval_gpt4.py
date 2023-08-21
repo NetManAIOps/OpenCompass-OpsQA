@@ -6,7 +6,7 @@ from opencompass.tasks import OpenICLInferTask
 
 with read_base():
     from .datasets.collections.chat_medium import datasets
-    from .summarizers.medium import summarizer
+    from ..summarizers.medium import summarizer
 
 # GPT4 needs a special humaneval postprocessor
 from opencompass.datasets.humaneval import humaneval_gpt_postprocess

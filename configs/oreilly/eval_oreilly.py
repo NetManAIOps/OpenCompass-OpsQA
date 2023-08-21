@@ -4,16 +4,16 @@ from opencompass.runners import LocalRunner
 from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
-    from .datasets.oreilly.oreilly_gen_1 import oreilly_datasets as oreilly
-    from .local_models.chatglm_6b import models as chatglm_6b
-    from .local_models.chatglm2_6b import models as chatglm2_6b
-    from .local_models.qwen_chat_7b import models as qwen_chat_7b
-    from .local_models.baichuan_7b import models as baichuan_7b
-    from .local_models.internlm_chat_7b import models as internlm_7b
-    from .local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
-    from .local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
-    from .models.gpt_4_peiqi import models as gpt_4
-    from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
+    from ..datasets.oreilly.oreilly_gen_1 import oreilly_datasets as oreilly
+    from ..local_models.chatglm_6b import models as chatglm_6b
+    from ..local_models.chatglm2_6b import models as chatglm2_6b
+    from ..local_models.qwen_chat_7b import models as qwen_chat_7b
+    from ..local_models.baichuan_7b import models as baichuan_7b
+    from ..local_models.internlm_chat_7b import models as internlm_7b
+    from ..local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
+    from ..local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
+    from ..models.gpt_4_peiqi import models as gpt_4
+    from ..models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
     *oreilly,

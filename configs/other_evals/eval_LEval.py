@@ -23,9 +23,9 @@ with read_base():
     from .datasets.LEvalReviewSumm.LEval_review_summ_gen import LEval_review_summ_datasets
     # choose a model of interest
     # ininternlm as an example
-    from .models.hf_internlm_7b import models
+    from ..models.hf_internlm_7b import models
     # and output the results in a choosen format
-    from .summarizers.LEval import summarizer
+    from ..summarizers.LEval import summarizer
 
 datasets = [*LEval_coursera_datasets,
             *LEval_tpo_datasets,
