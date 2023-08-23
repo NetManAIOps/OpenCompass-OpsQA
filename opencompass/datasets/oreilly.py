@@ -65,8 +65,8 @@ class OReillyDataset(BaseDataset):
                                                sample_len)
             if sample_ids and split == 'test':
                 json_data = [
-                    item for item in enumerate(json_data)
-                    if item['id'] in sample_ids
+                    item for idx, item in enumerate(json_data)
+                    if idx in sample_ids
                 ]
 
             raw_data = []

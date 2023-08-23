@@ -19,7 +19,7 @@ work_dirs
 __pycache__/
 *.py[cod]
 *$py.class
-*.ipynb
+# *.ipynb
 .ipynb_checkpoints/
 
 # C extensions
