@@ -14,4 +14,6 @@ cd llama
 pip install -e .
 ```
 
+alpaca: protobuf
+
 qwen需要flash-attention来进行加速，但是flash-attention需要安装，我目前懒得装

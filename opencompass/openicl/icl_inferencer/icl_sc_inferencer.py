@@ -127,7 +127,6 @@ class SCInferencer(BaseInferencer):
         logger.info('Starting inference process...')
         for entry in tqdm(dataloader, disable=not self.is_main_process):
             template_entries = [t[0] for t in entry]
-            print(template_entries)
 
             reference_entries = [t[1] for t in entry]
             # TODO: add more types of CoT method
