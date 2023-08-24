@@ -14,7 +14,7 @@ from opencompass.registry import ICL_INFERENCERS
 from ..icl_prompt_template import PromptTemplate
 from ..icl_retriever import BaseRetriever
 from ..utils.logging import get_logger
-from .icl_base_inferencer import BaseInferencer, GenInferencerOutputHandler
+from .icl_base_inferencer import BaseInferencer, CoTInferencerOutputHandler
 
 logger = get_logger(__name__)
 
@@ -57,6 +57,7 @@ class CoTInferencer(BaseInferencer):
             fix_id_list: Optional[List[int]] = None,
             sc_size: Optional[int] = 1,
             infer_type: Optional[str] = '',
+            cot_prompts: Optional[List[str]] = [''],
             generation_kwargs: dict = {},
             **kwargs) -> None:
         super().__init__(
@@ -73,6 +74,7 @@ class CoTInferencer(BaseInferencer):
         self.max_out_len = max_out_len
         self.fix_id_list = fix_id_list
         self.sc_size = sc_size
+        self.cot_prompts = cot_prompts
 
         if self.model.is_api and save_every is None:
             save_every = 1
@@ -85,7 +87,7 @@ class CoTInferencer(BaseInferencer):
                   output_json_filepath: Optional[str] = None,
                   output_json_filename: Optional[str] = None) -> List:
         # 1. Preparation for output logs
-        output_handler = GenInferencerOutputHandler()
+        output_handler = CoTInferencerOutputHandler()
 
         if output_json_filepath is None:
             output_json_filepath = self.output_json_filepath
@@ -134,20 +136,40 @@ class CoTInferencer(BaseInferencer):
                 parsed_entries = self.model.parse_template(template_entries,
                                                            mode='gen')
                 sc_results = []
+                sc_thoughts = []
                 for _ in range(self.sc_size):
                     results = self.model.generate_from_template(
                         template_entries,
                         max_out_len=self.max_out_len,
                         **self.generation_kwargs)
+
+                    # CoT following steps
+                    thoughts = []
+                    thoughts.append(results)
+
+                    prev_inputs = [
+                        p + r for p, r in zip(parsed_entries, results)
+                    ]
+                    for cot_prompt in self.cot_prompts:
+                        inputs = [prev + cot_prompt for prev in prev_inputs]
+                        results = self.model.generate(
+                            inputs,
+                            max_out_len=self.max_out_len,
+                            **self.generation_kwargs)
+                        thoughts.append(results)
+                        prev_inputs = [p + r for p, r in zip(inputs, results)]
+
+                    sc_thoughts.append(thoughts)
                     sc_results.append(results)
                 sc_prediction = list(map(list, zip(*sc_results)))
+                sc_thoughts = list(map(list, zip(*sc_thoughts)))
                 generated = sc_prediction
 
             # 5-3. Save current output
-            for prompt, prediction, reference in zip(parsed_entries, generated,
-                                                     reference_entries):
+            for prompt, prediction, reference, thought in zip(
+                    inputs, generated, reference_entries, sc_thoughts):
                 output_handler.save_results(prompt, prediction, reference,
-                                            index)
+                                            thought, index)
                 index = index + 1
 
             # 5-4. Save intermediate results

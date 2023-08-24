@@ -50,14 +50,16 @@ oreilly_datasets = [
                 save_every=200, 
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
-                sc_size = SAMPLE_SIZE
+                sc_size = SAMPLE_SIZE, 
+                max_out_len=max_out_len, 
             ),
         ),
         eval_cfg=oreilly_eval_cfg)
-    for qtype_abbr, qtype_id, hint in zip(
+    for qtype_abbr, qtype_id, hint, max_out_len in zip(
         ['single', 'multiple'],
         [0, 1],
-        ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n']
+        ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
+        [5, 100],
     )
 ]
 

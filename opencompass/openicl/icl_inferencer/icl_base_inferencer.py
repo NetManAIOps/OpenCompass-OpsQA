@@ -116,6 +116,29 @@ class GenInferencerOutputHandler:
         }
 
 
+class CoTInferencerOutputHandler:
+    origin_prompt_dict = {}
+    output_dict = {}
+    prediction_dict = {}
+    results_dict = {}
+
+    def __init__(self) -> None:
+        self.results_dict = {}
+
+    def write_to_json(self, save_dir: str, filename: str):
+        """Dump the result to a json file."""
+        dump_results_dict(self.results_dict, Path(save_dir) / filename)
+
+    def save_results(self, origin_prompt, prediction, reference, thoughts,
+                     idx):
+        self.results_dict[str(idx)] = {
+            'thoughts': thoughts,
+            'origin_prompt': origin_prompt,
+            'prediction': prediction,
+            'reference': reference
+        }
+
+
 class PPLInferencerOutputHandler:
     results_dict = {}
 

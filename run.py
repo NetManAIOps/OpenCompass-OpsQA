@@ -158,7 +158,7 @@ def main():
     if args.dry_run:
         args.debug = True
     # initialize logger
-    logger = get_logger(log_level='DEBUG' if args.debug else 'DEBUG')
+    logger = get_logger(log_level='DEBUG' if args.debug else 'INFO')
 
     cfg = Config.fromfile(args.config, format_python_code=False)
     if args.work_dir is not None:

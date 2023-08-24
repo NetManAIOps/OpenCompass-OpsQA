@@ -96,6 +96,8 @@ class Summarizer:
                 dataset_eval_mode[dataset_abbr] = 'ppl'
             elif 'SCInferencer' in inferencer:
                 dataset_eval_mode[dataset_abbr] = 'gen_sc'
+            elif 'CoTInferencer' in inferencer:
+                dataset_eval_mode[dataset_abbr] = 'gen_cot'
             else:
                 dataset_eval_mode[dataset_abbr] = 'unknown'
                 self.logger.warning(f'unknown inferencer: {inferencer} - {dataset_abbr}')
