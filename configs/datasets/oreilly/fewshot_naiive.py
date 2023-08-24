@@ -53,7 +53,7 @@ oreilly_datasets = [
     for qtype_abbr, qtype_id, hint in zip(
         ['single', 'multiple'],
         [0, 1],
-        ['', 'Some examples for your answer: A,B | B,C,D | A,E\n']
+        ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n']
     )
 ]
 

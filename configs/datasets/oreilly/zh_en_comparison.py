@@ -22,6 +22,43 @@ oreilly_eval_cfg = dict(
 oreilly_datasets = [
     dict(
         type=OReillyDataset,
+        abbr=f'zh-en-comparison-zeroshot-sc-zh',
+        path='/mnt/mfs/opsgpt/evaluation/translated',
+        name=f'chinese',
+        qtype=0,
+        # sample_setting=dict(
+        #     sample_size=1
+        # ),
+        reader_cfg=oreilly_reader_cfg,
+        infer_cfg=dict(
+            ice_template=dict(
+                type=PromptTemplate,
+                template=dict(
+                    begin="</E>",
+                    round=[
+                        dict(
+                            role="HUMAN",
+                            prompt=f"以下是关于{{topic}}的单项选择题，请选出其中的正确答案。\n{{question}}\n{{choices}}\n答案：\n"
+                        ),
+                        dict(role="BOT", prompt="{answer}\n")
+                    ]
+                ),
+                ice_token="</E>",
+            ),
+            retriever=dict(type=FixKRetriever),
+            inferencer=dict(
+                type=SCInferencer,
+                save_every=100,
+                generation_kwargs=dict(temperature=0.7),
+                infer_type='SC',
+                sc_size=SAMPLE_SIZE,
+                fix_id_list=[0, 1, 2]
+            ),
+        ),
+        eval_cfg=oreilly_eval_cfg
+    ),
+    dict(
+        type=OReillyDataset,
         abbr=f'zh-en-comparison-zeroshot-sc-en',
         path='/mnt/mfs/opsgpt/evaluation/translated', 
         name=f'original',
@@ -39,43 +76,6 @@ oreilly_datasets = [
                         dict(
                             role="HUMAN",
                             prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
-                        ),
-                        dict(role="BOT", prompt="{answer}\n")
-                    ]
-                ),
-                ice_token="</E>",
-            ),
-            retriever=dict(type=FixKRetriever),
-            inferencer=dict(
-                type=SCInferencer,
-                save_every=100, 
-                generation_kwargs=dict(temperature=0.7),
-                infer_type='SC',
-                sc_size = SAMPLE_SIZE, 
-                fix_id_list=[0,1,2]
-            ),
-        ),
-        eval_cfg=oreilly_eval_cfg
-    ), 
-    dict(
-        type=OReillyDataset,
-        abbr=f'zh-en-comparison-zeroshot-sc-zh',
-        path='/mnt/mfs/opsgpt/evaluation/translated', 
-        name=f'chinese',
-        qtype=0,
-        # sample_setting=dict(
-        #     sample_size=1
-        # ), 
-        reader_cfg=oreilly_reader_cfg,
-        infer_cfg=dict(
-            ice_template=dict(
-                type=PromptTemplate,
-                template=dict(
-                    begin="</E>", 
-                    round=[
-                        dict(
-                            role="HUMAN",
-                            prompt=f"以下是关于{{topic}}的单项选择题，请选出其中的正确答案。\n{{question}}\n{{choices}}\n答案：\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
