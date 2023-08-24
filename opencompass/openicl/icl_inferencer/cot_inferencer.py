@@ -159,6 +159,7 @@ class CoTInferencer(BaseInferencer):
                         thoughts.append(results)
                         prev_inputs = [p + r for p, r in zip(inputs, results)]
 
+                    thoughts = list(map(list, zip(*thoughts)))
                     sc_thoughts.append(thoughts)
                     sc_results.append(results)
                 sc_prediction = list(map(list, zip(*sc_results)))
