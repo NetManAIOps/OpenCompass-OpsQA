@@ -34,7 +34,7 @@ for ds in datasets:
 
 for model in models:
     model['max_out_len'] = 100
-    model['run_cfg'] = dict(num_gpus=3, num_procs=1)
+    model['run_cfg'] = dict(num_gpus=2, num_procs=1)
 
 infer = dict(
     partitioner=dict(
@@ -45,7 +45,7 @@ infer = dict(
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
+        max_num_workers=1,
         max_workers_per_gpu=1,
         task=dict(type=OpenICLInferTask),
     ),
