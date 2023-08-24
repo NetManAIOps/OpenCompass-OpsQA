@@ -163,7 +163,7 @@ class CoTInferencer(BaseInferencer):
                     sc_thoughts.append(thoughts)
                     sc_results.append(results)
                 sc_prediction = list(map(list, zip(*sc_results)))
-                # sc_thoughts = list(map(list, zip(*sc_thoughts)))
+                sc_thoughts = list(map(list, zip(*sc_thoughts)))
                 generated = sc_prediction
 
             # 5-3. Save current output
