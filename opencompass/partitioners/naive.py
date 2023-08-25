@@ -46,8 +46,8 @@ class NaivePartitioner(BasePartitioner):
         """
 
         tasks = []
-        for model in models:
-            for dataset in datasets:
+        for dataset in datasets:
+            for model in models:
                 filename = get_infer_output_path(model, dataset, out_dir)
                 if osp.exists(filename):
                     continue
