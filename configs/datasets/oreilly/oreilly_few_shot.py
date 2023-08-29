@@ -42,8 +42,8 @@ oreilly_datasets = [
     dict(
         type=OReillyChoiceDataset,
         abbr='oreilly-few-shot',
-        path='/home/v-xll22/OpsGPT',
-        # path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval',
+        # path='/home/v-xll22/OpsGPT',
+        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval',
         filename='fewshot.json',
         few_shot=True,
         reader_cfg=oreilly_reader_cfg,
