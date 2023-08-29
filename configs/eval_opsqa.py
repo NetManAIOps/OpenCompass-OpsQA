@@ -28,8 +28,8 @@ models = [
     # *chinese_alpaca_2_13b,
     # *chatglm2_6b,
     # *internlm_7b,
-    # *qwen_chat_7b,
-    *chatgpt
+    *qwen_chat_7b,
+    # *chatgpt
 ]
 
 for model in models:
@@ -47,7 +47,7 @@ infer = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=16,
-        max_workers_per_gpu=16,
+        max_workers_per_gpu=1,
         task=dict(type=OpenICLInferTask),
     ),
 )

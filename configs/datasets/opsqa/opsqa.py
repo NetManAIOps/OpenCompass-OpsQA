@@ -38,7 +38,7 @@ opsqa_datasets = [
     dict(
         type=OpsQADataset,
         abbr='OpsQA',
-        path='/home/v-xll22/OpsGPT/opsqa.json',
+        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval/opsqa.json',
         reader_cfg=opsqa_reader_cfg,
         infer_cfg=opsqa_infer_cfg,
         eval_cfg=opsqa_eval_cfg)
