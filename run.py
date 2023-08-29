@@ -102,7 +102,7 @@ def parse_args():
                         help='Max task to run in parallel on one GPU. '
                         'It will only be used in the local runner.',
                         type=int,
-                        default=32)
+                        default=1)
     parser.add_argument(
         '--retry',
         help='Number of retries if the job failed when using slurm or dlc. '
@@ -158,7 +158,7 @@ def main():
     if args.dry_run:
         args.debug = True
     # initialize logger
-    logger = get_logger(log_level='DEBUG' if args.debug else 'DEBUG')
+    logger = get_logger(log_level='DEBUG' if args.debug else 'INFO')
 
     cfg = Config.fromfile(args.config, format_python_code=False)
     if args.work_dir is not None:

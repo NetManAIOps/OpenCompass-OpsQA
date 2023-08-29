@@ -9,6 +9,7 @@ import torch
 from tqdm import tqdm
 
 from opencompass.models.base import BaseModel
+from opencompass.registry import ICL_INFERENCERS
 
 from ..icl_prompt_template import PromptTemplate
 from ..icl_retriever import BaseRetriever
@@ -18,6 +19,7 @@ from .icl_base_inferencer import BaseInferencer, GenInferencerOutputHandler
 logger = get_logger(__name__)
 
 
+@ICL_INFERENCERS.register_module()
 class SCInferencer(BaseInferencer):
     """Self-Consistency Inferencer class to evaluate by multiple generations.
 
@@ -97,7 +99,7 @@ class SCInferencer(BaseInferencer):
             ice_idx_list = retriever.retrieve()
 
         # 3. Generate prompts for testing input
-        prompt_list, reference_list = self.get_generation_prompt_list_from_retriever_indices(
+        prompt_list, reference_list = self.get_generation_prompt_list_from_retriever_indices(  # noqa
             ice_idx_list,
             retriever,
             self.gen_field_replace_token,
@@ -125,11 +127,13 @@ class SCInferencer(BaseInferencer):
         logger.info('Starting inference process...')
         for entry in tqdm(dataloader, disable=not self.is_main_process):
             template_entries = [t[0] for t in entry]
+
             reference_entries = [t[1] for t in entry]
             # TODO: add more types of CoT method
             # 5-1. Inference sc_size times with local model
             with torch.no_grad():
-                parsed_entries = self.model.parse_template(template_entries, mode='gen')
+                parsed_entries = self.model.parse_template(template_entries,
+                                                           mode='gen')
                 sc_results = []
                 for _ in range(self.sc_size):
                     results = self.model.generate_from_template(
@@ -141,8 +145,10 @@ class SCInferencer(BaseInferencer):
                 generated = sc_prediction
 
             # 5-3. Save current output
-            for prompt, prediction, reference in zip(parsed_entries, generated, reference_entries):
-                output_handler.save_results(prompt, prediction, reference, index)
+            for prompt, prediction, reference in zip(parsed_entries, generated,
+                                                     reference_entries):
+                output_handler.save_results(prompt, prediction, reference,
+                                            index)
                 index = index + 1
 
             # 5-4. Save intermediate results

@@ -257,7 +257,7 @@ for _row in book_list:
             sample_setting=dict(
                 seed=0,
                 # load_list=None,
-                sample_size=100,
+                # sample_size=100,
                 # sample_frac=None
             ),
             reader_cfg=oreilly_reader_cfg,
