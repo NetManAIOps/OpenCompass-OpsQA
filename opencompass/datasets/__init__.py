@@ -60,6 +60,7 @@ from .narrativeqa import *  # noqa: F401, F403
 from .natural_question import *  # noqa: F401, F403
 from .obqa import *  # noqa: F401, F403
 from .opsqa import *  # noqa: F401, F403
+from .opssub import * # noqa: F401, F403
 from .oreilly import *  # noqa: F401, F403
 from .piqa import *  # noqa: F401, F403
 from .qasper import *  # noqa: F401, F403

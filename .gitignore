@@ -1,5 +1,7 @@
 results/
+results_*/
 output_*/
+outputs_*/
 outputs/
 icl_inference_output/
 .vscode/

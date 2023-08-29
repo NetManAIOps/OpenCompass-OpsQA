@@ -86,24 +86,3 @@ def opsqa_compr_postprocess(text: str) -> str:
         text = text.split('答案是')[1]
     return text
 
-
-@ICL_EVALUATORS.register_module()
-class OpsQAEvaluator(BaseEvaluator):
-
-    def __init__(self):
-        self.bleu = BleuEvaluator()
-        self.rouge = RougeEvaluator()
-
-    def score(self, predictions, references):
-        bleu_score = self.bleu.score(predictions, references)
-        rouge_score = self.rouge.score(predictions, references)
-        bleu_score = {
-            'bleu_' + key: value
-            for key, value in bleu_score.items()
-        }
-        rouge_score = {
-            'rouge_' + key: value
-            for key, value in rouge_score.items()
-        }
-        bleu_score.update(rouge_score)
-        return bleu_score
