@@ -25,8 +25,8 @@ def extract_fail_cases(folder):
     for model in os.listdir(osp.join(folder, 'predictions')):
         print(model)
 
-        failcases = []
         for filename in os.listdir(osp.join(folder, 'predictions', model)):
+            failcases = []
             if not osp.isfile(osp.join(folder, 'predictions', model,
                                        filename)):
                 continue
@@ -39,8 +39,11 @@ def extract_fail_cases(folder):
                 gold = case['reference']['answer']
                 if predict != gold:
                     failcases.append(case)
-        with open(osp.join(folder, 'failcases', f'{model}.json'), 'w') as f:
-            json.dump(failcases, f, indent=4)
+            with open(
+                    osp.join(folder, 'failcases',
+                             f'{model}_{filename.replace(".json", "")}.json'),
+                    'w') as f:
+                json.dump(failcases, f, indent=4)
 
 
 if __name__ == '__main__':
