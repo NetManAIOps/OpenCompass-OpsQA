@@ -59,7 +59,7 @@ oreilly_datasets = [
         ['single', 'multiple'],
         [0, 1],
         ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
-        [5, 100],
+        [100, 100],
     )
 ]
 

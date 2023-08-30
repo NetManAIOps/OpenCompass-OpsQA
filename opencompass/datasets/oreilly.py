@@ -63,7 +63,11 @@ class OReillyDataset(BaseDataset):
                     sample_len = 1 if sample_len == 0 else sample_len
                     sample_ids = random.sample(list(range(len(json_data))),
                                                sample_len)
-            if sample_ids and split == 'test':
+            if 'load_list' in sample_setting and sample_ids and split == 'test':  # noqa
+                json_data = [
+                    item for item in json_data if item['id'] in sample_ids
+                ]
+            elif sample_ids and split == 'test':
                 json_data = [
                     item for idx, item in enumerate(json_data)
                     if idx in sample_ids
