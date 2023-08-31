@@ -36,17 +36,18 @@ models = [
     *llama2_chat_13b,
     *chinese_llama_2_13b,
     *chinese_alpaca_2_13b,
-    *xverse_13b,
+    #*xverse_13b,
 ]
 
 for model in models:
-    # model['path'] = model['path'].replace()
-    # model['tokenizer_path'] = model['tokenizer_path'].replace()
-    model['run_cfg'] = dict(num_gpus=2, num_procs=1)
+    model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
+    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
 
 for dataset in datasets:
-    # dataset['path'] = dataset['path'].replace()
-    dataset['sample_setting'] = dict(load_list='/mnt/mfs/opsgpt/evaluation/ops-cert-eval/network_list.json')
+    dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    #dataset['sample_setting'] = dict(sample_size=1)
+    dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
 
 infer = dict(
     partitioner=dict(
@@ -57,8 +58,8 @@ infer = dict(
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
-        max_workers_per_gpu=1,
+        max_num_workers=16,
+        max_workers_per_gpu=6,
         task=dict(type=OpenICLInferTask),
     ),
 )

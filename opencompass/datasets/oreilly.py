@@ -72,6 +72,7 @@ class OReillyDataset(BaseDataset):
                     item for idx, item in enumerate(json_data)
                     if idx in sample_ids
                 ]
+            print("[DATASET DEBUG]: dataset size", len(json_data))
 
             raw_data = []
             for data in json_data:

@@ -161,7 +161,9 @@ class CoTInferencer(BaseInferencer):
 
                     thoughts = list(map(list, zip(*thoughts)))
                     sc_thoughts.append(thoughts)
-                    sc_results.append(results)
+                    all_thoughts = ['\n'.join(ts) for ts in thoughts]
+                    # sc_results.append(results)
+                    sc_results.append(all_thoughts)
                 sc_prediction = list(map(list, zip(*sc_results)))
                 sc_thoughts = list(map(list, zip(*sc_thoughts)))
                 generated = sc_prediction
