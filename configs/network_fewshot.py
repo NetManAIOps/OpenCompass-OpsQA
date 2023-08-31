@@ -22,8 +22,8 @@ with read_base():
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
-    *fewshot_naiive, # ok
-    *fewshot_sc, 
+    # *fewshot_naiive, # ok
+    # *fewshot_sc, 
     *fewshot_sc_cot,
 ]
 
@@ -41,12 +41,13 @@ models = [
 ]
 
 for model in models:
-    model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
+    # model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    pass
 
 for dataset in datasets:
-    dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     dataset['sample_setting'] = dict(sample_size=1)
     # dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
 
