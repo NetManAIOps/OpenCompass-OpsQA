@@ -16,7 +16,7 @@ opsqa_infer_cfg = dict(
                 dict(
                     role="HUMAN",
                     prompt=
-                    f"回答下面关于{{topic}}的{{task}}问题。\n{{question}}\n答:\n"
+                    f"Answer the {{task}} question about {{topic}}.\n{{question}}\nAnswer:\n"
                 ),
                 dict(role="BOT", prompt="{answer}")
             ]

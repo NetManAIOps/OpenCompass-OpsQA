@@ -21,6 +21,7 @@ class OpsQADataset(BaseDataset):
                 'question': data['question'],
                 'topic': data['topic'],
                 'task': data['task'],
+                'keypoint': data['keypoint'],
                 'answer': data['answer']
             }
             raw_data.append(item)
