@@ -23,20 +23,20 @@ datasets = [
 ]
 
 models = [ 
-    *chatglm2_6b,
+    # *chatglm2_6b,
     # *qwen_chat_7b,
     # *baichuan_7b,
     # *internlm_chat_7b,
     # *llama2_chat_7b,
-    # *chatgpt,
+    *chatgpt,
 ]
 
 # for model in models:
     # model['max_out_len'] = 100
     # model['run_cfg'] = dict(num_gpus=2, num_procs=1)
 
-for ds in datasets:
-    ds['sample_setting'] = dict(sample_size=2)
+# for ds in datasets:
+    # ds['sample_setting'] = dict(sample_size=100)
 
 infer = dict(
     partitioner=dict(

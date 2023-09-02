@@ -8,7 +8,7 @@ from os import path as osp
 import pandas as pd  # noqa
 
 if __name__ == '__main__':
-    folder = '/mnt/mfs/opsgpt/opencompass/outputs/failcases/sampled-zeroshot'
+    folder = '/mnt/mfs/opsgpt/opencompass/outputs/failcases/en_zh_comparisons/all'  # noqa
     fail_ids = dict()
     for filename in os.listdir(folder):
         with open(osp.join(folder, filename), 'r') as f:
@@ -26,14 +26,26 @@ if __name__ == '__main__':
     print(len(intersect))
     failcases = dict()
     # get question and answer
-    with open(osp.join(folder, 'baichuan-13b-chat.json'), 'r') as f:
+    with open(
+            osp.join(folder,
+                     'baichuan-7b_zh-en-comparison-zeroshot-sc-zh.json'),
+            'r') as f:
         data = json.load(f)
         for d in data:
             if d['reference']['id'] in intersect:
                 failcases[d['reference']['id']] = {
-                    'prompt': d['origin_prompt'],
+                    'zh-prompt': d['origin_prompt'],
                     'answer': d['reference']['answer']
                 }
+    with open(
+            osp.join(folder,
+                     'baichuan-7b_zh-en-comparison-zeroshot-sc-en.json'),
+            'r') as f:
+        data = json.load(f)
+        for d in data:
+            if d['reference']['id'] in intersect:
+                failcases[d['reference']
+                          ['id']]['en-prompt'] = d['origin_prompt']
     # get each question's multiple answers
     for filename in os.listdir(folder):
         with open(osp.join(folder, filename), 'r') as f:
@@ -43,7 +55,7 @@ if __name__ == '__main__':
                 failcases[d['reference']['id']][filename.replace(
                     '.json', '')] = d['prediction']
 
-    with open(osp.join(folder, 'merged.json'), 'w') as f:
+    with open(osp.join(folder, '../merged.json'), 'w') as f:
         json.dump(failcases, f, indent=4)
 
     acnt = 0
