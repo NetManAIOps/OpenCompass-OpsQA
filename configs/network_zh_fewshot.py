@@ -23,31 +23,31 @@ with read_base():
 
 datasets = [
     # *fewshot_naiive, # ok
-    # *fewshot_sc, 
+    *fewshot_sc, 
     *fewshot_sc_cot,
 ]
 
 models = [ 
-    # *chatglm2_6b,
-    # *qwen_chat_7b,
-    # *internlm_chat_7b,
-    # *llama2_chat_7b,
-    # *baichuan_13b_chat,
-    # *llama2_chat_13b,
-    # *chinese_llama_2_13b,
-    # *chinese_alpaca_2_13b,
+    *chatglm2_6b,
+    *qwen_chat_7b,
+    *internlm_chat_7b,
+    *llama2_chat_7b,
+    *baichuan_13b_chat,
+    *llama2_chat_13b,
+    *chinese_llama_2_13b,
+    *chinese_alpaca_2_13b,
     #*xverse_13b,
-    *chatgpt,
+    #*chatgpt,
 ]
 
 for model in models:
-    # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    # model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
+    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
     pass
 
 for dataset in datasets:
-    # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     dataset['sample_setting'] = dict(sample_size=1)
     # dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
 

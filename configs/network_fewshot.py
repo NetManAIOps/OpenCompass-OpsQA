@@ -23,33 +23,36 @@ with read_base():
 
 datasets = [
     # *fewshot_naiive, # ok
-    # *fewshot_sc, 
+    *fewshot_sc, 
     *fewshot_sc_cot,
 ]
 
 models = [ 
-    # *chatglm2_6b,
-    # *qwen_chat_7b,
-    # *internlm_chat_7b,
-    # *llama2_chat_7b,
-    # *baichuan_13b_chat,
-    # *llama2_chat_13b,
-    # *chinese_llama_2_13b,
-    # *chinese_alpaca_2_13b,
+    *chatglm2_6b,
+    *qwen_chat_7b,
+    *llama2_chat_7b,
+    *internlm_chat_7b,
+    *baichuan_13b_chat,
+    *llama2_chat_13b,
+    *chinese_llama_2_13b,
+    *chinese_alpaca_2_13b,
     #*xverse_13b,
-    *chatgpt,
+    #*chatgpt,
 ]
 
 for model in models:
-    # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    # model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
+    if '13' in model['path']:
+        model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    else:
+        model['run_cfg'] = dict(num_gpus=4, num_procs=8)
     pass
 
 for dataset in datasets:
-    # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    dataset['sample_setting'] = dict(sample_size=1)
-    # dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
+    dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    #dataset['sample_setting'] = dict(sample_size=1)
+    dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
 
 infer = dict(
     partitioner=dict(
@@ -61,7 +64,7 @@ infer = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=16,
-        max_workers_per_gpu=6,
+        max_workers_per_gpu=3,
         task=dict(type=OpenICLInferTask),
     ),
 )

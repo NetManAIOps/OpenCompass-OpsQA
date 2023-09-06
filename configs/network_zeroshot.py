@@ -59,7 +59,7 @@ infer = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=16,
-        max_workers_per_gpu=6,
+        max_workers_per_gpu=5,
         task=dict(type=OpenICLInferTask),
     ),
 )

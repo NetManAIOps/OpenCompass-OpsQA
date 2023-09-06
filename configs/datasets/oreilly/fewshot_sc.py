@@ -38,7 +38,7 @@ oreilly_datasets = [
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\n{hint}Answer:\n"
+                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
@@ -52,7 +52,7 @@ oreilly_datasets = [
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE, 
                 save_every=200,
-                fix_id_list=[0,1,2], 
+                fix_id_list=[1,2,3], 
                 max_out_len=max_out_len
             ),
         ),
@@ -61,7 +61,7 @@ oreilly_datasets = [
         ['single', 'multiple'],
         [0, 1],
         ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
-        [200, 200],
+        [50, 50],
     )
 ]
 

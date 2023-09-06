@@ -22,7 +22,7 @@ with read_base():
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
-    *zeroshot_naiive, # ok
+    #*zeroshot_naiive, # ok
     *zeroshot_sc, 
     *zeroshot_sc_cot,
 ]
@@ -46,8 +46,7 @@ for model in models:
 
 for dataset in datasets:
     dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    #dataset['sample_setting'] = dict(sample_size=1)
-    dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
+    dataset['sample_setting'] = dict(sample_size=1)
 
 infer = dict(
     partitioner=dict(

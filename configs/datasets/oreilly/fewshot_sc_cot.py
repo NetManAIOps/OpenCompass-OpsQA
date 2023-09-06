@@ -42,7 +42,7 @@ oreilly_datasets = [
                         dict(role="BOT", prompt=f"{{solution}}\n"),
                         dict(
                             role="HUMAN",
-                            prompt=f"{hint}Therefore the answer is: \n"
+                            prompt="Therefore the answer is: \n"
                         ),
                         dict(
                             role="BOT", prompt=f"{{answer}}\n",
@@ -68,7 +68,7 @@ oreilly_datasets = [
             inferencer=dict(
                 type=CoTInferencer,
                 save_every=200,
-                cot_prompts=[f'{hint}Therefore the answer is: \n'],
+                cot_prompts=['Therefore the answer is: \n'],
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE, 
