@@ -37,7 +37,7 @@ oreilly_datasets = [
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"下面是一道关于{{topic}}的{qtype_hint}题，\n{{question}}\n{{choices}}\n让我们逐个选项分析：\n"
+                            prompt=f"以下关于{{topic}}的{qtype_hint}选择题。\n{{question}}\n{{choices}}\n让我们逐个选项分析：\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
@@ -59,7 +59,7 @@ oreilly_datasets = [
     for qtype_abbr, qtype_id, hint, max_out_len, qtype_hint in zip(
         ['single', 'multiple'],
         [0, 1],
-        ['', '请选择所有正确的答案并用英文逗号分隔，例如：“B,C”。\n'], 
+        ['请直接给出正确答案的选项。', '请直接给出所有正确答案的选项并用英文逗号分隔，例如：“B,C”。'],
         [200, 200],
         ['单选', '多选']
     )

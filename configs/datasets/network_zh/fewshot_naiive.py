@@ -35,7 +35,7 @@ oreilly_datasets = [
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"下面是一道关于{{topic}}的{qtype_hint}题，\n{{question}}\n{{choices}}\n{hint}答案：\n"
+                            prompt=f"以下关于{{topic}}的{qtype_hint}选择题，请直接给出正确答案的选项。\n{{question}}\n{{choices}}\n{hint}答案：\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
