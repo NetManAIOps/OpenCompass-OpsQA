@@ -5,9 +5,9 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from .datasets.oreilly.zeroshot_naiive import oreilly_datasets as zeroshot_naiive
-    from .datasets.oreilly.zeroshot_sc import oreilly_datasets as zeroshot_sc
-    from .datasets.oreilly.zeroshot_sc_cot import oreilly_datasets as zeroshot_sc_cot
+    from .datasets.network_zh.zeroshot_naiive import oreilly_datasets as zeroshot_naiive
+    from .datasets.network_zh.zeroshot_sc import oreilly_datasets as zeroshot_sc
+    from .datasets.network_zh.zeroshot_sc_cot import oreilly_datasets as zeroshot_sc_cot
     # Models
     from .local_models.chatglm2_6b import models as chatglm2_6b
     from .local_models.qwen_chat_7b import models as qwen_chat_7b
@@ -22,7 +22,7 @@ with read_base():
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
-    *zeroshot_naiive, # ok
+    #*zeroshot_naiive, # ok
     *zeroshot_sc, 
     *zeroshot_sc_cot,
 ]
@@ -36,18 +36,17 @@ models = [
     *llama2_chat_13b,
     *chinese_llama_2_13b,
     *chinese_alpaca_2_13b,
-    *xverse_13b,
+    #*xverse_13b,
 ]
 
-for dataset in datasets:
-    dataset['path'] = dataset['path'].replace("/mnt/mfs/opsgpt/evaluation/", "/gpudata/home/cbh/opsgpt/evaluation/")
-
 for model in models:
-    model['path'] = model['path'].replace("/mnt/mfs/opsgpt/models/", "/gpudata/home/cbh/opsgpt/models/")
-    if 'tokenizer_path' in model:
-        model['tokenizer_path'] = model['tokenizer_path'].replace("/mnt/mfs/opsgpt/models/", "/gpudata/home/cbh/opsgpt/models/")
-    model['max_out_len'] = 100
+    model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
     model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+
+for dataset in datasets:
+    dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+    dataset['sample_setting'] = dict(sample_size=1)
 
 infer = dict(
     partitioner=dict(
@@ -59,7 +58,7 @@ infer = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=16,
-        max_workers_per_gpu=4,
+        max_workers_per_gpu=6,
         task=dict(type=OpenICLInferTask),
     ),
 )

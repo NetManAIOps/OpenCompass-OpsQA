@@ -15,16 +15,16 @@ oreilly_reader_cfg = dict(
 
 oreilly_eval_cfg = dict(
     evaluator=dict(type=AccEvaluator),
-    sc_size=SAMPLE_SIZE, 
+    sc_size=SAMPLE_SIZE,
     pred_postprocessor=dict(type='oreilly-choice'))
     
 
 oreilly_datasets = [
     dict(
         type=OReillyDataset,
-        abbr=f'oreilly-3shot-sc-{qtype_abbr}',
-        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval/v3', 
-        name=f'{qtype_abbr}',
+        abbr=f'network-zh-zeroshot-sc-{qtype_abbr}',
+        path='/mnt/mfs/opsgpt/evaluation/translated/v3', 
+        name=f'ch_{qtype_abbr}',
         qtype=qtype_id,
         # sample_setting=dict(
         #     sample_size=1
@@ -34,34 +34,33 @@ oreilly_datasets = [
             ice_template=dict(
                 type=PromptTemplate,
                 template=dict(
-                    begin="</E>", 
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
+                            prompt=f"以下关于{{topic}}的{qtype_hint}选择题，{hint}\n{{question}}\n{{choices}}\n答案：\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
                 ),
                 ice_token="</E>",
             ),
-            retriever=dict(type=FixKRetriever),
+            retriever=dict(type=ZeroRetriever),
             inferencer=dict(
                 type=SCInferencer,
+                save_every=200, 
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE, 
-                save_every=200,
-                fix_id_list=[1,2,3], 
-                max_out_len=max_out_len
+                max_out_len=max_out_len, 
             ),
         ),
         eval_cfg=oreilly_eval_cfg)
-    for qtype_abbr, qtype_id, hint, max_out_len in zip(
+    for qtype_abbr, qtype_id, hint, max_out_len, qtype_hint in zip(
         ['single', 'multiple'],
         [0, 1],
-        ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
-        [50, 50],
+        ['请直接给出正确答案的选项。', '请直接给出所有正确答案的选项并用英文逗号分隔，例如：“B,C”。'],
+        [100, 100],
+        ['单选', '多选']
     )
 ]
 

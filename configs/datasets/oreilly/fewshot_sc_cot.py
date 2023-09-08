@@ -1,6 +1,6 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
-from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer
+from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer
 from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OReillyChoiceDataset, OReillyEvaluator, oreilly_choice_postprocess, OReillyDataset
@@ -8,7 +8,7 @@ from opencompass.datasets import OReillyChoiceDataset, OReillyEvaluator, oreilly
 SAMPLE_SIZE = 5
 
 oreilly_reader_cfg = dict(
-    input_columns=['topic','question','choices','qtype'],
+    input_columns=['topic','question','choices','qtype', 'solution'],
     output_column='answer',
     train_split='dev'
 )
@@ -22,7 +22,7 @@ oreilly_eval_cfg = dict(
 oreilly_datasets = [
     dict(
         type=OReillyDataset,
-        abbr=f'oreilly-3shot-sc-{qtype_abbr}',
+        abbr=f'oreilly-3shot-sc+cot-{qtype_abbr}',
         path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval/v3', 
         name=f'{qtype_abbr}',
         qtype=qtype_id,
@@ -33,12 +33,31 @@ oreilly_datasets = [
         infer_cfg=dict(
             ice_template=dict(
                 type=PromptTemplate,
+                template=dict( 
+                    round=[
+                        dict(
+                            role="HUMAN",
+                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nLet's think step by step.\n"
+                        ),
+                        dict(role="BOT", prompt=f"{{solution}}\n"),
+                        dict(
+                            role="HUMAN",
+                            prompt="Therefore the answer is: \n"
+                        ),
+                        dict(
+                            role="BOT", prompt=f"{{answer}}\n",
+                        )
+                    ]
+                ),
+            ),
+            prompt_template=dict(
+                type=PromptTemplate,
                 template=dict(
                     begin="</E>", 
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
+                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nLet's think step by step.\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
@@ -47,12 +66,13 @@ oreilly_datasets = [
             ),
             retriever=dict(type=FixKRetriever),
             inferencer=dict(
-                type=SCInferencer,
+                type=CoTInferencer,
+                save_every=200,
+                cot_prompts=['Therefore the answer is: \n'],
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE, 
-                save_every=200,
-                fix_id_list=[1,2,3], 
+                fix_id_list=[0,1,2], 
                 max_out_len=max_out_len
             ),
         ),
@@ -61,7 +81,7 @@ oreilly_datasets = [
         ['single', 'multiple'],
         [0, 1],
         ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
-        [50, 50],
+        [200, 200],
     )
 ]
 

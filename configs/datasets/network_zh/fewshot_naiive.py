@@ -1,11 +1,9 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
-from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer
+from opencompass.openicl.icl_inferencer import GenInferencer
 from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OReillyChoiceDataset, OReillyEvaluator, oreilly_choice_postprocess, OReillyDataset
-
-SAMPLE_SIZE = 5
 
 oreilly_reader_cfg = dict(
     input_columns=['topic','question','choices','qtype'],
@@ -15,16 +13,15 @@ oreilly_reader_cfg = dict(
 
 oreilly_eval_cfg = dict(
     evaluator=dict(type=AccEvaluator),
-    sc_size=SAMPLE_SIZE, 
     pred_postprocessor=dict(type='oreilly-choice'))
     
 
 oreilly_datasets = [
     dict(
         type=OReillyDataset,
-        abbr=f'oreilly-3shot-sc-{qtype_abbr}',
-        path='/mnt/mfs/opsgpt/evaluation/ops-cert-eval/v3', 
-        name=f'{qtype_abbr}',
+        abbr=f'network-zh-3shot-naiive-{qtype_abbr}',
+        path='/mnt/mfs/opsgpt/evaluation/translated/v3', 
+        name=f'ch_{qtype_abbr}',
         qtype=qtype_id,
         # sample_setting=dict(
         #     sample_size=1
@@ -34,11 +31,11 @@ oreilly_datasets = [
             ice_template=dict(
                 type=PromptTemplate,
                 template=dict(
-                    begin="</E>", 
+                    begin="</E>",
                     round=[
                         dict(
                             role="HUMAN",
-                            prompt=f"Here is a {{qtype}} question about {{topic}}.\n{{question}}\n{{choices}}\nAnswer:\n"
+                            prompt=f"以下关于{{topic}}的{qtype_hint}选择题，请直接给出正确答案的选项。\n{{question}}\n{{choices}}\n{hint}答案：\n"
                         ),
                         dict(role="BOT", prompt="{answer}\n")
                     ]
@@ -47,21 +44,19 @@ oreilly_datasets = [
             ),
             retriever=dict(type=FixKRetriever),
             inferencer=dict(
-                type=SCInferencer,
-                generation_kwargs=dict(temperature=0.7),
-                infer_type='SC',
-                sc_size = SAMPLE_SIZE, 
+                type=GenInferencer,
                 save_every=200,
-                fix_id_list=[1,2,3], 
-                max_out_len=max_out_len
+                fix_id_list=[0,1,2], 
+                max_out_len=max_out_len,
             ),
         ),
         eval_cfg=oreilly_eval_cfg)
-    for qtype_abbr, qtype_id, hint, max_out_len in zip(
+    for qtype_abbr, qtype_id, hint, max_out_len, qtype_hint in zip(
         ['single', 'multiple'],
         [0, 1],
-        ['', 'You should select all appropriate option letters separated by commas to answer this question. Example of a possible answer: B,C.\n'], 
-        [50, 50],
+        ['', ''],
+        [200, 200],
+        ['单选', '多选']
     )
 ]
 
