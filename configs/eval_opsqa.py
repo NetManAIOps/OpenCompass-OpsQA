@@ -12,6 +12,7 @@ with read_base():
     from .local_models.llama2_13b_chat import models as llama2_13b
     from .local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
     from .local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
+    from .local_models.llama2_chinese_13b_chat import models as llama2_chinese_13b
     from .local_models.baichuan_13b_chat import models as baichuan_13b
     from .local_models.baichuan2_13b_chat import models as baichuan2_13b
     from .local_models.xverse_13b import models as xverse_13b
@@ -28,6 +29,7 @@ models = [
     # *xverse_13b,
     *chinese_llama_2_13b,
     *chinese_alpaca_2_13b,
+    *llama2_chinese_13b,
     *chatglm2_6b,
     *internlm_7b,
     *qwen_chat_7b,
