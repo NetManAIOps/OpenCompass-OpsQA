@@ -22,6 +22,7 @@ with read_base():
     from .local_models.xverse_13b import models as xverse_13b
     from .models.gpt_4_peiqi import models as gpt_4
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
+    from .local_models.zhipu import models as zhipu
 
 datasets = [
     *fewshot_naiive, # ok
@@ -35,11 +36,12 @@ models = [
     # *llama2_chat_7b,
     # *internlm_chat_7b,
     # *baichuan_13b_chat,
-    *baichuan2_13b_chat,
+    # *baichuan2_13b_chat,
     # *llama2_chat_13b,
     # *chinese_llama_2_13b,
     # *chinese_alpaca_2_13b,
-    *llama2_chinese_13b_chat,
+    # *llama2_chinese_13b_chat,
+    *zhipu,
     #*xverse_13b,
     #*chatgpt,
 ]
@@ -48,7 +50,7 @@ for model in models:
     model['max_out_len'] = 16
     model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    if 'GPT' not in model['abbr']:
+    if 'GPT' not in model['abbr'] or 'zhipu' not in model['abbr']:
         model['run_cfg'] = dict(num_gpus=2, num_procs=1) if '7b' in model['abbr'] or '6b' in model['abbr'] else dict(num_gpus=4, num_procs=1)
         model['batch_size'] = 16
 
@@ -66,7 +68,7 @@ infer = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=16,
-        max_workers_per_gpu=3,
+        max_workers_per_gpu=16,
         task=dict(type=OpenICLInferTask),
     ),
 )

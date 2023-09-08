@@ -3,7 +3,7 @@ from mmengine.config import read_base
 
 
 with read_base():
-    from ..openai_key import peiqi_key
+    from ..api_key import peiqi_key
 
 models = [
     dict(abbr='GPT-3.5-turbo',
