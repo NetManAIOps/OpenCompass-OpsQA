@@ -35,9 +35,15 @@ models = [
     *chatgpt,
 ]
 
+for dataset in datasets:
+    dataset['path'] = dataset['path'].replace("/mnt/mfs/opsgpt/evaluation/", "/gpudata/home/cbh/opsgpt/evaluation/")
+
 for model in models:
+    model['path'] = model['path'].replace("/mnt/mfs/opsgpt/models/", "/gpudata/home/cbh/opsgpt/models/")
+    if 'tokenizer_path' in model:
+        model['tokenizer_path'] = model['tokenizer_path'].replace("/mnt/mfs/opsgpt/models/", "/gpudata/home/cbh/opsgpt/models/")
     model['max_out_len'] = 100
-    model['run_cfg'] = dict(num_gpus=2, num_procs=1)
+    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
 
 infer = dict(
     partitioner=dict(
@@ -48,8 +54,8 @@ infer = dict(
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
-        max_workers_per_gpu=1,
+        max_num_workers=16,
+        max_workers_per_gpu=4,
         task=dict(type=OpenICLInferTask),
     ),
 )

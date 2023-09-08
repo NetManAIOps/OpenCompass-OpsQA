@@ -3,9 +3,9 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM
 models = [
     dict(
         type=HuggingFaceCausalLM,
-        abbr='baichuan-13b-chat',
-        path="/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan-13B-Chat",
-        tokenizer_path='/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan-13B-Chat',
+        abbr='baichuan2-13b-chat',
+        path="/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan2-13B-Chat",
+        tokenizer_path='/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan2-13B-Chat',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,

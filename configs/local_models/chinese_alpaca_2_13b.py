@@ -11,9 +11,9 @@ models = [
     dict(
         abbr="chinese-alpaca-2-13b",
         type=HuggingFaceCausalLM, 
-        path="/mnt/mfs/opsgpt/models/chinese-llama-2/chinese-alpaca-2-13b/",
-        tokenizer_path="/mnt/mfs/opsgpt/models/chinese-llama-2/chinese-alpaca-2-13b/",
-        max_out_len=20,
+        path="/gpudata/home/cbh/opsgpt/models/chinese-llama-2/chinese-alpaca-2-13b/",
+        tokenizer_path="/gpudata/home/cbh/opsgpt/models/chinese-llama-2/chinese-alpaca-2-13b/",
+        max_out_len=1024,
         max_seq_len=2048,
         batch_size=16,
         meta_template=_meta_template,
