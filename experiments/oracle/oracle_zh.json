@@ -1,0 +1,846 @@
+[
+    {
+        "question": "1.下列哪一项不属于Oracle数据库关闭模式？\nA.Shutdown immediate\nB.Shutdown abort\nC.Shutdown transactional\nD.Shutdown poweroff",
+        "answer": "D"
+    },
+    {
+        "question": "2.Oracle NET 相关的三个文件具体路径在什么地方？\nA.$ORACLE_HOME/dbs\nB.$ORACLE_HOME/network/admin\nC.$ORACLE_HOME/network/dbs\nD.$ORACLE_HOME/admin",
+        "answer": "B"
+    },
+    {
+        "question": "3.控制文件是数据库启动第几阶段加载的文件？\nA.第四阶段加载PDB的时候\nB.第三阶段OPEN数据库的时候\nC.第二阶段MOUNT数据库的时候\nD.第一阶段NOMOUNT数据库的时候",
+        "answer": "C"
+    },
+    {
+        "question": "4.下面哪一项不属于在线日志组的状态？\nA.UNUSED\nB.NOACTIVE\nC.INACTIVE\nD.ACTIVEE.CURRENT",
+        "answer": "B"
+    },
+    {
+        "question": "5.观察下面命令：Alter tablespace users begin backup;将USERS表空间置于备份模式后，将触发哪种类型的检查点？\nA.增量检查点\nB.完全（线程）检查点\nC.局部（表空间）检查点\nD.完全检查点",
+        "answer": "C"
+    },
+    {
+        "question": "6.当发出COMMIT命令的时候，DBWR做了什么操作？\nA.它立刻将日志缓冲区日志写入磁盘\nB.它立刻将数据缓冲区数据写入磁盘\nC.它会通知LGWR写日志\nD.它什么都不做",
+        "answer": "D"
+    },
+    {
+        "question": "7.ASM自动存储管理中磁盘划分的单元(AU)默认大小为多大？\nA.1M\nB.2M\nC.4M\nD.8M\nE.16M\nF.32M\nG.64M",
+        "answer": "A"
+    },
+    {
+        "question": "8.参数文件和密码文件的物理路径在什么地方？\nA.$ORACLE_HOME/network/admin\nB.$ORACLE_HOME/dbs\nC.$ORACLE_HOME/network/dbs\nD.$ORACLE_HOME/admin",
+        "answer": "B"
+    },
+    {
+        "question": "9.下列关于还原与恢复说法正确的是？\nA.非归档模式下，无法还原数据库\nB.非归档模式下，可以还原数据库，也可以恢复数据库\nC.归档模式下，只能还原数据库，无法恢复数据库\nD.归档模式下，既可以还原数据库，也可以恢复数据库",
+        "answer": "D"
+    },
+    {
+        "question": "10.关于参数文件及参数说法正确的是？\nA.动态参数文件（SPFILE. 和静态参数文件（PFILE. 内容一致，保存形式不一致\nB.动态参数文件（SPFILE. 存的全部都是动态参数，静态参数文件（PFILE. 存的全部是静态参数\nC.动态参数文件（SPFILE. 只能通过静态参数文件（PFILE. 创建\nD.静态参数文件（PFILE. 只能通过动态参数文件（SPFILE. 创建",
+        "answer": "A"
+    },
+    {
+        "question": "11.关于闪回DROP说法正确的是？\nA.闪回DROP主要是针对DELETE操作的\nB.闪回DROP主要是针对TRUNCATE操作的\nC.闪回DROP是基于回收站策略（RecycleBin）的\nD.闪回DROP是基于闪回日志的",
+        "answer": "C"
+    },
+    {
+        "question": "12.观察以下命令：Rman target /RMAN> backup database format ‘/u01/app/oracle/backup/%U.full’ plus archivelog;下面说法正确的是？\nA.该命令会备份数据文件、控制文件、参数文件和归档日志文件\nB.该命令仅会备份数据文件和归档日志文件\nC.该命令仅会备份控制文件和参数文件\nD.该命令仅会备份日志文件和告警日志文件",
+        "answer": "A"
+    },
+    {
+        "question": "13.在Oracle 12c根容器中，如何关闭某个PDB(例如ERP1)？\nA.Alter pluggable database erp1 close immediate;\nB.Shutdown immediate;\nC.Alter pluggable database all close immediate;\nD.Shutdown abort;",
+        "answer": "A"
+    },
+    {
+        "question": "14.以sys用户连接根容器(CDB$ROOT)并发出以下命令：Create user c##abc identified by abc;下面哪一个说法是正确的？\nA.仅在根容器里面创建了C##ABC用户\nB.仅在所有PDB容器里面创建了C##ABC用户\nC.根容器和所有PDB容器里面都会创建C##ABC用户\nD.该命令报错",
+        "answer": "C"
+    },
+    {
+        "question": "15.以sys用户连接根容器(CDB$ROOT)并发出以下命令：Create role c##r1 container=current;下面哪一个说法是正确的？\nA.仅在根容器里面创建了C##R1角色\nB.仅在所有PDB容器里面创建了C##R1角色\nC.根容器和所有PDB容器里面都会创建C##R1角色\nD.该命令报错",
+        "answer": "D"
+    },
+    {
+        "question": "16.以sys连接某一PDB数据库(ERP1)并发出以下授权命令：Grant create session to abc container=all;下面哪一个说法是正确的？\nA.该授权会报错\nB.该授权仅在ERP1里面生效\nC.该授权仅在根容器CDB$ROOT里面生效\nD.该授权在ERP1和CDB$ROOT中都生效",
+        "answer": "A"
+    },
+    {
+        "question": "17.当Oracle服务器启动时，下列哪种文件不是必须的\nA.数据文件\nB.控制文件\nC.日志文件\nD.归档日志文件",
+        "answer": "D"
+    },
+    {
+        "question": "18.在Oracle中，当用户要执行SELECT语句时，下列哪个进程从磁盘获得用户需要的数据。\nA.用户进程\nB.服务器进程\nC.日志写入进程（LGWR）\nD.检查点进程（CKPT）",
+        "answer": "B"
+    },
+    {
+        "question": "19.在Oracle中，一个用户拥有的所有数据库对象统称为。\nA.数据库\nB.模式\nC.表空间\nD.实例",
+        "answer": "B"
+    },
+    {
+        "question": "20.在Oracle中，有一个教师表teacher的结构如下：ID NUMBER(5)\nNAME VARCHAR2(25)\nEMAIL VARCHAR2(50)\n下面哪个语句显示没有Email地址的教师姓名。\nA.SELECT name FROM teacher WHERE email = NULL;\nB.SELECT name FROM teacher WHERE email <> NULL;\nC.SELECT name FROM teacher WHERE email IS NULL;\nD.SELECT name FROM teacher WHERE email IS NOT NULL;",
+        "answer": "C"
+    },
+    {
+        "question": "21.在Oracle数据库的逻辑结构中有以下组件：A 表空间 B 数据块 C 区 D 段这些组件从大到小依次是。\nA.A→B→C→D\nB.A→D→C→B\nC.A→C→B→D\nD.D→A→C→B",
+        "answer": "B"
+    },
+    {
+        "question": "22.在Windows操作系统中，Oracle的 服务监听并接受来自客户端应用程序的连接请求。\nA.OracleHOME_NAMETNSListener\nB.OracleServiceSID\nC.OracleHOME_NAMEAgent\nD.OracleHOME_NAMEHTTPServer",
+        "answer": "A"
+    },
+    {
+        "question": "23.在Windows操作系统中，Oracle的 服务是使用iSQL*Plus必须的。\nA.OracleHOME_NAMETNSListener\nB.OracleServiceSID\nC.OracleHOME_NAMEAgent\nD.OracleHOME_NAMEHTTPServer",
+        "answer": "B"
+    },
+    {
+        "question": "24.在 Oracle 中创建用户时，若未提及 DEFAULT TABLESPACE 关键字，则 Oracle 就将 表空间分配给用户作为默认表空间。\nA.USER\nB.SYSTEM\nC.SYS\nD.DEFAULT",
+        "answer": "B"
+    },
+    {
+        "question": "25.在Oracle数据库中， 用户模式存储数据字典表和视图对象。\nA.SYSTEM\nB.SYS\nC.SCOTT\nD.SYSDBA",
+        "answer": "B"
+    },
+    {
+        "question": "26.在Oracle中，下面哪条语句当COMM字段为空时显示0，不为空时显示COMM的值 。\nA.SELECT ename, NVL(comm, 0) FROM emp;\nB.SELECT ename, NULL(comm, 0) FROM emp;\nC.SELECT ename, NULLIF(comm, 0) FROM emp;\nD.SELECT ename, DECODE(comm, NULL, 0) FROM emp;",
+        "answer": "A"
+    },
+    {
+        "question": "27.在Oracle中，下面用于限制分组函数的返回值的子句是。\nA.WHERE\nB.HAVING\nC.ORDER BY\nD.无法限定分组函数的返回值",
+        "answer": "B"
+    },
+    {
+        "question": "28.在Oracle中，有一个名为seq的序列对象，以下语句能返回序列值但不会引起序列值增加的是。\nA.select seq.ROWNUM from dual;\nB.select seq.ROWID from dual;\nC.select seq.CURRVAL from dual;\nD.select seq.NEXTVAL from dual;",
+        "answer": "C"
+    },
+    {
+        "question": "29.在Oracle中，游标都具有下列属性，除了。\nA.%NOTFOUND\nB.%FOUND\nC.%ROWTYPE\nD.%ISOPEN\nE.%ROWCOUNT",
+        "answer": "C"
+    },
+    {
+        "question": "30.在Oracle中，当控制一个显式游标时，下面哪种命令包含INTO子句。\nA.OPEN\nB.CLOSE\nC.FETCH\nD.CURSOR",
+        "answer": "C"
+    },
+    {
+        "question": "31.Oracle提供的 ，能够在不同硬件平台上的Oracle数据库之间传递数据。\nA.归档日志运行模式\nB.RECOVER命令\nC.恢复管理器(RMAN)\nD.Export和Import工具",
+        "answer": "D"
+    },
+    {
+        "question": "32.Select 语句的执行顺序是 (1)select (2)from(3)where(4)group by(5)having(6)order by\nA 、123456 B 、234561 C 、234516 D 、124563",
+        "answer": "C"
+    },
+    {
+        "question": "33.查询语句 SELECT SUBSTR(‘Hello World’,4,5) FROM DUAL; 返回结果，正确的是 \nA 、 loWor B 、 World C 、 lloWo D 、 lo Wo",
+        "answer": "D"
+    },
+    {
+        "question": "34.哪个活动将导致自动回滚\nA.GRANT\nB.CREATE\nC.系统崩溃\nD.从 SQL*Plus 退出",
+        "answer": "C"
+    },
+    {
+        "question": "35.数据库中有两张表， employees(雇员表)， departments(部门表)，表结构为课程中试验案例 , 如果想要获得全部雇员的信息，不管这个雇员是否被分配了部门，以下答案正确的是\nA.SELECT last_name,department_name FROM employees JOIN departments(+)\nB.SELECT last_name,department_name FROM employees(+) JOIN departments\nC.SELECT last_name, department_name FROM employees e RIGHT JOIN departments d ON (E.department_id ＝ D.department_iD. \nD.SELECT last_name, department_name FROM employees e LEFT JOIN departments d ON (E.department_id ＝ D.department_iD. ",
+        "answer": "D"
+    },
+    {
+        "question": "36.关于 Listener 的描述正确的是\nA.监听、接收客户端连接请求\nB.防止黑客入侵\nC.验证连接数据库用户的身份\nD.实现客户端与数据库之间的信息传输",
+        "answer": "A"
+    },
+    {
+        "question": "37.SQL 语句中连接字符串的符号是 \nA. “+” \nB.“||” \nC.“|”\nD.“&”",
+        "answer": "B"
+    },
+    {
+        "question": "38.查询语句 SELECT ROUND(13.57) ， ROUND 13.57 ， 1 ）， ROUND(13.57 ， -1)， TRUNC(13.57 ， -2)FROM DUAL 返回结果，正确的是\nA.13.57 ， 13.6 ，10，13 \nB.13， 13.5 ，14， 0 \nC.14， 13.6 ，10， 0 \nD.13.6 ， 13.5 ，11，13",
+        "answer": "C"
+    },
+    {
+        "question": "39.关于 ROWNUM 的描述，下列正确的是 \nA.ROWNUM 是每个表中实际存在的列。 \nB.ROWNUM 是每条查询语句执行完成之后，给每行数据填充的行号，行号从 0 开始。 \nC.ROWNUM 做为条件表达式时，可以使用任何算术运算符。 \nD.ROWNUM 经常用来做为分页查询。",
+        "answer": "D"
+    },
+    {
+        "question": "40.语句 WHERE SAL BETWEEN 1000 AND 4000 与下列哪个子句等价\nA.WHERE SAL 〉＝ 1000 AND SAL ﹤＝4000\nB.WHERE SAL 〉 1000 AND SAL ﹤4000 \nC.WHERE SAL 〉＝ 1000 OR SAL ﹤＝4000 \nD.WHERE SAL 〉＝ 1000 AND SAL ﹤4000",
+        "answer": "A"
+    },
+    {
+        "question": "41.关于 TRUNCATE 和 DELETE 命令，下列描述正确的是\nA.两者都属于 DML 语句。 \nB.两者都不属于 DML 语句。 \nC.执行 TRUNCATE 命令之后，该会话中先前未提交的事务自动提交。 \nD.执行 TRUNCATE 命令之后，该会话中先前未提交的事务自动回滚。",
+        "answer": "C"
+    },
+    {
+        "question": "42.下面哪条命令能够保证只删除表 employeE. 的数据而保留表的结构并且必要是可以回滚 ?\nA.DROP TABLE employeE. \nB.DELETE FROM employeE. \nC.TRUNCATE TABLE employeE. \nD.This task can’t be accomplisheD.",
+        "answer": "B"
+    },
+    {
+        "question": "43.在关系数据库系统中，为了简化用户的查询操作，而又不增加数据的存储空间，常用的方法是创建\nA.另一个表（ TABLE ） \nB.游标（CURSOR） \nC.视图（ VIEW ）\nD.索引（ INDEX ）",
+        "answer": "C"
+    },
+    {
+        "question": "44.EMP 表结构如下 : ENAME VARCHAR2(35) SALARY NUMBER(8,2) HIRE_DATE DATE 下面那句话列出了在公司工作了五年以上的员工？\nA.SELECT ENAMEFROM EMPWHERE SYSDATE-HIRE_DATE 〉 5；\nB.SELECT ENAMEFROM EMPWHERE HIRE_DATE-SYSDATE 〉 5； \nC.SELECT ENAMEFROM EMPWHERE (SYSDATE-HIRE_DATE. /365 〉 5；\nD.SELECT ENAMEFROM EMPWHERE (SYSDATE-HIRE_DATE. * 365 〉 5；",
+        "answer": "C"
+    },
+    {
+        "question": "45.STUDENT_GRADES 表结构如下 : STUDENT_ID NUMBER(12)SEMESTER_END DATE GPA NUMBER(4,3)要求显示 STUDENT_ID ， SEMESTER_END ，GPA，其中首先以 semester_end 从小到大，之后GPA从大到小排序显示？\nA.SELECT student_id, semester_end, gpaFROM student_gradesORDER BY semester_end DESC, gpa DESC ；\nB.SELECT student_id, semester_end, gpaFROM student_gradesORDER BY semester_end ASC, gpa ASC ；\nC.SELECT student_id, semester_end, gpaFROM student_gradesORDER BY semester_end, gpa DESC；\nD.SELECT student_id, semester_end, gpaFROM student_gradesORDER BY gpa DESC, semester_end DESC ；\nE.SEL CT student_id, semester_end, gpaFROM student_gradesORDER BY gpa DESC, semester_end ASC ；",
+        "answer": "C"
+    },
+    {
+        "question": "46.下列约束哪个是只能在列级定义的 ?\nA.UNIQUE\nB.NOT NULL\nC.CHECK\nD.PRIMARY KEY\nE.FOREIGN KEY",
+        "answer": "B"
+    },
+    {
+        "question": "47.MARKS 表结构如下 :STD_ID NUMBER(4) STUDENT_NAME VARCHAR2(30) SUBJ1 NUMBER(3) SUBJ2 NUMBER(3)下面 sql 语句中是否存在错误 SELECT subj1+subj2 total_marks, std_id FROM marks WHERE subj1 > AVG(subj1) AND subj2 > AVG(subj2) ORDER BY total_marks; 如果有错误，请指出是哪一项？\nA.能够成功执行\nB.SELECT 子句中有错误\nC.WHERE 子句中有错误\nD.ORDER BY子句中有错误",
+        "answer": "C"
+    },
+    {
+        "question": "48.创建表时，一个 VARCHAR2 的列没有指定长度，它的缺省长度是多少？\nA.1\nB.25\nC.4000\nD.对于 VARCHAR2 列，必须指定列的长度",
+        "answer": "B"
+    },
+    {
+        "question": "49.EMP 表结构如下 : LAST NAME VARCNAR2(35) NOT NULL SALARY NUMBER(9,2) NOT NULL COMMISION_PCT NUMBER(4,2) 要计算所有雇员的 12*salary* commission_pct 值 , 下面哪条语句能够保证显示所有雇员的12*salary* commissio _pct 值\nA.SELECT last_name, 12*salary* commission_pctFROM emp ； \nB.SELECT last_name, 12*salary* (commission_pct,0)FROM emp ； \nC.SELECT last_name, 12*salary*(nvl(commission_pct,0))FROM emp ； \nD.SELECT last_name, 12*salary*(decode(commission_pct,0))FROM emp ；",
+        "answer": "C"
+    },
+    {
+        "question": "50.当 quantity 值是 null 时，哪个语句显示 0\nA.Select 100/quantity from inventory \nB.Select NVL(100/quantity,0) from inventory \nC.Select NULL(100/quantity,0) from inventory\nD.Select TO_CHAR(100/quantity,0) from inventory",
+        "answer": "B"
+    },
+    {
+        "question": "51.对于权限的授予，下列说法正确的是\nA.WITH GRANT OPTION 选项可以实现系统权限的传递。 \nB.WITH ADMIN OPTION 选项可以实现对象权限的传递。 \nC.以上两种说法都正确。 \nD.以上两种说法都不正确。",
+        "answer": "D"
+    },
+    {
+        "question": "52.视图 ANN_SAL 是基于employee 表的，试图的结构如下：NAME NULL TYPE EMPNO NOT NULL NUMBER(4) YEARLY_SAL NUMBER(9,2) MONTHLY_SAL NUMBER(9,2) 下面哪条语句能够从试图 ANN_SAL 中检索出数据\nA.SELECT * FROM ANN_SAL \nB.SELECT * FROM EMPLOYEE\nC.SELECT * FROM VIEW ANN_SAL \nD.SELECT * FROM VIEW ANN_SAL IS DON EMPLOYEE",
+        "answer": "A"
+    },
+    {
+        "question": "53.将工资低于3000元或者低于平均工资的员工的工资上浮 10%，下面哪条语句正确 \nA.UPDATE EMP SET SAL=SAL*1.1 WHERE SAL ﹤ 3000 OR SAL ﹤ AVG(SAL) \nB.UPDATE SET SAL=SAL*1.1 FROM EMP WHERE SAL ﹤ 3000 OR SAL ﹤ AVG(SAL) \nC.UPDATE SET SAL=SAL*1.1 FROM EMP WHERE SAL ﹤ 3000 OR SAL ﹤ (SELECT AVG(SAL) FROM EMP) \nD.UPDATE EMP SET SAL=SAL*1.1 WHERE SAL ﹤ 3000 OR SAL ﹤ (SELECT AVG(SAL) FROM EMP)",
+        "answer": "D"
+    },
+    {
+        "question": "54.部分匹配查询中有关通配符 “_” 的正确的叙述是\nA.“_” 代表多个字符 \nB.“_” 代表一个字符 \nC.“_” 不能与 “%” 一同使用 \nD.“_” 代表代表零个或多个字符",
+        "answer": "B"
+    },
+    {
+        "question": "55.哪个选项能够限制组函数返回的值\nA.WHERE \nB.HAVING \nC.ORDER BY \nD.不能限制组函数",
+        "answer": "A"
+    },
+    {
+        "question": "56.为了进行数据库访问 , 需要哪个权限\nA.ALTER USER \nB.CREATE USER \nC.ALTER SYSTEM \nD.CREATE SESSION",
+        "answer": "D"
+    },
+    {
+        "question": "57.关于对空值的描述，下列说法正确的是\nA.包含空值的任何算术表达式结果都等于空。 \nB.包含空值的连接字符串 || 等于与空字符串连接，结果还是空值。 \nC.空值做为判断条件是写法是 ：判断字段＝ null 。 \nD.表Emp中有 5 条记录， empID 分别为 1 ， 2 ， 3 ， 4 ， 5 ，那么查询语句 Select * from Emp where empID not in （ 2 ， 3 ， 4 ， null ）的执行后结果是 2 条记录。",
+        "answer": "A"
+    },
+    {
+        "question": "58.关于事务的描述，下列说法正确的是\nA.执行一个 DDL 或DCL语句后，事务自动开始。 \nB.执行一个 DDL 或DCL语句后，事务自动提交。 \nC.执行一个 DDL 或DCL语句后，事务自动回滚。 \nD.执行一个 DDL 或DCL语句后，对当前事务没有影响。",
+        "answer": "B"
+    },
+    {
+        "question": "59.在 STUDENTS 表添加主键以下哪个语句是正确的 ?\nA.ALTER TABLE students ADD PRIMARY KEY student_id \nB.ALTER TABLE students ADD CONSTRAINT PRIMARY KEY (student_iD.  \nC.ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY student_id \nD.ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY (student_iD.  \nE.ALTER TABLE students MODIFY CONSTRAINT stud_id_pk PRIMARY KEY (student_iD. ",
+        "answer": "D"
+    },
+    {
+        "question": "60.查看序列DEPT_DEPTNO的当前值，应该使用伪列\nA.CURRVAL \nB.NEXTVAL \nC.MAXVAL \nD.MINVAL",
+        "answer": "A"
+    },
+    {
+        "question": "61.在 Oracle 数据库中创建一个表，对其主键叙述正确的是 \nA.一个表可以有多个主键 \nB.一个表的主键只能是一列 \nC.主键必须唯一且不能为空 \nD.联合主键的列数据类型必须一致",
+        "answer": "C"
+    },
+    {
+        "question": "62.在 Oracle 数据库的逻辑结构中有以下组件：1. 表空间 2. 数据块 3. 区 4. 段这些组件从大到小依次是。\nA. 1→2→3→4 B.1→4→3→2 C.1→3→2→4 D. 4→1→3→2",
+        "answer": "B"
+    },
+    {
+        "question": "63.下列哪个子句实现对一个结果集进行分组和汇总。\nA.HAVING\nB.ORDER BY\nC.WHERE\nD.GROUP BY",
+        "answer": "D"
+    },
+    {
+        "question": "64.在 Oracle 数据库中， 用户模式存储数据字典表和视图对象。\nA.SYS\nB.SYSTEM\nC.SCOTT\nD.SYSDBA",
+        "answer": "A"
+    },
+    {
+        "question": "65.以下不属于命名的 PL/SQL 块的是\nA.程序包\nB.过程\nC.游标\nD.函数",
+        "answer": "C"
+    },
+    {
+        "question": "66.在 Oracle 中创建用户时，若未提及 DEFAULT TABLESPACE 关键字，则 Oracle就将 表空间分配给用户作为默认表空间。\nA.HR\nB.SCOTT\nC.SYSTEM\nD.SYS",
+        "answer": "C"
+    },
+    {
+        "question": "67.在 Windows 操作系统中，Oracle 的 服务是使用 iSQL*Plus 必须的\nA.OracleHOME_NAMETNSListener \nB.OracleServiceSID\nC.OracleHOME_NAMEAgent\nD.OracleHOME_NAMEHTTPServer",
+        "answer": "B"
+    },
+    {
+        "question": "68.下列哪个语句可以在 SQL*Plus 中直接调用一个过程 。\nA.RETURN \nB.CALL\nC.SET \nD.EXEC",
+        "answer": "D"
+    },
+    {
+        "question": "69.如果服务器进程无法在数据缓冲区中找到空闲块，为添加从数据文件中读出的数据块，则系统会启动如下哪一个进程\nA.CKPT\nB.DBWR\nC.LGWR\nD.SMON",
+        "answer": "D"
+    },
+    {
+        "question": "70.下列哪一个锁模式不属于 Oracle。\nA.死锁 B.排他锁 C.行级共享锁 D.共享锁",
+        "answer": "A"
+    },
+    {
+        "question": "71.有字符串数据”test”分别存放到 char(10)和 varchar2(10)类型的字段中，其实际存储长度为\nA.10 4\nB.4 4\nC.10 10\nD.4 10",
+        "answer": "A"
+    },
+    {
+        "question": "72.在 Oracle 中，当控制一个显式游标时，下面哪种命令包含 INTO 子句 。\nA.FETCH\nB.CLOSE\nC.OPEN\nD.CURSOR",
+        "answer": "A"
+    },
+    {
+        "question": "73.ORACLE 中，用来判断列值是否为空的操作符是 。\nA.==NULL\nB.NULLIS\nC.AS NULL\nD.IS NULL",
+        "answer": "C"
+    },
+    {
+        "question": "74.查询一个表的总记录数，可以采用 统计函数。\nA.AVG(*)\nB.SUM(*)\nC.COUNT(*)\nD.MAX(*)",
+        "answer": "C"
+    },
+    {
+        "question": "75.以下的哪个命令可以将 SQL 命令的运行结果保存到文件中 。\nA.SAVE\nB.SPOOL\nC.GET\nD.INPUT",
+        "answer": "B"
+    },
+    {
+        "question": "76.为了去除结果集中重复的行，可在 SELECT 语句中使用下列哪个关键字 。\nA.ALL B.DISTINCT C.SPOOL D.HAVING",
+        "answer": "B"
+    },
+    {
+        "question": "77.关于模式的描述下列哪一项不正确。\nA.表或索引等模式对象一定属于某一个模式\nB.在 Oracle 数据库中，模式与数据库用户是一一对应的\nC.一个表可以属于多个模式\nD.一个模式可以拥有多个表",
+        "answer": "C"
+    },
+    {
+        "question": "78.下列 SELECT 语句中，哪些子句可以包含子查询。\nA.SELECT B.GROUP BY C.WHERE D.ORDER BY",
+        "answer": "C"
+    },
+    {
+        "question": "79.下列模式对象中，哪个对象不会占用实际的存储空间。\nA.视图\nB.表\nC.索引\nD.簇",
+        "answer": "A"
+    },
+    {
+        "question": "80.当 Oracle 服务器启动时，下列哪种文件不是必须的。\nA.数据文件 \nB.控制文件 \nC.日志文件 \nD.归档日志文件",
+        "answer": "D"
+    },
+    {
+        "question": "81.在 Oracle 中，当用户要执行 SELECT 语句时，下列哪个进程从磁盘获得用户需要的数据\nA.用户进程 \nB.服务器进程 \nC.日志写入进程（LGWR） \nD.检查点进程（CKPT）",
+        "answer": "B"
+    },
+    {
+        "question": "82.在 Oracle 中，一个用户拥有的所有数据库对象统称为。\nA.数据库 \nB.模式 \nC.表空间 \nD.实例",
+        "answer": "B"
+    },
+    {
+        "question": "83.在 Oracle 中，有一个教师表 teacher 的结构如下： ID NUMBER(5) NAME VARCHAR2(25) EMAIL VARCHAR2(50) 下面哪个语句显示没有 Email 地址的教师姓名。\nA.SELECT name FROM teacher WHERE email = NULL; \nB.SELECT name FROM teacher WHERE email <> NULL; \nC.SELECT name FROM teacher WHERE email IS NULL; \nD.SELECT name FROM teacher WHERE email IS NOT NULL;",
+        "answer": "C"
+    },
+    {
+        "question": "84.在 Oracle 数据库的逻辑结构中有以下组件： A 表空间 B 数据块 C 区 D 段.这些组件从大到小依次是。\nA.A→B→C→D\nB.A→D→C→B\nC.A→C→B→D\nD.D→A→C→B",
+        "answer": "B"
+    },
+    {
+        "question": "85.在 Windows 操作系统中，Oracle 的 服务监听并接受来自客户端应用程 序的连接请求。\nA.OracleHOME_NAMETNSListener \nB.OracleServiceSID \nC.OracleHOME_NAMEAgent \nD.OracleHOME_NAMEHTTPServer",
+        "answer": "A"
+    },
+    {
+        "question": "86.在 Windows 操作系统中，Oracle 的 服务是使用 iSQL*Plus 必须的。\nA.OracleHOME_NAMETNSListener \nB.OracleServiceSID \nC.OracleHOME_NAMEAgent \nD.OracleHOME_NAMEHTTPServer",
+        "answer": "B"
+    },
+    {
+        "question": "87.在 Oracle 中创建用户时，若未提及 DEFAULT TABLESPACE 关键字，则 Oracle 就将 表空间分配给用户作为默认表空间。\nA.USER \nB.SYSTEM \nC.SYS \nD.DEFAULT",
+        "answer": "B"
+    },
+    {
+        "question": "88.在 Oracle 数据库中， 用户模式存储数据字典表和视图对象。\nA.SYSTEM \nB.SYS \nC.SCOTT \nD.SYSDBA",
+        "answer": "B"
+    },
+    {
+        "question": "89.在 Oracle 中，下面哪条语句当 COMM 字段为空时显示 0，不为空时显示 COMM 的值\nA.SELECT ename, NVL(comm, 0) FROM emp; \nB.SELECT ename, NULL(comm, 0) FROM emp; \nC.SELECT ename, NULLIF(comm, 0) FROM emp; \nSELECT ename, DECODE(comm, NULL, 0) FROM emp;",
+        "answer": "A"
+    },
+    {
+        "question": "90.在 Oracle 中，下面用于限制分组函数的返回值的子句是。\nA.WHERE \nB.HAVING \nC.ORDER BY \nD.无法限定分组函数的返回值",
+        "answer": "B"
+    },
+    {
+        "question": "91.在 Oracle 中，有一个名为 seq 的序列对象，以下语句能返回序列值但不会 引起序列值增加的是。\nA.select from dual; \nB.select from dual; \nC.select from dual; \nD.select from dual;",
+        "answer": "C"
+    },
+    {
+        "question": "92.在 Oracle 中，游标都具有下列属性，除了。\nA.%NOTFOUND \nB.%FOUND \nC.%ROWTYPE \nD.%ISOPEN\nE.%ROWCOUNT",
+        "answer": "C"
+    },
+    {
+        "question": "93.在 Oracle 中，当控制一个显式游标时，下面哪种命令包含 INTO 子句（C. 。\nA.OPEN \nB.CLOSE \nC.FETCH \nD.CURSOR",
+        "answer": "C"
+    },
+    {
+        "question": "94.Oracle 提供的，能够在不同硬件平台上的 Oracle 数据库之间传递数据。\nA.归档日志运行模式 \nB.RECOVER 命令 \nC.恢复管理器(RMAN) \nD.Export 和 Import 工具",
+        "answer": "D"
+    },
+    {
+        "question": "95.使用 MySQL Enterprise Monitor的无代理安装监视 MySQL服务器。以下哪两项功能可用于此安装方法?\nA.磁盘使用情况和磁盘特征，包括磁盘顾问程序警告\nB.操作系统内存利用率\nC.CPU 占用率\nD.与安全有关的顾问程序警告\nE.MySQL 复制监视",
+        "answer": "D,E"
+    },
+    {
+        "question": "96.关于冷备份,下列哪项描述是正确的?\nA.如果只需要备份数据结构而不需要备份日志文件，则很适合使用它们。\nB.它们是从正在运行的数据库的快照获取的备份。\nC.它们是从操作系统复制命令获取的备份。\nD.当许多用户在线访问数据库时，它们很适合使用。",
+        "answer": "C"
+    },
+    {
+        "question": "97.分析以下成功执行的语句：\nCREATE TABLE rental (\nrental id int unsigned NOT NULL AUTO INCREMENT,\nrental date datetime NOT NULL,\ninventory id int unsigned NoT NULL,\ncustomer id int unsigned NOT NULL,\nreturn date datetime DEFAULT NULL,\nstaff id int unsigned NoT NULL,\nIast update timestamp NOT NULL DEFAULT CURRENT TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\nPRIMARY KEY (rental iD. \nENGINE-InnoDB;\n现在，检查以下查询：\nSELECT rental_id,customer_id\nFROM rental\nwhere rental_date between now() - interval 1 month and now()\nAND inventory_id=42\nAND staff_id=1024;\n您希望添加一个或多个索引，最大程度地减少查询工作量。\n以下哪条语句可完成此任务？\nA.  ALTER TABLE rental\nADD INDEx(inventory_iD. ,\nADD INDEX (staff_iD. \nADD INDEX (rental_datE. ,\nADD INDEx (customer_iD. ;\nB. ALTER TABLE rental\nADD INDEx (inventory_id, staff_id,rental_date,customer_iD. ;\nC.  ALTER TABLE rental\nADD INDEx (inventory_id,staff_id customer_id, rental_id, rental_datE. ;\nD.  ALTER TABLE rental\nADD INDEX (inventory_iD. ,\nADD INDEX (staff_iD. \nADD INDEX (rental_datE. :\nE.  ALTER TABLE rental\nADD INDEx (rental_date,inventory_id, staff_id, customer_iD. ;\nF.  ALTER TABLE rental ADD INDEX (inventory_id,staff_id,rental_datE. ;",
+        "answer": "B"
+    },
+    {
+        "question": "98.从属服务器I/O线程执行什么操作？\nA.连接到主服务器并请求其发送在其二进制日志中记录的更新\nB.监视和调度对中继日志子系统的1/0调用\nC.读取中继日志并执行其中包含的事件\nD.获取二进制日志的锁， 以便读取要发送到从属服务器的每个事件",
+        "answer": "A"
+    },
+    {
+        "question": "99.以下哪个术语没有出现在 11g Oracle 中 \nA.Multitenant\nB.instance \nC.listener \nD.background processes",
+        "answer": "A"
+    },
+    {
+        "question": "100.下面哪一个不是安装 Oracle 数据库服务器所必须的\nA.安装操作系统 \nB.安装 Oracle 软件\nC.创建数据库 \nD.配置 DataGuard",
+        "answer": "D"
+    },
+    {
+        "question": "101.下列哪一个应该是 Data Guard 备库的预期状态\nA.Open & READ ONLY WITH APPLYING \nB.Mounted & READ ONLY WITH APPLYING \nC.Mounted & READ ONLY \nD.Open & READ ONLY",
+        "answer": "A"
+    },
+    {
+        "question": "102.在 CS 架构的 Oracle 数据库服务器中，下列哪种进程可以不出现在服务器上\nA.Server process \nB.User process(正确答案) \nC.Background process \nD.listener process",
+        "answer": "B"
+    },
+    {
+        "question": "103.在 Oracle 11g 以及 11g 之前，一个实例只能对应一个数据库，一个数据库只能对 应一个实例 \nA.是 \nB.否",
+        "answer": "B"
+    },
+    {
+        "question": "104.在 sqlplus 中使用 create user 命令创建用户后，该用户没有任何权限。\nA.是 \nB.否",
+        "answer": "A"
+    },
+    {
+        "question": "105.以下 内存区不属于 SGA。\nA.PGA B.日志缓冲区 C.数据缓冲区 D.共享池",
+        "answer": "A"
+    },
+    {
+        "question": "106. 模式存储数据库中数据字典的表和视图。\nA.DBA\nB.SCOTT\nC.SYSTEM \nD.SYS",
+        "answer": "D"
+    },
+    {
+        "question": "107.在 Oracle 中创建用户时，若未提及 DEFAULT TABLESPACE关键字，则 Oracle 就将 表空间分配给用户作为默认表空间。\nA.HR \nB.SCOTT\nC.SYSTEM \nD.SYS",
+        "answer": "C"
+    },
+    {
+        "question": "108. 服务监听并按受来自客户端应用程序的连接请求\nA.OracleHOME_NAMETNSListener\nB.OracleServiceSID\nC.OracleHOME_NAMEAgent\nD.OracleHOME_NAMEHTTPServer",
+        "answer": "A"
+    },
+    {
+        "question": "109. 函数通常用来计算累计排名、移动平均数和报表聚合等。\nA.汇总 B.分析 C.分组 D.单行",
+        "answer": "B"
+    },
+    {
+        "question": "110. SQL 语句将为计算列 SAL*12 生成别名 Annual Salary\nA.SELECT ename,sal*12 ‘Annual Salary’ FROM emp;\nB.SELECT ename,sal*12 “Annual Salary” FROM emp;\nC.SELECT ename,sal*12 AS Annual Salary FROM emp;\nD.SELECT ename,sal*12 AS INITCAP(“Annual Salary”) FROM emp;",
+        "answer": "B"
+    },
+    {
+        "question": "111.锁用于提供 。\nA.改进的性能\nB.数据的完整性和一致性\nC.可用性和易于维护\nD.用户安全",
+        "answer": "B"
+    },
+    {
+        "question": "112. 锁用于锁定表，允许其他用户查询表中的行和锁定表，但不允许插入、更新和删除行。\nA.行共享 B.行排他 C.共享 D.排他",
+        "answer": "C"
+    },
+    {
+        "question": "113.有 子句的 SELECT 语句可以在表的一行或多行上放置排他锁。\nA.FOR INSERT\nB.FOR UPDATE\nC.FOR DELETE \nD.FOR REFRESH",
+        "answer": "B"
+    },
+    {
+        "question": "114.使用 命令可以在已分区表的第一个分区之前添加新分区。\nA.添加分区\nB.截断分区\nC.拆分分区\nD.不能在第一个分区前添加分区",
+        "answer": "C"
+    },
+    {
+        "question": "115. 分区允许用户明确地控制无序行到分区的映射。\nA.散列 B.范围 C.列表 D.复合",
+        "answer": "C"
+    },
+    {
+        "question": "116.可以使用 伪列来访问序列。\nA.CURRVAL 和 NEXTVAL\nB.NEXTVAL 和 PREVAL\nC.CACHE 和 NOCACHE\nD.MAXVALUE 和 MINVALUE",
+        "answer": "C"
+    },
+    {
+        "question": "117.带有错误的视图可使用 选项来创建。\nA.FORCE\nB.WITH CHECK OPTION\nC.CREATE VIEW WITH ERROR\nD.CREATE ERROR VIEW",
+        "answer": "A"
+    },
+    {
+        "question": "118.在联接视图中，当 时，该基表被称为键保留表。\nA.基表的主键不是结果集的主键\nB.基表的主键是结果集的主键\nC.基表的主键是结果集的外键\nD.基表的主键不是结果集的外键",
+        "answer": "B"
+    },
+    {
+        "question": "119.在列的取值重复率比较高的列上，适合创建 索引。\nA.标准\nB.唯一 \nC.分区\nD.位图",
+        "answer": "D"
+    },
+    {
+        "question": "120.要以自身的模式创建私有同义词，用户必须拥有 系统权限\nA.CREATE PRIVATE SYNONYM\nB.CREATE PUBLIC SYNONYM\nC.CREATE SYNONYM\nD.CREATE ANY SYNONYM",
+        "answer": "C"
+    },
+    {
+        "question": "121.PL/SQL 块中不能直接使用的 SQL 命令是 。\nA.SELECT\nB.INSERT\nC.UPDATE\nD.DROP",
+        "answer": "D"
+    },
+    {
+        "question": "122.以零作除数时会引发 异常。\nA.VALUE_ERROR\nB.ZERO_DIVIDE\nC.STORAGE_ERROR \nD.SELF_IS_NULL",
+        "answer": "B"
+    },
+    {
+        "question": "123.要更新游标结果集中的当前行，应使用 子句\nA.WHERE CURRENT OF\nB.FOR UPDATE\nC.FOR DELETE\nD.FOR MODIFY",
+        "answer": "A"
+    },
+    {
+        "question": "124.用于处理得到单行查询结果的游标为 。\nA.循环游标\nB.隐式游标\nC.REF 游标\nD.显式游标",
+        "answer": "B"
+    },
+    {
+        "question": "125.公用的子程序和常量在 中声明。\nA.过程\nB.游标\nC.包规范\nD.包主体",
+        "answer": "C"
+    },
+    {
+        "question": "126.数据字典视图 包含存储过程的代码文本\nA.A.USER_OBJECTS \nB.USER_TEXT\nC.USER_SOURCE \nD.USER_DESC",
+        "answer": "C"
+    },
+    {
+        "question": "127.以下不属于命名的 PL/SQL 块的是 。\nA.程序包 \nB.过程\nC.游标\nD.函数",
+        "answer": "C"
+    },
+    {
+        "question": "128. 包用于显示 PL/SQL 块和存储过程中的调试信息\nA.DBMS_OUTPUT\nB.DBMS_STANDARD\nC.DBMS_INPUT\nD.DBMS_SESSION",
+        "answer": "A"
+    },
+    {
+        "question": "129.Oracle 的内置程序包由 用户所有。\nA.SYS\nB.SYSTEM\nC.SCOTT \nD.PUBLIC",
+        "answer": "A"
+    },
+    {
+        "question": "130. 触发器允许触发操作中的语句访问行的列值。\nA.行级\nB.语句级\nC.模式\nD.数据库级",
+        "answer": "A"
+    },
+    {
+        "question": "131.在非归档日志方式下操作的数据库禁用了 。\nA.归档日志\nB.联机日志\nC.日志写入程序\nD.日志文件",
+        "answer": "A"
+    },
+    {
+        "question": "132.以下哪种备份方式需要在完全关闭数据库进行 。\nA.无归档日志模式下的数据库备份\nB.归档日志模式下的数据库备份\nC.使用导出实用程序进行逻辑备份\nD.以上都不对",
+        "answer": "A"
+    },
+    {
+        "question": "133. 方式的导出会从指定的表中导出所有数据。\nA.分区\nB.表\nC.全部数据库\nD.表空间",
+        "answer": "B"
+    },
+    {
+        "question": "134. 参数用于确定是否要导入整个导出文件。\nA.CONSTRAINTS\nB.TABLES\nC.FULL\nD.FILE",
+        "answer": "C"
+    },
+    {
+        "question": "135.如果“2X”的补码是“90H”，那么X的真值是 。\nA.72\nB.-56\nC.56\nD.111",
+        "answer": "B"
+    },
+    {
+        "question": "136.设有两个事务、有如下调度，产生的不一致性是。\nA.丢失修改\nB.不可重复读\nC.读脏数据\nD.幻影读",
+        "answer": "A"
+    },
+    {
+        "question": "137.一个 B 类网络的子网掩码为 255.255.224.0，则这个网络被划分成了 个子网。\nA.2\nB.4\nC.6\nD.8",
+        "answer": "D"
+    },
+    {
+        "question": "138.以下加密算法中适合对大量的明文消息进行加密传输的是\nA.RSA\nB.SHA-1\nC.MD5\nD.RC5",
+        "answer": "D"
+    },
+    {
+        "question": "139.下列描述中， 不是分布式数据库数据透明性的表现形式。\nA.代码透明性\nB.分片透明性\nC.位置透明性\nD.模型透明性",
+        "answer": "A"
+    },
+    {
+        "question": "140.下列哪一项资源不能在用户配置文件中限定？\nA.各个会话的用户数 \nB.登录失败的次数 \nC.使用 CPU 时间 \nD.使用 SGA 区的大小",
+        "answer": "B"
+    },
+    {
+        "question": "141.检查下面的 SQL 语句，哪一项是错误的？ Alter user tempuser identified by oracle default tablespace users default temporary tablespace temp quota 100M on users; \nA.default tablespace users \nB.default temporary tablespace temp \nC.quota 100M on users\nD.identified by oracle",
+        "answer": "B"
+    },
+    {
+        "question": "142.如果 a 表原本是空表,请问执行下列语句后,以下哪个表述正确 。 insert into a values(1,'abc','1'); insert into a values(2,'abc','2'); create table b as select * from a; rollback; \nA.a 表 b 表都没有数据 \nB.a 表 b 表都有两行数据 \nC.a 表有数据,b 表没有数据\nD.a 表没有数据,b 表有数据",
+        "answer": "C"
+    },
+    {
+        "question": "143.在以下用户中，哪个用户不能删除？\nA.一个与数据库连接的用户 \nB.一个没有任何模式对象的用户 \nC.一个带有只读表的用户 \nD.在任何时间可以删除所有用户",
+        "answer": "A"
+    },
+    {
+        "question": "144.若允许一个用户在 DOG_DATA 表空间使用 38M 的磁盘空间， 需在 CREATE USER 语句中使用哪一个子句？ \nA.QUOTA \nB.PROFILE \nC.DEFAULT TABLESPACE \nD.TEMPORARY TABLESPACE ",
+        "answer": "A"
+    },
+    {
+        "question": "145.当查询数据字典 DBA_USERS 时，这个数据字典将显示什么信 息？  \nA.所有用户的表空间份额（quotE.  \nB.当前用户的表空间份额 \nC.数据库用户被创建的日期 \nD.当前用户在一个表空间上是否具有无限的份额",
+        "answer": "A"
+    },
+    {
+        "question": "146.怎样才能开启口令（密码）检验函数？\nA.使用 ORAPWD 应用程序\nB.在 SYS 模式中执行 catproC.sql 脚本 \nC.在 SYS 模式中执行 utlpwdmG.sql 脚本 \nD.将 PASSWORD_VERIFY 初始化参数设置为 TRUE",
+        "answer": "C"
+    },
+    {
+        "question": "147.如果没有赋予一个用户任何概要文件，将发生什么情况？\nA.该用户没有赋予任何概要文件 \nB.该用户不能连接数据库\nC.该用户不能创建 \nD.默认（DEFAULT）概要文件被赋予了这个用户",
+        "answer": "D"
+    },
+    {
+        "question": "148.如要关闭资源限制，应该修改如下的哪一个初始化参数？ \nA.PROSESSES \nB.SESSION_LIMIT \nC.RESOURCE_LIMIT \nD.TIMED_STATISTICS",
+        "answer": "C"
+    },
+    {
+        "question": "149.作为 DBA，运行了创建 VERIFY_FUNCTION 函数的脚本，并 且这个脚本修改了默认的概要文件。如果用户 KIMJ 被赋予了默认概要 文件，她当前的密码是 TIME_2_GO，请问以下哪个密码是可以接受的？  \nA.KIM \nB.KIMJ \nC.KIM_J \nD.ITS4_ME \nE.TIME_2_GO\nF.TIME_3_GO ",
+        "answer": "D"
+    },
+    {
+        "question": "150.段是表空间中一种逻辑存储结构，以下 不是 ORACLE 数据库使用的段类型。\n（A.  索引段 （B. 临时段 （C. 回滚段（D. 代码段",
+        "answer": "D"
+    },
+    {
+        "question": "151.ORACLE 数据库物理结构包括以下三种文件，以下不属于的是。\n（A.  系统文件 （B. 日志文件（C. 数据文件 （D. 控制文件",
+        "answer": "A"
+    },
+    {
+        "question": "152.数据库中有两个用户 scott 和 muuser，物资表 wz 是属于 myuser 用户的，但当前用户是scott，要求查询物资表 wz（wno，wname，wtype，wunit）物资单位 wunit 列为 null 的记录，取结果的前 5 条记录显示，以下正确的 SQL 语句是\nA.select*from where wunit is null and rownum<5\nB.select*from where wunit = null and rownum<5\nC.select*from where wunit is null and rownum<6\nD.select*form where wunit is null and rownum<6；",
+        "answer": "C"
+    },
+    {
+        "question": "153.若当前日期为’25-5 月-06’，以下 表达式能计算出 5 个月后那一天所在月份的最后一天的日期\nA.NEXT_DAY(ADD_MONTHS(28-5 月-06,5))\nB.NEXT_DAY(MONTHS_BETWEEN(28-5 月-06,5))\nC.NEXT_DAY(MONTHS_BETWEEN(’28-5 月-06’,5))\nD.NEXT_DAY(ADD_MONTHS(’28-5 月-06’,5))",
+        "answer": "D"
+    },
+    {
+        "question": "154.下列叙述中正确的是。\nA.数据库是一个独立的系统，不需要操作系统的支持\nB.数据库设计是指设计数据库管理系统\nC.数据库技术的根本目标是要解决数据共享的问题\nD.数据库系统中，数据的物理结构必须与逻辑结构一致",
+        "answer": "C"
+    },
+    {
+        "question": "155.SQL 语句中修改表结构的命令是\nA.MODIFY TABLE \nB.MODIFY STRUCTURE \nC.ALTER TABLE\nD.ALTER STRUCTURE",
+        "answer": "C"
+    },
+    {
+        "question": "156.数据库 DB. 数据库系统 DBS、数据库管理系统 DBMS 三者之间的关系是。\nA.DBS 包括 DB 和 DBMS \nB.DBMS 包括 DB 和 DBS\nC.DB 包括 DBS 和 DBMS \nD.DBS 就是 DB，也就是 DBMS",
+        "answer": "A"
+    },
+    {
+        "question": "157.要控制两个表中数据的完整性和一致性可以设置\"参照完整性\"，要求这两个表。\nA.是同一个数据库中的两个表 \nB.不同数据库中的两个表\nC.两个自由表 \nD.一个是数据库表另一个是自由表",
+        "answer": "A"
+    },
+    {
+        "question": "158.在关系模型中，实现\"关系中不允许出现相同的元组\"的约束是通过。\nA. 候选键 B. 主键 C. 外键 D. 超键",
+        "answer": "B"
+    },
+    {
+        "question": "159.索引字段值不唯一，应该选择的索引类型为 。\nA. 主索引 B. 普通索引 C. 候选索引 D. 唯一索引",
+        "answer": "B"
+    },
+    {
+        "question": "160.从数据库中删除表的命令是 。\nA. DROP TABLE B. ALTER TABLE C. DELETE TABLE D. USE",
+        "answer": "C"
+    },
+    {
+        "question": "161.DELETE FROM S WHERE 年龄>60 语句的功能是 。\nA.从 S 表中彻底删除年龄大于 60 岁的记录\nB.S 表中年龄大于 60 岁的记录被加上删除标记 \nC.删除 S 表 \nD.删除 S 表的年龄列",
+        "answer": "B"
+    },
+    {
+        "question": "162.SQL 语言是 语言。 \nA.层次数据库 \nB.网络数据库 \nC.关系数据库 \nD.数据库",
+        "answer": "C"
+    },
+    {
+        "question": "163.在 SQL 中，删除视图用。 \nA.DROP SCHEMA 命令 \nB.CREATE TABLE 命令 \nC.DROP VIEW 命令 \nD.DROP INDEX 命令",
+        "answer": "C"
+    },
+    {
+        "question": "164.下列有关数据库的描述，正确的是 。 \nA.数据库是一个 DBF 文件 \nB.数据库是一个关系 \nC.数据库是一个结构化的数据集合 \nD.数据库是一组文件",
+        "answer": "C"
+    },
+    {
+        "question": "165.用二维表数据来表示实体及实体之间联系的数据模型称为。\nA. 实体--联系模型 B. 层次模型 C. 网状模型 D. 关系模型",
+        "answer": "D"
+    },
+    {
+        "question": "166. 语言是过程化 SQL 的缩写\nA.SQL \nB.Tran-SQL \nC.PL/SQL\nD.以上都不对",
+        "answer": "C"
+    },
+    {
+        "question": "167.启动数据库的命令。 \nA.startup \nB.startup open \nC.shutdown \nD.startup database",
+        "answer": "A"
+    },
+    {
+        "question": "168. 是启动数据库时用来记录数据文件、联机日志文件的相关信息的二进制文件。\nA.数据文件 \nB.参数文件 \nC.控制文件 \nD.归档文件",
+        "answer": "C"
+    },
+    {
+        "question": "169.你需要在表 SALES 里查找一些产品明细，其中 PROD_ID 列包括字符'_D123'。 WHERE 子句条件能得到这些相符产品。 \nA.WHERE prod_id LIKE '%_D123%' ESCAPE '_' \nB.WHERE prod_id LIKE '%\\_D123%' ESCAPE '\\' \nC.WHERE prod_id LIKE '%_D123%' ESCAPE '%_' \nD.WHERE prod_id LIKE '%\\_D123%' ESCAPE '\\_'",
+        "answer": "B"
+    },
+    {
+        "question": "170.关于单行函数，哪一个描述是正确的？ \nA.他们只能接受一个参数。 \nB.他们只能嵌套两层。 \nC.参数只能是字段值或常量。 \nD.他们始终为查找表中的每个行返回一个值。",
+        "answer": "D"
+    },
+    {
+        "question": "171.在表 emp 里，计算员工的年薪 SAL*12 并生成别名 Annual Salary。 \nA.SELECT ename,sal*12, Annual Salary FROM emp; \nB.SELECT ename,sal*12 \"Annual Salary \" FROM emp; \nC.SELECT ename,sal*12 AS Annual Salary FROM emp;\nD.SELECT ename,sql*12 AS INICTAP(\"Annual Salary \") FROM emp; ",
+        "answer": "B"
+    },
+    {
+        "question": "172.查看 promotion（促销表），每个促销周期为 7 天。你的经理要你生成一个报表，提供每周的促销成本。\nA.SELECT promo_name, promo_cost/promo_end_date-promo_begin_date/7 FROM promotions;\nB.SELECT promo_name,(promo_cost/promo_end_date-promo_begin_datE. /7 FROM promotions;\nC.SELECT promo_name, promo_cost/(promo_end_date-promo_begin_date/7) FROM promotions;\nD.SELECT promo_name, promo_cost/((promo_end_date-promo_begin_datE. /7) FROM promotions;",
+        "answer": "D"
+    },
+    {
+        "question": "173.你需要为每个客户的信息额度增加$1000。在输出时，客户的 last name 列头应为 Name,cust_credit_limit 的列头为 New Credit Limit。\nA.SELECT cust_last_name Name, cust_credit_limit + 1000 \"New Credit Limit\" FROM customers;\nB.SELECT cust_last_name AS Name, cust_credit_limit + 1000 AS New Credit Limit FROM customers;\nC.SELECT cust_last_name AS \"Name\", cust_credit_limit + 1000 AS \"New Credit Limit\" FROM customers;\nD.SELECT INITCAP(cust_last_namE.  \"Name\", cust_credit_limit + 1000 INITCAP(\"NEW CREDIT LIMIT\") FROM customers;",
+        "answer": "C"
+    },
+    {
+        "question": "174.下面查询：SQL> SELECT cust_name AS \"NAME\", cust_credit_limit/2 AS MIDPOINT,MIDPOINT+100 AS \"MAX LOWER LIMIT\" FROM customers; 上面查询在执行时发生错误，这个错误的原因是什么？\nA.一个别名不能使用在表达式中。 \nB.一个别名 NAME 没有一个隔开的双引号。 \nC.MIDPOINT+100 是错误的因为 CUST_CREDIT_LIMIT 包含了 NULL 值。 \nD.为 CUST_CREDIT_LIMIT/2 表达式取一个别名 MIDPOINT 应用双引号隔开。",
+        "answer": "A"
+    },
+    {
+        "question": "175.你想去生成一个报表显示每个员工从入职以来的总的薪金。 你执行下列查询： SQL>SELECT ename ' joined on ' hiredate ', the total compensation paid is ' TO_CHAR(ROUND(ROUND(SYSDATE-hiredatE. /365) * sal + comm) \"COMPENSATION UNTIL DATE\" FROM employees; 输出结果：哪个说法是正确的？ \nA.此查询执行错误是因为别名无效的。\nB.此查询能正确执行并得到正确的结果。\nC.此查询能正确执行但不能得到正确结果。\nD.此查询执行错误是因为 ROUND 函数是无效的。",
+        "answer": "C"
+    },
+    {
+        "question": "176.当你执行下列查询： SQL> select E.empno, E.ename, D.loc2 from emp e, dept d 3 where E.deptno = D.deptno 4 and substr(E.ename, 1, 1) = ‘S’; 下列哪个语句是 Oracle 数据库中可用的 ANSI 兼容等价语句？ \nA.select empno, ename, loc from emp join dept on emp.deptno = dept.deptno where substr(emp.ename, 1, 1) = ‘S’; \nB.select empno, ename, loc from emp, dept on emp.deptno = dept.deptno where substr(emp.ename, 1, 1) = ‘S’; \nC.select empno, ename, loc from emp join dept where emp.deptno = dept.deptno and substr(emp.ename, 1, 1) = ‘S’; \nD.select empno, ename, loc from emp left join dept on emp.deptno = dept.deptno and substr(emp.ename, 1, 1) = ‘S’;",
+        "answer": "A"
+    },
+    {
+        "question": "177.你要操纵 Oracle 数据，下列哪个不是 SQL 命令？\nA.select * from dual;\nB.set define \nC.update emp set ename = 6543 where ename = ‘SMITHERS’; \nD.create table employees(empid varchar2(10) primary key);",
+        "answer": "B"
+    },
+    {
+        "question": "178.下列哪个函数不返回结果-97？ \nA.ceil()\nB.floor()\nC.round()\nD.trunc()",
+        "answer": "B"
+    },
+    {
+        "question": "179.查看下面 PROMOTIONS 表结构：name Null Type\nPROMO_ID NOT NULL NUMBER(6)\nPROMO_NAME NOT NULL VARCHAR2(30)\nPROMO_CATEGORY NOT NULL VARCHAR2(30)\nPROMO_COST NOT NULL NUMBER(10,2\n管理层想看到每种促销种类的唯一促销成本。下面哪个查询得到需要的结果？\nA.SELECT DISTINCT promo_cost, promo_category FROM promotions;\nB.SELECT promo_category, DISTINCT promo_cost FROM promotions;\nC.SELECT DISTINCT promo_cost, DISTINCT promo_category FROM promotions;\nD.SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY 1;",
+        "answer": "D"
+    },
+    {
+        "question": "180.下列哪个 CREATE TABLE 语法是有效的？\nA.CREATE TABLE emp9$# (emp_no NUMBER (4));\nB.CREATE TABLE 9emp$# (emp_no NUMBER(4)); \nC.CREATE TABLE emp*123 (emp_no NUMBER(4)); \nD.CREATE TABLE emp9$# (emp_no NUMBER(4), date DATE. ; ",
+        "answer": "A"
+    },
+    {
+        "question": "181.评估下列 CREATE TABLE 命令： CREATE TABLE orders (ord_no NUMBER(2) CONSTRAINT ord_pk PRIMARY KEY, ord_date DATE, cust_id NUMBER(4)); CREATE TABLE ord_items(ord_no NUMBER(2), item_no NUMBER(3), qty NUMBER(3) CHECK (qty BETWEEN 100 AND 200), expiry_date date CHECK (expiry_date > SYSDATE. , CONSTRAINT it_pk PRIMARY KEY (ord_no,item_no), CONSTRAINT ord_fk FOREIGN KEY(ord_no) REFERENCES orders(ord_no)); 当执行上述命令时失败，原因是什么？ \nA.SYSDATE 不能用于 CHECK 约束。\nB.BETWEEN 子句不能用于 CHECK 约束。 \nC.CHECK 约束不能放在具有 DATE 数据类型的列。\nD.ORD_NO 和 ITEM_NO 不能用于复合主键因为 ORD_NO 也是外键。",
+        "answer": "A"
+    },
+    {
+        "question": "182.哪个 CREATE TABLE 语法是有效的？\nA.CREATE TABLE ord_details (ord_no NUMBER(2) PRIMARY KEY, item_no NUMBER(3) PRIMARY KEY, ord_date DATE NOT NULL); \nB.CREATE TABLE ord_details (ord_no NUMBER(2) UNIQUE, NOT NULL, item_no NUMBER(3), ord_date DATE DEFAULT SYSDATE NOT NULL); \nC.CREATE TABLE ord_details (ord_no NUMBER(2) , item_no NUMBER(3), ord_date DATE DEFAULT NOT NULL, CONSTRAINT ord_uq UNIQUE (ord_no), CONSTRAINT ord_pk PRIMARY KEY (ord_no));\nD.CREATE TABLE ord_details (ord_no NUMBER(2), item_no NUMBER(3), ord_date DATE DEFAULT SYSDATE NOT NULL, CONSTRAINT ord_pk PRIMARY KEY (ord_no, item_no)); ",
+        "answer": "D"
+    },
+    {
+        "question": "183.检查下列 CREATE SEQUENCE 语法： CREATE SEQUENCE seq1 START WITH 100 INCREMENT BY 10 MAXVALUE 200 CYCLE NOCACHE; 当 SEQ1 序列生成到最大值为 200。你执行下列 SQL 语法： SELECT seq1.nextval FROM dual; 此 SELECT 语法显示什么？ \nA. 1 B. 10 C. 100 D. 出现错误",
+        "answer": "A"
+    },
+    {
+        "question": "184.检查下列 SQL 语法： 用 PRODUCTS 表，你需要生成名字，当前价格列表，及打折扣 25%后小于$10 的所有的这 些产品。SQL>SELECT prod_name, prod_list_price, prod_list_price - (prod_list_price * .25) \"DISCOUNTED_PRICE\" FROM products WHERE discounted_price < 10; 此查询执行时发生一个错误。此错误的原因是什么？\nA.括号应包含整个表达式。\nB.双引号应该从列别名被删除。 \nC.在 WHERE 子句的表达式应被替换。 \nD.列别名应为大写且在 WHERE 子句中用双引号括起来。",
+        "answer": "C"
+    },
+    {
+        "question": "185.下面哪两个关于索引说法正确？\nA.他们可以建立在表和聚簇上。 \nB.他们可以建立在表上和简单视图上。 \nC.你可以使用相同的列创建唯一索引。 \nD.如果你指定相同列的不同组合可以建立多个索引。",
+        "answer": "A,D"
+    },
+    {
+        "question": "186.实例（INSTANCE. 包含以下哪两个部分？\nA.SGA\nB.DataBase\nC.一系列后台进程\nD.Server Process",
+        "answer": "A,C"
+    },
+    {
+        "question": "187.实例恢复包含哪两个动作？\nA.提交\nB.前滚\nC.回滚\nD.恢复\nE.还原",
+        "answer": "B,C"
+    },
+    {
+        "question": "188.基于用户管理的备份，说法正确的是？\nA.不用关闭数据库，直接底层拷贝就可以保证一致性\nB.可以干净一致的关闭数据库，然后底层拷贝保证一致性\nC.不用关闭数据库，因为底层文件和oracle系统无关\nD.不用关闭数据库，但需要将备份的表空间置于备份模式",
+        "answer": "B,D"
+    },
+    {
+        "question": "189.评估下列 SQL 命名： SQL>CREATE SEQUENCE ord_seq INCREMENT BY 10 START WITH 120 MAXVALUE 9999 NOCYCLE; SQL>CREATE TABLE ord_items (ord_no NUMBER(4)DEFAULT ord_seq.NEXTVAL NOT NULL, item_no NUMBER(3), qty NUMBER(3) CHECK (qty BETWEEN 100 AND 200), expiry_date date CHECK (expiry_date > SYSDATE. , CONSTRAINT it_pk PRIMARY KEY (ord_no,item_no), CONSTRAINT ord_fk FOREIGN KEY(ord_no) REFERENCES orders(ord_no)); 上述命令建立表失败，哪两个 SQL 语法失败？\nA.A. 你在 CHECK 约束的条件下不能使用 SYSDATE。\nB.你在 CHECK 约束条件下不能使用 BETWEEN。\nC.你不能使用 NEXTVAL 序列值作为列的 DEFAULT 值。\nD.ORD_NO 和 ITEM_NO 不能用于复合主键因为 ORD_NO 也是外键。",
+        "answer": "A,C"
+    },
+    {
+        "question": "190.在Oracle 12c根容器中，如何切换到某PDB(例如 ERP1）？\nA.Conn sys/oracle\nB.Alter session set container=erp1;\nC.Conn sys/oracle@erp1\nD.Conn sys/oracle@erp1 as sysdba",
+        "answer": "B,D"
+    },
+    {
+        "question": "191.在Oracle中，可用于提取日期时间类型特定部分(如年、月、日、时、分、秒)的函数有。\nA.DATEPART\nB.EXTRACT\nC.TO_CHAR\nD.TRUNC",
+        "answer": "B,C"
+    },
+    {
+        "question": "192.在Oracle中，PL/SQL块中定义了一个带参数的游标：CURSOR emp_cursor(dnum NUMBER) IS SELECT sal, comm FROM emp WHERE deptno = dnum;那么正确打开此游标的语句是。\nA.OPEN emp_cursor(20);\nB.OPEN emp_cursor FOR 20;\nC.OPEN emp_cursor USING 20;\nD.FOR emp_rec IN emp_cursor(20) LOOP … END LOOP;",
+        "answer": "A,D"
+    },
+    {
+        "question": "193.下面哪些语句是 DML （数据操作语言）\nA.SELECT\nB.INSERT\nC.DELETE\nD.CREATE\nE.DROP",
+        "answer": "B,C"
+    },
+    {
+        "question": "194.Oracle 中，可用于提取日期时间类型特定部分（如年、月、日、时、分、秒）的函数有 。\nA.DATEPART \nB.EXTRACT \nC.TO_CHAR \nD.TRUNC",
+        "answer": "B,C"
+    },
+    {
+        "question": "195.在 Oracle 中，PL/SQL 块中定义了一个带参数的游标： CURSOR emp_cursor(dnum NUMBER) IS SELECT sal, comm FROM emp WHERE deptno = dnum; 那么正确打开此游标的语句是。\nA.OPEN emp_cursor(20); \nB.OPEN emp_cursor FOR 20; \nC.OPEN emp_cursor USING 20; \nD.FOR emp_rec IN emp_cursor(20) LOOP … END LOOP;",
+        "answer": "A,D"
+    },
+    {
+        "question": "196.按照最佳实践，搭建 RAC 集群需要哪些类型的网络应用服务器配合\nA.时间服务器\nB.DNS 域名服务器\nC.邮件服务器 \nD.文件服务器",
+        "answer": "A,B"
+    },
+    {
+        "question": "197.下列关于 ORACLE 的 to_date 函数和 to_char 函数，描述正确的是 \nA.to_char 函数是将字符串数据转换为日期数据 \nB.to_date 函数是将字符串数据转换为日期数据 \nC.to_char 函数是将日期数据转换为字符数据 \nD.to_date 函数是将日期数据转换为字符数据",
+        "answer": "B,C"
+    },
+    {
+        "question": "198.哪两个关于约束正确的说法？\nA.外键不能包含 NULL 值。\nB.一个有 UNIQUE 约束的字段能包含 NULL 值。 \nC.约束是只对一个表上的 INSERT 操作执行。\nD.约束能被禁用即使约束字段包含数据。\nE.所有的约束可以在列级定义，也可以在表级别定义。 ",
+        "answer": "B,D"
+    },
+    {
+        "question": "199.查看表 PRODUCTS。你需要生成一个报表显示如下格式：CATEGORIES 5MP Digital Photo Camera's category is Photo Y Box's category is Electronics Envoy Ambassador's category is Hardware 哪两个查询可以获得需要的输出?\nA.SELECT prod_name || q'''s category is ' || prod_category CATEGORIES FROM products;\nB.SELECT prod_name || q'['s ]'category is ' || prod_category CATEGORIES FROM products;\nC.SELECT prod_name || q'\\'s \\' || ' category is ' || prod_category CATEGORIES FROM products;\nD.SELECT prod_name || q'<'s >' || 'category is ' || prod_category CATEGORIES FROM products;",
+        "answer": "C,D"
+    },
+    {
+        "question": "200.哪两个 SQL 语句在表 EMP_DETAILS 执行是正确的？\nA.一个 EMP_IMAGE 字段能包含在 GROUY BY 子句。\nB.一个 EMP_IMAGE 字段不能包含在 ORDER BY 子句。\nC.你不能在表中增加新的 LONG 字段。\nD.您可以更改表，包括对 EMP_IMAGE 列的 NOT NULL 约束。",
+        "answer": "B,C"
+    },
+    {
+        "question": "201.检查下列表结构：name Null Type TRANS_ID NOT NULL NUMBER(6) CUST_NAME NOT NULL VARCHAR2(20) CUST_STATUS NOT NULL CHAR TRANS_DATE NOT NULL DATE TRANS_VALIDITY VARCHAR2 CUST_CREDIT_LIMIT NUMBER 在上面的表结构中创建和存储中哪些说法是正确的？ \nA.CUST_STATUS 列将给出错误。\nB.TRANS_VALIDITY 列将给出错误。 \nC.CUST_STATUS 列能存储一个字符。 \nD.CUST_CREDIT_LIMIT 列不能存储有小数位的值。\nE.TRANS_VALIDITY 列最大长度为一个字符。\nF.TRANS_DATE 列能存储天、月、世纪、年、小时、分、秒和秒的小数部分。",
+        "answer": "B,C"
+    },
+    {
+        "question": "202.在上面的表结构中创建和存储中哪些说法是正确的？ \nA.TRANS_DATE 列只允许存储格式为 dd-mon-yyyy 的日期。\nB.CUST_CREDIT_VALUE 列允许存储正负整数。\nC.TRANS_VALIDITY 列允许存储日、小时、分和秒间隔时间。\nD.CUST_STATUS 列允许存储最大为 4000 字符。",
+        "answer": "B,C"
+    },
+    {
+        "question": "203.在 Oracle 数据库 10g/11g 里哪三个关于数据类型描述正确的是？\nA.每个表里只能有一个 LONG 字段。\nB.一个 TIMESTAMP 数据类型字段只能存储带秒的时间值。\nC.BLOB 数据类型字段用于在操作系统文件里存储二进制数据。\nD.可以为一个 VARCHAR2 数据类型列中指定的最小列宽为 1\nE.一个 CHAR 数据类型列中的值是空格填充到最大定义的列宽",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "204.下面哪个 SQL 语句显示 1890.55 as $1,890.55？\nA.SELECT TO_CHAR(1890.55,'$0G000D00') FROM DUAL;\nB.SELECT TO_CHAR(1890.55,'$9,999V99') FROM DUAL;\nC.SELECT TO_CHAR(1890.55,'$99,999D99') FROM DUAL;\nD.SELECT TO_CHAR(1890.55,'$99G999D00') FROM DUAL; E. SELECT TO_CHAR(1890.55,'$99G999D99') FROM DUAL;",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "205.按照最佳实践，需要为下列哪些磁盘组准备磁盘\nA.OCR 表决磁盘组\nB.DATA 数据磁盘组\nC.ARCH 归档磁盘组\nD.Online Redo Log 磁盘组 ",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "206.你用下列命令删除 PRODUCTS 表： SQL>DROP TABLE products; 下列哪三个说法正确的？\nA.表的结构及所有数据都删除。 \nB.在会话中未提交的事务被提交。\nC.表对应的所有的索引将保留但他们变为无效。 \nD.所有的视图和同义词将保留但他们变为无效。 \nE.所有的数据被删除但是表结构将保留。",
+        "answer": "A,B,D"
+    },
+    {
+        "question": "207.下面关于 TRUNCATE 和 DELETE 的说法正确的是 \nA.TRUNCATE 属于 DDL ，而 DELETE 属于 DML \nB.TRUNCATE 与 DELETE 均能够删除表中的指定记录 \nC.TRUNCATE 不能删除表中的指定记录，而 DELETE 能够删除表中的指定记录 \nD.在清空表记录的操作时， TRUNCATE 的执行效率比 DELETE 高 \nE.TRUNCATE 和 DELETE 没有差异",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "208.关于使用 AlTER TABLE 进行修改表的定义，下列描述正确的是\nA.使用该命令可以修改表的名称\nB.使用该命令可以修改列的名称\nC.使用该命令可以修改列的数据类型\nD.使用该命令可以修改列的精度",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "209.关于子查询的描述，下列说法正确的是\nA.子查询必须要写在括号内。\nB.子查询可以写在 FROM ， WHERE ，HAVING子句中。\nC.＜ALL主要应用于多行子查询中，表示要小于子查询结果集的任意一个值即可。\nD.子查询可以用在UPDATE的 SET 子句中。",
+        "answer": "A,B,D"
+    },
+    {
+        "question": "210.下列哪些项是搭建 RAC 所需要的 IP\nA.物理 \nB.VIP\nC.SCAN IP\nD.心跳 IP ",
+        "answer": "A,B,C,D"
+    },
+    {
+        "question": "211.下列说法正确的是 \nA.从 12c 开始，Oracle 一个实例可以关联多个数据库\nB.Oracle RAC 各节点呈现给 Oracle 的网络接口名称要根据用途保持一致\nC.表空间的大小就是其中所有数据文件大小的总和\nD.逻辑结构与物理结构通过表空间与数据文件产生关联",
+        "answer": "A,B,C,D"
+    }
+]

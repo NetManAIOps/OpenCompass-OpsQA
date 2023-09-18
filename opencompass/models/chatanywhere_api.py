@@ -14,7 +14,7 @@ from opencompass.utils.prompt import PromptList
 from .base_api import BaseAPIModel
 
 PromptType = Union[PromptList, str]
-OPENAI_API_BASE = 'https://api.chatanywhere.cn/v1/chat/completions'
+OPENAI_API_BASE = 'https://api.chatanywhere.com.cn/v1/chat/completions'
 
 
 @MODELS.register_module()

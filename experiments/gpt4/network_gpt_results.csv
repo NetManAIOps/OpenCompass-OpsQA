@@ -1,0 +1,9 @@
+,model,dataset,qtype,sc,acc,chinese,cot,shot
+0,GPT-4-peiqi,zh-3shot-sc+cot-single,single,yes,0.614921780986763,yes,yes,3shot
+1,GPT-4-peiqi,zh-3shot-sc+cot-single,single,no,0.614921780986763,yes,yes,3shot
+2,GPT-4-peiqi,3shot-sc+cot-single,single,yes,0.6378066378066378,no,yes,3shot
+3,GPT-4-peiqi,3shot-sc+cot-single,single,no,0.6378066378066378,no,yes,3shot
+4,GPT-4-peiqi,zh-3shot-sc+cot-multiple,multiple,yes,0.48409090909090907,yes,yes,3shot
+5,GPT-4-peiqi,zh-3shot-sc+cot-multiple,multiple,no,0.48409090909090907,yes,yes,3shot
+6,GPT-4-peiqi,3shot-sc+cot-multiple,multiple,yes,0.4868421052631579,no,yes,3shot
+7,GPT-4-peiqi,3shot-sc+cot-multiple,multiple,no,0.4868421052631579,no,yes,3shot

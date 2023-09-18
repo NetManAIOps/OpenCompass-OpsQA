@@ -1,0 +1,2352 @@
+{
+    "0": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 2
+        }
+    },
+    "1": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 3
+        },
+        "chatglm2-6b": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        }
+    },
+    "2": {
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 2
+        }
+    },
+    "3": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        }
+    },
+    "4": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "5": {
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        }
+    },
+    "6": {
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "7": {
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        }
+    },
+    "8": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "9": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        }
+    },
+    "10": {
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "11": {
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 1
+        }
+    },
+    "12": {
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        }
+    },
+    "13": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        }
+    },
+    "14": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "15": {
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        }
+    },
+    "16": {
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "17": {
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        }
+    },
+    "18": {
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "19": {
+        "llama-2-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "20": {
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "21": {
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        }
+    },
+    "22": {
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "23": {
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "24": {
+        "chatglm2-6b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "25": {
+        "llama-2-70b-int4": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "26": {
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "27": {
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "28": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "29": {
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "30": {
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "31": {
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "32": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        }
+    },
+    "33": {
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        }
+    },
+    "34": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        }
+    },
+    "35": {
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        }
+    },
+    "36": {
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        }
+    },
+    "37": {
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 2
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        }
+    },
+    "38": {
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "39": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "40": {
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        }
+    },
+    "41": {
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 3
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "42": {
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        }
+    },
+    "43": {
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        }
+    },
+    "44": {
+        "chinese-llama-2-13b": {
+            "Fluency": 0,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    },
+    "45": {
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 3
+        },
+        "internlm_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        }
+    },
+    "46": {
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 2
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        }
+    },
+    "47": {
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 1
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 2,
+            "Evidence": 2
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 1,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "48": {
+        "internlm_chat_7b": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 1
+        },
+        "qwen_chat_7b": {
+            "Fluency": 2,
+            "Accuracy": 3,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 1
+        }
+    },
+    "49": {
+        "qwen_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "chinese-alpaca-2-13b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 1
+        },
+        "llama-2-13b-chat": {
+            "Fluency": 3,
+            "Accuracy": 3,
+            "Evidence": 2
+        },
+        "chatglm2-6b": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "baichuan-13b-chat": {
+            "Fluency": 1,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "llama-2-70b-int4": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "internlm_chat_7b": {
+            "Fluency": 3,
+            "Accuracy": 0,
+            "Evidence": 0
+        },
+        "GPT-3.5-turbo": {
+            "Fluency": 3,
+            "Accuracy": 1,
+            "Evidence": 0
+        },
+        "chinese-llama-2-13b": {
+            "Fluency": 2,
+            "Accuracy": 0,
+            "Evidence": 0
+        }
+    }
+}

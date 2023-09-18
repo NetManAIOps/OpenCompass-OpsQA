@@ -1,0 +1,1170 @@
+[
+    {
+        "question": "Which two are true about reclaiming space used by Flashback logs in Oracle Database 19c and \nlater releases?\nA. Space is only reclaimed when there is space pressure in the Fast Recovery Area(FRA. \nB. Space is always reclaimed automatically when the retention period for Flashback logs is \nlowered\nC. Space might be reclaimed proactively before space pressure occurs\nD. Space is always reclaimed proactively before space pressure occurs\nE.  Space might be reclaimed automatically when the retention period for Flashback logs is \nlowered",
+        "answer": "C,E"
+    },
+    {
+        "question": "2、Which two are true about server-generated alerts?\nA. Stateless alerts can be cleared manually\nB. Stateless alerts are automatically cleared after one day.\nC. Stateful alerts are purged automatically from the alert history after one day\nD. Stateless alerts can be purged manually from the alert history.\nE.  Stateful alerts must be cleared by a DBA to resolve the problem identified in the alert.",
+        "answer": "A,D"
+    },
+    {
+        "question": "Which three are true about upgrading Oracle Grid Infrastructure?\nA. The newer version is installed in a separate Oracle Grid Infrastructure home on the same server \nas the existing version\nB. A direct upgrade can be performed only from the immediately preceding Oracle Grid \nInfrastructure version\nC.  The upgrade process will automatically install all mandatory patches for the current version of \nOracle Grid Infrastructure\nD.  Only the grid user can perform the upgrade\nE.  Existing Oracle Database instances must be shut down before starting the upgrade\nF. An existing Oracle base can be useD.\n",
+        "answer": "A,E,F"
+    },
+    {
+        "question": "Which two are true about the Program Global Area(PGA. and its management in an Oracle \ndatabase instance?\nA. PGA AGGREGATE LIMII is a hard limit on the PGA size for any one session\nB. The entire PGA is located in the System Global Area(SGA. when using shared servers\nC. The private SQL area(UGA. is located in the System Global Area(SGA. when using shared \nservers\nD. Sorts and Hash Joins use PGA memory.\nE.  The private SQL area(UGA. is located in the System Global Area(SGA. when using dedicated \nservers",
+        "answer": "C,D"
+    },
+    {
+        "question": "5、You plan to perform cross-platform PDB transport using XTTS.\nWhich two are true?\nA. A backup of the PDB must exist, taken using the BACKUP command with the ro PLATFORM \nclause\nB.  The source PDB can be in MOUNT or OPEN state\nC. The source PDB must be in MOUNT statE.\nD.  The source PDB must not be an application root.\nE.  Automatic conversion of endianess occurs.\nF.  The source and target platforms must have the same endianess",
+        "answer": "A,F"
+    },
+    {
+        "question": "6、Which two are true about the automatic execution of operating system scripts when performing \nsilent mode installation starting from Oracle Database 19c?\nA.  The installer will prompt for the root or sudo password\nB. Silent install always runs operating scripts automatically.\nC.  The response file can specify the root or sudo password\nD. The response file must contain the root or sudo password\nE.  The response file can specify the path of the sudo program",
+        "answer": "A,E"
+    },
+    {
+        "question": "7 、Which three actions will add a resource to an Oracle Restart configuration?\nA. creating a database service using Oracle Database Configuration Assistant(DBCA. \nB. creating a disk group using the CREATE DISKGROUP SQL statement\nC.  creating a database using the CREATE DATABASE SQL statement\nD. creating an Oracle Database service by modifying the SERVICE NAMES parameter\nE. creating an Oracle Automatic Storage Management(AM)instance with ASM Configuration \nAssistant(ASMCA. \nF ) creating a database service using DBMS SERVICE CREATE SERVICE",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "8、How do you configure a CDB for local undo mode?\nA. Open the CDB instance in restricted modE. In CDB$ROOT, drop the UNDO tablespace \nExecute AI TER DAMBASE LOCAL UNDO ON in each PDB. and then restart the CDB instance\nB. Open the CDB instance in restricted modE. In CDB$ROOT, execute ALTER DATABASE \nLOCAL UNDO ON. create an UNDO tablespace in each PDB, and then restart the CDB instancE.\nC.  Open the CDB instance in upgrade modE. In CDB&ROOT, execute ALTER DATABASE \nLOCAL UNDO ON, and then restart the CDB instance\nD.  Open the CDB in read-only modE. In CDB$ROOT, execute ALTER DATABASE LOCAL \nUNDO ON and then change the CDB to read/write mode\nE.  Open the CDB instance in upgrade modE. In each PDB, execute ALTER DATABASE LOCAL \nUNDO ON, create an UNDO tablespace, and then restart the CDB instancE.",
+        "answer": "C"
+    },
+    {
+        "question": "9 、Which three activities are possible for PDBS?\nA.  converting an application PDB to a regular PDB\nB.  converting an application PDB to an application seed\nC.  converting a regular PDB to an application PDB\nD.  copying an application container into another application container in the same CDB\nE.  converting an application seed to an application PDB\nF.  converting an application PDB to an application root\nG.  copying an application container into another application container in a different CDB",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "10、A user complains about poor database performance\nYou want to verify if the user's session has waited for certain types of I/O activity\nWhich view displays all waits waited on by a session at least once?\nA.  V$SESSTAT\nB.  V$SESSION WAIT\nC.  V$SESSION EVENT\nD.  V$SESSION\nE.  V$SESSION WAIT CLASS",
+        "answer": "C"
+    },
+    {
+        "question": "11、 Which two are true about RMAN duplexed backup sets?\nA.  They can be written to media\nB They can be created only by using the copies option of a BACKUP command\nC.  They can be created by using the RMAN CONFIGURE command to specify duplexing before \ntaking a backup\nD.  They can be written only to disk.\nE.  They must be written to media",
+        "answer": "A,C"
+    },
+    {
+        "question": "12 、Examine this configuration\n1. CDB1 is a container database running in ARCHIVELOG modE.\n2. Multiple uncommitted transactions are running in CDB1\n3. Redo log groups 1 and 2 are INACTIVE\n4. Redo log group 3 is the CURRENT group\nAll members of redo log group 3 are lost before it is archived\nExamine these possible steps\n1. SHUTDOWN ABORT\n2. STARTUP NOMOUNT\n3. STARUP MOUNT\n4. ALTER DATABASE MOUNT\n5. RESTORE DATABASE\n6. RECOVER DATABASE NOREDO\n7. RECOVER DATABASE UNTILAVAILABLE\n8. RESTORE ARCHIVELOG ALL\n9. ALTER DATABASE OPEN\n10. ALTER DATABASE OPEN RESETLOGS\nChoose the minimum required steps in the correct order to recover the database\nA. 1,3,5,6,9\nB. 1,3,5,8,6,10\nC. 1,2,5,7,4,10\nD. 1,3,5,7,10\nE. 1,3,5,6,10\nF. 1,3,5,6,10",
+        "answer": "D"
+    },
+    {
+        "question": "13、A schema owner truncated a table in error and must recover the data\nWhich Oracle Flashback feature could be used to recover the data?\nA. FLASHBACK VERSION QUERY\nB.  FLASHBACK TABLE\nC. FLASHBACK TRANSACTION\nD.  FLASHBACK DATABASE\nE.  FLASHBACK DATA ARCHIVE",
+        "answer": "D"
+    },
+    {
+        "question": "14、While backing up to an SBT channel, you determine that the read phase of your compressed \nRecovery Manager (RMAN)incremental level 0 backup is a bottleneck\nFORCE LOGGING is enabled for the database\nWhich two could improve read performance?\nA.  Disable FORCE LOGGING for the database\nB.  Enable asynchronous disk I/O\nC.  Increase the size of the database buffer cachE.\nD. Increase the level of RMAN multiplexing\nE.  Increase the size of tape I/O buffers",
+        "answer": "B,D"
+    },
+    {
+        "question": "15、 Which two are true about Oracle instance recovery?\nA.  Recovery begins from the beginning of the CURRENT redo log group.\nB.  Recovery begins from the start of any ACTIVE redo log group or the start of the CURRENT \nlog group if no other group is ACTIVE\nC.  Recovery begins from the last checkpoint position that was recorded in the control file by the \ncheckpoint process (ckpt)\nD.  Recovery begins from the last checkpoint position that was calculated by the Database Writer \nbefore instance failure\nE.  Recovery reads redo until the end of the redo thread, and then opens the databasE. SMON then \nrolls back any dead transactions\nF.  Recovery reads redo until the end of the redo threaD. SMON rolls back any dead transactions, \nand then the database is opened",
+        "answer": "C,E"
+    },
+    {
+        "question": "16、Which three are true about recovering tables using RMAN?\nA.  RMAN can recover tables in the SYSAUX tablespace\nB.  RMAN always uses an auxiliary instance\nC.  RMAN can recover a table after a DDL operation has altered the table structurE.\nD.  RMAN can recover tables owned by the sys user.\nE.  RMAN can recover tables in the SYSTEM tablespace\nF.  RMAN can recover tables in a standby database\nG.  RMAN can recover tables owned by the SYSTEM user.",
+        "answer": "B,C,G"
+    },
+    {
+        "question": "17、Which two are true about creating RMAN backups for an Oracle container database?\nA.  Control file backups can be created while connected to cdb$root\nB.  The BACKUP TABLESPACE command can back up a PDB tablespace even if RMAN is \nconnected to CDB$ROOT\nC.  Online Redo Log backups can be created while connected to CDB$ROOT.\nD.  Control file backups can not be created while connected to a PPB.\nE.  Archived Redo Log backups can be created while connected to PDB",
+        "answer": "A,B"
+    },
+    {
+        "question": "18、Which two are true about creating pluggable databases(PDBS)in Oracle 19c and later releases?\nA.  A PDB snapshot depends on an existing storage snapshot of the source PDB\nB.  A PDB snapshot can be a full copy of a source PDB\nC.  A PDB snapshot can be a sparse copy of a source PDB\nD.  A snapshot copy PDB does not depend on an existing storage snapshot of the source PDB\nE.  A snapshot copy PDB can be a full copy of a source PDB",
+        "answer": "B,C"
+    },
+    {
+        "question": "19、In which two situations can you use Database Upgrade Assistant?\nA.  when the operating system(OS)needs to be changed as part of the upgrade\nB.  when multiple pluggable databases in a container database have to be upgraded in a specific \nsequence\nC. when the hardware platform needs to be changed as part of the upgrade\nD.  when a character set conversion is required during the upgrade\nE.  when the target and source database are on the same platform",
+        "answer": "B,E"
+    },
+    {
+        "question": "20、Which three are true in Oracle 19c and later releases?\nA.  Simultaneous data pump jobs can be limited at the pluggable database(PDB.  level\nB.  An ordinary data pump export of a table with encrypted columns will always encrypt the same \ncolumns when imported\nC.  Tablespaces always remain in read/write mode during transportable tablespace operations\nD.  A transportable data pump import can leave a plugged-in tablespace in read/write modE.\nE.  Tablespaces never remain in read/write mode during transportable tablespace operations\nF.  A transportable data pump import can leave a plugged-in tablespace in read-only mode",
+        "answer": "A,D,F"
+    },
+    {
+        "question": "21、Which three are true about patchsets?\nA.  They are only released quarterly\nB.  They are installed via Opatch or Opatchauto.\nC.  A base release is not needed to install patchsets.\nD.  They can introduce new features\nE.  They can be applied in a rolling fashion for Clusterware and the databases\nF.  Installing a patchset is considered an upgradE.",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "22 、 Which three are true about recovery operations done without using Recovery \nManager(RMAN)?\nA.  A lost SPFILE can be recovered from memory using SQL*PLUS\nB.  A lost password file can be re-created with SQL*PLUS.\nC.  A lost password file can be manually re-created with the orapwd utility\nD.  A lost index tablespace can be re-created without performing any recovery\nE.  A lost TEMPFILE must always be re-created manually.\nF.  A lost PFILE can be re-created from alert log using SOL*PLUS",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "23、Which two are true about Optimizer Statistics?\nA.  They are ignored by Optimizer if they are stalE.\nB.  They provide real-time data about schema objects\nC.  By default, they are automatically gathered by a maintenance job\nD.  They are gathered by the SQL Tuning Advisor\nE.  They can be gathered by the DBMS_STATS package",
+        "answer": "C,E"
+    },
+    {
+        "question": "24、Which three are true about interpreting Recovery Manager(RMAN)error stacks returned to \nstandard output?\nA.  If an RMAN command fails, the output will only identify the command that failed\nB.  If an RMAN command fails, the output will identify the channel ID where the failure occurreD.\nC.  Media Management errors appear as a line with\"sbtio\nD.  Some messages in the error stack are not errors\nE.  Media Management errors appear as a line with\"Additional information and a number.\nF.  Media Management errors appear as a line with\"sbtio and a number.",
+        "answer": "B,D,E"
+    },
+    {
+        "question": "25、In performance management, which two factors might reduce the ability of an application to \nscale to a larger number of users?\nA.  the number of data files containing extents belonging to tables updated by a transaction\nB.  issuing multiple savepoints during a transaction\nC.  poorly written SQL\nD.  poorly trained users who do not commit transactions\nE.  the number of tablespaces containing tables updated by a transaction",
+        "answer": "C,D"
+    },
+    {
+        "question": "26、Which three are true about block media recovery?\nA.  The target database for which one or more blocks are to be recovered must be in the OPEN \nstate\nB.  The data file containing the block being recovered remains online\nC.  It cannot repair logical corruption\nD.  It can be performed on noncorrupt blocks\nE.  A block being recovered is not accessible\nF.  To use it, Flashback Database must be enabled",
+        "answer": "B,D,E"
+    },
+    {
+        "question": "27、You issued this command\nRMAN> BACKUP RECOVERY AREA FORCE\nWhich three are true?\nA.  All Oracle recovery files normally written to the FRA and which have been backed up already \nto the current FRA are backed up\nB.  All files in any previous FRA that have not yet been backed up, are backed up\nC.  All Oracle recovery files normally written to the FRA and which have not yet been backed, \narebacked up\nD.  All Oracle recovery files normally written to the FRA and which have been backed up already \nto in any previous FRA, are backed up\nE.  All files in the current fast recovery area(FRA. that have not yet been backed up, are backed up\nF.  All files in the current FRA that have been backed up already, are backed up\nG.  All files in any previous FRA that have been backed up already, are backed up.",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "28、 Which three are true about Automatic Workload Repository (AWR), Automatic Database \nDiagnostic Monitor(ADDM), and the Manageability Monitor(MMON)background process?\nA.  AWR snapshots must be deleted when no longer required by ADDM\nB.  By default, MMON creates an AWR snapshot every 30 minutes.\nC.  ADDM can recommend extending the buffer cache\nD.  ADDM can recommend shrinking the buffer cache\nE.  By default, AWR snapshots are automatically purged after eight days\nF ADDM performs its analysis only when a DBA requests it.",
+        "answer": "C,D,E"
+    },
+    {
+        "question": "29、Which three are true about Automatic Workload Repository (AR)and Automatic Database \nDiagnostic Monitor(ADDM)in an Oracle multitenant environment?\nA.  AWR snapshots can be created in CDB$ROOT\nB.  No AWR data is stored in the CDBSROOT SYSAUX tablespace\nC.  ADDM can run in a nonroot container\nD.  All AWR data is stored in the CDBSROOR SYSAUX tablespace\nE.  AWR snapshots can be created in a PDB\nF.  AWR reports can be generated while connected to any container",
+        "answer": "A,E,F"
+    },
+    {
+        "question": "30、Which four are true about duplicating a database using Recovery Manager(RMAN)\nA.  A connection to an auxiliary instance is always required\nB.  A connection to the target database instance is always required\nC.  A subset of the target database can be duplicated\nD A new DBID is always created for the duplicated database\nE.  Duplication can be done by having the auxiliary database instance pull backup sets from the \ntarget database instance\nF.  Duplication can be done by having the target database instance push copies to the auxiliary\ndatabase instance\nG. A connection to the recovery catalog instance is always required\nH. A backup of the target database is always requireD.",
+        "answer": "A,C,E,F"
+    },
+    {
+        "question": "31、Which are three of the steps taken by Database Configuration Assistant(DBCA )to clone a \nremote pluggable database(PDB. starting from Oracle 19c?\nA.  leaving the cloned PDB in mount state\nB.  creating a database link from CDBSROOR in the local database to the PDB in the remote \nsystem that is to be cloned\nC.  creating a database link from CDBSROOR in the local database to CDBSROOR in the remote \nsystem that is to be cloned\nD.  opening the cloned PDB\nE.  backing up the cloned PDB",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "32、Which two are true about the character sets used in an Oracle database?\nA.  Unicode enables information from any language to be stored using a single character set\nB.  Unicode is the only supported character set for Oracle databases created using \nDatabaseConfiguration Assistant (DBCA. \nC.  Single-byte character sets provide better performance than multibyte character sets\nD.  Single-byte character sets always use 7-bit encoding schemes\nE.  Multibyte character sets allow more efficient space utilization than single byte character sets.\nF.  Single-byte character sets always use 8-bit encoding schemes.",
+        "answer": "A,C"
+    },
+    {
+        "question": "33、Which three are true about using Database Upgrade Assistant(DBUA. to upgrade a database?\nA.  Multiple databases with the same ORACLE HOME can be upgraded simultaneously\nB.  All pluggable databases are automatically upgraded as part of a container database upgradE.\nC.  DBUA must be launched from the target Oracle Home\nD.  The Pre-upgrade Information Tool script is executed by DBUA\nE.  A whole database backup must exist before upgrade\nF.  The database must be opened in read-only modE.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "35、Which three are true about using Database Resource Manager in an Oracle multitenant \nenvironment?\nA.  A Pdb-level resource plan can limit session PGA memory\nB.  A Cdb-level resource plan is mandatory when using Pdb-level resource plans\nC.  A Cdb-level resource plan can limit session CPU utilization.\nD.  A Cdb-level resource plan can limit PDB UNDO use\nE.  Pdb-level resource plans can limit uncommitted UNDO per consumer group\nF.  A Cdb-level resource plan can limit PDB CPU utilization.",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "36、Which three are true about the FLASHBACK DATABASE feature?\nA.  It always generates REDO and UNDO\nB.  It requires that the target database be in ARCHIVELOG mode\nC.  FLASHBACK DATABASE only uses FLASHBACK Logs to get the database to the desired \nflashback time\nD.  FLASHBACK LOGS are archived after a log switch\nE.  A database can be flashedback using SQL*PLUS\nF.  Queries and DML have the same FLASHBACK LOG overhead when flashback is enabled for \na database",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "37、Which should be tuned first when doing a performance tuning exercise for an Oracle Database \nenvironment?\nA.  log writer performance\nB.  SQL statements\nC.  database instance memory management and sizes\nD.  general operating system health\nE.  database writer performance",
+        "answer": "D"
+    },
+    {
+        "question": "38、Which three are true about Rapid Home Provisioning (RHP), which has been available since \nOracle 18c?\nA.  It can be used to deploy Grid Infrastructure homes, including Oracle Restart.\nB.  It is an Oracle Grid Infrastructure service\nC.  It is an Oracle Database service\nD.  It cannot be used to provision middlewarE.\nE.  It cannot be used to provision applications\nF.  It can be used to deploy Oracle Database homes.",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "39、You want to transport the UNIVERSIRY tablespace from one database to another.\nThe universiry tablespace is currently open read/write\nThe source and destination platforms have the same endian format.\nExamine this list of steps:\n1. Make the UNIVERSIRY tablespace read-only on the source system\n2. Export the UNIVERSIRY tablespace metadata using EXPDP\n3. Create a cross-platform backup set from the UNIVERSITY tablespace on the source system, \nusing an\nRMAN command that includes the DAMAPUMP clause\n4. Copy the cross-platform backup sets to the destination system\n5. Copy the Data Pump dump set from the source to the destination system\n6. Restore the cross-platform backup set on the destination system using an RMAN command that\nincludes the pamapump clause\n7. Import the UNIVERSIRY tablespace metadata using IMPDP\n8. Make the UNIVERSIRY tablespace read/write on the destination system\nWhich are the minimum number of steps required, in the correct order, to transport the \nUNIVERSIRY tablespace?\nA. 3,4,6\nB. 1,3,4,6,8\nC. 1,2,3,4,5,6,7,8\nD. 2,3,4,5,6,7",
+        "answer": "B"
+    },
+    {
+        "question": "40、A database is configured in ARCHIVELOG mode\nA full RMAN backup exists but no control file backup to trace has been taken\nA media failure has occurred\nIn which two scenarios is incomplete recovery required?\nA.  after losing all copies of the control file\nB.  after losing a sysaux tablespace data file\nC.  after losing all members of the CURRENT online redo log group\nD.  after losing all members of an INACTIVE online redo log group\nE.  after losing an UNDO tablespace that is in use",
+        "answer": "C,E"
+    },
+    {
+        "question": "41、Which three are true about an application container?\nA.  It can contain a single application\nB.  It can contain multiple applications\nC.  Two application containers can share an application seed PDB\nD.  An application PDB can belong to multiple application containers\nE.  It must have an application root PDB\nF.  It must have an application seed PDB",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "42、Which two are true about backup set compression using RMAN default compression?\nA.  Compressed backups cannot have a section size defined\nB.  Unused blocks below the high water mark are backed up\nC.  Binary compression adds CPU overhead to backup operations\nD.  Compressed backups can be written only to media\nE.  Compression can be done only for locally managed tablespaces",
+        "answer": "C,E"
+    },
+    {
+        "question": "43、Which three are true about Automatic Workload Repository (AWR)snapshots?\nA.  They can be retained forever\nB.  They are generated if statistics LEVEL is set to ALL.\nC.  They are always created manual\nD.  They are generated if statistics LEVEL is set to BASIC.\nE.  They are always created automatically.\nF.  They are generated if statistics LEVEL is set to TYPICAL",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "44、Which two are true about duplicating pluggable databases(PDBS) with RMAN?\nA.  CDB$ROOT and PDBSSEED are automatically duplicated if a PDB is duplicated\nB.  A user with SYSDBA or SYSBKUP must use RMAN logged in to a PDB in order to duplicate \nit.\nC.  Two or more PDBS can be duplicated with the same RMAN DUPLICATE command\nD. The auxiliary instance is automatically created with ENABLE PLUGGABLE DATABASE \nTRUE\nE.  All tablespaces belonging to a PDB must be duplicated when duplicating the PDB",
+        "answer": "A,C"
+    },
+    {
+        "question": "47、Which three capabilities require the use of the RMAN recovery catalog?\nA.  using the REPORT SCHEMA command to list a databases current data files and tablespaces\nB.  using the KEEP FOREVER clause with the BACKUP command\nC.  creating encrypted backups\nD.  creating customized reports about a single databases backups\nE.  using the REPORT SCHEMA command to list a databases data files and tablespaces at times in \nthe past\nF.  using RMAN stored scripts",
+        "answer": "B,E,F"
+    },
+    {
+        "question": "49、Which two are true about various Oracle security and auditing capabilities\nA.  Application-common Transparent Security Data Protection(TSDP)policies can be created only \nif all the PDBS in the application container are closed\nB.  Unified auditing can be automatically synchronized to all application PDBS in an application\ncontainer\nC.  Application-common OLS policies can be created only if all the PDBS in the application \ncontainer are closed\nD.  Fine-grained auditing (FGA )policies in an application root are automatically synchronized to \nall application PDBS contained in the application container when they are updated\nE.  Application-common TSDP policies are always container specifiC.",
+        "answer": "B,E"
+    },
+    {
+        "question": "50、Which statement correctly describes the SQL profiling performed by the SQL Tuning Advisor?\nA.  It is a set of recommendations by the optimizer to create new indexes\nB.  It is a set of recommendations by the optimizer to change the access methods used\nC.  It is auxiliary information collected by the optimizer for a SQL statement to help use better \njoins orders\nD.  It is a set of recommendations by the optimizer to restructure a SQL statement to avoid\nsuboptimal execution plans\nE.  It is auxiliary information collected by the optimizer for a SQL statement to eliminate \nestimation error",
+        "answer": "E"
+    },
+    {
+        "question": "51、Which three are true about performing an Oracle Database install on Linux?\nA.  It can be done after installing Grid Infrastructure for a Standalone Server\nB.  It allows you to select the languages supported by the Oracle database server.\nC.  The Oracle Preinstallation RPM can be used to configure the Oracle database installation \nowner the Oracle Inventory group, and an Oracle administrative privileges group.\nD.  It can be done before installing Grid Infrastructure for a Standalone Server\nE.  The runfixup. sh script can install missing RPMS\nF.  The Oracle Preinstallation RPM must be used to configure the Oracle database installation \nowner, the Oracle Inventory group, and an Oracle administrative privileges group.\nG.  The Oracle database administrator must be granted access to the root operating system account \nto run root privileged scripts",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "52、Which three are true about a whole database backup?\nA.  It can be created only by using RMAN\nB.  It is the only possible backup type for a database in NOARCHIVELOG mode\nC.  It can be consistent.\nD.  It can consist of either backup sets or image copies.\nE.  It can be inconsistent\nF.  It always includes all data files, the current control file, the server parameter file, and archived \nredo logs.\n",
+        "answer": "C,D,E"
+    },
+    {
+        "question": "53 、 Which three resources are always shared among CDB$ROOT and pluggable \ndatabases( PDBS)?\nA.  the log writer process(LGWR)\nB.  Undo tablespaces\nC.  temporary tablespaces\nD.  the data dictionary in CDB$ROOT\nE.  the Process Monitor Process(PMON)\nF.  SYSAUX tablespaces",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "54、which three are true about the tools for diagnosing Oracle Database failure situations?\nA. The Automatic Diagnostic Repository (ADR) has a separate home directory for each instance of \neach Oracle product that is installed and uses it\nB.  The ADR command-line utility (ADRCI)can package incident information to send to Oracle\nSupport.\nC.  The ADR can store metadata in an Oracle Database repository.\nD.  Flashback commands help with repairing physical errors.\nE.  The Data Recovery Advisor uses the ADR\nF RMAN can always repair corrupt blocks",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "55、Which three are true about RMAN archival backups with the RESTORE POINT clause?\nA.  Archive logs are retained if they are necessary to allow the database to be recovered to a \nconsistent state when an archival backup is restored\nB.  The SPFILE is included in the archival backup.\nC.  The ARCHIVAI attribute for a backup overrides the RMAN retention policy\nD.  They are never considered obsolete by RMAN\nE.  They can optionally be written to a fast recovery area(FRA. .\nF.  All archive logs are retained after an archival backup is taken, until the next archival backup is \ntaken of the same database\nG. Use of a recovery catalog is always required to support the creation and use of archival backups",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "56、Which three are true about backing up the control file?\nA.  It gets backed up automatically by RMAN when the BACKUP SPFILE command is used\nB.  It gets backed up automatically by RMAN as a trace file containing SQL statements for control \nfile re-creation when a database backup occurs\nC.  It can get backed up automatically as a binary copy.\nD.  It can be backed up manually as a binary copy.\nE.  It cannot be backed up manually as a binary copy.\nF.  It can be backed up manually as a trace file containing SQL statements for control file \nre-creation",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "57、You want to install Oracle Grid Infrastructure for a Standalone Server using Oracle Universal \nInstaller （OUI)\nThere is no existing Oracle installation on the server.\nWhich two are prerequisites?\nA.  the Oracle Inventory group oinstall\nB.  the installation of Oracle ASMLIB\nC.  an operating system user to own this installation\nD.  a group called dba\nE.  an operating system account called grid",
+        "answer": "A,C"
+    },
+    {
+        "question": "58、RMAN has just been connected to a target database and the recovery catalog database\nIn which two cases would an automatic full resynchronization occur between this target databases \ncontrol file and the RMAN recovery catalog?\nA.  when control file metadata for archive log backups or image copies has been overwritten in the \ntarget databases control file due to being older than CONTROL FILE RECORD KEEP TIME\nB.  when control file metadata for data file backups or image copies has been overwritten in the \ntarget databases control file due to being older than CONTROL FILE RECORD KEEP TIME\nC.  when a backup of the current control file is created\nD.  when the target is first registered\nE.  when a new tablespace is added to a registered target database",
+        "answer": "C,D"
+    },
+    {
+        "question": "59、Which three are true about post-upgrade activities when upgrading an Oracle database using \nDatabase Upgrade Assistant?\nA.  After a manual upgrade, TNSNAMES. ORA entries must be updated to reflect the new \nORACLE HOME\nB.  The new extended data type capabity must be enabled by running the utlrp. sql script\nC.  The Oracle Application Express configuration should be updated after upgrading Oracle \nDatabase\nD.  Any Recovery Manager(RMAN)recovery catalog must be upgraded manually\nE.  Time zone files must be upgraded manually using the DBMS DST PL/SQL packagE.",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "60、A container database, CDB1, contains a pluggable database PDB1\nAnother container database is called CDB2\nYou want to relocate PPB1 from CDB1 to CDB2 with near-zero down time\nWhich three are required?\nA.  CDB1 must be in shared UNDO mode only\nB.  CDB2 must be in archivelog modE.\nC.  CDB1 must be in archivelog mode\nD.  CDB2 must be in shared UNDO mode only\nE.  CDB1 and CDB2 must both be in local UNDO mode\nF.  CDB1 and CDB2 must be in shared UNDO mode",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "61、Which two are true about an Rpm-based Oracle Database installation?\nA.  It requires an Unbreakable Linux Network(ULN)subscription\nB.  It uses a service configuration script to create a single-instance database as part of the\ninstallation\nC.  It performs a software-only Oracle Database installation\nD.  It includes the Oracle Preinstallation RPM\nE.  From Oracle Database 18c, a single RPM can be used to install only Oracle Database Server \nfor a single instance",
+        "answer": "C,D"
+    },
+    {
+        "question": "62、Which three are true about cloning databases into an existing CDB with RMAN?\nA.  The target and auxiliary instance passwords must be the samE.\nB.  Only one PDB can be cloned at a time\nC.  Two or more PDBS can be cloned with the same command\nA NON-CDB can be cloned into a PDB\nE.  A user with SYSDBA or SYSBKUP must be logged in with RMAN to CDB$ROOT when \ncloning a PDB\nF.  A user with SYSDBA or SYSBKUP must be logged in with RMAN to the NON-CDB being \ncloned when cloning a NON-CDB",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "63、Which two are true about Lockdown profiles in a container database(CDB. and its pluggable \ndatabases(PDBS)?\nA.  A PDB Lockdown profile can be created in an application root\nB.  A PDB Lockdown profile can be created in a regular PDB\nC.  A Lockdown profile created from a base Lockdown profile is never automatically modified if \nthe profile on which it is based is modified\nD.  A PDB Lockdown profile can be created in CDB$ROOT\nE.  A Lockdown profile created from a base Lockdown profile is always automatically modified if \nthe profile on which it is based is modified",
+        "answer": "A,D"
+    },
+    {
+        "question": "64、Which three are true about the Oracle Optimizer?\nA.  It can re-optimize execution plans after previous executions detect suboptimal plans\nB.  It considers the filters in WHERE clauses when generating execution plans for SQL statements\nC.  It can only use SQL Plan Directives tied to the SQL statement for which a plan is being \ngenerated\nD.  It considers object statistics when generating execution plans for SQL statements\nE.  It updates stale object statistics in the Data Dictionary\nF.  It obeys all hints.",
+        "answer": "A,B,D"
+    },
+    {
+        "question": "65、The HR_Root application container must support the execution of a query on a table shared by \napplication local PDBS PDB1 and PDB2, and remote PDB PDB3\nWhich three are true?\nA.  A proxy PDB must exist in the application root in the remote CDB\nB.  A database link must exist in the remote CDB referring to the local CDB\nC.  A database link must exist in the local CDB root referring to the remote CDB\nD.  The HR_Root replica must exist in the remote CDB\nE.  A proxy PDB must exist in the application root in the local CDB\nF.  PDB3'S application root replica must exist in the local CDB",
+        "answer": "C,D,E"
+    },
+    {
+        "question": "66、Which two are true about RMAN Multisection backups when a very large data file is divided \ninto four sections?\nA.  Each of the file sections must be processed serially.\nB.  The four sections must be image copies\nC.  The four sections can be created serially\nD.  The four sections can be created in parallel\nE.  The four sections must be contained in backup sets",
+        "answer": "C,D"
+    },
+    {
+        "question": "67、Which three are true about Rapid Home Provisioning of Oracle software?\nA.  It can be used only on nodes with Oracle Grid Infrastructure installed\nB.  It can be used to patch existing Oracle software installations\nC.  It can be used to deploy new homes without disrupting active databases.\nD.  It can be used to upgrade only single-instance databases running on Oracle Restart.\nE.  It can be used to create templates of Oracle homes as gold images of only Oracle databases\nF.  It can be used to create a single-instance Oracle Database in an already-installed Oracle homE.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "68 、 Which three are true about using an RMAN Recovery Catalog with a pluggable \ndatabase(PDB. target connection in Oracle Database 19c and later releases?\nA.  The target PDB must be registered in a Virtual Private Catalog\nB.  The base catalog must be used by RMAN when performing point-in-time recovery for the PDB \nregistered in the Virtual Private Catalog\nC.  The target PDB must be registered in both the base catalog and the Virtual Private Catalog\nD.  The target PDB must be registered in a base catalog\nE.  The base catalog owner must give the Virtual Private Catalog access to metadata for one or \nmore PDBS\nF. The base catalog must be enabled for Virtual Private Catalog use",
+        "answer": "D,E,F"
+    },
+    {
+        "question": "70、A database is configured in ARCHIVELOG mode\nFull RMAN backups are taken daily and no backup to trace has been taken of the control file, A \nmedia failure has occurred\nIn which two scenarios is complete recovery possible?\nA.  after losing an archived log from after the most recent backup\nB.  after losing all copies of the control file\nC.  after losing the SYSTEM tablespace\nD.  after losing an archived log from before the most recent backup\nE.  when any archived log from, before, or after the most recent backup is corrupt",
+        "answer": "B,C"
+    },
+    {
+        "question": "71、Which two are true about an Oracle gold image-based installation in Oracle 18c and later \nreleases?\nA.  It does not require the setup wizard\nB.  It can be used to install and upgrade Oracle Database for single-instance and cluster\nconfigurations\nC.  It can be used for both Oracle Database and Oracle Grid Infrastructure installation\nD.  It uses a single RPM that automatically extracts and installs the Oracle Database software\nE.  It can only install and configure Oracle Database softwarE. The database has to be create\nseparately.",
+        "answer": "B,C"
+    },
+    {
+        "question": "72、Which two are true about unplugging an application container from a container database and \nplugging it into a different container database?\nA.  It requires local UNDO mode in both container databases\nB.  Application PDBS in the application container must be unplugged before the application root is \nunpluggeD.\nC.  The application root of an application container should be plugged into the other CDB before \nits application PDBS are plugged in.\nD.  Unplugging the application root from a CDB unplugs all its application PDBS.\nE.  Plugging the application root into a different CDB plugs in all its application PDBS.\nF.  IT requires only local UNDO mode in the database where the application container will be\nunplugged",
+        "answer": "B,C"
+    },
+    {
+        "question": "73、Which three are true about actions that can or cannot be performed by users with the \nSYSBACKUP privilege?\nA.  They can view data from any user-defined tables.\nB.  They can drop any tablespace\nC.  They can create any tablE.\nD.  They cannot drop tablespaces\nE.  They can view data from any data dictionary view or dynamic performance view.\nF.  They cannot create restore points",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "74、Which two are true about RMAN backups when using a media manager?\nA.  A media manager is required to create RMAN proxy copies.\nB.  A media manager always writes RMAN requested backups to tape\nC.  The media manager layer(MML) routines provided by Oracle support any vendors media\nmanagement products\nD.  A media manager is required to create RMAN image copies\nE.  By default, a request for a proxy copy may result in a backup set being created",
+        "answer": "B,E"
+    },
+    {
+        "question": "75、A container database (CDB. contains two pluggable databases PDB1 and PDB2\nThe LOCAL_UNDO_ENABLED database property is set to FALSE in the CDB\nData file 24 of PDB2 was deleted and you need to restore and recover it\nThe only RMAN backup that exists was created with the BACKUP DATABASE command while \nconnected to CDB$ROOT\nWhich three are true?\nA.  Data file 24 can be restored and recovered while connected to CDB$ROOT\nB.  Data file 24 can be restored only while connected to PDB2\nC.  Data file 24 can be recovered only while connected to PDB2\nD.  Data file 24 can be restored only while connected to CDB$ROOT\nE.  Data file 24 can be recovered while connected to PDB2\nF.  Data file 24 can be recovered while connected to CDB$root.",
+        "answer": "A,E,F"
+    },
+    {
+        "question": "76 Which three are performed by Oracle Automatic Storage Management(ASM)instances?\nA.  mounting disk groups\nB.  managing Allocation Units (AUS)for disk group content\nC.  managing extent allocation for Oracle database segments\nD.  acting as an I/O server to read data file blocks from ASM disks on behalf of database server\nprocesses\nE.  acting as an I/O server to write data file blocks to ASM disks on behalf of Database Writer\nprocesses(DBWR)\nF.  managing space allocation for Oracle ASM files",
+        "answer": "A,D,E,\n"
+    },
+    {
+        "question": "77、On the 10th of August, you implement an incremental database backup strategy and configure \na recovery window of five days\nLevel 0 backups are taken on the 10th, 17th, and 24th of August\nDifferential level 1 incremental backups are taken daily between the level 0 backup\nToday is the 26th of August\nWhich backups will be obsolete?\nA.  all backups prior to 24th of August\nB.  all backups prior to 17th of August\nC.  all backups prior to 10th of August\nD.  all backups prior to 22nd of August\nE.  all backups prior to 20th of August",
+        "answer": "B"
+    },
+    {
+        "question": "78、Which two are true about Oracle Grid Infrastructure for a Standalone Server?\nA.  It requires Oracle Automatic Storage Management(ASM)components to be installed separately\nB.  The CSS daemon runs from the Grid Infrastructure home\nC.  It can manage database resources on the server where it is installed or on a different server.\nD.  It supports volume management, file system, and automatic restart capabilities\nE.  It must be installed before the Oracle database software is installed",
+        "answer": "B,D"
+    },
+    {
+        "question": "79、HR_Root is an application container with the HR App application installed\nNo application PDBS and no application seed have yet been created in HR_ROOT\nAn application PDB, PDB1, must be created so that the HR App applications common objects are \naccessible to it\nWhich two methods can be used?\nA.  Create an application seed, synchronize it with HR Root, and then create the PDB1 application \nPDB\nB.  Create the PDB1 application PDB and synchronize it with HR ROOT\nC.  Create an application seed, and install HR APP in it.\nD.  Create the PDB1 application PDB and synchronize it with PDBSSEED\nE.  Create the PPB1 application PDB and install HR App in it.",
+        "answer": "A,B"
+    },
+    {
+        "question": "80、Which two are true about instance recovery?\nA.  It is not possible if an archived log is missing\nB. Setting Fasr START Mrrr TARGER to a higher value reduces instance recovery time by causing \nthe log writer to write more frequently, thereby reducing the number of I/Os needed during \ninstance recovery\nC. It is performed automatically after the database is opened; however, blocks requiring recovery \nare not available until they are recovered\nD. Setting FAST START MTTR TARGET to a lower value reduces instance recovery time by \ncausing dirty buffers to be written to disk more frequently, thereby reducing the number of I/Os \nneeded during instance recovery.\nE.  It is performed automatically while the database remains in MOUNT statE. Then the database is \nopened\nF.  It is performed by the Recovery Writer (RVWR)background process",
+        "answer": "D,E,F"
+    },
+    {
+        "question": "82、Which two are true about RMAN virtual private catalogs(VPCS)?\nA.  Each VPC is owned by the recovery catalog schema owner.\nB.  VPC functionality is enabled by default.\nC.  Only one target database can be registered in a VPC\nD.  The RMAN catalog owner can grant access for an already registered database to a new virtual \ncatalog owner\nE.  RMAN uses Oracle Virtual Private Database(VPD.  to implement VPCS",
+        "answer": "D,E,F"
+    },
+    {
+        "question": "84、Which two are true about memory advisors?\nA.  If Automatic Memory Management is enabled, the Shared Pool Advisor and Buffer Cache \nAdvisor are available to set the maximum size for these individual System Global Area \ncomponents\nB.  If Manual Shared Memory Management is enabled, only the Shared Pool Advisor and Buffer \nCache Advisor are available\nC. If Automatic Shared Memory Management is enabled, both the SGA Advisor and PGA Advisor \nare always availablE.\nD.  If Automatic Memory Management is enabled, no memory advisors are availablE.\nE.  All memory advisors use data from Automatic Workload Repository",
+        "answer": "C,E"
+    },
+    {
+        "question": "86、Which two are prerequisites for using FLASHBACK TABLE?\nA.  Row Movement must be enabled on the table being flashed back\nB.  A tables indexes must be set to unusable before issuing the flashback\nC.  A tables constraints must be disabled before issuing the flashback.\nD.  The FLASHBACK ANY TABLE system privilege or the FLASHBACK object privilege must \nbe granted to the user performing the flashback\nE.  The FLASHBACK ANY TABLE system privilege or the FLASHBACK object privilege must \nbe granted to the table owner",
+        "answer": "A,D"
+    },
+    {
+        "question": "87、Which two are true about a read-only Oracle home?\nA.  It contains an image that can be distributed across multiple servers\nB.  It is enabled by performing a software-only Oracle Database installation and then running the \nroohctl-enable script\nC.  It is enabled by performing an Oracle Database installation with database creation and then\nrunning the roohctl -enable script.\nD.  It requires the Rapid Home Provisioning servicE.\nE.  It’s configuration data and log files reside in subdirectories under the Oracle home",
+        "answer": "A,B"
+    },
+    {
+        "question": "88、Which three are true about upgrading an application in an application container?\nA.  The upgrade can be performed when connected either to cdb$root or to PDB$SEED\nB.  An application name and version number must be specified to upgrade the application\nC.  After an application upgrade, the application containers pdbs remain synchronized with the \nexisting application root\nD.  The upgrade must be performed when connected to CDB$ROOT\nE.  An application root clone gets created automatically\nF.  After an application upgrade, the application containers PDBS are automatically synchronized \nwith the application root clone",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "90、Which two are true about SQL Performance Analyzer(SPA. ?\nA.  It offers fine-grained analysis of all the SQL statements in the analysis task as a group\nB.  It provides before and after execution statistics for each SQL statement in the analysis task.\nC.  It is integrated with the SQL Access Advisor.\nD.  SQL statements that were originally run concurrently are run concurrently by SPA\nE.  It predicts the impact of system changes on SQL workload response time",
+        "answer": "B,E"
+    },
+    {
+        "question": "91、Which three are true about transporting databases across platforms using Recovery Manager \n(RMAN) image copies?\nA.  A new DBID is automatically created for the transported database\nB.  By default, the transported database will use Oracle Managed Files(OMF. \nC.  Data files can be converted on the source system\nD.  Databases can be transported between systems with different endian formats\nE.  Data files can be converted on the destination system\nF.  The password file is automatically converted by RMAN.",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "93、Which three are true about Oracle Restart?\nA.  You can add and remove components from an Oracle Restart configuration with Server Control \n(SRVCTL) commands\nB.  It can manage Oracle Database instances, Oracle Net Listeners, and Oracle Automatic Storage \nManagement instances\nC.  It runs from the Oracle Grid Infrastructure home\nD.  It is used in both clustered and non-clustered environments\nE.  If you shut down a database instance with sol*plus, Oracle Restart interprets this as a\ndatabase failure and attempts to restart the instance\nF.  The Server Control (SRVCTL)utility can be used to start and stop Oracle Restart",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "94、Some archived log backups have been accidentally deleted from storage\nWhich two commands should be used to update the status of backups in the recovery catalog to \ndisplay only the missing backups?\nA.  LIST ARCHIVELOG ALL\nB.  RESYNC CATALOG\nC.  CROSSCHECK BACKUP OF ARCHIVELOG ALL\nD.  LIST ARCHIVELOG\nE.  REPORT OBSOLETE\nF. LIST EXPIRED",
+        "answer": "C,F"
+    },
+    {
+        "question": "95、Examine this configuration\n1. cdb1 is a container database\n2. There are several pluggable databases(PDBS)in CDB1\n5. Each PDB has several tables with referential integrity constraints\n6. FLASHBACK DAABASE is ON\n7. UNDO RETENTION GUARANTEE is enabled\nMultiple undesired multitable changes were made in all the PDBS\nWhich method can be used to undo the changes using a single command\nA.  flashback database\nB.  flashback table and transaction\nC.  flashback transaction\nD.  flashback table\nE.  restore and recover database",
+        "answer": "A"
+    },
+    {
+        "question": "96、You must migrate a NON-CDB Oracle 11g Database to a CDB without first performing an \nupgrade to the NON-CDB\nUser-defined objects are stored in several tablespaces in the NON-CDB\nWhich three methods can you use?\nA.  Data Pump transportable tablespaces\nB.  Data Pump full database export and import\nC.  Data Pump full transportable database\nD.  replication using Goldengate\nE.  cloning the NON-CDB as a PDB\nF.  the DBMS PDB package",
+        "answer": "B,D,E"
+    },
+    {
+        "question": "98、Which three actions are mandatory post database upgrade?\nA.  Resetting passwords to enforce case-sensitivity\nB.  Setting threshold values for tablespace alerts\nC.  Upgrading user tables that depend on Oracle-maintained abstract data types.\nD.  Migration to unified auditing\nE.  Run Patch commands from the new Oracle home\nF.  Updating client scripts with the new Oracle homE.",
+        "answer": "C,E,F"
+    },
+    {
+        "question": "99、In a single-instance, multitenant container database(CDB. , which three are only ever defined \nin or part of CDB$ROOT?\nA.  undo tablespaces\nB.  temporary tablespaces\nC.  redo logs\nD.  all data dictionary metadata\nE.  User-defined PL/SQL packages\nF.  control files\nG.  mandatory Oracle-supplied PU/SQL packages",
+        "answer": "C,F,G"
+    },
+    {
+        "question": "100、Which two are true about backup encryption?\nA.  The BACKUP BACKUPSET command can encrypt and decrypt backup sets\nB.  Image copies can be encrypted\nC.  Backup encryption can be enabled selectively for specific tablespaces\nD.  The Transparent Data Encryption (TDE.  keystore is backed up using RMAN\nE.  Vendor-specific media management software can be used for making encrypted RMAN \nbackups to media\nF.  Keystore-based encryption is the default mode for RMAN backup encryption",
+        "answer": "C,F"
+    },
+    {
+        "question": "101、Your database is in ARCHIVELOG mode and you plan to use Flashback DatabasE.\nWhich two features or parameters manage space availability in the fast recovery area?\nA.  the backup retention policy\nB.  the DB_CREATE_ONLINE_LOG_DEST_n parameter setting\nC.  the archived log deletion policy\nD.  the backup optimization policy\nE.  using guaranteed UNDO retention\nF.  the DB RECOVERY FILE DEST parameter setting",
+        "answer": "A,C"
+    },
+    {
+        "question": "102、Which operating system group is NOT needed to perform an Oracle Database installation?\nA.  OSRACDBA\nB.  OSDBA\nC.  OSASM\nD.  OSKMDBA\nE ) OSOPER",
+        "answer": "E"
+    },
+    {
+        "question": "103、Which two are true about PDB archive files?\nA.  DBMS_PDB_ CHECK.PLUG_COMPATIBILITY can be run against a PDB archive\nB.  They contain a PDB manifest file and all the data files in uncompressed form for a PDB\nC.  They contain all the data files only in uncompressed form for a PDB.\nD.  They contain a PDB manifest file and all the data files in compressed form for a PDB.\nE.  They must be created using the DBMS PDB package\nF.  They contain all the data files only in compressed form for a PDB",
+        "answer": "A,D"
+    },
+    {
+        "question": "104 Your CDB has two regular PDBs as well as one application container with two application \nPDBs and an application seeD.No changes have been made to the standard PDB$SEED.\nHow many default temporary tablespaces can be assigned in the CDB?\nA.  eight\nB.  six\nC.  five\nD.  three\nE.  seven",
+        "answer": "A"
+    },
+    {
+        "question": "105 in which two scenarios is incomplete recovery required?\nWhich two are true about changing the LOCAL_UNDO_ENABLED property to false in a CDB? \n(Choose two.)\nA.  After the change, only a common user with the required privilege can create an undo \ntablespace in CDB&ROOT.\nB.  Any new PDB and existing PDBs are automatically configured to use the default undo \ntablespace in CDB$ROOT.\nC.  After the change, only one undo tablespace can exist in CDB$ROOT.\nD.  After the change, any user with the required privilege can create an undo tablespace in the \nPDBs. \nE.  Undo tablespaces existing in PDBs must be dropped before the changE.\nF.  After the change, each existing PDB has to be reopened for the new undo mode to take effect.",
+        "answer": "A,B"
+    },
+    {
+        "question": "106 A container database called CDB1 is OMF-enableD. PDB_FILE_NAME_CONVERT is not \nconfigured in CDB1. PDB1 was unplugged from CDB1 earlier in the week.\nExamine this command, which will be executed in CDB1:\nCREATE PLUGGABLE DATABASE pdb1USING '/u01/app/oracle/oradata/pdb1.xml' \nSOURCE_FILE_NAME_CONVERT=('/u01/app/or acle/oradata/','/u02/app/oracle/oradata/');\nWhich two are true? (Choose two.)\nA.  PDB1 data files already exist in the correct location.\nB.  DBMS_PDB.CHECK_PLUG_COMPATIBILITY must be run in CDB1 before executing the \ncommanD.\nC.  PDB_FILE_NAME_CONVERT must be set before executing the commanD.\nD.  /u01/app/oracle/oradata/pdb1.xml does not contain the current locations of data files for PDB1. \nE.  PDB1 must be dropped from CDB1.",
+        "answer": "A,E"
+    },
+    {
+        "question": "107 Your SALES_ROOT application container has two application PDBs. The SALES_APP \napplication has a common table, FIN.REVENUE, in the two PDBs. Examine this query and its \noutput:\nWhich two are true? (Choose two.)\nA. The CONTAINERS clause cannot be used in queries on the REVENUE tablE.\nB. The REVENUE table must be a list-partitioned tablE.\nC. The MAPTABLE tables defines a logical partition key on a commonly used column for the \nREVENUE tablE.\nD. The MAPTABLE table is a metadata-linked tablE.\nE. A container map exists for the REVENUE table, but is not enableD.\nF. The REVENUE table partitions are not pruned across the PDBs automatically.",
+        "answer": "C,F"
+    },
+    {
+        "question": "108 which are three of the steps taken by Database Configuration Assistant(DBCA.  to clone a \nremote pluggable database(PDB.  starting from Oracle 19c?\nA.  create a database link from CDB$ROOT in the local database to CDB$ROOT in the remote \nsystem that is to be cloneD.\nB.  leaving the cloned PDB in mount state\nC.  opening the cloned PDB.\nD.  backing up the cloned PDB.\nE.  create a database link from CDB$ROOT in the local database to the PDB in the remote system \nthat is to be cloneD.",
+        "answer": "A,C"
+    },
+    {
+        "question": "109 Which three are true about Oracle pluggable database(PDBs)?\nA.  A PDB can be plugged into a CDB only if both are of the same Oracle Database releasE.\nB.  A PDB created from PDB$SEED must be set to READ WRITE after loading datA.\nC.  A non-CDB can be converted into a PDB.\nD.  A PDB created from PDB$SEED must be set to READ ONLY after loading datA.\nE.  An unplugged PDB can be plugged into multiple CDBs simultaneously by sharing data files. \nF.  A PDB unplugged from a container database(CDBs) can be plugged into a different CDB \nwithout altering any of schemas.\nG.  A PDB in a remote CDB can be accessed transparently thereby aggregating results from local \nand remote PDBs.",
+        "answer": "C,F,G"
+    },
+    {
+        "question": "110 Which three are true about Oracle Grid Infrastructure for a Standalone Server?\nA.  It includes both Oracle Restart and Oracle Automatic Storage Management(ASM) softwarE.\nB.  It creates one disk group during installation.\nC.  It requires the operating system ORACLE_BASE environment variable to be predefined before \ninstallation.\nD.  It requires Oracle ASMLib to manage Automatic Storge Management(ASM) disks.\nE.  It requires Oracle ASM Filter Driver(ASMFD.  to manage Automatic Storge \nManagement(ASM) disks.\nF.  Automatic Storge Management(ASM) requires that O/S groups OSASM and OSDBA be \nassigned as secondary groups for its installation owner.",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "Which query is valid?\nA.  SELECT dept_id, join_date, SUM(salary) FROM employees GROUP BY dept_id, \njoin_date;\nB.  SELECT depe_id,join_date, SUM(salary) FROM employees GROUP BY dept_id:\nC.  SELECT dept_id,MAX (AVG (salary)) FROM employees GROUP BY dept_id;\nD.  SELECT dept_ id,AVG (MAX (salary)) FROM employees GROUP BY dapt_id;",
+        "answer": "A"
+    },
+    {
+        "question": "Which three are true about the CREATE TABLE command?\nA.  It can include the CREATE...INDEX statement for creating an index to enforce \nthe primary key constraint.\nB.  The owner of the table should have space quota available on the tablespace \nwhere the table is defineD.\nC.  It implicitly executes a commit.\nD.  It implicitly rolls back any pending transactions.\nE.  A user must have the CREATE ANY TABLE privilege to create tables,\nF.  The owner of the table must have the UNLIMITED TABLESPACE system privilege",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "The CUSTOMERS table has a CUST_CREDT_LIMIT column of data type number.\nWhich two queries execute successtully?\nA.  SELECT TO_CHAR(NVL(cust_credit_limit * .15,'Not Available')) FROM customers;\nB.  SELECT NVL2(cust_credit_limit * .15,'Not AvailabIe') FROM customers;\nC.  SELECT NVL(cust_credit_limit * .15, 'Not Available') FROM customers;\nD.  SLECT NVL(TO_CHAR(cust_credit_limit * .15),'Not available') from customers;\nE.  SELECT NVL2(cust_credit_limit,TO_CHAR(cust_credit_limit * .15),'NOT \nAvailable') FROM customers;",
+        "answer": "D,E"
+    },
+    {
+        "question": "Exammine the desciption of the PRODUCT DETALS table:\nNAME NULL TYPE\n--------------------------------------------------\nPRODUCT_ID NOT NULL NUMBER(2)\nPRODUCT_NAME NOT NULL VARCHAR2(25)\nPRODUCT_PRICE NUMBER(8,2)\nEXPIRY_DATE DATE\nWhich two statements are true?\nA.  PRODUCT_ID can be assigned the PEIMARY KEY constraint.\nB.  EXPIRY_DATE cannot be used in arithmetic expressions.\nC.  EXPIRY_DATE contains the SYSDATE by defalt if no date is assigned to it\nD.  PRODUCT_PRICE can be used in an arithmetic expression even if it has no value \nstored in it\nE.  PRODUCT_PRICE contains the value zero by default if no value is assigned to\nit.\nF.  PRODUCT_NAME cannot contain dupicate values.",
+        "answer": "A,D"
+    },
+    {
+        "question": "The CUSTOMERS table has a CUST_LAST_NAME column of data type VARCHAR2.\nThe table has two rows whose COST_LAST_MANE values are Anderson and Ausson. \nWhich query produces output for CUST_LAST_SAME containing Order for the first \nrow and Aus for the second?\nA.  SELECT REPLACE (REPLACE(cust_last_name,'son',''),'An','O') FROM customers;\nB.  SELECT REPLACE (TRIM(TRALING 'son' FROM cust_last_namE. , 'An','O') FROM \ncustomers;\nC.  SELECT INITCAP (REPLACE(TRIM('son' FROM cust_last_namE. ,'An','O')) FROM \ncustomers;\nD.  SELECT REPLACE (SUBSTR(cust_last_name,-3), 'An', 'O') FROM customers;",
+        "answer": "A"
+    },
+    {
+        "question": "Which three statements are true about indexes and their administration in an \nOrade database?\nA.  An INVISIBLE index is not maintained when Data Manipulation Language (DML) is \nperformed on its underlying tablE.\nB.  An index can be created as part of a CREATE TABLE statement.\nC.  A DROP INDEX statement always prevents updates to the table during the drop \nopeaton\nD.  A UNIQUE and non-unique index can be ceated on the same table colunn\nE.  A descending index is a type of funcion-based index\nF.  If a query filters on an indexed column then it will always be used during \nexecution of the query",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "Which three are true about granting object privileges on tables, views, and \nsequences?\nA.  UPDATE can be granted only on tables and views.\nB.  DELETE can be granted on tables, views, and sequences.\nC.  REFERENCES can be granted only on tables and views.\nD.  INSERT can be granted on tables, vews, and sequences.\nE.  SELECT can be granted only on tables and views.\nF.  ALTER can be granted only on tables and sequences.",
+        "answer": "A,C,F"
+    },
+    {
+        "question": "The EMPLOYEES table contains columns EMP_ID of data type NUMBER and HIRE_DATE of \ndata type DATE\nYou want to display the date of the first Monday after the completion of six \nmonths since hiring\nThe NLS_TERRITORY parameter is set to AMERICA in the session and, therefore, \nSunday is the first day ofthe week\nWhich query can be used?\nA.  SELECT emp_id,NEXT_DAY(ADD_MONTHS(hite_date,6), 'MONDAY') FROM employees;\nB.  SELECT emp_id,ADD_MONTHS(hire_date,6), NEXT_DAY('MONDAY') FROM employees;\nC.  SELECT emp_id,NEXT_DAY(MONTHS_BETWEEN(hire_date,SYSDATE. ,6) FROM employees;\nD.  SELECT emp_id,NEXT_DAY(ADD_MONTHS(hire_date,6),1) FROM employees;",
+        "answer": "A"
+    },
+    {
+        "question": "Which three statements are true about views in an Orade batabase?\nA.  A SELECT statement cannot contain a where clause when querying a view contaning \na WHERE clause in its defining query\nB.  Rows inserted into a table using a view are retained in the table if the view \nis dopped\nC.  Views can join tables only if they belong to the same schemA.\nD.  Views have no segment.\nE.  Views have no object number.\nF.  A view can be created that refers to a non-existent table in its defining \nquery",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which two statements are true about Oracle synonyms?\nA.  A synonym can have a synonym.\nB.  All private synonym names must be unique in the databasE.\nC.  Any user can create a PUBLIC synonym.\nD.  A synonym can be created on an object in a packagE.\nE.  A synonym has an object number.",
+        "answer": "A,E"
+    },
+    {
+        "question": "Which two statements are true about a self join?\nA.  The join key column must have an index.\nB.  It can be a left outer join.\nC.  It must be a full outer join.\nD.  It can be an inner join.\nE.  It must be an equijoin.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which three statements are true about dropping and unused columns in an Oracle\ndatabase?\nA.  A primary key column referenced by another column as a foreign key can be \ndropped if using the CASCADE option.\nB.  A DROP COLUMN command can be rolled back\nC.  An UNUSED column's space is redaimed automatially when the block containing \nthat column is next queried\nD.  An UNUSED column's space is redaimed automatially when the row containing \nthat column is next querieD.\nE.  Partition key columns cannot be droppeD.\nF.  A column that is set to NNUSED still counts towards the limit of 1000 columns \nper tablE.",
+        "answer": "A,E"
+    },
+    {
+        "question": "Examine this query:\nSELECT TRUNC (ROUND(156.00,-2),-1) FROM DUAL;\nWhat is the result?\nA.  16\nB.  160\nC.  150\nD.  200\nE.  100",
+        "answer": "D"
+    },
+    {
+        "question": "Examine this SQL statement:\nUPDATE orders o\nSET customer_name =\n(SELECT cust_last_name\nFROM customers\nWHERE customer_id=o.customer_iD. ;\nWhich two are true?\nA.  The subquery is executed before the UPDATE statement is executeD.\nB.  All existing rows in the ORDERS table are updateD.\nC.  The subquery is executed for every updated row in the ORDERS tablE.\nD.  The UPDATE statement executes successfully even if the subquery selects \nmultiple rows.\nE.  The subquery is not a correlated subquery.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Examine the description of the PRODUCTS table:\nName Null? Type\n-----------------------------------------------------------------\nPRODUCT_ID NOT NULL NUMBER(2)\nPRODUCT_NANE VARCHAR2(10)\nUNIT_PRICE NUMBER(3)\nSURCHARGE VARCHAR2(2)\nEXPIRY_DATE DATE\nDELIVERY_DATE DATE\nWhich three queres use valid expressions?\nA.  SELECT produet_id, unit_pricer, 5 \"Discount\",unit_price+surcharge-discount FROM products;\nB.  SELECT product_id, (unit_price * 0.15 / (4.75 + 552.25)) FROM products;\nC.  SELECT ptoduct_id, (expiry_date - delivery_datE.  * 2 FROM products;\nD.  SPLECT product_id, expiry_date * 2 FROM products;\nE.  SELEGT product_id, unit_price, unit_price + surcharge FROM products;\nF.  SELECT product_id,unit_price || \"Discount\" , unit_price + surcharge - discount FROM products;",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "Examine this partial command:\nCREATE TABLE cust (\ncust_id NUMBER(2),\ncredit_ limit NUMBER(10)\n)\nORGANIZATION EXTERNAL\nWhich two clauses are required for this command to execute successfully?\nA.  the DEFAULT DIRECTORY clause\nB.  the REJECT LIMIT clause\nC.  the LOCATION clause\nD.  the ACCESS PARAMETERS clause\nE.  the access driver TYPE clause",
+        "answer": "A,D"
+    },
+    {
+        "question": "Examine this business rule:\nEach studert can work on mutiple projects and eath project can have multiple students\nYou must desion an Entity Relationsep (ER) model for optional data storage and allow generating \nreports in this format:\nSTUDENT_ID FIRST_NAME LAST_NAME PROJECT_ID PROJECT_NAME PROJECT_TASK\nWhich two statements are true?\nA.  An associative table must be created with a composite key of STUDENT_ID and \nPROJECT_ID,which is the foreign key linked to the STUDENTS and PROJECTS entities.\nB.  The ER must have a many-to-many relationship between the STUDENTS and PROJECTS entities \nthat must be resolved into 1-to-many relationships.\nC.  PROJECT_ID must be the primary key in the PROJECTS eitity and foreign key in the STUDENTS \nentity.\nD.  The ER must have a 1-to-many relationship between the STUDENTS and PROJECTS entities.\nE.  STUDENT_ID must be the primary key in the STUDENTS entity and foreign key in the PROJECTS \nentity",
+        "answer": "A,B"
+    },
+    {
+        "question": "Which two statements are true about the WHERE and HAVING clouses in a SELECT statement?\nA.  The WHERE clause can be used to exclude rows after divding them into groups\nB.  WHERE and HAVING clauses can be used In the same statement only if applied to dfferent table \ncolumns.\nC.  The HAVING clause can be used with aggregating functions in subqueries.\nD.  Aggregating functions and columns used in HAVING clauses must be spectfied in thes SELECT \nlist of a query.\nE.  The WHERE clause can be used to exclude rows before dviding them into goups.",
+        "answer": "C,E"
+    },
+    {
+        "question": "The INVOICE table has a QTY_SOLD column of data type NUMBER and an INVOTCE_DATE column \nof data type DATE\nNLS_DATE_FORMAT is set to DD-MON-RR.\nWhich two are true about data type conversions involving these columns in query expressions?\nA.  invoice_date > '01-02-2019' : uses implicit conversion\nB.  qty_sold =' 05549821 ' : requires explicit conversion\nC.  CONCAT(qty_sold, invoice_datE.  : reuires explicit conversion\nD.  qty_sold BETWEEN '101' AND '110' : uses implicit convesion\nE.  invoice_date = '15-march-2019' : uses implicit conversion",
+        "answer": "D,E"
+    },
+    {
+        "question": "The PRODUCT_INFORMATION table has a UNIT_PRICE column of data type NUMBER(8, 2).\nEvaluate this SQL statement:\nSELECT TO_CHAR(unit_price,'$9,999') FROM Product_intormation;\nWhich two statements are true about the output?\nA.  A row whose UNIT_PRICE column contains the value 1023.99 will be displayed as $1,024.\nB.  A row whose UNIT_PRICE column contains the value 1023.99 will be displayed a5 $1,023.\nC.  A row whose UNIT_PRICE column contains the value 10235.99 will be displayed as $1,0236.\nD.  A row whose UNIT_PRICE column contains the value 10235.99 will be displayed as $1,023.\nE.  A row whose UNIT_PRICE column contains the value 10235.99 will be displayed as #####",
+        "answer": "A,E"
+    },
+    {
+        "question": "In the PROMOTIONS table, the PROMO_BEGTN_DATE columm is of datatype DATE and the default \ndate format is DD-MON-RR.\nWhich two statements are true about expressions using PROMO_BEGIN_DATE contained in a \nqueny?\nA.  TO_NUMBER(PROMO_ BEGIN_DATE.  - 5 will return number\nB.  TO_DATE(PROMO_BEGIN_DATE * 5) will return a date\nC.  PROMO_BEGIN_DATE - SYSDATE will return a number.\nD.  PROMO_BEGIN_DATE - 5 will return a datE.\nE.  PROMO_BEGIN_DATE - SYSDATE will return an error.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which two statements are true about transactions in the Oracle Database serve?\nA.  An uncommitted transaction commits automatically if the user exits SQL*Plus\nB.  Data Manipulation Language (DML) statements always start a new transaction.\nC.  A user can always see uncomitted updates made by the same user in a dfferert session.\nD.  A Data Detiniton Language (DDL) statement does a commit automatially only for the data \ndictionary updates caused by the DDL\nE.  A session can always see uncomnitted updetes made by itselt.\nF.  If a session has an uncometted transaction,then a DDL statement issue a COMMIT before starting \na new transaction.",
+        "answer": "A,E"
+    },
+    {
+        "question": "Examine this description of the PRODUCTS table:\nName NULL? TYPE\n------------------------------------------------------------------------\nPROD_ID NOT NULL VARCHAR2(6)\nQUANTITY NUMBER(8,2)\nPRICE NUMBER(10.2)\nEXPIRY_DATE DATE\nRows exist in this table with data in all the columns. You put the PRODUCTS table in read-only modE.\nWhich three commands execute successfully on PRODUCTS?\nA.  ALTER TAELE products DROP COLUMN expiry_date;\nB.  CREATE INDEX price_idx on products (pricE. ;\nC.  ALTER TABLE products SET UNUSED(expiry_datE. ;\nD.  TRUNCATE TABLE products;\nE.  ALTER TABLE products DROP UNUSED COLUMNS\nF.  DROP TABLE products",
+        "answer": "B,E,F"
+    },
+    {
+        "question": "Which three statements are true about GLOBAL TEMPORARY TABLES?\nA.  A GLOBAL TEMPORARY TABLE cannot have PUBLIC SYNONYM.\nB.  A GLOBAL TEMPORARY TABLE can have multiple indexes\nC.  A GLOBAL TEMPORARY TABLE can be referenced in the defining query of a view.\nD.  Data Manipulation Language (DML) on GLOBAL TEMPORARY TABLES generates no REDO.\nE.  A GLOBAL TEMPORARY TABLE can have only one index.\nF.  A tigger can be created on a GLOBAL TEMPORARY TABLE",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "Which three statements are true about defining relations between tables in a relatonal database?\nA.  Foreign key columns allow null values.\nB.  Unique key columns allow null values\nC.  Primary key columns allow null values.\nD.  Every primary or unique key value must refer to a matching foreign key valuE.\nE.  Every foreign key value must refer to a matching primary or unique key valuE.",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "Which three actions can you perfom only with system privileges?\nA.  Truncate a table in another schemA.\nB.  Access flat files via a database, which are stored in an operating system directory.\nC.  Log in to a databasE.\nD.  Query any table in a databasE.\nE.  Use the WITH GRANT OPTION clausE.\nF.  Execute a procedure in another schemA.",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "Which two statements are true about the DUAL table?\nA.  It can display multiple rows and columns.\nB.  It can be accessed only by the SYS user.\nC.  It can be accessed by any user who has the SELECT privilege in any schema\nD.  It can display multiple rows but only a single column.\nE.  It consists of a single row and single column of VARCHAR2 data typE.\nF.  It can be used to display only constants or pseudo columns.",
+        "answer": "A,C"
+    },
+    {
+        "question": "The ORDERS table has a column ORDER_DATE of date type DATE\nThe default display format for a date is DD-MON-RR\nWhich two WHERE conditions demonstrate the correct usage of conversion functions?\nA.  WHERE ordet_date > TO_CRAR(ADD_MONTHS(SYSDATE, 6), 'MON DD YYYY')\nB.  WHERE TO_CHAR(order_date, 'MON DD YYYY') = 'JAN 20 2019'\nC ) WHERE order_date > TO_DATE('JUL 10 2018', 'MON DD YYYY')\nD.  WHERE order_date IN (TO_DATE ('Oct 21 2018', 'MON DD YYYY'), TO_CHAR('Nov 21 2018','MON \nDD YYYY'))\nE.  WHERE order_date > TO_DATE(ADD_MONTHS(SYSDATE,6),'MON DD YYYY')",
+        "answer": "B,C"
+    },
+    {
+        "question": "choose two.\n·MANAGER is an existing role with no privileges or roles.\n·EMP is an existing role containing the CREATE TABLE privilegE.\n·EMPLOYEES is an existing table in the HR schemA.\nWhich two commands execute successfully?\nA.  GRANT CREATE SEQUENCE TO manager, emp;\nB.  GRANT SELECT, INSERT ON hr.employees TO manager WITH GRANT OPTION:\nC.  GRANT CREATE TABLE, emp TO manager;\nD.  GRANT CREATE TABLE, SELECT ON hr. employees TO manager ;\nE.  GRANT CREATE ANY SESSION, CREATE ANY TABLE TO manager;",
+        "answer": "A,C"
+    },
+    {
+        "question": "Evalute these conmands which execate sucestully\nCREATE SEQUENCE ord_seq\nINCREMENT BY 1\nSTART WITH 1\nMAXVALUE 100000\nCYCLE\nCACHE 5000;\nWhich two statements are true atout the ORD_ITEMS table and the ORD_SEQ sequence?\nA.  Any user inserting rows into table ORD_ITEMS must have been granted access to sequence \nORD_SEQ.\nB.  Colunn ORD_NO gets the next number from squence ORD_SEQ whenever a row is inserted into \nORD_ITEMS and no explict value is given for ORD_NO.\nC.  Sepuence ORD_SEQ cycles back to 1 after every 5000 numbers and can cycle 20 times\nD.  IF sequence ORD_SEQ is dropped then the default value for column ORD_NO will be NULL for\nrows inserted into ORD_ITEMS.\nE.  Sequence ORD_SEQ is guaranteed not to genenate duplicate numbers.",
+        "answer": "A,B"
+    },
+    {
+        "question": "Examine the data in the CUST NAME column of the CUSTOMERS table:\nCUST_NAME\n------------------------------\nRenske Ladwig\nJason Mallin\nSamuel McCain\nAllan MCEwen\nIrene Mikkilineni\nJulia Nayer\nYou want to display the CUST_NAME values where the last name starts with Mc or MC.\nWhich two WHERE clauses give the required result?\nA.  WHERE INITCAP (SUBSTR(cust_name, INSTR(cust_name,' ') +1 ) ) IN ('MC%', 'Mc%)\nB.  WHERE UPPER (SUBSTR(cust_nane, INSTR(cust_name, ' ') +1 ) ) LIKE UPPER('MC%')\nC.  WHERE INITCAP(SUBSTR(cust_nane, INSTR(cust_name,' ') +1 ) ) LIKE 'Mc%'\nD.  WHERE SUBSTR(cust_name,INSTR(cust_name,' ') +1 ) LIKE 'Mc%' OR 'MC%'\nE.  WHERE SUBSTR(cust_name, INSTR(cust_name,' ') +1 ) LIKE 'Mc%'",
+        "answer": "B,C"
+    },
+    {
+        "question": "Examine this SQL statement:\nSELECT cust_id, cus_ last_name \"Last Name\"\nFROM customers\nWHERE country_id = 10\nUNION\nSELECT cust_id CUST_NO, cust_last_name\nFROM customers\nWHERE country_id = 30\nIdentify three ORDER BY clauses, any one of which can complete the query successfully.\nA.  ORDERBY 2, 1\nB.  ORDER BY \"CUST_NO\"\nC.  ORDER BY 2,cust_id\nD.  ORDER BY CUST_NO\nE.  ORDER BY \"Last Name\"",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Which three statements are true about a self join?\nA.  It must be an inner join.\nB.  It can be an outer join.\nC.  The ON clause must be useD.\nD.  It must be an equijoin.\nE.  The query must use twodifferent aliases for the tablE.\nF.  The ON clause can be useD.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "Which two statements are true about the results of using the INTERSECT operator in compound \nqueres?\nA.  Reversing the order of the intersected tables can sometimes affect the output.\nB.  Column names in each SELECT in the compound query can be dfferent.\nC.  INTERSECT returns rows common to both sides of the compound query.\nD.  The number of columns in each SELECT in the compound query can be dfferent.\nE.  INTERSECT ignores NULLs",
+        "answer": "B,C"
+    },
+    {
+        "question": "Which two statenents ane tue about the COUNT function?\nA.  It can only be used for NUMBER data types.\nB.  COUNT (DISTINCT inv_amt) returns the number of rows excluding rows containing dupicates and \nNULLs in the INV_AMT column\nC.  COUNT(*) returns the number of rows in a table including duplicate rows and rows containing \nNULLs in any column.\nD.  A SELECT statement using the COUNT function with a DISTINCT keyword cannot have a WHERE \nclausE.\nE.  COUNT(inv_amt) returns the number of rowsin a table including rows with NULL in the INV_AMT \ncolumn.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Which three statements are true about sequences in a single instance Orade database?\nA.  A sequence's unallocated cached values are lost if the instance shuts down.\nB.  Two or more tables cannot have keys generated from the same sequencE.\nC.  A sequence number that was allocated can be rolled back if a transaction fails.\nD.  A sequence can issue duplicate values.\nE.  Sequences can always have gaps.\nF.  A sequence can only be dropped by a DBA.",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "Examine the desaiption of the PRODUCT_INFORMATION table:\nName NULL? Type\n------------------------------------------------------------------------\nPROD_ID NOT NULL NUMBER(2)\nPROD_NANE VARCRAR2 (10)\nLIST_PRICE NUMBER(6,2)\nWhich query retrieves the number of products with a null list price?\nA.  SELECT (COUNT(list_pricE.  FERM Product_intormation WHERE list_price=NULL;\nB.  SELECT Count(nvl( list_price,0) )FROM pruduct_information WHERE list_price is null;\nC.  SELECT COUNT(DISTINCT last_pricE.  FROM produet_infomation WHERE last_price is nulll.\nD.  BELECT COUNT(list_pricE.  from proceduct_information where list_price is NULL;",
+        "answer": "B"
+    },
+    {
+        "question": "You need to calculate the number of days from 1st January 2019 until today.\nDates are stored in the default format of DD-MON-RR.\nWhich two queries give the required output?\nA.  SELECT SYSDATE - TO_DATE (' 01-JANUARY-2019' ) FROM DUAL;\nB.  SELECT TO_DATE (SYSDATE, ' DD/MONTH/YYYY' ) - '01/JANUARY/2019' FROM DUAL;\nC.  SELECT ROUND (SYSDATE - TO_DATE(' 01/JANUARY/2019' ) ) FROM DUAL;\nD.  SELECT TO_CHAR (SYSDATE, ' DD-MON-YYYY') - '01-JAN-2019' FROM DUAL;\nE.  SELECT ROUND (SYSDATE- '01-JAN-2019') FROM DUAL:",
+        "answer": "A,C"
+    },
+    {
+        "question": "Exanine the desatption of the BOOKS_TRANSACTIONS table\nName Null? Type\n----------------------------------------------------------------------------------------------\nTHANSACTION_ID NOT NULL VARCHAR2(6)\nTRANSACTION_TYPE VARCHAR2(3)\nBORROWED_DATE DATE\nBOOK_ID VARCHAR2(6)\nMEMBER_ID VARCHAR2(6)\nExamine this partial SQL statement:\nSELECT * FROM books_transctions;\nWhich twoWHERE condtions give the same resut?\nA.  WHERE borrowed_date = SYSDATE AND (transaction_type= 'RM' OR member_id IN \n('A101','A102' ) );\nB.  WHERE borrowed_date = SYSDATE AND transaction_type= 'RM' OR member_id IN \n('A101','A102' ) ;\nC.  WHERE borrowed_date = SYSDATE AND (transaction_type= 'RM' AND member_id='A101' OR \nmember_id = 'A102') );\nD.  WHERE (borrowed_date = SYSDATE AND transaction_type= 'RM' ) OR member_id IN \n('A101','A102' );\nE.  WHERE borrowed_date = SYSDATE AND (transaction_type= 'RM' AND ( member_id= 'A101' OR \nmember_id = 'A102' ) );",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which two statements are true about single row functions?\nA.  CONCAT : can be used to combine any number of values\nB.  MOD : returns the quotient of a division operation\nC.  CEIL : can be used for positive and negative numbers\nD.  FLOOR : returns the smallest integer greater than or equal to a specified number\nE.  TRUNC : can be used with NUMBER and DATE values",
+        "answer": "C,E"
+    },
+    {
+        "question": "The ORDERS table has a primary key constraint on the ORDER_ID column.\nThe ORDER_ITEMS table has a foreign key constraint on the ORDER_ID column,referencing the \nprimary key of the ORDERS tablE.\nThe constraint is defined with on DELETE CASCADE.\nThere are rows in the ORDERS table with an ORDER_TOTAL less than 1000.\nWhich three DELETE statements execute successfully?\nA.  DELETE FROM orders WHERE order_total<1000;\nB.  DELETE * FROM orders WHERE order_total<1000;\nC.  DELETE orders WHERE order_total<1000;\nD.  DELETE FROM orders;\nE.  DELETE order_id FROM orders WHERE order_total<1000;",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "Examine this SQL statement:\nDELETE FROM employees e\nWHERE EXISTS\n(SELECT 'dummy'\nFROM emp_history\nWHERE employee_id = E.employee_iD. \nWhich two are true?\nA.  The subquery is executed for every row in the EMPLOYEES tablE.\nB.  The subquery is not a correlated subquery.\nC.  The subquery is executed before the DELETE statement is executeD.\nD.  All existing rows in the EMPLOYEEE table are deleteD.\nE.  The DELETE statement executes successfully even if the subquery selects multiple rows.",
+        "answer": "A,E"
+    },
+    {
+        "question": "You execute this command:\nTRUNCATE TABLE depts;\nWhich two are true?\nA.  It drops any triggers defined on the tablE.\nB.  It retains the indexes defined on the tablE.\nC.  It retains the integrity constraints defined on the tablE.\nD.  A ROLLBACR statement can be used to retrieve the deleted datA.\nE.  It always retains the space used by the removed rows.\nF.  A FLASHBACK TABLE statement can be used to retrieve the deleted datA.",
+        "answer": "B,C"
+    },
+    {
+        "question": "The SALES table has columns PROD_ID and QUANTITY_SOLD of data type NUMBER.\nWhich two querdes execute successfully?\nA.  SELECT COUNT(prod_iD.  FROM sales WHERE quantity_sold>55000 GROUP BY prod_id;\nB.  SELECT prod_id FROM sales WHERE quantity_sold > 55000 GROUP BY prod_id HAVING \nCOUNT(*) > 10;\nC.  SELECT COUNT(prod_iD.  FROM sales GROUP BY prod_id WHERE quantity_sold > 55000;\nD.  SELECT prod_id FROM sales WHERE quantity_sold> 55000 AND COUNT(*) > 10 GROUP BY \nCOUNT(*) > 10;\nE.  SELECT prod_id FROM sales WHERE quantity_sold> 55000 AND COUNT(*) > 10 GROUP BY \nprod_id HAVING COUNT(*) > 10;",
+        "answer": "A,B"
+    },
+    {
+        "question": "You have been tasked to create a table for a banking application.\nOne of the columns must meet three requirements:\n1) Be stored in a format supporting date arithmetic without using conversion functions\n2) Store a loan period of up to 10 years\n3) Be used for calculating interest for the number of days the loan remains unpaid\nWhich data type should you use?\nA.  TIMESTAMP WITH TIMEZONE\nB.  TIMESTAMP\nC.  TIMESTAMP WITH LOCAL TIMEZONE\nD.  INTERVAL YEAR TO MONTH\nE.  INTERVAL DAY TO SECOND",
+        "answer": "E"
+    },
+    {
+        "question": "Which three are true about dropping columns from a table?\nA.  A column can be removed only if it contains no datA.\nB.  A column drop is implidtly committed\nC.  A column that is referenced by another column in any other table cannot be droppeD.\nD.  A column must be set as unused before it is dropped from a tablE.\nE A primary key column cannot be droppeD.\nF.  Multiple columns can be dropped simultaneously using the ALTER TABLE commanD.",
+        "answer": "B,C,F"
+    },
+    {
+        "question": "which three statements are true about GLOBAL TEMPORARY TABLES?\nA. A DELETE comand on GLOBAL TEMPORARY TABLE cannot be rolled back\nB.  GLOBAL TEMPORARY TABLE rows inserted by a session are available to any other session whose \nuser has been granted selected on the table\nC.  Any GLOBAL TEMPORARY TABLE rows exsting at session termination will be deleted\nD.  A GLOBAL TEMPORARY TABLE's definition is available to multiple sessions;\nE.  GLOBAL TEMPORARY TABLE space allocation occurs at session start.\nF.  A TRUNCATE command issues in a session causes all rows in a GLOBAL TEMPORARY TABLE for \nthe issuing session to be deleteD.",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "You ceate a table by using this command:\nCREATE TABLE rate_list (rate NUMBER(6,2));\nWhich two are true about executing statements?\nA.  INSERT INTO rate_list VALUES (-.9) inserts the value as -.9.\nB.  INSERT INTO rate_list VALUES (0.999) produces an eror.\nC.  INSERT INTO rate_list VALUES (-10) produces an error.\nD.  INSERT INTO rate_list VALUES (87654. 556) inserts the value as 87654.6.\nE.  INSERT INTO rate_list VALUES (0.551) inserts the value as .55.\nF.  INSERT INTO rate_list VALUES (-99.99) inserts the value as 99.99.",
+        "answer": "A,E"
+    },
+    {
+        "question": "What is true about non-equijoin statement performance?\nA.  The Orade join syntax performs better than the SQL:1999 compliant ANSI join syntax.\nB.  Table aliases can improve performancE.\nC.  The BETWEEN condition always performs less well than using the >= and <= conditions.\nD.  The join syntax used makes no difference to performancE.\nE.  The BETWEEN condition always perfoms better than using the >= and <= conditions.",
+        "answer": "A,B"
+    },
+    {
+        "question": "Which two statements are true about date/time functions in a session where NLS_DATE_PORMAT \nis set to DD-MON-YYYY SH24:MI:SS\nA.  SYSDATE CAN be used in expressions only if the default date format is DD-MON-RR.\nB.  CURRENT_TIMESTAMP returns the same date as CURRENT_DATE.\nC.  CURRENT_DATE returns the current date and time as per the session time zone\nD.  SYSDATE and CURRENT_DATE return the current date and time set for the operating system of \nthe database server.\nE.  CURRENT_TIMESTAMP returns the same date and time as SYSDATE with addtional details of \nfunctional seconds.\nF.  SYSDATE can be queried only from the DUAL tablE.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which two statements are true about conditional INSERT ALL?\nA.  Each row returned by the subquery can be inserted into only a single target tablE.\nB.  It cannot have an ELSE clausE.\nC.  The total number of rows inserted is always equal to the number of rows returned by the \nsubquery\nD.  A single WHEN condition can be used for multiple INTO clauses.\nE.  Each WHEN condition is tested for each row returned by the subquery.",
+        "answer": "D,E"
+    },
+    {
+        "question": "Which two statements are true about INTERVAL data types\nA.  INTERVAL YEAR TO MONTH columns only support monthly intervals within a range of years.\nB.  The value in an INTERVAL DAY TO SECOND column can be copied into an INTERVAL YEAR TO \nMONTH column.\nC.  INTERVAL YEAR TO MONTH columns only support monthly intervals within a single year .\nD.  The YEAR field in an ITERVAL YEAR TO MONTE column must be a positve valuE.\nE.  INTERVAL DAY TO SECOND columns spport fractions of seconds.\nF.  INTERVAL YEAR TO MONTH columns support yearly intervals.",
+        "answer": "E,F"
+    },
+    {
+        "question": "Which two tue about a sql statement using SET openatons such as UNION?\nA.  The data type of each column returned by the second query must be implldtly convertible to \nthe data type of the corresponding column returned by the first query\nB.  The data type of each colunn retuned by he second query must exactly match the data type of \nthe corresponding column returned by the first query\nC.  The number, but not names, of columns must be identical for all SELECT statements in the query\nD.  The data type group of each column returned by the second query must match the data type \ngroup of the corresponding column returned by the first query\nE.  The names and muntber of columns must be identical for all SELECT statements in the query.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Examine this query:\nSELECT 2 FROM dual d1 CROSS JOIN dual d2 CROSS JOIN dual d3;\nWhat is returned upon execution?\nA.  0 rows\nB.  an error\nC.  8 rows\nD.  6 rows\nE.  1 row\nF.  3 row",
+        "answer": "E"
+    },
+    {
+        "question": "Examine this query:\nSELECT employee_id,first_name,salary\nFROM employees\nWHERE hire_date > '&1';\nWhich two methods should you use to prevent prompting for a hire date value when this query is \nexecuted? \nA.  Use the DEFINE command before executing the query.\nB.  Store the query in a script and pass the substitution value to the script when executing it.\nC.  Replace '&1' with '&&1' in the query.\nD.  Execute the SET VERIFY OFF command before executing the query.\nE.  Use the UNDEFINE command before executing the query.\nF.  Execute the SET VERIFY ON command before executing the query.",
+        "answer": "A,C"
+    },
+    {
+        "question": "choose the best answer\nExamine the desciption of the CUSTOMERS table:\nName Null? Type\n-----------------------------------------------------------------------------------------\nCUST_ID Not NULL VARCHAR2(6)\nFIRST_NAME VARCHAR2(50)\nLAST_NAME Not NULL VARCHAR2(50)\nADDRRESS VARCHAR2(50)\nCITY VARCHAR2(25)\nYou want to display detalls of all castomers who reside in cities starting with the letter D followed \nby at least two character\nWhich query can be used?\nA.  SELECT * FROM customers WHERE city = 'D_%';\nB.  SELECT * FROM customers WHERE city = '%D_';\nC.  SELECT * FROM customers WHERE city LIKE 'D_ _%';\nD.  SELECT * FROM customers WHERE city LIKE 'D_';",
+        "answer": "C"
+    },
+    {
+        "question": "Examine the description of the BOOKS table:\nName Null? Type\n-------------------------------------------------------------\nTRANSACTION_ID NOT NULL VARCHAR2(6)\nTRANSACTION_DATE DATE\nAMOUNT NUMBER(10,2)\nCUSTOMER_ID VARCHAR2(6)\nThe table has 100 rows\nExamine this sequence of statements issued in a new session:\nINSERT INTO books VALUES ('ADV12','Adventures of Tom Sawyer',NULL,NULL);\nSAVEPOINT a;\nDELETE FROM books;\nROLLBACK TO SAVEPOINT a;\nROLLBACK;\nWhich two statements are true?\nA.  The first ROLLBACK command restores the 101 rows that were deleted and commits the inserted \nrow.\nB.  The first ROLLBACK command restores the 101 rows that were deleted ,leaving the inserted row \nstill to be commiteD.\nC.  The second ROLLBACK command does nothinG.\nD.  the second ROLLBACK undoes the insert.\nE.  The second ROLLBACK command replays the deletE.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Examine this description of the PRODUCTS table:\nName Null? Type\n---------------------------------------------------------------------------\nPROD_ID NOT NULL NUMBER(2)\nQTY NUMBER(5,2)\nCOST NUMBER(8,2)\nYou successfully execute this command:\nCREATE TABLE new_prices (prod_id NUMBER(2),price NUMBER(8,2));\nwhich two statements execute without errors?\nA.  MERGE INTO new_prices n\nUSING (SELECT * FROM products) p\nWHEN MATCHED THEN\n UPDATE SET n.price = p. cost*.01\nWHEN NOT MATCHED THEN\n INSERT (n.prod_id, n.pricE.  VALUES (p.prod_id, cost* .01)\nWHERE (p.cost < 200) ;\nB.  MERGE INTO new_prices n\nUSING (SELECT * FROM products WHERE cost> 150) p\nON (n.prod_id=p.prod_iD. \nWHEN MATCHED THEN\n DELETE WHERE (p.cost < 200)\nWHEN NOT MATCHED THEN\n INSERT (n.prod_id, n.pricE.  VALUES (p.prod_id, p.cost*.01);\nC.  MERGE INTO new_prices n\nUSING (SELECT * FROM products WHERE cost>150) p\nON (n.prod_id= p.prod_iD. \nWHEN MATCHED THEN\n UPDATE SET n.price= p.cost*.01\nDELETE WHERE (p.cost < 200);\nD.  MERGE INTO new_prices n\nUSING products p\nON (p.prod_id = n.prod_iD. \nWHEN NOT MATCHED THEN\n INSERT (n,prod_id, n.pricE.  VALUES (p.prod_id, p.cost*.01)\nWHERE (p.cost < 200);",
+        "answer": "C,D"
+    },
+    {
+        "question": "Examine the descrption of the SALES1 table:\nName Null? Type\n--------------------------------------------------------------------\nSALES_ID NOT NULL NUMBER\nSTORE_ID NOT NULL NUMBER\nITEMS_ID NUMBER\nQUANTITY NUMBER\nSALES_DATE DATE\nSALES2 is a table with the same description as SALES1.\nSome sales data is duplicated in both tables.\nYou want to display the rows from the SALES1 table which are not present in the SALES2 tablE.\nWhich set operator generates the required output?\nA.  UNION ALL\nB.  MINUS\nO) INTERSECT\nD.  SUBTRACT\nE.  UNION",
+        "answer": "B"
+    },
+    {
+        "question": "Which two are true about the WITH GHANT OPTION clause?\nA.  The grantee can grant the object privilege to any user in the database, with or without including \nthis option\nB.  It can be used to pass on privileges to other users by the prantee\nC.  The grantee must have the GRANT ANY OBJECT PRIVILEGE system privilege to use this option\nD.  It can be used for system and object privileges\nE.  It can be used when granting privilleges to roles.\nF.  It cannot be used to pass on privileges to PUBLIC by the grantee",
+        "answer": "B,F"
+    },
+    {
+        "question": "Examine the description of the EMPLOYEES table:\nName Null? Type\n----------------------------------------------------------------------------\nEMP_ID NOT NULL NUMBER\nEMP_NAME VARCHAR2(10)\nDEPT_ID NUMBER (2)\nSALARY NUMBER(8,2)\nJOIN_DATE DATE\nNLS_DATE_ FORMAT is set to DD-MON-YY.\nWhich query requires explicit data type conversion?\nA.  SELECT salary + '120.50' FROM employees;\nB.  SELECT SUBSTR(join_date, 1, 2) - 10 FROM employees;\nC.  SELECT join_date || ' ' || salary FROM employees;\nD.  SELECT join_date FROM employees WHERE join_date>'10-02-2018';\nE.  SELECT join_date + '20' FROM enployees;",
+        "answer": "D"
+    },
+    {
+        "question": "Which three statements are true about time zones,date data types,and timestamp data types in \nan oracle database?\nA.  The DBTIMEZONE function can return an offset from Universal Coordinated Time(UTC. .\nB.  A TIMESTAMP data type column contains information about year,month,and day.\nC.  A TIMESTAMP WITH LOCAL TIMEZONE data type column is stored in the database using the time \nzone of the session that inserted the row.\nD.  The SESSIONTIMEZONE function can return an offset from Universal Coordinated Time(UTC. .\nE.  The CURRENT_TIMESTAMP function returns data without time zone information.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which two are true about the data dictionary?\nA.  All user actions are recorded in the data dictionary\nB.  The data dictionary is constantly updated to reflect changes to database objects, permissions, \nand datA.\nC.  The SYS user owns all base tables and user-accessible views in the data dictionary.\nD.  Base tables in the data dictionary have the prefix DBA_.\nE.  All users have permissions to access all infomation in the data dictionary by default.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Examine the description of the SALES table:\nName Null? Type\n-------------------------------------------------------------------------\nPRODUCT_id NOT NULL NUMBER(10)\nCUSTOMER_ID NOT NULL NUMBER(10)\nTIME_ID NOT NULL DATE\nCHANNEL_ID NOT NULL NUMBER(5)\nPROMO_ID NOT NULL NUMBER(5)\nQUANTITY_SOLD NOT NULL NUMBER(10,2)\nPRICE NUMBER(10,2)\nAMOUNT_SOLD NOT NULL NUMBER(10,2)\nThe SALES table has 55,000 rows.\nExamine this statement:\nCREATE TABLE sales1 (prod_id,cust_id,quantity_sold,pricE. \nAS\nSELECT product_id,customer_id,quantity_sold,price\nFROM sales\nWHERE 1=1;\nWhich two statements are true?\nA.  SALES1 has PRIMARY KEY and UNIQUE constraints on any selected columns which had those \nconstraints in the SALES table\nB.  SALES1 is created with 55,000 rows.\nC.  SALES1 is created with no rows.\nD.  SALES1 is created with 1 row.\nE.  SALES1 has NOT NULL constraints on any selected columns which had those constraints in the \nSALES tablE.",
+        "answer": "B,E"
+    },
+    {
+        "question": "Which three statements are true about Structured Query Language(SQL)?\nA.  It best supports relational databases.\nB.  It requires that data be contained in hierarchical data storagE.\nC.  It guarantees atomicity,consistency,isolation,and durablity(ACID.  features.\nD.  It is the only language that can be used for both relational and object oriented databasE.\nE.  It is used to define encapsulation and polymorphism for a relational tablE.\nF.  It provides independence for logical data structures being manipulated from the underlying \nphysical data storagE.",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "Examine the description of the CUSTOMERS table\nName Null? Type\n-------------------------------------------------------------------\nCUST_ID NOT NULL VARCHAR2(2)\nCUST_LAST_NAME VARCHAR2(30)\nCITY VARCHAR2(10)\nCUST_CREDIT_LIMIT number(6,2)\nYou need to display last names and credit limits of all customers whose last name starts with A or \nB in lower or upper case,and whose credit limit is below 1000.\nExamine this partial query:\nSELECT cust_last_name,cust_credit_limit FROM customers;\nWhich two WHERE conditions give the required result?\nA.  WHERE (UPPER(cust_last_namE.  LIKE INITCAP('A') OR UPPER(cust_last_namE.  LIKE INITCAP('B')) \nAND ROUND(cust_credit_limit) < ROUND(1000);\nB.  WHERE(UPPER(cust_last_namE.  LIKE 'A%' OR UPPER(cust_last_namE.  LIKE 'B%')\nAND ROUND(cust_credit_limit) < 1000;\nC.  WHERE UPPER(cust_last_namE.  IN ('A%','B%')\nAND cust_credit_limit < 1000;\nD.  WHERE (INITCAP(cust_last_namE.  LIKE 'A%' OR INITCAP(cust_last_namE.  LIKE 'B%')\nAND cust_credit_limit < 1000;\nE.  WHERE UPPER(cust_last_namE.  BETWEEN UPPER('A%' AND 'B%')\nAND ROUND(cust_credit_limit) < 1000;",
+        "answer": "B,D"
+    },
+    {
+        "question": "Choose two\nExamine these SQL statements which exeaute successfully\nCREATE TABLE emp\n(emp_no NUMBER(2) CONSTRAINT emp_ emp_no_pk PRIMARY KEY,\nename VARCHAR2(15),\nsalary NUMBER(8,2),\nmgr_no NUMBER(2));\nALTER TABLE emp ADD CONSTRAINT emp_mgr_fk\nFOREIGN KEY(mgr_no)\nREFERENCES emp(emp_no)\nON DELETE SET NULL;\nALTER TABIE emp\nDISABLE CONSTRAINT emp_emp_no_pk\nCASCADE;\nALTER TABLE emp\nENABLE CONSTRAINT emp_emp_ no_pk;\nWhich two statements are true after execution?\nA.  The primary key constraint will be enabled and DEFRRED.\nB.  The primary key constraint will be enabled and IMMEDIATE.\nC.  The foreign key constraint will be enabled and DEFERRED.\nD.  The foreign key constraint will be enabled and IMMEDIATE.\nE.  The foreign key constraint will be disableD.",
+        "answer": "B,E"
+    },
+    {
+        "question": "Choose three\nWhich three are true about privileges and roles?\nA.  A role can contain a combination of several privileges and roles.\nB.  PUBLIC acts as a default role granted to every user in a databasE.\nC.  System privileges always set privileges for an entire databasE.\nD.  A user has all object privileges for every object in their schema by default.\nE.  PUBLIC can be revoked from a user.\nF.  A role is owned by the user who created it.\nG.  All roles are owned by the SYS schemA.",
+        "answer": "A,D,F"
+    },
+    {
+        "question": "Which three statements are true about the Oracle join and ANSI Join syntax?\nA.  The SQL:1999 compliant ANSI Join syntax supports creation of a Cartesian product of two tables.\nB.  The Orade join syntax performs less well than the SQL:1999 compliant ANST join syntax.\nC.  The SQL:1999 compliant ANSI join syntax supports natural Joins.\nD.  The Orade join syntax perfoms better than the SQL:1999 compliant ANSI join syntax.\nE.  The Orade join syntax supports creation of a Cartesian product of two tables.\nF.  The Oracle join syntax suports natural joins.\nG.  The Orade join syntax only supports right outer joins.",
+        "answer": "C,D,E"
+    },
+    {
+        "question": "Which two statements are true about the ORDER BY clause when used with a SQL statement \ncontaining a SET operator such as UNION?\nA.  Only column names from the first SELECT statements in the compound query are recognizeD.\nB.  Each SELECT statement in the compound query can have its own ORDER BY clausE.\nC.  The first column in the first SELECT of the compound query with the UNION operator is used by \ndefault to sort output in the absence of an ORDER BY clausE.\nD.  Each SELECT statement in the compound query must have its own ORDER BY clausE.\nE.  Column positions must be used in the ORDER BY clausE.",
+        "answer": "A,C"
+    },
+    {
+        "question": "View the Exhibit and examine the structure of the PRODUCTS tablE.\nWhich two tasks require subqueries?\nA.  Display the total number of products supplied by supplier 102 which have a product status of \nobsoletE.\nB.  Display the number of products whose PROD_LIST_PRICE is more than the average \nPROD_LIST_PRICE.\nC.  Display the minimum PROD_LIST_PRICE for each product status.\nD.  Display suppliers whose PROD_LIST_PRICE is less than 1000.\nE.  Display products whose PROD_MIN_PRICE is more than the average PROD_LIST_PRICE of all \nproducts, and whose status is orderablE.",
+        "answer": "B,E"
+    },
+    {
+        "question": "Examine the description of the PRODUCT_STATUS table:\nName Null? Type\n-------------------------------------------------------------------------------\nPROD_ID NOT NULL NUMBER(2)\nSTATUS NOT NULL VARCHAR2(15)\nThe STATUS column contains the values 'IN STOCK' or 'OUT OF STOCK' for each row.\nWhich two queries will execute successfully?\nA.  SELECT prod_id || q'('s not availablE. ' \"CURRENT AVAILABLITY\" FROM product _status WHERE \nstatus = 'OUT OF STOCK';\nB.  SELECT prod_id q's not available\" FROM product_status WHERE status='OUT OF STOCK';\nC.  SELECT prod_id || q'('s not availablE. ' 'CURRENT AVAILABILITY' FROM product_status WHERE \nstatus = 'OUT OF STOCK';\nD.  SELECT prod_id || q'('s not avallablE. ' FROM product_status WHERE status='OUT OF STOCK';\nE.  SELECT prod_id || q\"'s not available\" FROM product_status WHERE status='OUT OF STOCK';\nF.  SELECT prod_id \"CURRENT AVAILABILITY\" || q'('s not availabiE. ' FROM product_status WHERE \nstatus ='OUT OF STOCK';",
+        "answer": "A,D"
+    },
+    {
+        "question": "choose three\nWhich three statements are true about Data ManipulationLanguage(DML)?\nA.  DELETE statements can remove multiple rows based on multiple conditions.\nB.  INSERT INTO...SELECT...FROM statements automatically commit.\nC.  INSERT statements can insert NULLS explidtly into a column.\nD.  UPDATE statements can have different subqueries to specify the values for each updated column.\nE.  DML statements require a primary key be defined on a tablE.",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "Which three statements are true about performing Data Manipulation Language (DML) operations \non a view in an Orade Database?\nA.  Insert statements can always be done on a table through a view.\nB.  Views cannot be used to query rows from an underlying table if the table has a PRIMARY KEY \nand the PRIMARY KEY columns are not referenced in the defining query of the view.\nC.  The WITH CHECK clause has no effect when deleting rows from the underlying table through the \nview.\nD.  Views cannot be used to add or modify rows in an underlying table if the defining query of the \nview contains the DISTINCT keyworD.\nE.  Views cannot be used to add or modify rows in an underlying table if the defining query of the \nview contains aggregating funtions.\nF.  Views cannot be used to add rows to an underlying table if the table has columns with NOT NULL \nconstraints lacking default values which are not referenced in the defining query of the view.",
+        "answer": "C,D,E,F"
+    },
+    {
+        "question": "choose the best answer\nYou want to write a query that prompts for two column names and the WHERE condition each time \nit is executed in a session but only prompts for the table name the first time it is executeD.\nThe variables used in your query are never undefined in your session.\nWhich query can be used?\nA.  SELECT &col1, &col2\nFROM &&table\nWHERE &condition:\nB.  SELECT &col1,&scol2\nFROM \"&table\"\nWHERE &condition;\nC.  SELECT &&col1, &&col2\nFROM &table\nWHERE &&condition = &&cond;\nD.  SEIECT '&&col1', '&&col2'\nFROM &table\nWHERE '&&condition' = '&cond';\nE.  SELECT &&col1, &&col2\nFROM &table\nWHERE &&condition;",
+        "answer": "A"
+    },
+    {
+        "question": "choose two\nExamine the desciption of the TRANSACTIONS table:\nName Null? Type\n----------------------------------------------------------------------------\nTRANSACTION_ID NOT NULL VARCHAR2 (6)\nTRANSACTION_DATE DATE\nAMOUNT NUMBER(10,2)\nCUSTOMER_ID VARCHAR2 (6)\nWhich two SQL statements execute successfully?\nA.  SELECT customer_id AS 'CUSTOMER-ID', transaction_date AS DATE, amount+100 'DUES' FROM \ntransactions;\nB.  SEIECT customer_id CUSTID, transaction_date TRANS_DATE, amount+100 DUES FROM \ntransactions;\nC.  SELECT customer_id AS \"CUSTOMER-ID\", transaction_date AS \"DATE\", amount+100 DUES FROM \ntransactions;\nD.  SELECT customer_id AS CUSTOMER-ID, transaction_date AS TRANS_DATE, amount+ 100 \"DUES \nAMONT\" FROM transactions;\nE.  SELECT customer_id AS \"CUSTOMER-ID\", transaction_date AS DATE, amount+100 \"DUES\" FROM \ntransactions;",
+        "answer": "B,C"
+    },
+    {
+        "question": "Choose threE.\nWhich three statements are true about multiple row subqueries?\nA.  They can contain GROUP BY clauses.\nB.  They can contain HAVING clauses.\nC.  They can return multiple columns.\nD.  They cannot contain a subquery.\nE.  Two or more values are always returned from the subquery.",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "Which two statements are true about a full outer join?\nA.  It includes rows that are returned by a Cartesian product.\nB.  It includes rows that are returned by an inner join.\nC.  It returns only unmatched rows from both tables being joineD.\nD.  It returns matched and unmatchedrows from both tables being joineD.\nE.  The Oracle join operator(+) must be used on both sides of the join condition in the WHERE clausE.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which two statements are true about selecting related rows from two tables based on an Entity \nRelationship Diagram (ERD. ?\nA.  Implementing a relationship between two tables might require joining additional tables.\nB.  Relating data from a table with data from the same table is implemented with a self join.\nC.  Rows from unrelated tables cannot be joineD.\nD.  Every relationship between the two tables must be implemented in a join condition.\nE.  An inner join relates rows within the same tablE.",
+        "answer": "A,D"
+    },
+    {
+        "question": "Which two statements are true about substitution variables?\nA.  A substitution variable prefixed with & always prompts only once for a value in a session.\nB.  A substitution variable can be used only in a SELECT statement.\nC.  A substitution variable used to prompt for a column name must be enclosed in single quotation \nmarks.\nD.  A substitution variable used to prompt for a column name must be endlosed in double quotation \nmarks.\nE.  A substitution variable prefixed with && prompts only once for a value in a session unless it is \nset to undefined in the session.\nF.  A substitution variable can be used with any clause in a SELECT statement.",
+        "answer": "E,F"
+    },
+    {
+        "question": "You execute this query: \nSELECT TO_CHAR (NEXT_DAY (LAST_DAY (SYSDATE. , 'MON') , 'dd \"Monday for\" fmMonth rrrr' )\n FROM DUAL;\nWhat is the result?\nA.  It executes successfully but does not return any result.\nB.  It generates an error.\nC.  It returns the date for the first Monday of the next month.\nD.  It returns the date for the last Monday of the current month.",
+        "answer": "C"
+    },
+    {
+        "question": "Table ORDER_ITEMS contains columns ORDER_ID, UNIT_PRICE and QUANTITY, of data type \nNUMBER.\nExamine these SQL statements:\nStatement 1:\nSELECT MAX (unit_price * quantity) \"Maximum order\"\nFROM order_items;\nStatement 2:\nSELECT MAX (unit_price * quantity) \"Maximum order\"\nFROM order_items\nGROUP BY order_id;\nWhich two statements are true?\nA.  Both statements will return NULL if either UNIT_PRICE or QUANTITY contains NULL.\nB.  Statement 2 may return multiple rows of output.\nC.  Statement 2 returns only one row of output.\nD.  Statement 1 returns only one row of output.\nE.  Both the statements give the same output.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Table EMPLOYEES contains columns including EMPLOYEE_ID, JOB_ID and SALARY.\nOnly the EMPLOYEE_ID column is indexeD.\nRows exist for employees 100 and 200.\nExamine this statement: ;\nUPDATE employees\nSET (job_id, salary) =\n(SELECT job_id, salary\nFROM employees\nWHERE employee_id = 200)\nWHERE employee_id = 100;\nWhich two statements are true?\nA.  Employee 100 will have SALARY set to the same value as the SALARY of employee 200.\nB.  Employees 100 and 200 will have the same JOB_ID as before the update commanD.\nC.  Employee 100 will have JOB_ID set to the same value as the JOB_ID of employee 200.\nD.  Employees 100 and 200 will have the same SALARY as before the update commanD.\nE.  Employee 200 will have SALARY set to the same value as the SALARY of employee 100.\nF.  Employee 200 will have JOB_ID set to the same value as the JOB_ID of employee 100.",
+        "answer": "A,C"
+    },
+    {
+        "question": "You execute this command:\nALTER TABLE employees SET UNUSED (department_iD.  ;\nWhich two are true?\nA.  The DEPARTMENT_ID column is set to null for all rows in the tablE.\nB.  A query can display data from the DEPARTMENT_ID column.\nC.  No updates can be made to the data in the DEPARTMENT_ID column.\nD.  A new column with the name DEPARTMENT_ID can be added to the EMPLOYEES tablE.\nE.  The DEPARTMENT_ID column can be recovered from the recycle bin.\nF.  The storage space occupied by the DEPARTMENT_ID column is released only after a COMMIT is \nissueD.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Examine the description of the CUSTOMERS table:\nName Null? Type\nCUSTNO NOT NULL NUMBER(3)\nCUSTNAME NOT NULL VARCHAR2 (25)\nCUSTADDRESS VARCHAR2 (35)\nCUST_CREDIT_LIMIT NUMBER(5)\nCUSTNO is the PRIMARY KEY.\nYou must determine if any customers' details have been entered more than once using a different \nCUSTNO, by listing all duplicate names.\nWhich two methods can you use to get the required result?\nA.  FULL OUTER JOIN with self join\nB.  LEFT OUTER JOIN with self join\nC.  RIGHT OUTER JOIN with self join\nD.  self join\nE.  subquery",
+        "answer": "D,E"
+    },
+    {
+        "question": "Which statement is true about the INTERSECT operator used in compound queries?\nA.  It ignores NULLs.\nB.  INTERSECT is of lower precedence than UNION or UNION ALL.\nC.  Multiple INTERSECT operators are not possible in the same SQL statement.\nD.  It processes NULLs in the selected columns.",
+        "answer": "D"
+    },
+    {
+        "question": "Which three statements are true regarding single row subqueries?\nA.  They can be used in the WHERE clausE.\nB.  They must be placed on the right side of the comparison operator or condition.\nC.  They must return a row to prevent errors in the SQL statement.\nD.  They must be placed on the left side of the comparison operator or condition.\nE.  A SQL statement may have multiple single row subquery blocks.\nF.  They can be used in the HAVING clausE.",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Examine the description of the MEMBERS table:\nName Null? Type\n------------------------- ----------------------- -----------------------\nMEMBER_ID NOT NULL VARCHAR2 (6)\nFIRST_NAME VARCHAR2(50)\nLAST_NAME NOT NULL VARCHAR2 (50)\nADDRESS VARCHAR2 (50)\nCITY VARCHAR2 (25)\nExamine the partial query:\nSELECT city, last_name LNAME FROM members ...;\nYou want to display all cities that contain the string AN. The cities must be returned in ascending \norder, with the last names further sorted in descending order.\nWhich two clauses must you add to the query?\nA.  ORDER BY 1, LNAME DESC\nB.  ORDER BY last_name DESC, city ASC\nC.  WHERE city LIKE '%AN%'\nD.  WHERE city = '%AN%'\nE.  WHERE city IN ('%AN%')\nF.  ORDER BY 1,2",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which three statements are true about Oracle synonyms?\nA.  A SEQUENCE can have a synonym.\nB.  Any user can drop a PUBLIC synonym.\nC.  A synonym cannot be created for a PL/SQL packagE.\nD.  A synonym created by one user can refer to an object belonging to another user.\nE.  A synonym can be available to all users.",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "Which three statements are true about built-in data types?\nA.  A BLOB stores unstructured binary data within the databasE.\nB.  A VARCHAR2 column definition does not require the length to be specifieD.\nC.  A CHAR column definition does not require the length to be specifieD.\nD.  A BFILE stores unstructured binary data in operating system files.\nE.  The default length for a CHAR column is always one character.\nF.  A VARCHAR2 blank-pads column values only if the data stored is non-numeric and contains no \nspecial characters.",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Examine the structure of the two tables:\nPRODUCTS:\nName Null? Type\n------------------------------------------------------------------------\nPROD_ID CHAR(2)\nPROD_NAME CHAR(4)\nEXP_DATE TIMESTAMP (6)\nNEW_PRODUCTS:\nName Null? Type\n------------------------------------------------------------------------\nPROD_ID CHAR(4)\nPROD_NAME VARCHAR2 (10)\nEXP_DATE DATE\nWhich two queries execute successfully?\nA.  SELECT prod_id, prod_name FROM products\nINTERSECT\n SELECT 100, prod_name FROM new_products;\nB.  SELECT prod_id FROM products\nUNION ALL\n SELECT prod_id, prod_name FROM new_products;\nC.  SELECT prod_id, exp_date FROM products\nUNION ALL\n SELECT prod_id, NULL FROM new_products;\nD.  SELECT * FROM products\nUNION\n SELECT * FROM new_products;\nE.  SELECT * FROM products\nMINUS\n SELECT prod_id FROM new_products;",
+        "answer": "C,D"
+    },
+    {
+        "question": "Examine this statement:\nSELECT 1 AS id, 'John' AS first_name\n FROM dual\nUNION\nSELECT 1, 'John' AS name\n FROM dual\nORDER BY 1;\nWhat is returned upon execution?\nA.  0 rows\nB.  2 rows\nC.  1 row\nD.  an error",
+        "answer": "C"
+    },
+    {
+        "question": "Which three privileges can be restricted to a subset of columns in a table?\nA.  REFERENCES\nB.  INSERT\nC.  SELECT\nD.  ALTER\nE.  UPDATE\nF.  DELETE\nG.  INDEX",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "Choose the best answer\nWhich statement is true about aggregate functions?\nA.  The MAX and MIN functions can be used on columns with character data types.\nB.  The AVG function implicitly converts NULLS to zero.\nC.  Aggregate functions can be used in any clause of a SELECT statement.\nD.  Aggregate functions can be nested to any number of levels.",
+        "answer": "A"
+    },
+    {
+        "question": "Which is the default column or columns for sorting output from compound queries using SET \noperators such as INTERSECT in a SQL statement?\nA.  the first NUMBER or VARCHAR2 column in the last SELECT of the compound query\nB.  the first column in the first SELECT of the compound query\nC.  the first VARCHAR2 column in the first SELECT of the compound query\nD.  the first NUMBER column in the first SELECT of the compound query\nE.  the first column in the last SELECT of the compound query",
+        "answer": "B"
+    },
+    {
+        "question": "Which three statements are true about the DESCRIBE command?\nA.  It can be used to display the structure of an existing view.\nB.  It displays all constraints that are defined for each column.\nC.  It displays the NOT NULL constraint for any columns that have that constraint.\nD.  It can be used from SQL Developer.\nE.  It displays the PRIMARY KEY constraint for any column or columns that have that constraint.\nF.  It can be used only from SQL*Plus.",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "Which two statements are true regarding the UNION and UNION ALL operators?\nA.  NULLS are not ignored during duplicate checkinG.\nB.  The output is sorted by the UNION ALL operator.\nC.  The number of columns selected in each SELECT statement must be identical.\nD.  Duplicates are eliminated automatically by the UNION ALL operator.\nE.  The names of columns selected in each SELECT statement must be identical.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which three statements are true regarding indexes?\nA.  A SELECT statement can access one or more indices without accessing any tables.\nB.  A table belonging to one user can have an index that belongs to a different user.\nC.  A UNIQUE index can be altered to be non-uniquE.\nD.  An update to a table can result in no updates to any of the table's indexes.\nE.  When a table is dropped and is moved to the RECYCLE BIN, all indexes built on that table are \npermanently droppeD.\nF.  An update to a table can result in updates to any or all of the table's indexes.",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "Which three actions can you perform by using the ORACLE_DATAPUMP access driver?\nA.  Create a directory object for an external tablE.\nB.  Read data from an external table and load it into a table in the databasE.\nC.  Query data from an external tablE.\nD.  Create a directory object for a flat filE.\nE.  Execute DML statements on an external tablE.\nF.  Read data from a table in the database and insert it into an external tablE.",
+        "answer": "A,B,C"
+    },
+    {
+        "question": "Which two statements are true about TRUNCATE and DELETE?\nA.  The result of a TRUNCATE can be undone by issuing a ROLLBACK.\nB.  TRUNCATE can use a WHERE clause to determine which row(s) should be removeD.\nC.  The result of a DELETE can be undone by issuing a ROLLBACK.\nD.  TRUNCATE leaves any indexes on the table in an UNUSABLE statE.\nE.  DELETE can use a WHERE clause to determine which row(s) should be removeD.",
+        "answer": "C,E"
+    },
+    {
+        "question": "Which three are true about multitable INSERT statements?\nA.  They can be performed on relational tables.\nB.  They can be performed only by using a subquery.\nC.  They can be performed on remote tables.\nD.  They can insert each computed row into more than one tablE.\nE.  They can be performed on extemal tables using SQL*Loader.\nF.  They can be performed on views.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "Which three statements are true about views in an Oracle database?\nA.  Data Manipulation Language (DML) can always be used on views.\nB.  Deleting one or more rows using a view whose defining query contains a GROUP BY clause will \ncause an error.\nC.  The WITH CHECK clause prevents certain rows from being displayed when querying the view.\nD.  The WITH CHECK clause prevents certain rows from being updated or inserteD.\nE.  Inserting one or more rows using a view whose defining query contains a GROUP BY clause will \ncause an error.\nF.  Views can be updated without the need to re-grant privileges on the view.\nG.  Tables in the defining query of a view must always exist in order to create the view.",
+        "answer": "B,E,G"
+    },
+    {
+        "question": "The STORES table has a column START_DATE of data type DATE, containing the date the row was \ninserteD.\nYou only want to display details of rows where START_DATE is within the last 25 months.\nWhich WHERE clause can be used?\nA.  WHERE MONTHS_BETWEEN (SYSDATE, start_datE.  <= 25\nB.  WHERE ADD_MONTHS (start_date, 25) <= SYSDATE\nC.  WHERE TO_NUMBER(start_date - SYSDATE.  <= 25\nD.  WHERE MONTHS_BETWEEN(start_date, SYSDATE.  <= 25",
+        "answer": "A"
+    },
+    {
+        "question": "View the Exhibit and examine the description of the tables.\nYou execute this SQL statement:\nINSERT INTO sales VALUES (\n23, 2300, SYSDATE,\n(SELECT channel_id\nFROM channels\nWHERE channel_desc = 'Direct sales'),\n12, 1, 500) ;\nWhich three statements are true?\nA.  The statement will fail if a row already exists in the SALES table for product 23.\nB.  The SALES table has five foreign keys.\nC.  A product can have a different unit price at different times.\nD.  The statement will execute successfully and a new row will be inserted into the SALES tablE.\nE.  The statement will fail because a subquery may not be contained in a VALUES clausE.\nF.  A customer can exist in many countries.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "Which three actions can you perform by using the ALTER TABLE command?\nA.  Restrict all DML statements on a tablE.\nB.  Drop pseudocolumns from a tablE.\nC.  Drop all columns simultaneously from a tablE.\nD.  Lock a set of rows in a tablE.\nE.  Rename a tablE.\nF.  Enable or disable constraints on a tablE.",
+        "answer": "A,E,F"
+    },
+    {
+        "question": "Which three statements are true about inner and outer joins?\nA.  A full outer join returns matched and unmatched rows.\nB.  Outer joins can only be used between two tables per query.\nC.  Outer joins can be used when there are multiple join conditions on two tables.\nD.  A left or right outer join returns only unmatched rows.\nE.  A full outer join must use Oracle syntax.\nF.  An inner join returns matched rows.",
+        "answer": "A,C,F"
+    },
+    {
+        "question": "Which three actions can you perform on an existing table containing data?\nA.  Change a DATE column containing data to a NUMBER data typE.\nB.  Increase the width of a numeric column.\nC.  Add a new NOT NULL column with a DEFAULT valuE.\nD.  Add a new column as the table's first column.\nE.  Change the default value of a column.\nF.  Define a default value that is automatically inserted into a column containing nulls.",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "Which two statements are true about the SET VERIFY ON command?\nA.  It displays values for variables prefixed with &&.\nB.  It displays values for variables used only in the WHERE clause of a query.\nC.  It can be used only in SQL*Plus.\nD.  It can be used in SQL Developer and SQL*Plus.\nE.  It displays values for variables created by the DEFINE commanD.",
+        "answer": "A,C"
+    },
+    {
+        "question": "An Oracle database server session has an uncommitted transaction in progress which \nupdated 5000 rows in a tablE.\nIn which three situations does the transaction complete thereby committing the updates?\nA.  when the session logs out successully\nB.  when a DBA issues a successful SHUTDOWN IMMEDIATE statement and the user \nthen issues a COMMIT\nC.  when a DBA issues a successful SHUTDOWN TRANSACTIONAL statement and \nthe user then issues a COMMIT\nD.  when a CREATE INDEX statement is executed successfully in the same session\nE.  when a COMMIT statement is issued by the same user from another session in the \nsame database instance\nF.  when a CREATE TABLE AS SELECT statement is executed unsuccessfully in the \nsame session",
+        "answer": "C,D,F"
+    },
+    {
+        "question": "Which four statements are true about constraints on Oracle tables?\nA.  A UNIQUE constraint can use a pre-existing index on the constrained column or \ncolumns.\nB.  A UNIQUE constraint permits NULLS.\nC.  A NOT NULL constraint can be defined at the table level.\nD.  A CHECK constraint can refer to values in other rows.\nE.  A FOREIGN KEY column can contain NULLS.\nF.  A PRIMARY KEY constraint can be added after a table has been created and \npopulateD.\nG.  A column can have only one CHECK constraint.",
+        "answer": "B,E,F,G"
+    },
+    {
+        "question": "In which three situations does a new transaction always start?\nA.  when issuing the first Data Manipulation Language (DML) statement after a \nCOMMIT or ROLLBACK statement was issued in the same session\nB.  when issuing a CREATE INDEX statement after a CREATE TABLE statement \ncompleted successfully in the same session\nC.  when issuing a DML statement after a DML statement failed in the same session\nD.  when issuing a CREATE TABLE statement after a SELECT statement was issued \nin the same session\nE.  when issuing a TRUNCATE statement after a SELECT statement was issued in the \nsame session\nF.  when issuing a SELECT FOR UPDATE statement after a CREATE TABLE AS \nSELECT statement was issued in the same session",
+        "answer": "A,C,F"
+    },
+    {
+        "question": "Which three are true about the MERGE statement?\nA.  It can update, insert, or delete rows conditionally in multiple tables.\nB.  It can use subqueries to produce source rows.\nC.  It can use views to produce source rows.\nD.  It can merge rows only from tables.\nE.  It can combine rows from multiple tables conditionally to insert into a single tablE.\nF.  It can update the same row of the target table multiple times.",
+        "answer": "B,C,E"
+    },
+    {
+        "question": "Which two are true about granting privileges on objects?\nA.  An object privilege can be granted to a role only by the owner of that object.\nB.  A table owner must grant the REFERENCES privilege to allow other users to create \nFOREIGN KEY constraints using that tablE.\nC.  The owner of an object acquires all object privileges on that object by default.\nD.  An object privilege can be granted to other users only by the owner of that object.\nE.  The WITH GRANT OPTION clause can be used only by DBA users.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Which two statements are true about the ORDER BY clause?\nA.  Only columns that are specified in the SELECT list can be used in the ORDER BY \nclausE.\nB.  Column aliases can be used in the ORDER BY clausE.\nC.  In a character sort, the values are case-sensitivE.\nD.  NULLS are not included in the sort operation.\nE.  Numeric values are displayed in descending order if they have decimal positions.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Evalute these conmands which execate sucestully\nCREATE SEQUENCE ord_seq\nINCREMENT BY 1\nSTART WITH 1\nMAXVALUE 100000\nCYCLE\nCACHE 5000;\nCREATE TABLE ord_items\nord_no NUMBER(4) DEFAULT ord_seq.NEXTVAL NOT NULL,\nitem_no NUMBER(3), qty NUMBER(3),\nexpiry_date DATE,\nCONSTRAINT it_pk PRIMARY KEY (ord_no, item_no)，\nCONSTRAINT ord_fk FOREIGN KEY (ord_no) REFERENCES orders (ord_no)) ;\nWhich two statements are true atout the ORD_ITEMS table and the ORD_SEQ \nsequence?\nA.  Any user inserting rows into table ORD_ITEMS must have been granted access to \nsequence ORD_SEQ.\nB.  Sepuence ORD_SEQ cycles back to 1 after every 5000 numbers and can cycle 20 \ntimes \nC.  Sequence ORD_SEQ is guaranteed not to genenate duplicate numbers.\nD.  Colunn ORD_NO gets the next number from squence ORD_SEQ whenever a row \nis inserted into ORD_ITEMS and no explict value is given for ORD_NO.\nE.  IF sequence ORD_SEQ is dropped then the default value for column ORD_NO will \nbe NULL for rows inserted into ORD_ITEMS.",
+        "answer": "A,D"
+    },
+    {
+        "question": "Examine the description of the PROMOTIONS table:\nName Nu11? Type\n-----------------------------------------------------------------------------\nPROMO_ID NOT NULL NUMBER(6)\nPROMO_NAME NOT NULL VARCHAR2 (30)\nPROMO_CATEGORY NOT NULL VARCHAR2 (30)\nPROMO_COST NOT NULL NUMBER(10,2)\nYou want to display the unique promotion costs in each promotion category.\nWhich two queries can be used?\nA.  SELECT promo_category, DISTINCT promo_cost FROM promotions ORDER BY \n2;\nB.  SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY \n1;\nC.  SELECT DISTINCT promo_category || ' has ' || promo_cost AS COSTS FROM \npromotions ORDER BY 1;\nD.  SELECT DISTINCT promo_cost || ' in ' || DISTINCT promo_category FROM \npromotions ORDER BY 1;\nE.  SELECT promo_cost, promo_category FROM promotions ORDER BY by 1;",
+        "answer": "B,C"
+    },
+    {
+        "question": "Which two queries execute successfully?\nA.  SELECT COALESCE (100,NULL,200) FROM DUAL;\nB.  SELECT NULLIF (100,100) FROM DUAL; \nC.  SELECT COALESCE(100,'A') FROM DUAL; ;\nD.  SELECT NULLIF (100,'A') FROM DUAL;\nE.  SELECT NULLIF (NULL,100) FROM DUAL;",
+        "answer": "A,B"
+    },
+    {
+        "question": "Which two statements are true about the rules of precedence for operators?\nA.  The + binary operator has the highest precedence in an expression in a SQL \nstatement.\nB.  Multiple parentheses can be used to override the default precedence of operators in \nan expression.\nC.  NULLS influence the precedence of operators in an expression.\nD.  The concatenation operator || is always evaluated before addition and subtraction in \nan expression.\nE.  Arithmetic operators with equal precedence are evaluated from left to right within \nan expression.",
+        "answer": "B,E"
+    },
+    {
+        "question": "Which statement is true about TRUNCATE and DELETE?\nA.  You can never DELETE rows from a table if foreign key constraints will be violateD.\nB.  For tables with multiple indexes and triggers DELETE is faster than TRUNCATE.\nC.  You can never TRUNCATE a table if foreign key constraints will be violateD.\nD.  For large tables TRUNCATE is faster than DELETE.",
+        "answer": "C"
+    },
+    {
+        "question": "Which two are true about multitable INSERT statements?\nA.  The conditional INSERT FIRST statement always inserts a row into a single tablE.\nB.  They always use subqueries.\nC.  The unconditional INSERT ALL statement must have the same number of columns \nin both the source and target tables.\nD.  They can transform a row from a source table into multiple rows in a target tablE.\nE.  The conditional INSERT ALL statement inserts rows into a single table by \naggregating source rows.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which four statements are true regarding primary and foreign key constraints and the \neffect they can have on table data?\nA.  Primary key and foreign key constraints can be defined at both the column and table \nlevel.\nB.  Only the primary key can be defined at the column and table level.\nC.  It is possible for child rows that have a foreign key to be deleted automatically from \nthe child table at the time the parent row is deleteD.\nD.  It is possible for child rows that have a foreign key to remain in the child table at the \ntime the parent row is deleteD.\nE.  A table can have only one primary key but multiple foreign keys.\nF.  The foreign key columns and parent table primary key columns must have the same \nnames.\nG.  A table can have only one primary key and one foreign key.",
+        "answer": "A,C,D,E"
+    },
+    {
+        "question": "Which two are true about the MERGE statement?\nA.  The WHEN NOT MATCHED clause can be used to specify the updates to be \nperformeD.\nB.  The WHEN NOT MATCHED clause can be used to specify the deletions to be \nperformeD.\nC.  The WHEN NOT MATCHED clause can be used to specify the inserts to be \nperformeD.\nD.  The WHEN MATCHED clause can be used to specify the inserts to be performeD.\nE.  The WHEN MATCHED clause can be used to specify the updates to be performeD.",
+        "answer": "C,E"
+    },
+    {
+        "question": "You issued this command:\nDROP TABLE hr.employees;\nWhich three statements are true?\nA.  All indexes defined on HR.EMPLOYEES are droppeD.\nB.  Synonyms for HR.EMPLOYEES are droppeD.\nC.  All constraints defined on HR.EMPLOYEES are droppeD.\nD.  Sequences used to populate columns in the HR.EMPLOYEES table are droppeD.\nE.  The HR.EMPLOYEES table may be moved to the recycle bin.\nF.  Views referencing HR.EMPLOYEES are droppeD.",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Choose two.\nWhich two statements are true regarding a SAVEPOINT?\nA.  A SAVEPOINT does not issue a COMMIT.\nB.  Rolling back to a SAVEPOINT can undo a TRUNCATE statement.\nC.  Rolling back to a SAVEPOINT can undo a DELETE statement.\nD.  Rolling back to a SAVEPOINT can undo a CREATE INDEX statement.\nE.  Only one SAVEPOINT may be issued in a transaction.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which two statements are true about external tables?\nA.  Their data can be retrieved by using only SQL or PL/SQL.\nB.  Their metadata and actual data are both stored outside the databasE.\nC.  You can populate them from existing data in the database by using the CREATE \nTABLE AS SELECT commanD.\nD.  DML statements cannot be used on them.\nE.  Indexes can be created on them.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which three statements are true about single-row functions?\nA.  They can accept only one argument.\nB.  They can be nested to any level.\nC.  They return a single result row per tablE.\nD.  The data type returned can be different from the data type of the argument.\nE.  The argument can be a column name, variable, literal or an expression.\nF.  They can be used only in the WHERE clause of a SELECT statement.",
+        "answer": "B,D,E"
+    },
+    {
+        "question": "Which two statements are true about views?\nA.  Views can be updated without the need to re-grant privileges on the view.\nB.  Views can be indexeD.\nC.  The WITH CHECK clause prevents certain rows from being updated or inserted in the underlying \ntable through the view.\nD.  The WITH CHECK clause prevents certain rows from being displayed when querying the view.\nE.  Tables in the defining query of a view must always exist in order to create the view.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which three statements are true about performing Data Manipulation Language (DML)\noperations on a view with no INSTEAD OF triggers defined?\nA.  Views cannot be used to add or modify rows in an underlying table if the defining query of the\nview contains the DISTINCT keyworD.\nB.  Delete statements can always be done on a table through a view.\nC.  Insert statements can always be done on a table through a view.\nD.  Views cannot be used to query rows from an underlying table if the table has a PRIMARY KEY\nand the PRIMARY KEY columns are not referenced in the defining query of the view.\nE.  Views cannot be used to add rows to an underlying table if the table has columns with NOT \nNULL constraints lacking default values which are not referenced in the defining query of the view.\nF.  The WITH CHECK clause has no effect when deleting rows from the underlying table through the \nview.",
+        "answer": "A,E,F"
+    },
+    {
+        "question": "Which three are true about system and object privileges?\nA.  Adding a foreign key constraint pointing to a table in another schema requires the REFERENCES \nobject privilegE.\nB.  Revoking an object privilege that was granted with the WITH GRANT OPTION clause has a \ncascading effect.\nC.  WITH GRANT OPTION cannot be used when granting an object privilege to PUBLIC.\nD.  WITH GRANT OPTION can be used when granting an object privilege to both users and roles.\nE.  Adding a primary key constraint to an existing table in another schema requires a system \nprivilegE.\nF.  Revoking a system privilege that was granted with WITH ADMIN OPTION has a cascading effect.",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "Examine these statements executed in a single Oracle session:\nCREATE TABLE product (pcode NUMBER(2),pname VARCHAR2 (20));\nINSERT INTO product VALUES (1, 'pen') ;\nINSERT INTO product VALUES (2, 'pencil');\nINSERT INTO product VALUES (3, 'fountain pen');\nSAVEPOINT a;\nUPDATE product SET pcode = 10 WHERE pcode = 1;\nCOMMIT;\nDELETE FROM product WHERE pcode = 2;\nSAVEPOINT b;\nUPDATE product SET pcode = 30 WHERE pcode = 3;\nSAVEPOINT c;\nDELETE FROM product WHERE pcode = 10;\nROLLBACK TO SAVEPOINT b;\nCOMMIT;\nWhich three statements are true?\nA. The code for pen is 1.\nB.  There is no row containing fountain pen.\nC.  The code for fountain pen is 3.\nD.  There is no row containing pen.\nE.  There is no row containing pencil.\nF.  The code for pen is 10.",
+        "answer": "C,E,F"
+    },
+    {
+        "question": "Which two are true about granting object privileges on tables, views, and sequences?\nA.  INSERT can be granted only on tables and sequences.\nB.  REFERENCES can be granted only on tables.\nC.  DELETE can be granted on tables, views, and sequences.\nD.  SELECT can be granted on tables, views, and sequences.\nE.  ALTER can be granted only on tables and sequences.",
+        "answer": "D,E"
+    },
+    {
+        "question": "Examine this list of requirements for a sequence:\n1. Name: EMP_SEQ\n2. First value returned: 1\n3. Duplicates are never permitteD.\n4. Provide values to be inserted into the EMPLOYEES.EMPLOYEE_ID column.\n5. Reduce the chances of gaps in the values.\nWhich two statements will satisfy these requirements?\nA.  CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CYCLE;\nB.  CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CACHE;\nC.  CREATE SEQUENCE emp_seq START WITH 1 CACHE ;\nD.  CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 NOCACHE;\nE.  CREATE SEQUENCE emp_seq NOCACHE;\nF.  CREATE SEQUENCE emp_seq;",
+        "answer": "D,E"
+    },
+    {
+        "question": "Which two are true about creating tables in an Oracle database?\nA.  A system privilege is requireD.\nB.  The same table name can be used for tables in different schemas.\nC.  Creating an external table will automatically create a file using the specified directory and file \nnamE.\nD.  A primary key constraint is mandatory.\nE.  A CREATE TABLE statement can specify the maximum number of rows the table will contain.",
+        "answer": "A,B"
+    },
+    {
+        "question": "Which three are true about subqueries?\nA.  A subquery can be used in a WHERE clausE.\nB.  A subquery cannot be used in the select list.\nC.  < ANY returns true if the argument is less than the highest value returned by the subquery.\nD.  A subquery can be used in a HAVING clausE.\nE.  = ANY can only evaluate the argument against a subquery if it returns two or more values.\nF.  A subquery cannot be used in a FROM clausE.\nG.  < ANY returns true if the argument is less than the lowest value returned by the subquery.",
+        "answer": "A,C,D"
+    },
+    {
+        "question": "Examine the description of the CUSTOMERS table:\nName Null? Type \n----------------------------------------------------------------------------\nCUSTOMER_ID NOT NULL NUMBER(38)\nCUSTOMER NAME NOT NULL VARCHAR2 (100)\nINSERT_DATE NOT NULL DATE\nWhich three statements will do an implicit conversion?\nA.  SELECT * FROM customers WHERE TO_DATE (insert_datE.  = DATE '2019-01-01';\nB.  SELECT * FROM customers WHERE customer_id = '0001' ;\nC.  SELECT * FROM customers WHERE TO_CHAR (customer_iD.  = '0001' ;\nD.  SELECT * FROM customers WHERE customer_id = 0001;\nE.  SELECT * FROM customers WHERE insert_date = DATE '2019-01-01' ;\nF.  SELECT * FROM customers WHERE insert_date = '01-JAN-19' ;",
+        "answer": "B,E,F"
+    },
+    {
+        "question": "Examine this partial statement:\nSELECT *\nFROM employees\nWHERE salary = (<subquery>);\nWhich is true?\nA.  Both the query and the subquery can select any number of rows.\nB.  The query can select any number of rows, but the subquery can select only zero rows or one \nrow.\nC.  Both the query and the subquery can select only zero rows or one row.\nD.  The query can select only zero rows or one row, but the subquery can select any number of rows.",
+        "answer": "B"
+    },
+    {
+        "question": "Which statement will execute successfully?\nA.  SELECT 1,2 FROM DUAL\n UNION\n SELECT 3,4 FROM DUAL\n ORDER BY 1, 2;\nB.  SELECT 1 FROM DUAL\n UNION\n SELECT 2 FROM DUAL\n ORDER BY 1,2;\nC.  SELECT 1, 2 FROM DUAL\n UNION\n SELECT 3,4 FROM DUAL\n ORDER BY 3,4;\nD.  SELECT 3 FROM DUAL\n UNION\n SELECT 4 FROM DUAL\n ORDER BY 3;",
+        "answer": "A"
+    },
+    {
+        "question": "Examine the description of the EMPLOYEES table:\nName Null? Type\n-------------------------------------------------------------------------------------\nEMP_NO NOT NULL NUMBER(5)\nLAST_NAME VARCHAR2 (10)\nDEPT_NO NOT NULL NUMBER(5)\nSALARY NUMBER(6,2)\nYou write this failing statement:\nSELECT dept_no AS department_id, MAX(salary) AS max_sal\n FROM employees\nWHERE salary > 10000\nGROUP BY department_id\nORDER BY max_sal;\nWhich clause causes the error?\nA.  GROUP BY\nB.  SELECT\nC.  WHERE\nD.  ORDER BY",
+        "answer": "A"
+    },
+    {
+        "question": "Examine data in the BRICKS table:\nSHAPE WEIGHT\n--------------------------------------\ncube 5\ncuboid 10\ncylinder 15\nExamine the BOXES table:\nBOX_SIZE MIN_WEIGHT MAX_WEIGHT\n----------------------------------------------------------------------------\nSMALL 0 10\nWhich two queries only return CUBE?\nA.  SELECT shape\nFROM bricks\nJOIN boxes\nON weight < max_weight;\nB.  SELECT shape\nFROM bricks\nJOIN boxes\nON NOT (weight > max_weight) ;\nC.  SELECT shape\nFROM bricks\nJOIN boxes\nON weight > min_weight;\nD.  SELECT shape\nFROM bricks\nJOIN boxes\nON weight >= min_weight\nAND weight < max_weight;\nE.  SELECT shape\nFROM bricks\nJOIN boxes\nON weight BETWEEN min_weight AND max_weight;",
+        "answer": "A,D"
+    },
+    {
+        "question": "Which two are true about unused columns?\nA.  A query can return data from unused columns, but no DML is possible on those columns.\nB.  Unused columns retain their data until they are droppeD.\nC.  A foreign key column cannot be set to unuseD.\nD.  Once a column has been set to unused, a new column with the same name can be added to the \ntablE.\nE.  A primary key column cannot be set to unuseD.\nF.  The DESCRIBE command displays unused columns.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which statement executes successfully?\nA.  SELECT TO_DATE (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;\nB.  SELECT TO_NUMBER (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;\nC.  SELECT TO_NUMBER (TO_DATE (INTERVAL '800' SECOND. ) FROM DUAL;\nD.  SELECT TO_DATE (TO_NUMBER (INTERVAL '800' SECOND. ) FROM DUAL;\nE.  SELECT TO_CHAR (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;",
+        "answer": "E"
+    },
+    {
+        "question": "Which two queries execute successfully?\nA.  SELECT SYSTIMESTAMP + INTERVAL '1' DAY FROM DUAL;\nB.  SELECT SYSDATE * INTERVAL '1' DAY FROM DUAL; .\nC.  SELECT INTERVAL '1' DAY - SYSDATE FROM DUAL;\nD.  SELECT INTERVAL '1' DAY - INTERVAL '1' MINUTE FROM DUAL;\nE.  SELECT INTERVAL '1' DAY + INTERVAL '1' MONTH FROM DUAL;",
+        "answer": "A,D"
+    },
+    {
+        "question": "Examine the data in the ORDERS table:\nORDER_ID ORDER_DATE\n------------------------------------------------------\n1 <null>\n2 <null>\n3 01-JAN-2019\n4 01-FEB- 2019\n5 01 -MAR-2019\nExamine the data in the INVOICES table:\nINVOICE_ID ORDER_ID ORDER_DATE\n-------------------------------------------------------------------------\n1 1 <null>\n2 2 01-JAN-2019\n3 3 <null>\n4 4 01-FEB-2019\n5 5 <null>\nExamine this query:\nSELECT order_id, order_date FROM orders\nMINUS\nSELECT order_id, order_date FROM invoices;\nWhich three rows will it return?\nA.  5 <null>\nB.  1 <null>\nC.  3 <null>\nD.  5 01-MAR-2019\nE.  2 <null>\nF.  3 01-JAN-2019\nG.  4 01-FEB-2019",
+        "answer": "D,E,F"
+    },
+    {
+        "question": "Which three are key components of an Entity Relationship Model?\nA.  a relationship\nB.  a table\nC.  a unique identifier\nD.  an entity\nE.  an attribute .\nF.  an activity",
+        "answer": "A,D,E"
+    },
+    {
+        "question": "Examine the description of EMPLOYEES table:\nName Null? Type\n------------------------------------------------------------------------\nEMPLOYEE_ID NOT NULL NUMBER(6)\nEMPLOYEE_NAME NOT NULL VARCHAR2 (100)\nSALARY NOT NULL NUMBER\nCOMMISSION NUMBER\nWhich three queries return all rows for which SALARY + COMMISSION is greater than 20000?\nA.  SELECT * FROM employees WHERE salary + NVL2 (commission, commission, 0) >= 20000;\nB.  SELECT * FROM employees WHERE salary + NULLIF (commission, 0) >= 20000;\nC.  SELECT * FROM employees WHERE NVL2 (salary + commission, salary + commission, salary) >= \n20000;\nD.  SELECT * FROM employees WHERE COALESCE (salary, commission) >= 20000;\nE.  SELECT * FROM employees WHERE salary + NVL (commission, 0) >= 20000;\nF.  SELECT * FROM employees WHERE NVL(salary + commission, 0) >= 20000;",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "In your session, the NLS_DATE_FORMAT is DD-MM-YYYY.\nThere are 86400 seconds in a day.\nExamine this result: \nDATE\n-------------------\n02-JAN-2020\nWhich statement returns this?\nA.  SELECT TO_CHAR(TO_DATE ('29-10-2019') + INTERVAL '2' MONTH + INTERVAL '5' DAY - INTERVAL \n'86410' SECOND, 'DD-MON-YYYY') AS \"date\"\nFROM DUAL; \nB.  SELECT TO_CHAR(TO_DATE('29-10-2019') + INTERVAL '3' MONTH + INTERVAL '7' DAY - INTERVAL \n'360' SECOND, 'DD-MON-YYYY') AS \"date\"\nFROM DUAL;\nC.  SELECT TO_CHAR(TO_DATE('29-10-2019') + INTERVAL '2' MONTH + INTERVAL '5' DAY - INTERVAL \n'120' SECOND, 'DD-MON-YYYY') AS \"date\"\nFROM DUAL;\nD.  SELECT TO_CHAR(TO_DATE('29-10-2019') + INTERVAL '2' MONTH + INTERVAL '6' DAY - INTERVAL \n'120' SECOND, 'DD- -MON-YYYY') AS \"date\"\nFROM DUAL;\nE.  SELECT TO_CHAR(TO_DATE ('29-10-2019') + INTERVAL '2' MONTH + INTERVAL '4' DAY - INTERVAL \n'120' SECOND, 'DD-MON-YYYY') AS \"date\"\nFROM DUAL;",
+        "answer": "C"
+    },
+    {
+        "question": "Examine the description of the COUNTRIES table:\nName Null? Type\n-----------------------------------------------------------------------\nCOUNTRY_ID NOT NULL CHAR(2)\nCOUNTRY_NAME VARCHAR2 (40) \nExamine the description of the DEPARTMENTS table: \nName Null? Type\n-------------------------------------------------------------------\nDEPARTMENT_ID NOT NULL NUMBER(4)\nDEPARTMENT_NAME NOT NULL VARCHAR2 (30)\nLOCATION_ID NUMBER(4)\nExamine the description of the LOCATIONS table:\nName Null? Type \n------------------------------------------------------------------------\nLOCATION_ID NOT NULL NUMBER(4)\nADDRESS VARCHAR2 (140)\nCOUNTRY_ID CHAR (2)\nWhich two queries will return a list of countries with no departments?\nA.  SELECT country_id, country_name\nFROM countries\nMINUS\nSELECT l.country_id, C.country_name\nFROM locations l\nJOIN countries c ON l.country_id = C.country_id\nJOIN departments d ON D.location_id = l.location_id;\nB.  SELECT country_id, country_name\nFROM countries\nJOIN locations USING (country_iD. \nJOIN departments USING (location_iD. \nWHERE department_id is NULL;\nC.  SELECT country_id, country_name\nFROM countries\nWHERE country_id NOT IN (\nSELECT country_id\nFROM countries\nJOIN locations USING (country_iD. \nJOIN departments USING (location_iD. \n);\nD.  SELECT country_id, country_name\nFROM countries\nINTERSECT\nSELECT l.country_id, C.country_name\nFROM locations l\nJOIN countries c ON l.country_id = C.country_id\nJOIN departments d ON D.location_id = l.location_id; ",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which two statements execute successfully?\nA.  SELECT TO_CHAR('2019-DEC-25 15:30', 'YYYY-MON-DD HH24:MI', 'NLS_DATE_LANGUAGE = \nAMERICAN' )\nFROM DUAL;\nB.  SELECT TO_DATE (TO_CHAR('2019-DEC-25 03:30', 'YYYY-MON-DD HH12:MI'))\nFROM DUAL;\nC.  SELECT TO_CHAR('2019-DEC-25 15:30', 'YYYY-MON-DD HH24:MI')\nFROM DUAL;\nD.  SELECT TO_DATE('2019-DEC-25 15:30', 'YYYY-MON-DD HH24:MI', 'NLS_DATE_LANGUAGE = \nAMERICAN')\nFROM DUAL; \nE.  SELECT TO_CHAR(TO_DATE('2019-DEC-25 03:30', 'YYYY-MON-DD HH12:MI'))\nFROM DUAL; ",
+        "answer": "D,E"
+    },
+    {
+        "question": "Examine the data in the INVOICES table:\nINVOICE_ID CURRENCY_CODE RAISED_DATE\n------------------------------------------------------------------------------------------------\n1 EUR 01-JAN-2019\n2 USD 01-FEB-2019\n3 JPY 01-MAR-2019 \nExamine the data in the CURRENCIES table:\nCURRENCY_CODE\n------------------------------\nJPY\nGPB\nCAD\nEUR\nUSD\nWhich query returns the currencies in CURRENCIES that are not present in INVOICES?\nA.  SELECT currency_code FROM currencies\nMINUS\nSELECT currency_code FROM invoices;\nB.  SELECT * FROM currencies\nMINUS\nSELECT * FROM invoices;\nC.  SELECT * FROM currencies\nWHERE NOT EXISTS (\nSELECT NULL FROM invoices WHERE currency_code = currency_code :\n);\nD.  SELECT currency_code FROM currencies\nINTERSECT\nSELECT currency_code FROM invoices;",
+        "answer": "A"
+    },
+    {
+        "question": "Which two statements about INVISIBLE indexes are true?\nA.  All INSERT, UPDATE, and DELETE statements maintain entries in the index.\nB.  You can only create one INVISIBLE index on the same column list.\nC.  An INVISIBLE index consumes no storagE.\nD.  The query optimizer never considers INVISIBLE indexes when determining execution plans.\nE.  You use ALTER INDEX to make an INVISIBLE index VISIBLE.",
+        "answer": "A,B,E"
+    },
+    {
+        "question": "Examine the contents of the EMP table: .\nID NAME SALARY\n-----------------------------------------------------\n101 John 26000 \n102 Neena 24000 \n103 DeHaan 12000 \n104 Lex 17000 \n105 Bill 18000 \n106 Daniel 26000 \n107 Ben 12000 \n108 George 25000 \nExamine this query that executes successfully:\nSELECT id, name, salary\nFROM emp\nORDER BY salary\nFETCH FIRST 5 ROWS WITH TIES;\nWhat is the result?\nA.  It will return the five employees earning the highest salaries, in descending order.\nB.  It will return the six employees earning the lowest salaries, in ascending order.\nC.  It will return the six employees earning the highest salaries, in descending order.\nD.  It will return the five employees earning the lowest salaries, in ascending order.",
+        "answer": "D"
+    },
+    {
+        "question": "Examine the BRICKS table:\nCOLOUR SHAPE WEIGHT\n------------------------------------------------------\nred cube 5\nred cylinder 10\nblue cube 15\nblue cylinder 20\nYou write this query:\nSELECT *\nFROM bricks b1 CROSS JOIN bricks b2\nWHERE b1.weight < b2.weight;\nHow many rows will the query return?\nA.  4\nB.  1\nC.  6\nD.  10\nE.  0\nF.  16",
+        "answer": "C"
+    },
+    {
+        "question": "Examine this incomplete query: .\nSELECT DATE '2019-01-01' + <INTERVAL CLAUSE>\nFROM DUAL;\nWhich three clauses can replace < INTERVAL CLAUSE> to add 12 hours to the date?\nA.  INTERVAL '12:00' HOUR TO SECOND\nB.  INTERVAL '720' MINUTE\nC.  INTERVAL '12' HOUR\nD.  INTERVAL '0.5' DAY\nE.  INTERVAL '11:60' HOUR TO MINUTE\nF.  INTERVAL '0 12' DAY TO HOUR",
+        "answer": "B,C,F"
+    },
+    {
+        "question": "Which three statements are true about an ORDER BY clause?\nA.  By default an ORDER BY clause sorts rows in descending order.\nB.  An ORDER BY clause can perform a linguistic sort.\nC.  An ORDER BY clause can perform a binary sort.\nD.  By default an ORDER BY clause sorts rows in ascending order.\nE.  An ORDER BY clause will always precede a HAVING clause if both are used in the same top-level \nquery.\nF.  An ORDER BY clause always sorts NULL values last.",
+        "answer": "B,C,D"
+    },
+    {
+        "question": "Examine the description of the EMPLOYEES table:\nName Null? Type\n-----------------------------------------------------------------\nEMPLOYEE_ID NOT NULL NUMBER (3)\nFIRST_NAME VARCHAR2 (15)\nLAST_NAME NOT NULL VARCHAR2 (15)\nSALARY NUMBER(6,2)\nWhich two statements will run successfully?\nA.  SELECT 'The first_name is '' || first_name || '' FROM employees;\nB.  SELECT 'The first_name is \\'' || first_name || '\\'' FROM employees;\nC.  SELECT 'The first_name is ''' || first_name || ''' FROM employees;\nD.  SELECT 'The first_name is ' || first_name || ' ' FROM employees ;\nE.  SELECT 'The first_name is ''' || first_name || '''' FROM employees;",
+        "answer": "D,E"
+    },
+    {
+        "question": "You execute these commands successfully:\nCREATE GLOBAL TEMPORARY TABLE invoices_gtt (\ncustomer_id INTEGER,\ninvoice_total NUMBER(10,2)\n) ON COMMIT PRESERVE ROWS;\nINSERT INTO invoices_gtt VALUES (1, 100) ;\nCOMMIT;\nWhich two are true?\nA.  To drop the table in this session, you must first truncate it.\nB.  When you terminate your session, the row will be deleteD.\nC.  Other sessions can view the committed row.\nD.  You can add a foreign key to the tablE.\nE.  You can add a column to the table in this session.",
+        "answer": "A,B"
+    },
+    {
+        "question": "You execute these commands:\nCREATE TABLE customers (customer_id INTEGER, customer_name VARCHAR2 (20)) ;\nINSERT INTO customers VALUES (1, 'Customer 1') ;\nSAVEPOINT post_insert; \nINSERT INTO customers VALUES (2, ' Customer 2') ;\n<TODO>\nSELECT COUNT(*) FROM customers;\nWhich two, used independently, can replace <TODO> so the query returns 1?\nA.  COMMIT TO SAVEPOINT post_insert;\nB.  ROLLBACK TO post_insert;\nC.  COMMIT;\nD.  ROLLBACK TO SAVEPOINT post_insert;\nE.  ROLLBACK;",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which two statements are true about Oracle synonyms?\nA.  Synonyms cannot be created for sequences.\nB.  Synonyms can be created for roles.\nC.  Users must have the DBA role to create public synonyms.\nD.  Synonyms cannot be created for synonyms.\nE.  Synonyms can be created for packages.\nF.  Users must have the required privileges on the underlying objects to use public synonyms.",
+        "answer": "E,F"
+    },
+    {
+        "question": "Which is true about the & and && prefixes with substitution variables?\nA.  Both & and && can prefix a substitution variable name in queries and DML statements.\nB.  The && prefix will not prompt for a value even if the substitution variable is not previously \ndefined in the session.\nC.  An && prefix to an undefined substitution variable, which is referenced multiple times in \nmultiple queries, will prompt for a value once per query.\nD.  & can prefix a substitution variable name only in queries.\nE.  An & prefix to an undefined substitution variable, which is referenced twice in the same query, \nwill prompt for a value twicE.",
+        "answer": "A,E"
+    },
+    {
+        "question": "Which three items does a direction of a relationship contain?\nA.  an optionality\nB.  an attribute\nC.  a label\nD.  a cardinality\nE.  a unique identifier\nF.  an entity",
+        "answer": "B,E,F"
+    },
+    {
+        "question": "Choose the best answer.\nExamine the description of the EMPLOYEES table:\nName Null? Type\n-----------------------------------------------------------------------\nEMP_NO NOT NULL NUMBER (4)\nLAST_NAME VARCHAR2 (10)\nHIRE_DATE DATE\nSALARY NUMBER(6,2)\nFor each employee in department 90 you want to display:\n1. their last name\n2. the number of complete weeks they have been employed\nThe output must be sorted by the number of weeks, starting with the longest serving employee \nfirst.\nWhich statement will accomplish this?\nA.  SELECT last_name, ROUND( (SYSDATE - hire_datE.  / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure DESC;\nB.  SELECT last_name, TRUNC( (SYSDATE - hire_datE.  / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure;\nC.  SELECT last_name, ROUND( (SYSDATE - hire_datE.  / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure;\nD.  SELECT last_name, TRUNC( (SYSDATE - hire_datE.  / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure DESC;",
+        "answer": "A"
+    },
+    {
+        "question": "Which two are true about queries using set operators such as UNION?\nA.  An expression in the first SELECT list must have a column alias for the expression.\nB.  In a query containing multiple set operators, INTERSECT always takes precedence over UNION \nand UNION ALL.\nC.  Queries using set operators do not perform implicit conversion across data type groups (E.G. \ncharacter, numeriC. .\nD.  CHAR columns of different lengths used with a set operator return a VARCHAR2 whose length \nequals the longest CHAR valuE.\nE.  All set operators are valid on columns of all data types.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which two are true about the precedence of operators and conditions?\nA.  || has a higher order of precedence than + (addition).\nB.  Operators are evaluated before conditions.\nC.  AND and OR have the same order of precedence in a condition.\nD.  NOT has a higher order of precedence than AND and OR in a condition.\nE.  + (addition) has a higher order of precedence than * (multiplication).",
+        "answer": "B,D"
+    },
+    {
+        "question": "Examine these statements which execute successfully:\nCREATE USER finance IDENTIFIED BY pwfin; \nCREATE USER fin_manager IDENTIFIED BY pwmgr;\nCREATE USER fin_clerk IDENTIFIED BY pwclerk;\nGRANT CREATE SESSION TO finance, fin_clerk;\nGRANT SELECT ON scott.emp TO finance WITH GRANT OPTION;\nCONNECT finance/pwfin\nGRANT SELECT ON scott.emp TO fin_clerk;\nWhich two are true?\nA.  Dropping user FINANCE will automatically revoke SELECT on SCOTT.EMP from user FIN_CLERK.\nB.  Revoking SELECT on SCOTT.EMP from user FINANCE will also revoke the privilege from user \nFIN_CLERK.\nC.  User FINANCE is unable to grant ALL on SCOTT.EMP to FIN_MANAGER.\nD.  User FIN_CLERK can grant SELECT on SCOTT.EMP to user FIN_MANAGER.\nE.  User FINANCE can grant CREATE SESSION to user FIN_MANAGER.",
+        "answer": "A,B"
+    },
+    {
+        "question": "Examine this statement:\nCREATE TABLE employees\n(emp_id NUMBER(5) PRIMARY KEY,\nename VARCHAR2 (15) ,\nemail VARCHAR2(40) UNIQUE,\naddress LONG ,\nresume LONG,\ndept_id NUMBER(3) CONSTRAINT emp_dept_id_fk REFERENCES departments (dept_iD.  ,\nCONSTRAINT ename_nn NOT NULL\n);\nWhich two things must be changed for it to execute successfully?\nA.  The NOT NULL constraint on ENAME must be defined at the column level instead of the table \nlevel.\nB.  The foreign key constraint on DEPT_ID must be defined at the table level instead of the column \nlevel.\nC.  One of the LONG columns must be changed to a VARCHAR2 or CLOB.\nD.  The word CONSTRAINT in the foreign key constraint on DEPT_ID must be changed to FOREIGN \nKEY.\nE.  The primary key constraint on EMP_ID must have a namE.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Choose all that apply.\nWhich two statements are true about Oracle databases and SQL?\nA.  A user can be the owner of multiple schemas in the same databasE.\nB.  When you execute an UPDATE statement, the database instance locks each updated row.\nC.  The database guarantees read consistency at select level on user-created tables.\nD.  A query can access only tables within the same schemA.\nE.  Updates performed by a database user can be rolled back by another user by using the \nROLLBACK commanD.",
+        "answer": "B,C"
+    },
+    {
+        "question": "Which two are true about rollbacks?\nA.  The ROLLBACK statement does not release locks resulting from table updates.\nB.  A transaction interrupted by a system failure is automatically rolled back.\nC.  Data Control Language (DCL) statements, such as GRANT and REVOKE, can be rolled back.\nD.  If the ROLLBACK statement is used without TO SAVEPOINT, then all savepoints in the transaction \nare deleted\nE.  Data consistency is not guaranteed after a rollback.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Which two statements are true about Entity Relationships?\nA.  A table name can be specified just once when selecting data from a table having a self_x0002_referencing relationship.\nB.  A one-to-many relationship in one direction is a one-to one relationship in the other direction.\nC.  A many-to-many relationship can be implemented only by using foreign keys.\nD.  A relationship can be mandatory for both entities.\nE.  A one-to-one relationship is always a self referencing relationship.",
+        "answer": "B,D"
+    },
+    {
+        "question": "Examine the data in the NEW_EMPLOYEES table:\nEMPLOYEE_ID NAME DEPARTMENT_ID MANAGER_ID JOB_ID SALARY\n--------------------------------------------------------------------------------------------------------------------------------\n101 David 20 120 SA_REP 14000\n102 Sam 10 105 CLERK 12500\n103 Andrew 20 120 FIN_ADMIN 14200\n104 Adrian 30 108 MAR_CLERK 12500\n105 Maria 30 108 FIN_ADMIN 15000\n106 Tracy 40 110 AD_ASST 13000\n108 Kate 30 110 FIN_DIR 16500\n110 Anne 40 120 EX_DIR 18000\n120 Fran 20 110 SQ_DIR 16500\nExamine the data in the EMPLOYEES table:\nEMPLOYEE_ID NAME JOB_ID SALARY\n-----------------------------------------------------------------------------\n101 David CLERK 14000\n102 Sam SA_REP 11500\n104 Adrian MAR_CLERK 12500\n108 Kate FIN_DIR 16500\n110 Annie EX_DIR 18000\nYou want to:\n1. Update existing employee details in the EMPLOYEES table with data from the NEW_EMPLOYEES \ntablE.\n2. Add new employee details from the NEW_EMPLOYEES table to the EMPLOYEES tablE.\nWhich statement will do this?\nA.  MERGE INTO employees e\n USING new_employees ne\n ON (E.employee_id= nE.employee_iD. \n WHEN FOUND THEN UPDATE SET E.name=nE.name, E.job_id= nE.job_id, E.salary= nE.salary\n WHEN NOT FOUND THEN INSERT VALUES (nE.employee_id, ne .name, nE.job_id, nE.salary);\nB.  MERGE INTO employees e\n USING new_employees ne\n WHERE E.employee_id= nE.employee_id\n WHEN FOUND THEN UPDATE SET E.name= nE.name, E.job_id= nE.job_id, E.salaly= nE.salary\n WHEN NOT FOUND THEN INSERT VALUES (nE.employee_id, nE.name, nE.job_id, nE.salary) ;\nC.  MERGE INTO employees e\n USING new_employees ne\n WHERE E.employee_id= nE.employee_id\n WHEN MATCHED THEN UPDATE SET E.name= nE.name, E.job_id= nE.job_id, E.salary= nE.salary\n WHEN NOT MATCHED THEN INSERT VALUES (nE.employee id, nE.name, nE.job_id, nE.salary) :\nD.  MERGE INTO employees e\n USING new_employees ne\n ON (E.employee_id= ne .employee_iD. \n WHEN MATCHED THEN UPDATE SET E.name=nE.name, E.job_id= nE.job_id, E.salary= nE.salary\n WHEN NOT MATCHED THEN INSERT VALUES (nE.employee_id, nE.name, nE.job_id, nE.salary);",
+        "answer": "D"
+    },
+    {
+        "question": "Choose the best answer\nExamine these statements and results:\nSQL> SELECT COUNT(*) FROM emp;\nCOUNT (*)\n--------------------\n14\nSQL> CREATE GLOBAL TEMPORARY TABLE t_emp AS SELECT * FROM emp;\nTable createD.\nSQL> INSERT INTO t_emp SELECT * FROM emp;\n14 rows createD.\nSQL> COMMIT;\nCommit completE.\nSQL> INSERT INTO t_emp SELECT * FROM emp;\n14 rows createD.\nSQL> SELECT COUNT(*) FROM t_emp;\nHow many rows are retrieved by the last query?\nA.  0\nB.  14\nC.  28\nD.  42",
+        "answer": "B"
+    },
+    {
+        "question": "Examine the data in the COLORS table:\nRGB_HEX_VALUE COLOR_NAME\n------------------------------------------------------------\nFF0000 red\n00FF00 green\n0000FF blue\nExamine the data in the BRICKS table:\nBRICK_ID COLOR_RGB_HEX_VALUE\n-------------------------------------------------------------------\n1 FF0000\n2 00FF00\n3 FFFFFF\nWhich two queries return all the rows from COLORS?\nA.  SELECT *\nFROM colors c\nLEFT JOIN bricks b\nUSING (rgb_hex_valuE.  ;\nB.  SELECT *\nFROM bricks b\nFULL JOIN colors c\nON B.color_rgb_hex_value= C.rgb_hex_value;\nC.  SELECT *\nFROM colors c\nLEFT JOIN bricks b\nON B.color_rgb_hex.value= C.xgb_hex_value\nWHERE B.brick_id > 0;\nD.  SELECT *\nFROM bricks b \nJOIN colors c\nON B.color_rgb_hex_value= C.rgb_hex_value;\nE.  SELECT *\nFROM bricks b\nRIGHT JOIN colors c\nON B.color_rgb_hex_value= C.rgb_hex_value;",
+        "answer": "B,E"
+    },
+    {
+        "question": "Examine this partial statement:\nSELECT ename, sal, comm FROM emp\nNow examine this output:\nENAME SAL COMM\n-------------------------------------------------\nMARTIN 1250 1400\nHARD 1250 500 \nALLEN 1600 300\nTURNER 1500 0\nALLEN 1100 \nBLAKE 2850\nCLARK 2450\nFORD 3000\nJAMES 950\nJONES 2975\nKING 5000\nMILLER 1300\nSCOTT 3000\nSMITH 800\nWhich ORDER BY clause will generate the displayed output?\nA.  ORDER BY comm DESC NULLS LAST, ename\nB.  ORDER BY NVL(comm, 0) DESC, ename\nC.  ORDER BY NVL(comm, 0) ASC NULLS LAST, ename\nD.  ORDER BY NVL(comm, 0) ASC NULLS FIRST, ename",
+        "answer": "B"
+    },
+    {
+        "question": "Examine this query:\nSELECT SUBSTR (SYSDATE, 1,5) \"Result\" FROM DUAL;\nWhich statement is true?\nA.  It fails unless the expression is modified to TO_CHAR (SUBSTR (SYSDATE, 1, 5)).\nB.  It fails unless the expression is modified to SUBSTR (TO_CHAR (SYSDATE. , 1, 5).\nC.  It fails unless the expression is modified to SUBSTR (TO_CHAR (TRUNC (SYSDATE. ), 1, 5).\nD.  It executes successfully with an implicit data type conversion.",
+        "answer": "D"
+    },
+    {
+        "question": "Which two are true about global temporary tables?\nA.  Backup and recovery operations are available for these tables.\nB.  Their data is always stored in the default temporary tablespace of the user who created them.\nC.  If the ON COMMIT clause is transaction specific, all rows in the table are deleted after each \nCOMMIT or ROLLBACK.\nD.  Indexes can be created on them.\nE.  They can be created only by a user with the DBA role, but can be accessed by all users who can \ncreate a session,\nF.  If the ON COMMIT clause is session specific, the table is dropped when the session is terminateD.",
+        "answer": "C,D"
+    },
+    {
+        "question": "Which two statements are true?\nA.  All conditions evaluated using DECODE can also be evaluated using CASE.\nB.  CASE is a function and DECODE is not.\nC.  Neither CASE nor DECODE is a function.\nD.  All conditions evaluated using CASE can also be evaluated using DECODE.\nE.  Both CASE and DECODE are functions.\nF.  DECODE is a function and CASE is not.",
+        "answer": "A,E"
+    },
+    {
+        "question": "Which three statements are true about CURRENT_TIMESTAMP?\nA.  The value varies depending on the setting of SESSIONTIMEZONE.\nB.  The date is in the time zone of DBTIMEZONE.\nC.  It returns a value of data type TIMESTAMP.\nD.  The time is in the time zone of DBTIMEZONE.\nE.  It returns the same date as CURRENT_DATE.\nF.  It always returns the same value as SYSTIMESTAMP.\nG.  It returns the same time as CURRENT_DATE.",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Which two statements cause changes to the data dictionary?\nA.  TRUNCATE TABLE emp;\nB.  DELETE FROM scott.emp;\nC.  SELECT * FROM user_tab_privs;\nD.  ALTER SESSION SET NLS_DATE_FORMAT = ' DD/MM/ YYYY' ;\nE.  GRANT UPDATE ON scott.emp TO fin_manager;",
+        "answer": "A,E"
+    },
+    {
+        "question": "Examine this data in the EMPLOYEES table:\nID LAST_NAME SALARY DEPT_ID\n--------------------------------------------------------------------------------\n1 Smith 1000 10\n2 Jones 2000 10\n3 Markham 1500 20\n4 Black 1300 20\nWhich statement will execute successfully?\nA.  SELECT dept_id, STDDEV (last_namE. , SUM(salary) FROM employees GROUP BY dept_id;\nB.  SELECT dept_id, INSTR(last_name, 'A'), SUM(salary) FROM employees GROUP BY dept_id;\nC.  SELECT dept_id, LENGTH(last_namE. , SUM(salary) FROM employees GROUP BY dept_id;\nD.  SELECT dept_id, MAX(last_namE. , SUM(salary) FROM employees GROUP BY dept_id;",
+        "answer": "D"
+    },
+    {
+        "question": "Which two are true about the NVL, NVL2, and COALESCE functions?\nA.  NVL must have expressions of the same data typE.\nB.  COALESCE stops evaluating the list of expressions when it finds the first null valuE.\nC.  COALESCE stops evaluating the list of expressions when it finds the first non-null valuE.\nD.  NVL2 can have any number of expressions in the list.\nE.  NVL can have any number of expressions in the list.\nF.  The first expression in NVL2 is never returneD.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Examine these statements and the result:\nCREATE SEQUENCE customer_seq CACHE 10;\nSELECT customer_seq. NEXTVAL FROM DUAL;\nNEXTVAL\n-----------------\n1\nNow examine this command:\nALTER SEQUENCE customer_seq <MISSING CLAUSE>;\nWhat must replace MISSING CLAUSE for CUSTOMER_SEQ. NEXTVAL to return 11?\nA.  INCREMENT BY 10\nB.  START WITH 11\nC.  NOCACHE\nD.  MINVALUE 11\nE.  CYCLE 11",
+        "answer": "A"
+    },
+    {
+        "question": "Which two queries return the string Hello! We're ready?\nA.  SELECT 'Hello! We're ready' FROM DUAL;\nB.  SELECT q'[Hello! We're ready]' FROM DUAL;\nC.  SELECT 'Hello! we\\' re ready' ESCAPE '\\' FROM DUAL;\nD.  SELECT \"Hello! We're ready\" FROM DUAL;\nE.  SELECT q'!Hello! We're ready!' FROM DUAL;",
+        "answer": "B,E"
+    },
+    {
+        "question": "Which two are true about savepoints?\nA.  After issuing a savepoint, you cannot roll back the complete transaction.\nB.  They make uncommitted updates visible to other sessions owned by the same user.\nC.  They make uncommitted updates visible to sessions owned by other users.\nD.  A ROLLBACK To SAVEPOINT command issued before the start of a transaction results in an error.\nE.  After issuing a savepoint, you can roll back to the savepoint name within the current transaction.\nF.  You can commit updates done between two savepoints without committing other updates in \nthe current transaction.",
+        "answer": "D,E"
+    },
+    {
+        "question": "Which three queries execute successfully?\nA.  SELECT SYSDATE - DATE '2019-01-01' - 1 FROM DUAL;\nB.  SELECT 1 - SYSDATE - DATE '2019-01-01' FROM DUAL;\nC.  SELECT SYSDATE - 1 - DATE '2019-01-01' FROM DUAL;\nD.  SELECT 1 / SYSDATE - DATE '2019-01-01' FROM DUAL;\nE.  SELECT (SYSDATE - DATE '2019-01-01') / 1 FROM DUAL; \nF.  SELECT SYSDATE / DATE '2019-01-01' - 1 FROM DUAL;",
+        "answer": "A,C,E"
+    },
+    {
+        "question": "Which two statements will return the names of the three employees with the lowest salaries?\nA.  SELECT last_name, salary\nFROM (SELECT * FROM employees ORDER BY salary)\nWHERE ROWNUM <= 3;\nB.  SELECT last_name, salary\nFROM employees\nORDER BY salary\nFETCH FIRST 3 ROWS ONLY;\nC.  SELECT last_name, salary\nFROM employees\nWHERE ROWNUM <= 3\nORDER BY (SELECT salary FROM employees) ;\nD.  SELECT last_name, salary\nFROM employees\nFETCH FIRST 3 ROWS ONLY\nORDER BY salary;\nE.  SELECT last_name, salary\nFROM employees\nWHERE ROWNUM <= 3\nORDER BY salary;",
+        "answer": "A,B"
+    },
+    {
+        "question": "Which statement will return the last sequence number generated by the EMP_SEQ sequence?\nA.  SELECT emp_seq. CURRVAL FROM DUAL;\nB.  SELECT CURRVAL FROM emp_seq;\nC.  SELECT NEXTVAL FROM emp_seq;\nD.  SELECT emp_seq . NEXTVAL FROM DUAL;",
+        "answer": "A"
+    },
+    {
+        "question": "A session's NLS_DATE_FORMAT is set to DD Mon YYYY.\nWhich two queries return the value 1 Jan 2019?\nA.  SELECT TO_DATE('2019-01-01', 'YYYY-MM-DD') FROM DUAL;\nB.  SELECT DATE '2019-01-01' FROM DUAL;\nC.  SELECT TO_CHAR('2019-01-01') FROM DUAL;\nD.  SELECT TO_DATE('2019-01-01') FROM DUAL;\nE.  SELECT '2019-01-01' FROM DUAL;",
+        "answer": "A,B"
+    },
+    {
+        "question": "Examine this partial query:\nSELECT ch. channel_type, t. month, co. country_code, SUM(s. amount_solD.  SALES\nFROM sales s, times t, channels ch, countries co\n WHERE s. time_id = t. time_id\nAND s. country_id = co. country_id\nAND s. channel_id = ch. channel_id\nAND ch. channel_type IN ('Direct Sales', ' Internet')\nAND t. month IN ('2000-09', '2000-10')\nAND co. country_code IN ('GB', 'US')\nExamine this output:\nCHANNEL_TYPE MONTH CO SALES\n------------------------------------------------------------------------------------------------\nInternet 2000-09 GB 16569\nInternet 2000-09 US 124224\nInternet 2000-09 140793\nInternet 2000-10 GB 14539\nInternet 2000-10 US 137054\nInternet 2000-10 151593\nInternet 292387\nDirect Sales 2000-09 GB 85223\nDirect sales 2000-09 US 638201\nDirect sales 2000-09 723424\nDirect sales 2000-10 GB 91925\nDirect Sales 2000-10 US 682297\nDirect sales 2000-10 774222\nDirect sales 1497646\nWhich GROUP BY clause must be added so the query returns the results shown?\nA.  GROUP BY ch. channel_type, t. month, co. country_code;\nB.  GROUP BY ch. channel_type, ROLLUP (t .month, co. country_codE.  ;\nC.  GROUP BY CUBE (ch. channel_type, t .month, co. country_codE.  ;\nD.  GROUP BY ch. channel_type, t .month, ROLLUP (co . country_codE. ;",
+        "answer": "B"
+    },
+    {
+        "question": "Examine this statement which executes successfully:\nINSERT ALL\nWHEN SAL > 20000 THEN\nINTO special_sal VALUES (EMP_ID, SAL)\nELSE\nINTO sal_history VALUES (EMP_ID, HIREDATE, SAL)\nINTO mgr_history VALUES (EMP_ID, MGR, SAL)\nSELECT employee_id EMP_ID, hire_date HIREDATE, salary SAL, manager_id MGR\nFROM employees\nWHERE employee_id < 125;\nWhich three are true?\nA.  If the salary is 20000 or less and the employee id is less than 125, insert EMPLOYEE_ID, \nHIRE_DATE, and SALARY into the SAL_HISTORY tablE.\nB.  If the salary is more than 20000 and the employee id is less than 125, insert EMPLOYEE_ID and \nSALARY into the SPECIAL_SAL tablE.\nC.  Only if the salary is 20000 or less and the employee id is 125 or higher, insert EMPLOYEE_ID, \nMANAGER_ID, and SALARY into the MGR_HISTORY tablE.\nD.  Regardless of salary, only if the employee id is less than 125, insert EMPLOYEE_ID, MANAGER_ID, \nand SALARY into the MGR_HISTORY tablE.\nE.  Regardless of salary and employee id, insert EMPLOYEE_ID, MANAGER_ID, and SALARY into the \nMGR_HISTORY tablE.\nF.  Only if the salary is 20000 or less and the employee id is less than 125, insert EMPLOYEE_ID, \nMANAGER_ID, and SALARY into the MGR_HISTORY tablE.",
+        "answer": "A,B,F"
+    },
+    {
+        "question": "You must find the number of employees whose salary is lower than employee 110.\nWhich statement fails to do this?\nA.  SELECT COUNT (*)\nFROM employees e\nJOIN employees a\nON E.salary < A. salary\nWHERE A.employee_id = 110;\nB.  SELECT COUNT (*)\nFROM employees e\nJOIN (SELECT salary FROM employees WHERE employee_id = 110) a\nON E.salary < A. salary;\nC.  SELECT COUNT (*)\nFROM employees e\nWHERE E.salary < (SELECT A. Salary FROM employees a WHERE E.employee_id = 110) ;\nD.  SELECT COUNT (*)\nFROM employees\nWHERE salary < (SELECT salary FROM employees WHERE employee_id = 110);",
+        "answer": "D"
+    },
+    {
+        "question": "You and your colleague Andrew have these privileges on the EMPLOYEE_RECORDS table:\n1. SELECT\n2. INSERT\n3. UPDATE\n4. DELETE\nYou connect to the database instance and perform an update to some of the rows in \nEMPLOYEE_RECORDS, but do not commit yet.\nAndrew connects to the database instance and queries the tablE.\nNo other users are accessing the tablE.\nWhich two statements are true at this point?\nA.  Andrew will be unable to see the changes you have madE.\nB.  Andrew will be able to see the changes you have madE.\nC.  Andrew will be able to modify any rows in the table that have not been modified by your \ntransaction.\nD.  Andrew will be able to SELECT from the table, but be unable to modify any existing rows.\nE.  Andrew will be unable to perform any INSERTS, UPDATES, or DELETES on the tablE.",
+        "answer": "A,C"
+    },
+    {
+        "question": "Which three are true about scalar subquery expressions?\nA.  A scalar subquery expression that returns zero rows evaluates to zero.\nB.  They can be used as default values for columns in a CREATE TABLE statement.\nC.  They cannot be used in GROUP BY clauses.\nD.  A scalar subquery expression that returns zero rows evaluates to NULL.\nE.  They cannot be used in the VALUES clause of an INSERT statement.\nF.  They can be nesteD.",
+        "answer": "D,E,F"
+    },
+    {
+        "question": "Examine this statement:\nCREATE TABLE orders \n(serial_no NUMBER UNIQUE,\norder_id NUMBER PRIMARY KEY,\norder_date DATE NOT NULL,\nstatus VARCHAR2 (10) CHECK (status IN ('CREDIT', 'CASH')) ,\nproduct_id NUMBER REFERENCES products (product_iD.  ,\norder_total NUMBER) ;\nOn which two columns of the table will an index be created automatically?\nA.  STATUS\nB.  ORDER_TOTAL\nC.  ORDER_DATE\nD.  PRODUCT_ID\nE.  ORDER_ID\nF.  SERIAL_NO",
+        "answer": "E,F"
+    },
+    {
+        "question": "Examine the description of the EMPLOYEES table:\nName Null? Type\n-------------------------------------------------------------\nEMPLOYEE_ID NOT NULL NUMBER(4)\nEMPLOYEE_NAME NOT NULL VARCHAR2 (100)\nSALARY NOT NULL NUMBER(6,2) .\nDEPARTMENT_ID NOT NULL NUMBER(4)\nWhich statement will fail?\nA.  SELECT department_id, COUNT(*)\nFROM employees\nWHERE department_id <> 90\nHAVING COUNT(*) >= 3\nGROUP BY department_id;\nB.  SELECT department_id, COUNT (*)\nFROM employees\nWHERE department_id <> 90\nAND COUNT(*) >= 3\nGROUP BY department_id;\nC.  SELECT department_id, COUNT (*)\nFROM employees\nWHERE department_id < 90\nGROUP BY department_id\nHAVING COUNT(*) >= 3;\nD.  SELECT department_id, COUNT (*)\nFROM employees\nHAVING department_id < 90\nAND COUNT(*) >= 3\nGROUP BY department_id;",
+        "answer": "B"
+    }
+]
