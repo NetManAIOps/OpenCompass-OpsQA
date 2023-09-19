@@ -1,15 +1,23 @@
-from opencompass.models import HuggingFace, HuggingFaceCausalLM
+from opencompass.models import HuggingFaceCausalLM
+
+ROOT_DIR = '/mnt/mfs/opsgpt/'
+
+_meta_template = dict(
+    round=[
+        dict(role="HUMAN", api_role="HUMAN"),
+        dict(role="BOT", api_role="BOT", generate=True),
+    ],
+)
 
 models = [
     dict(
         type=HuggingFaceCausalLM,
         abbr='baichuan2-13b-chat',
-        path="/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan2-13B-Chat",
-        tokenizer_path='/gpudata/home/cbh/opsgpt/models/baichuan/Baichuan2-13B-Chat',
-        tokenizer_kwargs=dict(padding_side='left',
-                              truncation_side='left',
-                              trust_remote_code=True,
+        path=ROOT_DIR+"models/baichuan/Baichuan2-13B-Chat",
+        tokenizer_path=ROOT_DIR+'models/baichuan/Baichuan2-13B-Chat',
+        tokenizer_kwargs=dict(trust_remote_code=True,
                               use_fast=False,),
+        meta_template=_meta_template,
         max_out_len=1024,
         max_seq_len=2048,
         batch_size=16, 

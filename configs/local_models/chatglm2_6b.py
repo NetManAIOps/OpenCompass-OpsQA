@@ -1,12 +1,13 @@
 from opencompass.models import HuggingFace
 
+ROOT_DIR = '/mnt/mfs/opsgpt/'
 
 models = [
     dict(
         type=HuggingFace,
         abbr='chatglm2-6b',
-        path="/gpudata/home/cbh/opsgpt/models/chatglm/chatglm2-6b",
-        tokenizer_path='/gpudata/home/cbh/opsgpt/models/chatglm/chatglm2-6b',
+        path=ROOT_DIR+"models/chatglm/chatglm2-6b",
+        tokenizer_path=ROOT_DIR+'models/chatglm/chatglm2-6b',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,

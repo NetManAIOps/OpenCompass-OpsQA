@@ -1,5 +1,7 @@
 from opencompass.models import HuggingFaceCausalLM
 
+ROOT_DIR = '/mnt/mfs/opsgpt/'
+
 _meta_template = dict(
     round=[
         dict(role="HUMAN", api_role="HUMAN"),
@@ -10,10 +12,9 @@ _meta_template = dict(
 models = [
     dict(
         abbr="llama-2-13b-chat",
-        # type=Llama2Chat,
         type=HuggingFaceCausalLM, 
-        path="/gpudata/home/cbh/opsgpt/models/llama-hf/Llama-2-13b-chat-hf/",
-        tokenizer_path="/gpudata/home/cbh/opsgpt/models/llama-hf/Llama-2-13b-chat-hf/",
+        path=ROOT_DIR+"models/llama-hf/Llama-2-13b-chat-hf/",
+        tokenizer_path=ROOT_DIR+"models/llama-hf/Llama-2-13b-chat-hf/",
         meta_template=_meta_template,
         max_out_len=1024,
         max_seq_len=2048,
