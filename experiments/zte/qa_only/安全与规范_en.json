@@ -1,0 +1,1068 @@
+[
+    {
+        "id": "安全与规范-1",
+        "question": "\"The grounding of the feeder line and the host shell is for ( ) purposes.\nA: lightning protection, reference level\nB: lightning protection, anti-static\nC: anti-static, reference level\nD: anti-static, lightning protection\"",
+        "choices": [
+            "防雷、参考电平",
+            "防雷、防静电",
+            "防静电、参考电平",
+            "防静电、防雷"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-2",
+        "question": "\"The three-proof capability is required for base station antennas, which means ( ), and omnidirectional antennas must meet the requirement of inverted installation.\nA: Radiation protection\nB: Salt spray protection\nC: Anti-mold\nD: Moisture-proof\"",
+        "choices": [
+            "防辐射",
+            "补防盐雾",
+            "防霉菌",
+            "防潮"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-3",
+        "question": "\"天馈的馈线在入室之前需要做回水弯,以避免雨水顺着馈线流出机架。( )\"\n\nA: Correct\nB: Incorrect",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-4",
+        "question": "\"Which of the following statements about the differences between 5G security architecture and 4G security architecture is incorrect?\nA: The security parameters of 3GPP and Non-3GPP in EPC are independent, but in 5GC they are shared.\nB: EPC does not provide encryption for the air interface user plane, but 5GC does.\nC: In EPC, IMSI may be transmitted in clear text over the air interface before the establishment of security context, but in 5GC, IMSI will not be transmitted in clear text over the air interface before the establishment of security context.\nD: EPC only has authentication results for visited domains, while 5GC adds authentication results for home domains.\"",
+        "choices": [
+            "EPC中3GPP和Non-3GPP的安全参数是独立的，但是5GC中3GPP和Non-3GPP的安全参数是共享的",
+            "EPC不提供空口用户面的加密，但是5GC提供空口用户面的加密",
+            "EPC在安全上下文建立前IMSI可能会在空口明文传输，但是5GC的IMSI在安全上下文建立前也不会在空口明文传输",
+            "EPC只有拜访域确认鉴权结果，5GC增加了归属域确认鉴权结果"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-5",
+        "question": "\"Which of the following is not included in the three elements of information security?\nA: Confidentiality\nB: Integrity\nC: Availability\nD: Continuity\"",
+        "choices": [
+            "机密性",
+            "完整性",
+            "可用性",
+            "持续性"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-6",
+        "question": "\"Which of the following protection methods does not belong to host security protection? ()\nA: Identity authentication\nB: Data confidentiality\nC: Access control\nD: Resource control\"",
+        "choices": [
+            "身份鉴别",
+            "数据保密",
+            "访问控制",
+            "资源控制"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-7",
+        "question": "\"What is the content targeted by cookie theft?\nA: Windows system account password of website visitors\nB: A piece of identification information saved on the visitor's host by the website\nC: Windows system account password of the website server\nD: Website visitors' page browsing history\"",
+        "choices": [
+            "网站访问者的Windows系统帐户密码",
+            "网站在来访者主机上保存的一段身份识别信息",
+            "网站服务器的Windows系统帐户密码",
+            "网站访问者的页面浏览记录"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-8",
+        "question": "\"The scope of security audit does not include ( ).\nA: Network communication system\nB: Operating system of important server hosts\nC: Application platform software of major server hosts\nD: Security management system\"",
+        "choices": [
+            "网络通信系统",
+            "重要服务器主机操作系统",
+            "主要服务器主机应用平台软件",
+            "安全管理制度"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-9",
+        "question": "\"Regarding web server log analysis and mining, the following statement is correct: \nA: Specialized log analysis tools must be used to find traces of website intrusion. \nB: The more fields saved during log recording, the more advantageous it is for analyzing the website intrusion process. \nC: The longer the time period that log records are saved, the less helpful it is for analyzing the intrusion process. \nD: Log recording can help administrators improve website performance.\"",
+        "choices": [
+            "必须使用专门的日志分析工具才能找出网站入侵的痕迹",
+            "日志记录时保存的字段条目越多，对于分析网站入侵过程就越有利",
+            "日志记录保存的时间越久对分析入侵过程没有帮助",
+            "日志记录能够帮助管理员提高网站性能"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-10",
+        "question": "\"Network-based intrusion detection systems are generally not deployed in the following locations: \nA: Inside the firewall \nB: Outside the firewall \nC: On the host \nD: Both inside and outside the firewall.\"",
+        "choices": [
+            "防火墙内",
+            "防火墙外",
+            "主机上",
+            "防火墙内外都有"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-11",
+        "question": "\"The main threats faced by computer network communication can be divided into data interception, communication interruption, data tampering, data forgery, and ( ). \nA: Spam \nB: Virus propagation \nC: System vulnerabilities \nD: Data retransmission\"",
+        "choices": [
+            "垃圾邮件",
+            "病毒传播",
+            "系统漏洞",
+            "数据重发"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-12",
+        "question": "\"The first step of intrusion detection is: ( ).\nA: Information gathering\nB: Information analysis\nC: Packet filtering\nD: Packet inspection\"",
+        "choices": [
+            "信息收集",
+            "信息分析",
+            "数据包过滤",
+            "数据包检查"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-13",
+        "question": "\"In the encryption method of databases, if ( ) is adopted, key management is relatively simple, and only the key management method of file encryption needs to be borrowed.\nA: External encryption\nB: Internal encryption\nC: Record encryption\nD: Tuple encryption\"",
+        "choices": [
+            "库外加密",
+            "库内加密",
+            "记录加密",
+            "元组加密"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-14",
+        "question": "Which of the following is not a common step in resolving computer security incidents?\nA: Revise security policies and procedures as needed\nB: Suspend all business operations\nC: Verify the effectiveness of remedial measures\nD: Determine the nature of the incident in detail",
+        "choices": [
+            "按需修订安全策略和程序",
+            "暂停所有业务",
+            "验证补救措施的有效性",
+            "详细地确定事件的本质"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-15",
+        "question": "Which of the following is not a punishment for violating the \"Administrative Measures for the International Networking Security Protection of Computer Information Networks\"? \nA: Revocation of networking qualifications \nB: Revocation of business license \nC: A fine of 50,000 yuan \nD: Suspension of operations for up to 6 months",
+        "choices": [
+            "取消联网资格",
+            "吊销经营许可证",
+            "五万元罚款",
+            "6个月以内的停机整顿"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-16",
+        "question": "\"In the BS7799 security standard, security auditing includes ( ), recording, storing, and analyzing information related to security-related behaviors.\nA: Comparing\nB: Identifying\nC: Supporting\nD: Analyzing\"",
+        "choices": [
+            "比较",
+            "识别",
+            "支持",
+            "分析"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-17",
+        "question": "\"Which of the following measures is least effective in dealing with data loss caused by computer software and hardware failures?\nA: Hot standby\nB: System redundancy\nC: Cold backup\nD: Strengthened management\"",
+        "choices": [
+            "双机热备",
+            "系统冗余",
+            "冷备份",
+            "加强管理"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-18",
+        "question": "\"In the deployment process of Group Policy, the incorrect step that needs to be completed before using the Group Policy Results tool for evaluation is ( ).\nA: Create a standard desktop configuration\nB: Filter the scope of GPO application\nC: Specify exceptions to the default Group Policy inheritance\nD: Establish inter-forest trust relationships\"",
+        "choices": [
+            "创建标准桌面配置",
+            "筛选GPO的应用范围",
+            "指定默认组策略继承的例外情况",
+            "建立林间信任关系"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-19",
+        "question": "\"Which of the following are default security zones in mainstream firewalls?\nA: Trust\nB: Untrust\nC: DMZ\nD: Zone\"",
+        "choices": [
+            "Trust",
+            "Untrust",
+            "DMZ",
+            "Zone"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-20",
+        "question": "\"DNS cache poisoning, also known as DNS cache contamination, is a virus that spreads between DNS servers. \nA: True \nB: False\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-21",
+        "question": "\"RSA is a type of public key encryption algorithm. \nA: Correct \nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-22",
+        "question": "\"Serious violations of the Management Measures for the Security Protection of International Networking of Computer Information Networks may result in penalties such as suspension of networking or shutdown for up to six months, and if necessary, the original issuing or approving authority may be recommended to revoke the business license or cancel the networking qualification. ( ? )\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-23",
+        "question": "\"Information security is an operational responsibility shared by all members of management, therefore, consideration should be given to establishing a management forum that enhances internal security through appropriate commitment and resource allocation. (?)\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-24",
+        "question": "\"After the information system is filed, the public security organs shall review the filing status of the information system. For those that meet the requirements of level protection, the information system security level protection filing certificate shall be issued within 30 working days from the date of receiving the filing materials; if it is found that it does not comply with these Measures and relevant standards, the filing unit shall be notified to make corrections within 30 working days from the date of receiving the filing materials. (?)\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-25",
+        "question": "Which of the following statements is incorrect:\nA: Network information security is a comprehensive discipline involving multiple subjects\nB: The purpose of information security is to ensure uninterrupted network services\nC: Ensure the continuity of organizational business operations\nD: The security definition of modern information systems is basically inconsistent with computer network security.",
+        "choices": [
+            "网络信息安全是一门涉及到多种学科的综合性学科",
+            "信息安全目的是网络服务不中断",
+            "确保组织业务运行的连续性",
+            "现代信息系统，其安全定义与计算机网络安全基本不一致"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-26",
+        "question": "\"In the security requirements of cloud computing, which layer does virtualization security belong to?\nA: Access layer\nB: Capability layer\nC: Management layer\nD: External layer\"",
+        "choices": [
+            "接入层",
+            "能力层",
+            "管理层",
+            "外部层"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-27",
+        "question": "The incorrect statement among the following is:\nA: Internet security is more complex than IoT security\nB: The large number of IoT devices makes routine updates and maintenance challenging\nC: IoT devices have diverse access methods and varying security levels, making the access process vulnerable to authentication bypass risks\nD: There are many types and large quantities of interconnected smart devices in IoT, and any security issue can be amplified to the entire network, causing a chain reaction.",
+        "choices": [
+            "互联网安全比物联网安全更复杂",
+            "由于物联网的设备的数量巨大使得常规的更新和维护操作面临挑战",
+            "物联网中智能设备接入方式多样，安全水平不一，接入过程容易被利用，存在接入认证绕过风险",
+            "智能设备种类多、数量大且相互连接，任何安全问题都可能被放大到全网范围，引起连锁反应"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-28",
+        "question": "\"The security risks faced by big data include:\nA: Various data such as B domain, M domain, O domain, and DPI signaling are centrally stored in the big data platform. Once a security event occurs, it may involve massive customer sensitive information and company data assets.\nB: Big data is often deployed in cloud environments, which brings new problems such as data management and ownership separation, and blurred network boundaries due to multi-layer virtualization of storage and computing.\nC: Big data platforms often use open-source software such as Hadoop, Hive, and third-party components. These software are designed for efficient data processing, but their systematic security functions are relatively lacking, and their security protection capabilities lag far behind business development, resulting in security vulnerabilities.\nD: Sensitive data is retained across departments and systems, and any unit or system with inadequate security measures may cause sensitive data leaks, resulting in serious consequences of \"one point breakthrough, all network loss\".\"",
+        "choices": [
+            "大数据平台中，B域、M域、O域及DPI信令等各类数据集中存储，一旦发生安全事件则可涉及海量客户敏感信息及公司数据资产。",
+            "大数据多部署在云环境中，由于存储、计算的多层面虚拟化，带来了数据管理权与所有权分离，网络边界模糊等新问题",
+            "大数据平台多使用Hadoop、Hive、第三方组件等开源软件，这些软件设计初衷是为了高效数据处理，系统性安全功能相对缺乏，安全防护能力远远滞后业务发展，存在安全漏洞。",
+            "敏感数据跨部门、跨系统留存，任一单位或系统安全防护措施不当，均可能发生敏感数据泄漏，造成“一点突破、全网皆失”的严重后果。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-29",
+        "question": "\"What aspects should be noted when receiving emails?\nA: Unsafe file types\nB: Unknown file types\nC: Microsoft file types\nD: Phishing emails\"",
+        "choices": [
+            "不安全的文件类型",
+            "未知的文件类型",
+            "微软文件类型",
+            "钓鱼邮件"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-30",
+        "question": "\"In the security requirements of cloud computing, which layer does the user belong to?\nA: Access layer\nB: Capability layer\nC: Management layer\nD: External layer\"",
+        "choices": [
+            "接入层",
+            "能力层",
+            "管理层",
+            "外部层"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-31",
+        "question": "\"In the security requirements of cloud computing, which layer does network security belong to?\nA: Access layer\nB: Capability layer\nC: Management layer\nD: External layer\"",
+        "choices": [
+            "接入层",
+            "能力层",
+            "管理层",
+            "外部层"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-32",
+        "question": "\"What kind of algorithm does RSA belong to?\nA: Symmetric encryption algorithm\nB: Asymmetric encryption algorithm\nC: Neither of the above\"",
+        "choices": [
+            "对称密码算法",
+            "非对称密码算法",
+            "都不属于"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-33",
+        "question": "\"Which of the following statements about cloud computing is incorrect:\nA: Cloud computing is a model that allows local computers to access resources through the network with just one command.\nB: \"Cloud\" refers to resources that exist on internet server clusters.\nC: \"Cloud\" resources only include software resources.\nD: \"Cloud\" resources only include hardware resources.\"",
+        "choices": [
+            "云计算是一种模式，使得本地计算机只需一个指令，就可通过网络访问上述资源",
+            "“云”就是存在于互联网服务器集群上的资源",
+            "\"云”的资源只包含软件资源",
+            "\"云”的资源只包含硬件资源"
+        ],
+        "qtype": 0,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-34",
+        "question": "\"What are the three elements of security?\nA: Confidentiality\nB: Integrity\nC: Availability\nD: Independence\"",
+        "choices": [
+            "保密性",
+            "完整性",
+            "可用性",
+            "独立性"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-35",
+        "question": "\"Which of the following is the correct order of the security audit process?\nA: Policy formulation - Event collection - Time response - Event analysis - Results summary\nB: Policy formulation - Event collection - Event analysis - Time response - Results summary\nC: Event collection - Event analysis - Time response - Policy formulation - Results summary\nD: Time response - Event collection - Event analysis - Policy formulation - Results summary\"",
+        "choices": [
+            "策略制定-事件采集-时间响应-事件分析-结果汇总",
+            "策略制定-事件采集-事件分析-时间响应-结果汇总",
+            "事件采集-事件分析-时间响应-策略制定-结果汇总",
+            "时间响应-事件采集-事件分析-策略制定-结果汇总"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-36",
+        "question": "\"Which of the following is not included in the capability layer of cloud computing security requirements?\nA: Network security\nB: Virtualization security\nC: Data security\nD: Security management\"",
+        "choices": [
+            "网络安全",
+            "虚拟化安全",
+            "数据安全",
+            "安全管理"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-37",
+        "question": "\"What are the three levels of China's current information security legal system framework?\nA: National laws related to information security\nB: Administrative regulations and departmental rules related to information security\nC: Local regulations/rules and industry regulations related to information security\nD: Personal professional ethics related to information security\"",
+        "choices": [
+            "信息安全相关的国家法律",
+            "信息安全相关的行政法规和部门规章",
+            "信息安全相关的地方法规/规章和行业规定",
+            "信息安全相关的个人职业素养"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-38",
+        "question": "\"The three synchronization principles of daily work in network and information security refer to:\nA: Synchronous planning\nB: Synchronous construction\nC: Synchronous use\nD: Synchronous data\"",
+        "choices": [
+            "同步规划",
+            "同步建设",
+            "同步使用",
+            "同步数据"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-39",
+        "question": "Which of the following statements about logs is incorrect:\nA: Most multi-user operating systems, formal large-scale software, and most security devices have logging functions.\nB: Logs are usually used to check user logins, analyze faults, manage charges and statistics of traffic, check software running status, and debug software.\nC: Logs refer to the record files generated by the system or software.\nD: Logs only support viewing by a single user.",
+        "choices": [
+            "大多数的多用户操作系统、正规的大型软件、多数安全设备都有日志功能。",
+            "日志通常用于检查用户的登录、分析故障、进行收费管理统计流量、检查软件运行状况和调试软件。",
+            "日志是指系统或软件生成的记录文件",
+            "日志仅支持单个进行查看"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-40",
+        "question": "\"Security audits are typically based on () activities.\nA: algorithms\nB: logs\nC: data models\nD: analysis methods\"",
+        "choices": [
+            "算法",
+            "日志",
+            "数据模型",
+            "分析方法"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-41",
+        "question": "\"The security protection of cloud computing mainly includes:\nA: Data security\nB: Identity recognition and access control\nC: Cloud security evaluation mechanism and audit mechanism\nD: Virtualization security\"",
+        "choices": [
+            "数据安全",
+            "身份识别及访问控制",
+            "云安全测评机制与审计机制",
+            "虚拟化安全"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-42",
+        "question": "\"What are the characteristics of logs?\nA: Mostly readable\nB: Can view user login information\nC: Can check software running status\nD: Generated by the system as a record file\"",
+        "choices": [
+            "多用可读",
+            "可以查看用户的登录情况",
+            "可以检查软件运行情况",
+            "是系统生成的记录文件"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-43",
+        "question": "\"How many judicial interpretations are there in the legal system of cybersecurity in China?\nA: 6\nB: 7\nC: 8\nD: 9\"",
+        "choices": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-44",
+        "question": "\"What does symmetric encryption algorithm refer to?\nA: Encryption method with the same encryption and decryption algorithms\nB: Encryption method with the same encryption and decryption keys\nC: Encryption method with different encryption and decryption algorithms\nD: Encryption method with publicly available encryption and decryption algorithms\"",
+        "choices": [
+            "加密算法解密算法相同的加密方法",
+            "加密密钥和解密密钥相同的加密方法",
+            "加密算法解密算法不同的加密方法",
+            "加密算法解密算法可以公开的加密方法"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-45",
+        "question": "Which of the following statements is correct:\nA: Many of the security threats in cloud computing already exist in other technologies, while others have emerged with the advent of cloud computing, requiring effective security measures specifically tailored to this new model.\nB: Developing comprehensive and effective security measures for the Internet of Things is essential for better utilization and development of the IoT.\nC: Adapting to, grasping, and leading big data security will become a trend of the times.\nD: In recent years, new businesses have continued to develop, while security management and technology have lagged behind relatively.",
+        "choices": [
+            "云结算的安全威胁，很多是其他技术已经存在的，还有一些是伴随云计算诞生的，因此要求针对云计算这个新模式作出有效的安全防护",
+            "制定全面有效的物联网安全防护措施，是更好的利用物联网、发展物联网的必行之路",
+            "适应、把握、引领大数据安全，将成为时代潮流。",
+            "近年来，新型业务不断发展，而安全管理和技术却相对滞后"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-46",
+        "question": "Which of the following statements is incorrect:\nA: In the big data environment, data has become a target for cybercrime.\nB: Big data security issues have become the core problem hindering the development of big data business.\nC: The data leakage problem of communication operators has sounded the alarm for big data security.\nD: Data leakage will not endanger personal safety.",
+        "choices": [
+            "大数据环境下，数据已经成为网络犯罪的攻击目标",
+            "大数据安全问题已成为阻碍大数据业务发展的核心问题",
+            "通信运营商的数据泄露问题敲响了大数据安全警钟",
+            "数据泄露不会危及到人身安全"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-47",
+        "question": "\"In the security requirements of cloud computing, which layer does data security belong to?\nA: Access layer\nB: Capability layer\nC: Management layer\nD: External layer\"",
+        "choices": [
+            "接入层",
+            "能力层",
+            "管理层",
+            "外部层"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-48",
+        "question": "\"Which statement about the CLOUD Act is correct:\nA: \"Clarifying Lawful Overseas Use of Data Act\"\nB: Allows for cross-border retrieval of citizens' overseas information\nC: Authorizes the FBI to collect electronic mail and any personal information from overseas\nD: Allows foreign governments to store personal data of non-US citizens in the US, etc.\"",
+        "choices": [
+            "《澄清域外合法使用数据法》",
+            "可跨境调取公民海外信息的法案",
+            "授权美国联邦调查局收集来自海外的电子邮件和任何个人信息",
+            "允许外国政府将非美国公民的个人数据存储在美国等"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-49",
+        "question": "\"Which of the following statements about the implementation process of security assessment is incorrect:\nA: First, prepare for the assessment, then identify the elements and analyze the risks, and finally make a judgment on the results.\nB: The preparation stage of security assessment is the foundation for the organization to conduct security assessment and the guarantee of the effectiveness of the entire security assessment process.\nC: In the result judgment stage, evaluate the risk level, comprehensively evaluate the risk situation, and obtain the risk assessment report.\nD: First, analyze the risks, then prepare for the assessment and identify the elements, and finally make a judgment on the results.\"",
+        "choices": [
+            "先进行评估准备，然后进行要素识别和风险分析，最后进行结果判定",
+            "安全评估的准备阶段是组织进行安全评估的基础，是整个安全评估过程有效性的保证",
+            "进入结果判定阶段，对风险等级进行评估，综合评价风险状况，得出风险评估报告",
+            "先进行风险分析，然后进行评估准备和要素识别，最后进行结果判定"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-50",
+        "question": "\"What trend is the change in attack methods shifting from spontaneous and decentralized to?\nA: Specialization\nB: Commercialization\nC: Grouping\nD: Automation\"",
+        "choices": [
+            "专业化",
+            "商业化",
+            "集团化",
+            "自动化"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-51",
+        "question": "\"Security management in cloud computing includes:\nA: Administrator role division\nB: Administrator account and permission management\nC: Log auditing\"",
+        "choices": [
+            "管理员角色划分",
+            "管理员账号、权限管理",
+            "日志审核"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-52",
+        "question": "\"() is the top obstacle to the development of the Internet of Things?\nA: Massive number of terminals\nB: Cloud computing technology\nC: Formulation of IoT standards\nD: Security\"",
+        "choices": [
+            "终端数量巨大",
+            "云计算技术",
+            "物联网标准的制定",
+            "安全"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-53",
+        "question": "\"The security issues of IoT terminal devices mainly focus on:\nA: Account password security\nB: System vulnerabilities\nC: Identity forgery\nD: System viruses\"",
+        "choices": [
+            "账号口令安全",
+            "系统漏洞",
+            "伪造身份",
+            "系统病毒"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-54",
+        "question": "\"In the security requirements of cloud computing, which layer does security management belong to?\nA: Access layer\nB: Capability layer\nC: Management layer\nD: External layer\"",
+        "choices": [
+            "接入层",
+            "能力层",
+            "管理层",
+            "外部层"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-55",
+        "question": "\"Which of the following statements is incorrect:\nA: Worm viruses are viruses that can self-replicate.\nB: Vulnerabilities include remote vulnerabilities and local vulnerabilities.\nC: Viruses can spread explosively within an internal network.\nD: The harm caused by viruses is controllable.\"",
+        "choices": [
+            "蠕虫病毒是一种能够自我复制的病毒",
+            "漏洞包括远程漏洞和本地漏洞",
+            "病毒可以在内网进行爆发式传播",
+            "病毒带来的危害是可控的"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-56",
+        "question": "\"What are the types of information security threats?\nA: Unauthorized access\nB: Identity theft\nC: Information leakage\nD: Denial of service\"",
+        "choices": [
+            "越权访问",
+            "身份仿冒",
+            "信息泄露",
+            "拒绝服务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-57",
+        "question": "\"Cloud\" refers to resources that exist on a cluster of internet servers, including:\nA: Servers\nB: Storage\nC: CPU\nD: Integrated Development Environment (IDE)\"",
+        "choices": [
+            "服务器",
+            "存储器",
+            "CPU",
+            "集成开发环境"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-58",
+        "question": "\"The key to data security lies in:\nA: Protection of personal information\nB: Data backup\nC: Prevention of data loss\nD: Covering all aspects of information collection, transmission, storage, use, sharing, and destruction.\"",
+        "choices": [
+            "个人信息保护",
+            "数据的备份",
+            "防止数据丢失",
+            "涵盖信息的收集、传输、存储、使用、共享、销毁等各个环节"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-59",
+        "question": "\"What is the Kerckhoff's principle?\nA: If any details of a cryptographic system are known, the system is not secure.\nB: If any details of a cryptographic system are known, the system is still secure.\nC: If any details of a cryptographic system are known, it should still be secure as long as the key is not compromised.\nD: If any details of a cryptographic system are known, it should still be secure even if the key is compromised.\"",
+        "choices": [
+            "密码系统的任何细节已为人悉知，该密码系统不可用",
+            "密码系统的任何细节已为人悉知，该密码系统仍可用",
+            "密码系统的任何细节已为人悉知，只要密钥未泄漏，它也应是安全的",
+            "密码系统的任何细节已为人悉知，密钥泄漏了它也应是安全的"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-60",
+        "question": "\"What are the main security needs of users?\nA: Terminal security\nB: Application security\nC: Identity management\nD: Host security\"",
+        "choices": [
+            "终端安全",
+            "应用安全",
+            "身份管理",
+            "主机安全"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-61",
+        "question": "\"The elements of security assessment mainly include:\nA: Assets\nB: Threats\nC: Vulnerabilities\nD: Security measures\"",
+        "choices": [
+            "资产",
+            "威胁",
+            "脆弱性",
+            "安全措施"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-62",
+        "question": "The statement that is incorrect regarding the functions of security auditing is:\n\nA: Using auditing tools to monitor and record activities outside the system\nB: Having a deterrent and warning effect on external intruders and malicious behavior by internal personnel through auditing tracking and corresponding accountability mechanisms\nC: Providing valuable system usage logs for system administrators\nD: Providing statistical logs of system operation for system administrators.",
+        "choices": [
+            "利用审计工具，监视和记录系统外的活动情况",
+            "通过审计跟踪，并配合相应的责任追究机制，对外部的入侵者以及内部人员的恶意行为具有威慑和警告作用",
+            "为系统管理员提供有价值的系统使用日志",
+            "为系统管理员提供系统运行的统计日志"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-63",
+        "question": "\"How many relevant laws are there in the legal system of the Cybersecurity Law?\nA: 6\nB: 7\nC: 8\nD: 9\"",
+        "choices": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-64",
+        "question": "\"The characteristics of information security are:\nA: Information security is system security\nB: Information security is dynamic security\nC: Information security is borderless security\nD: Information security is non-traditional security\"",
+        "choices": [
+            "信息安全是系统的安全",
+            "信息安全是动态的安全",
+            "信息安全是无边界的安全",
+            "信息安全是非传统的安全"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-65",
+        "question": "\"The scope of information technology security includes:\nA: Information technology issues\nB: Organizational management issues\nC: Social issues\nD: National security issues\"",
+        "choices": [
+            "信息技术问题",
+            "组织管理问题",
+            "社会问题",
+            "国家安全问题"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-66",
+        "question": "\"Which of the following statements about password security is incorrect:\nA: Passwords are the last line of defense against network attacks.\nB: Attacks on passwords are easy and effective, and password cracking is quick.\nC: Username + password is the simplest and most commonly used form of identity authentication.\nD: Passwords are the safest security measure.\"",
+        "choices": [
+            "口令是抵御网络攻击的最后一道防线",
+            "针对口令的攻击简便易行，口令破解快速有效",
+            "用户名+口令是最简单也最常用的身份认证方式",
+            "口令是最保险的安全环节"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-67",
+        "question": "Which of the following statements is incorrect:\nA: A host may virtualize multiple servers, each containing multiple security management domains.\nB: Virtualization is a key element of IaaS.\nC: PaaS and SaaS providers do not use virtualization technology in their backend.\nD: Virtualization technology includes virtual servers, virtual storage, and virtual switches.",
+        "choices": [
+            "一台主机上可能虚拟了多个服务器，各个服务器包含了多个安全管理域",
+            "虚拟化是IaaS的关键要素之一",
+            "PaaS和SaaS提供商的后台没有使用虚拟化技术",
+            "虚拟化技术包括虚拟服务器、虚拟存储、虚拟交换机"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-68",
+        "question": "\"What are the precautions for office security?\nA: Lock the screen when leaving the computer temporarily\nB: Do not store important data and sensitive files in the computer\nC: Do not write passwords on paper\nD: Do not easily use unknown sources of mobile media.\"",
+        "choices": [
+            "暂时离开电脑时锁屏",
+            "不在电脑里存放重要数据和敏感文件",
+            "不要将口令写在纸上",
+            "不要轻易使用未知来源的移动介质"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-69",
+        "question": "\"What are the characteristics of the change in attack methods?\nA: Increasingly asymmetric threats\nB: Automation and increased attack speed\nC: Increasingly complex attack tools\nD: Greater threats to infrastructure\"",
+        "choices": [
+            "越来越不对称的威胁",
+            "自动化和攻击速度提高",
+            "攻击工具越来越复杂",
+            "对基础设施威胁增大"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-70",
+        "question": "\"How many grounding points are required for the AAU DC power supply cable?\nA: 1 point\nB: 2 points\nC: 3 points\nD: Depends on the length of the power supply cable.\"",
+        "choices": [
+            "1处",
+            "2处",
+            "3处",
+            "视电源线长度而定"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-71",
+        "question": "\"What are the environmental conditions that need to be considered for high-altitude operations?\nA: 5S\nB: Wind speed, weather temperature, lighting\nC: Dirty or clean\nD: Noise\"",
+        "choices": [
+            "5S",
+            "风速、天气冷热、光线",
+            "脏还是干净",
+            "噪音"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-72",
+        "question": "\"How many rope buckles are required for high-altitude operations?\nA: One\nB: Two\nC: Three\nD: None\"",
+        "choices": [
+            "一个",
+            "两个",
+            "三个",
+            "零个"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-73",
+        "question": "\"What is the minimum number of people required for the tower homework?\nA: One person\nB: Two people\nC: Three people\nD: Four people\"",
+        "choices": [
+            "一人",
+            "二人",
+            "三人",
+            "四人"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-74",
+        "question": "\"A: Do not place power cords on the ground!\nB: Do not overload the power supply!\nC: Damaged power components must be replaced in a timely manner!\"",
+        "choices": [
+            "电源线禁止放置地面！",
+            "禁止电源超负荷！",
+            "损坏的电源器件须及时更换！"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-75",
+        "question": "\"RF Safety Precautions\n\nA: All RF-related operations must be carried out by personnel with corresponding qualifications and capabilities.\nB: Before approaching or working near an antenna, ensure knowledge of the safety area around the antenna.\nC: If working in a non-safety area is necessary, apply for cutting off the antenna power.\nD: It is prohibited to dismantle running RF cables, connectors, etc. to avoid contact with RF burns.\"",
+        "choices": [
+            "所有射频相关操作必须是有相应资质和能力的人员进行",
+            "到达或接近天线前|应确保了解安全天线的区域",
+            "若需要在非安全区域内工作|必须申请切断天线电源",
+            "禁止拆开正在运行的射频电缆、连接器等|避免接触射频烧伤。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-76",
+        "question": "\"Tower Work Safety\n\nA: Solo climbing of the tower is not allowed | A companion must be present.\nB: Safety clothing must be checked before climbing the tower | Safety clothing must be worn when climbing the tower.\nC: Ensure that the safety belt is secured at 2 different points.\nD: Tools carried must be stored in a bag | To avoid falling.\nE: Climbing the tower is prohibited during severe weather conditions such as thunderstorms and strong winds.\"",
+        "choices": [
+            "不允许单独一人爬塔工作|必须有看护人员陪同",
+            "必须在爬塔前检查安全衣|且爬塔必须穿安全衣",
+            "确保安全带系2个不同点",
+            "携带的工具应装在包内|避免跌落",
+            "雷雨、大风等恶劣天气|禁止爬塔"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D,E",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-77",
+        "question": "\"Security warnings include but are not limited to:\nA: Unauthorized personnel are prohibited from entering\nB: Safety helmets must be worn\nC: High-altitude operations\nD: None of the above\"",
+        "choices": [
+            "未得到授权的人禁止入内",
+            "必须带安全帽",
+            "高空作业",
+            "以上都不是"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-78",
+        "question": "\"Factors that are not suitable for driving include:\nA: Illness\nB: Effects of medication\nC: Effects of alcohol\nD: Age\"",
+        "choices": [
+            "疾病",
+            "药物的影响",
+            "酒精的影响",
+            "年龄"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-79",
+        "question": "\"Using cable ties, wrapping tubes, and corrugated tubes can be used to fix and protect fiber optic cables.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-80",
+        "question": "\"When using 1/4\" coaxial cable as GPS cable, if two repeater amplifiers need to be installed, the first repeater amplifier should be placed 65 meters behind the antenna, and the second repeater amplifier should be placed 130 meters behind the antenna.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-81",
+        "question": "\"Compared to other enterprises, telecom operators have inherent advantages in terms of security.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-82",
+        "question": "\"Drivers should repeatedly practice their ability to use handheld phones while driving.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-83",
+        "question": "\"If the driver is driving slowly, there is no need to fasten the seat belt.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "安全与规范-84",
+        "question": "\"Authorization and competency requirements must be met for electrical equipment operation.\nA: Correct\nB: Incorrect\"",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    }
+]

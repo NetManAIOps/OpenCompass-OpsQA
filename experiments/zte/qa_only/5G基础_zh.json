@@ -1,0 +1,7581 @@
+[
+    {
+        "id": "5G基础-2",
+        "question": "5G中，工信部把2.6GHz频段给了哪家运营商？\nA: 中国移动\nB: 中国联通\nC: 中国电信\nD: 中国铁通",
+        "choices": [
+            "中国移动",
+            "中国联通",
+            "中国电信",
+            "中国铁通"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-4",
+        "question": "R15版本中，以下为5G控制面协议的是？\nA: GTPU\nB: NGAP\nC: SDAP\nD: APP",
+        "choices": [
+            "GTPU",
+            "NGAP",
+            "SDAP",
+            "APP"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-5",
+        "question": "当电波的磁场强度方向垂直于地面时，此电波称为\nA: 水平极化波\nB: 垂直极化波\nC: 椭圆极化波\nD: 圆极化波",
+        "choices": [
+            "水平极化波",
+            "垂直极化波",
+            "椭圆极化波",
+            "圆极化波"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-6",
+        "question": "当无线电波遇到大量尺寸远小于波长的颗粒时，会产生现象。\nA: 绕射\nB: 散射\nC: 反射\nD: 直射",
+        "choices": [
+            "绕射",
+            "散射",
+            "反射",
+            "直射"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-7",
+        "question": "当信源近端的室分器件互调指标不达标时，可能会出现哪类干扰？（）\nA: 阻塞干扰\nB: 杂散干扰\nC: 互调干扰\nD: 飞弧干扰",
+        "choices": [
+            "阻塞干扰",
+            "杂散干扰",
+            "互调干扰",
+            "飞弧干扰"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-8",
+        "question": "第5代移动通信系统是制式的系统。\nA: 电路\nB: 数字\nC: 模拟\nD: 逻辑",
+        "choices": [
+            "电路",
+            "数字",
+            "模拟",
+            "逻辑"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-10",
+        "question": "根据自由空间的传播损耗模型，当距离增加一倍时，传播损耗增大。\nA: 6DB\nB: 5DB\nC: 4 DB\nD: 3 DB",
+        "choices": [
+            "6DB",
+            "5DB",
+            "4 DB",
+            "3 DB"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-11",
+        "question": "工业和信息化部许可中国电信、中国移动、中国联通在全国开展第五代移动通信系统试验。其中，中国电信获得（）频段？\nA: 3500MHz-3600MHz\nB: 3400MHz-3500MHz\nC: 4800MHz-4900MHz\nD: 2515MHz-2675MHz",
+        "choices": [
+            "3500MHz-3600MHz",
+            "3400MHz-3500MHz",
+            "4800MHz-4900MHz",
+            "2515MHz-2675MHz"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-12",
+        "question": "关于多径衰落，以下说法不正确的有（）。\nA: 多径衰落也称瑞利衰落\nB: 对于多径衰落，基站采取的措施就是采用时间分集、频率分集和空间分集（极化分集）的办法\nC: 多径衰落其中值变动服从对数正态分布\nD: 多径衰落最大值和最小值发生的位置大约相差1/4波长",
+        "choices": [
+            "多径衰落也称瑞利衰落",
+            "对于多径衰落，基站采取的措施就是采用时间分集、频率分集和空间分集（极化分集）的办法",
+            "多径衰落其中值变动服从对数正态分布",
+            "多径衰落最大值和最小值发生的位置大约相差1/4波长"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-13",
+        "question": "交织的作用可以减小信道带来的影响。\nA: 快衰落\nB: 慢衰落\nC: 阴影衰落\nD: 瑞利衰落",
+        "choices": [
+            "快衰落",
+            "慢衰落",
+            "阴影衰落",
+            "瑞利衰落"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-14",
+        "question": "快衰落的特性是。\nA: 有线通信\nB: 慢速\nC: 瑞利分布\nD: 浅度",
+        "choices": [
+            "有线通信",
+            "慢速",
+            "瑞利分布",
+            "浅度"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-15",
+        "question": "快衰落分为空间选择性快衰落、选择性快衰落和时间选址性快衰落。\nA: 合并\nB: 频率\nC: 损耗\nD: 地点",
+        "choices": [
+            "合并",
+            "频率",
+            "损耗",
+            "地点"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-16",
+        "question": "慢衰落速率主要决定于。\nA: 幅度\nB: 传播环境\nC: 频率\nD: 相位,",
+        "choices": [
+            "幅度",
+            "传播环境",
+            "频率",
+            "相位,"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-17",
+        "question": "慢衰落一般遵从分布。\nA: Rician(莱斯)\nB: Rayleigh (瑞利)\nC: 对数正态\nD: 直线",
+        "choices": [
+            "Rician(莱斯)",
+            "Rayleigh (瑞利)",
+            "对数正态",
+            "直线"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-18",
+        "question": "下列属于SA组网的是（）\nA: option7\nB: option5\nC: option3\nD: option2",
+        "choices": [
+            "option7",
+            "option5",
+            "option3",
+            "option2"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-19",
+        "question": "以下不属于5G关键性能指标的是。\nA: 2ms端到端时延\nB: 100万连接每平方公里\nC: 1ms端到端时延\nD: 连接速度10gbps",
+        "choices": [
+            "2ms端到端时延",
+            "100万连接每平方公里",
+            "1ms端到端时延",
+            "连接速度10gbps"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-20",
+        "question": "以下部署选项，不能为仅支持5G终端提供服务的是（）\nA: option3a\nB: option4\nC: option4a\nD: option2",
+        "choices": [
+            "option3a",
+            "option4",
+            "option4a",
+            "option2"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-21",
+        "question": "以下关于电波传播的描述,不正确的是 \nA: 电磁波波长越长，传播速度越快。\nB: 电磁波频率越高，传播损耗越大。\nC: 电磁波在不同的媒质中，传播速度不同。\nD: 电磁波波长越长，绕射能力越强。",
+        "choices": [
+            "电磁波波长越长，传播速度越快。",
+            "电磁波频率越高，传播损耗越大。",
+            "电磁波在不同的媒质中，传播速度不同。",
+            "电磁波波长越长，绕射能力越强。"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-22",
+        "question": "在R15版本，（）是5G的核心频段， 用于无缝覆盖。\nA: FR0\nB: FR1\nC: FR2\nD: FR3",
+        "choices": [
+            "FR0",
+            "FR1",
+            "FR2",
+            "FR3"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-23",
+        "question": "在R15版本，FR2是5G的辅助频段， 用于热点区域速率提升，FR2适用于（）\nA: 都不对\nB: TDD和FDD\nC: FDD\nD: TDD",
+        "choices": [
+            "都不对",
+            "TDD和FDD",
+            "FDD",
+            "TDD"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-24",
+        "question": "以下关于电波传播的描述,不正确的是 \nA: 电磁波频率越高，传播损耗越大。\nB: 电磁波波长越长，绕射能力越强。\nC: 电磁波波长越长，传播速度越快。\nD: 电磁波在不同的媒质中，传播速度不同。",
+        "choices": [
+            "电磁波频率越高，传播损耗越大。",
+            "电磁波波长越长，绕射能力越强。",
+            "电磁波波长越长，传播速度越快。",
+            "电磁波在不同的媒质中，传播速度不同。"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-25",
+        "question": "下面选项中哪些属于5G的关键技术？\nA: 新频段和新空口\nB: 大规模天线技术\nC: 灵活的时隙配置\nD: 多连接技术",
+        "choices": [
+            "新频段和新空口",
+            "大规模天线技术",
+            "灵活的时隙配置",
+            "多连接技术"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-26",
+        "question": "在5G中，下面哪些频段是小于6GHz的？\nA: n41\nB: n77\nC: n80\nD: n257",
+        "choices": [
+            "n41",
+            "n77",
+            "n80",
+            "n257"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-27",
+        "question": "下面哪些频段是5G初期全球的主流频段？\nA: 1.8GHz\nB: 3.5GHz\nC: 28GHz\nD: 39GHz",
+        "choices": [
+            "1.8GHz",
+            "3.5GHz",
+            "28GHz",
+            "39GHz"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-28",
+        "question": "在通信系统中，按照数据流的方向可以分为哪几种传输模式？\nA: 双工通信方式\nB: 单工通信方式\nC: 半双工通信方式\nD: 半单工通信方式",
+        "choices": [
+            "双工通信方式",
+            "单工通信方式",
+            "半双工通信方式",
+            "半单工通信方式"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-29",
+        "question": "多址接入方式有哪些？\nA: FDMA\nB: TDMA\nC: CDMA\nD: OFDMA",
+        "choices": [
+            "FDMA",
+            "TDMA",
+            "CDMA",
+            "OFDMA"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-30",
+        "question": "5G毫米波频谱\nA: 37-42.5GHz\nB: 24.75-27.5GHz\nC: 3300-3600MHz\nD: 4800-5000MHz",
+        "choices": [
+            "37-42.5GHz",
+            "24.75-27.5GHz",
+            "3300-3600MHz",
+            "4800-5000MHz"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-31",
+        "question": "5G毫米波通信技术有哪些特点？\nA: 降雨时衰减严重\nB: 是一种典型的视距传输方式\nC: 具有“大气窗口”和“衰减峰”\nD: 对沙尘和烟雾具有很强的穿透能力",
+        "choices": [
+            "降雨时衰减严重",
+            "是一种典型的视距传输方式",
+            "具有“大气窗口”和“衰减峰”",
+            "对沙尘和烟雾具有很强的穿透能力"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-32",
+        "question": "5G所采用的关键技术包括\nA: M2M通信\nB: 超密集异构网络\nC: D2D通信\nD: 自组织网络",
+        "choices": [
+            "M2M通信",
+            "超密集异构网络",
+            "D2D通信",
+            "自组织网络"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-33",
+        "question": "5G网络规划与2/3/4G相比存在很大不同，主要面临的挑战有。\nA: 新架构的挑战\nB: 新频谱的挑战\nC: 新业务的挑战\nD: 新空口的挑战",
+        "choices": [
+            "新架构的挑战",
+            "新频谱的挑战",
+            "新业务的挑战",
+            "新空口的挑战"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-34",
+        "question": "NSA（非独立组网）组网特点\nA: UE必须为支持双连接的终端\nB: 5G基站不能独立工作，必须采用双连接借助LTE基站信令接入，5G仅作为数据管道的增强\nC: 5G与4G之间的互操作（切换、重定向等）为跨核心网的互操作\nD: 主要解决5G初期覆盖不完善，5G与4G之间互操作频繁的问题",
+        "choices": [
+            "UE必须为支持双连接的终端",
+            "5G基站不能独立工作，必须采用双连接借助LTE基站信令接入，5G仅作为数据管道的增强",
+            "5G与4G之间的互操作（切换、重定向等）为跨核心网的互操作",
+            "主要解决5G初期覆盖不完善，5G与4G之间互操作频繁的问题"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-35",
+        "question": "传播损耗与以下哪些因素有关？\nA: 信号的入射角度\nB: 信号强度\nC: 建筑物材质\nD: 频率",
+        "choices": [
+            "信号的入射角度",
+            "信号强度",
+            "建筑物材质",
+            "频率"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-36",
+        "question": "多普勒频移和哪些因素有关?\nA: 天线高度\nB: 频率\nC: 路径损耗\nD: 速度",
+        "choices": [
+            "天线高度",
+            "频率",
+            "路径损耗",
+            "速度"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-37",
+        "question": "关于5G网络结构的说法正确的是。\nA: 逻辑功能模块化设计，实现灵活的网络切片\nB: 分为核心网5GC与无线接入网NG-RAN两部分\nC: 网络基于NFV、SDN技术，实现逻辑功能和硬件的解耦，控制面与用户面的绝对分离\nD: 采用基于服务的网络架构",
+        "choices": [
+            "逻辑功能模块化设计，实现灵活的网络切片",
+            "分为核心网5GC与无线接入网NG-RAN两部分",
+            "网络基于NFV、SDN技术，实现逻辑功能和硬件的解耦，控制面与用户面的绝对分离",
+            "采用基于服务的网络架构"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-38",
+        "question": "5G的三大应用场景分别为。\nA: 增强移动宽带\nB: 低时延高可靠\nC: 热点高容量\nD: 海量机器通信",
+        "choices": [
+            "增强移动宽带",
+            "低时延高可靠",
+            "热点高容量",
+            "海量机器通信"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-39",
+        "question": "5G独立组网方式有？\nA: NSA\nB: NR+NGC\nC: NR+EPC\nD: SA",
+        "choices": [
+            "NSA",
+            "NR+NGC",
+            "NR+EPC",
+            "SA"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-40",
+        "question": "关于无线传播损耗，以下哪些说法是不正确的。\nA: 空间传播损耗：随距离衰减的电播传播损耗，为固定斜率的衰减。\nB: 快衰落损耗：多径效应，由多径传播引起，表现为正态分布。一般通过功控:均衡等信号处理方式解决。\nC: 阴影衰落损耗（慢衰落损耗）：阴影效应，由地形地物引起，表现为瑞利分布。\nD: 其他损耗，如穿透损耗等。一般通过预留损耗余量降低对通信质量的影响。",
+        "choices": [
+            "空间传播损耗：随距离衰减的电播传播损耗，为固定斜率的衰减。",
+            "快衰落损耗：多径效应，由多径传播引起，表现为正态分布。一般通过功控:均衡等信号处理方式解决。",
+            "阴影衰落损耗（慢衰落损耗）：阴影效应，由地形地物引起，表现为瑞利分布。",
+            "其他损耗，如穿透损耗等。一般通过预留损耗余量降低对通信质量的影响。"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-41",
+        "question": "自由空间的路径损耗与哪些因素有关？\nA: 发射功率\nB: 天线增益\nC: 频率\nD: 距离",
+        "choices": [
+            "发射功率",
+            "天线增益",
+            "频率",
+            "距离"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-42",
+        "question": "无线信号经过多径传播后，以下属性将发生变化。\nA: 时延\nB: 相位\nC: 幅度\nD: 能量",
+        "choices": [
+            "时延",
+            "相位",
+            "幅度",
+            "能量"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-43",
+        "question": "关于5G毫米波通信技术的优势描述正确的有\nA: 可用频带宽，可提供几十GHz带宽\nB: 受空气和雨水等影响很小\nC: 波束集中，提高能效\nD: 方向性好，受干扰影响小",
+        "choices": [
+            "可用频带宽，可提供几十GHz带宽",
+            "受空气和雨水等影响很小",
+            "波束集中，提高能效",
+            "方向性好，受干扰影响小"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-44",
+        "question": "5G D2D通信优势是\nA: 终端近距离通信，高速率低时延低功耗\nB: 提升网络容量\nC: 提升蜂窝频谱利用率\nD: 减轻基站流量负载",
+        "choices": [
+            "终端近距离通信，高速率低时延低功耗",
+            "提升网络容量",
+            "提升蜂窝频谱利用率",
+            "减轻基站流量负载"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-45",
+        "question": "边缘计算的三大技术分别是本地缓存、本地转发、跨层优化。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-46",
+        "question": "无线电波的频率越高，路径损耗越小。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-47",
+        "question": "新空口技术是5G关键技术。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-48",
+        "question": "虚拟现实英文缩写AR。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-49",
+        "question": "在R15版本中，会话管理功能是NR中UPF的功能。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-50",
+        "question": "在R15版本中，同一个用户可以同时连接5G和4G小区进行双连接。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-51",
+        "question": "在R15版本中，相对于LTE，NR物理层的结构更加复杂，更加灵活，所有变化都是为了满足5G网络大带宽、低时延、大连接等需求。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-52",
+        "question": "在R15版本中，只支持频分双工（FDD）不再支持时分双工（TDD）。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-53",
+        "question": "（2017）由于移动通信存在干扰和衰落，在信号传输过程中将出现差错，故对数字信号必须采用纠、检错技术。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-54",
+        "question": "5G NR覆盖不连续的情况下，推荐非独立组网架构。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-55",
+        "question": "5G的关键技术有全频谱接入、新架构、新空口技术。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-56",
+        "question": "5G的效率挑战包括频谱效率、能源效率、资源效率、成本效率、传输效率、链接效率。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-57",
+        "question": "5G技术的空口时延可低至1ms，可靠性接近100%。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-58",
+        "question": "5G将采用NFV+SDN架构。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-59",
+        "question": "5G商用频段3300M Hz-3600M Hz仅能用于室内覆盖。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-60",
+        "question": "5G网络不处理用户应用层协议。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-61",
+        "question": "D2D 通信是一种设备到设备的直接通信技术，与蜂窝通信最主要的区别就是不需要基站的中转。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-62",
+        "question": "NSA可与LTE共用核心网。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-63",
+        "question": "NSA组网可以逐步演进到SA组网\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-64",
+        "question": "option4，4a可以为不支持5G的UE提供服务\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-65",
+        "question": "车联网技术要求网络延时低于10ms。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-66",
+        "question": "大气对电磁波传输中没有影响。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-67",
+        "question": "带宽要求和时延是5G发展的主要驱动力。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-68",
+        "question": "电磁波在自由空间传播，其传播速度和频率无关。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-69",
+        "question": "陆地移动网络无线信道的主要特征是：时延扩展、多径传播引起的快衰落、移动台运动引起的多普勒频移。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-70",
+        "question": "无线电波传播距离越远，路径损耗越大。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-71",
+        "question": "5G数据信道采用什么编码方式（ ）。\nA: Turbo\nB: 卷积码\nC: Polar\nD: LDPC",
+        "choices": [
+            "Turbo",
+            "卷积码",
+            "Polar",
+            "LDPC"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-72",
+        "question": "NR系统中，不做为5G双工技术的是（   ）。\nA: 时分双工\nB: 频分双工\nC: 码分双工\nD: 全双工",
+        "choices": [
+            "时分双工",
+            "频分双工",
+            "码分双工",
+            "全双工"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-73",
+        "question": "NR系统中，gNB之间的接口是（  ）。\nA: X2\nB: S1\nC: Xn\nD: NG",
+        "choices": [
+            "X2",
+            "S1",
+            "Xn",
+            "NG"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-74",
+        "question": "毫米波的频率范围是（ ）。\nA: 3～30GHz\nB: 30～300GHz\nC: 300～3000MHz\nD: 30～300MHz",
+        "choices": [
+            "3～30GHz",
+            "30～300GHz",
+            "300～3000MHz",
+            "30～300MHz"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-75",
+        "question": "EN-DC中，MCG进行NR邻区测量使用的参考信号 (  )\nA: SSB RS\nB: CSI-RS\nC: C-RS\nD: DM-RS",
+        "choices": [
+            "SSB RS",
+            "CSI-RS",
+            "C-RS",
+            "DM-RS"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-76",
+        "question": "以下选项中，哪个是NR帧结构的最小时间单元为（  ）\nA: 无线帧\nB: 子帧\nC: 时隙\nD: 符号",
+        "choices": [
+            "无线帧",
+            "子帧",
+            "时隙",
+            "符号"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-77",
+        "question": "NR系统中，R15版本，PDSCH最大调制是（  ）\nA: 64QAM\nB: 128QAM\nC: 256QAM\nD: 512QAM",
+        "choices": [
+            "64QAM",
+            "128QAM",
+            "256QAM",
+            "512QAM"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-78",
+        "question": "NR系统中，PDCCH信道共有多少种DCI格式（  ）\nA: 4\nB: 8\nC: 16\nD: 24",
+        "choices": [
+            "4",
+            "8",
+            "16",
+            "24"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-79",
+        "question": "NR系统中，TAC包含在（  ）消息中。\nA: MIB\nB: SIB1\nC: SIB2\nD: SIB3",
+        "choices": [
+            "MIB",
+            "SIB1",
+            "SIB2",
+            "SIB3"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-80",
+        "question": "5G同步信号采用的调制方式是（   ）\nA: BPSK\nB: QPSK\nC: 8PSK\nD: 16QAM",
+        "choices": [
+            "BPSK",
+            "QPSK",
+            "8PSK",
+            "16QAM"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-81",
+        "question": "5G核心网的SMF主要有PDU Session Control和（）功能？\nA: Mobility Anchoring\nB: PDU Handling\nC: UE IP address allocation\nD: NAS Security",
+        "choices": [
+            "Mobility Anchoring",
+            "PDU Handling",
+            "UE IP address allocation",
+            "NAS Security"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-82",
+        "question": "EN-DC中，下面哪个信令可以携带SCG Add或PSCell Change相关SCG配置？\nA: NR侧的RRCConnectionSetup\nB: NR侧的RRCReconfiguration\nC: LTE侧的RRCConnectionReconfiguration\nD: LTE侧的RRCConnectionSetup",
+        "choices": [
+            "NR侧的RRCConnectionSetup",
+            "NR侧的RRCReconfiguration",
+            "LTE侧的RRCConnectionReconfiguration",
+            "LTE侧的RRCConnectionSetup"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-83",
+        "question": "5G NR中，若使用 30kHz 子载波间隔，则一个RB的宽度是（    ）kHz。\nA: 180\nB: 360\nC: 720\nD: 1440",
+        "choices": [
+            "180",
+            "360",
+            "720",
+            "1440"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-84",
+        "question": "NR系统中，做FTP下载业务，连接FTP时一般默认端口号（ ）\nA: 12\nB: 21\nC: 20\nD: 30",
+        "choices": [
+            "12",
+            "21",
+            "20",
+            "30"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-85",
+        "question": "NR系统中，单站优化时不需要观察哪些指标（   ）\nA: RSRP\nB: SINR\nC: BLER\nD: BWPID",
+        "choices": [
+            "RSRP",
+            "SINR",
+            "BLER",
+            "BWPID"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-86",
+        "question": "中移动单站验收规范好点无线环境要求（）\nA: -80dBm ≦ SS-RSRP < -70dBm 且 20dB ≦ SS-SINR < 25dB\nB: -85dBm ≦ SS-RSRP < -75dBm 且 15dB ≦ SS-SINR < 20dB\nC: -80dBm ≦ SS-RSRP < -70dBm 且 15dB ≦ SS-SINR < 20dB\nD: -90dBm ≦ SS-RSRP < -70dBm 且 15dB ≦ SS-SINR < 20dB",
+        "choices": [
+            "-80dBm ≦ SS-RSRP < -70dBm 且 20dB ≦ SS-SINR < 25dB",
+            "-85dBm ≦ SS-RSRP < -75dBm 且 15dB ≦ SS-SINR < 20dB",
+            "-80dBm ≦ SS-RSRP < -70dBm 且 15dB ≦ SS-SINR < 20dB",
+            "-90dBm ≦ SS-RSRP < -70dBm 且 15dB ≦ SS-SINR < 20dB"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-87",
+        "question": "5G系统中，有关UE RRC_INACTIVE状态下，下面说法错误的是（   ）\nA: UE存储UE inactive AS上下文\nB: UE依然保持物理层资源\nC: NG-RAN知道UE归属的RNA\nD: 此时UE依然可以PLMN选择",
+        "choices": [
+            "UE存储UE inactive AS上下文",
+            "UE依然保持物理层资源",
+            "NG-RAN知道UE归属的RNA",
+            "此时UE依然可以PLMN选择"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-88",
+        "question": "NR覆盖优化的原则，以下描述不正确的是（）\nA: 先优化SS-RSRP，后优化 SS-SINR；\nB: 针对弱覆盖问题，应该先进行功率优化，再考虑天馈调整；\nC: 优先优化弱覆盖、越区覆盖、再优化重叠覆盖；\nD: 覆盖优化的两大关键任务：消除弱覆盖（保证SS-RSRP覆盖）；净化切换带、消除交叉覆盖。",
+        "choices": [
+            "先优化SS-RSRP，后优化 SS-SINR；",
+            "针对弱覆盖问题，应该先进行功率优化，再考虑天馈调整；",
+            "优先优化弱覆盖、越区覆盖、再优化重叠覆盖；",
+            "覆盖优化的两大关键任务：消除弱覆盖（保证SS-RSRP覆盖）；净化切换带、消除交叉覆盖。"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-89",
+        "question": "NR系统中，容易出现弱覆盖的场景不包括（）\nA: 地下室；\nB: 城中村；\nC: 停车场；\nD: 十字路口。",
+        "choices": [
+            "地下室；",
+            "城中村；",
+            "停车场；",
+            "十字路口。"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-90",
+        "question": "EN-DC中，触发NR辅站增加流程需要UE上报哪个事件？\nA: A2\nB: A1\nC: B2\nD: B1",
+        "choices": [
+            "A2",
+            "A1",
+            "B2",
+            "B1"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-91",
+        "question": "5G帧结构与4G帧结构相比有哪些特点（  ）。\nA: 每subframe的slot个数与SCS有关\nB: slot及符号长度与SCS有关\nC: 特殊子帧位置可灵活配置\nD: 子载波间隔固定",
+        "choices": [
+            "每subframe的slot个数与SCS有关",
+            "slot及符号长度与SCS有关",
+            "特殊子帧位置可灵活配置",
+            "子载波间隔固定"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-92",
+        "question": "NR支持的子载波间隔SCS有（  ）。\nA: 15\nB: 30\nC: 60\nD: 90",
+        "choices": [
+            "15",
+            "30",
+            "60",
+            "90"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-93",
+        "question": "5G网络架构白皮书中，网络逻辑架构主要由哪几个部分组成（ ）。\nA: 控制平面\nB: 业务平面\nC: 接入平面\nD: 转发平面",
+        "choices": [
+            "控制平面",
+            "业务平面",
+            "接入平面",
+            "转发平面"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-94",
+        "question": "NR系统中，以下属于5G网元AMF的功能是（ ）。\nA: 移动性管理控制\nB: 空闲态UE寻址\nC: 会话管理\nD: 注册区域管理",
+        "choices": [
+            "移动性管理控制",
+            "空闲态UE寻址",
+            "会话管理",
+            "注册区域管理"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-95",
+        "question": "5G技术白皮书中，在低频新空口设计考虑中，针对低时延高可靠场景中，对如何有效降低空口时延的描述，下列哪些是正确的（ ）。\nA: 核心网功能下沉，移动内容本地化\nB: 在波形方面，由于短的TTI设计导致CP开销过大，考虑采用无CP或多个符号共享CP的新波形\nC: 多址技术方面，通过SCMA、PDMA、MUSA等技术实现免调度传输，实现上行数据包调度“零”等待时间\nD: 帧结构方面，采用更短的帧长",
+        "choices": [
+            "核心网功能下沉，移动内容本地化",
+            "在波形方面，由于短的TTI设计导致CP开销过大，考虑采用无CP或多个符号共享CP的新波形",
+            "多址技术方面，通过SCMA、PDMA、MUSA等技术实现免调度传输，实现上行数据包调度“零”等待时间",
+            "帧结构方面，采用更短的帧长"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-96",
+        "question": "5G空中接口MAC子层的功能包括（ ）。\nA: UE与逻辑信道优先级处理\nB: 调度信息报告\nC: ARQ纠错\nD: 复用/解复用",
+        "choices": [
+            "UE与逻辑信道优先级处理",
+            "调度信息报告",
+            "ARQ纠错",
+            "复用/解复用"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-97",
+        "question": "5G系统中，下行信号包括（   ）\nA: PT-RS\nB: DMRS\nC: PSS/SSS\nD: CSI-RS",
+        "choices": [
+            "PT-RS",
+            "DMRS",
+            "PSS/SSS",
+            "CSI-RS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-98",
+        "question": "NR系统中，BWP切换有哪些方式（ ）\nA: TCI\nB: DCI\nC: Timer\nD: RMSI",
+        "choices": [
+            "TCI",
+            "DCI",
+            "Timer",
+            "RMSI"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-99",
+        "question": "NR系统中，BWP Generic parameter包括（  ）\nA: locationAndBandwidth\nB: subcarrierSpacing\nC: cyclicPrefix\nD: bwp-Id",
+        "choices": [
+            "locationAndBandwidth",
+            "subcarrierSpacing",
+            "cyclicPrefix",
+            "bwp-Id"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-100",
+        "question": "NR系统中，PCF的网元功能为（   ）\nA: 支持统一的政策架构来管理网络行为\nB: 提供控制面功能策略规则\nC: 实现前端（PCF FE），以访问统一数据存储库（UDR)\nD: PCF访问与PCF相同的PLMN中的UDR",
+        "choices": [
+            "支持统一的政策架构来管理网络行为",
+            "提供控制面功能策略规则",
+            "实现前端（PCF FE），以访问统一数据存储库（UDR)",
+            "PCF访问与PCF相同的PLMN中的UDR"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-101",
+        "question": "NR系统中，C-RAN实际部署可以出现（   ）分离 的三级配置\nA: BBU\nB: CU\nC: DU\nD: RRU",
+        "choices": [
+            "BBU",
+            "CU",
+            "DU",
+            "RRU"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-102",
+        "question": "UE在上报NR邻区的MR中，会携带NR小区的哪些信息？\nA: TA\nB: PCI\nC: Path Loss\nD: RSRP",
+        "choices": [
+            "TA",
+            "PCI",
+            "Path Loss",
+            "RSRP"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-103",
+        "question": "以下哪些信息会携带在“SgNB Addition Request\"信令中？\nA: 建立X2AP接口的参数\nB: 测量事件B1\nC: 发送给UE的辅站变更命令\nD: 请求为eRAB分配资源",
+        "choices": [
+            "建立X2AP接口的参数",
+            "测量事件B1",
+            "发送给UE的辅站变更命令",
+            "请求为eRAB分配资源"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-104",
+        "question": "根据TS38.306协议，5G峰值速率计算相关的因素有哪些（   ）。\nA: 时/频资源\nB: 空域资源\nC: 载频资源\nD: 调制方式和码率",
+        "choices": [
+            "时/频资源",
+            "空域资源",
+            "载频资源",
+            "调制方式和码率"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-105",
+        "question": "NR MIB消息中包含\nA: 系统帧号\nB: 半帧指示\nC: PHICH配置\nD: SIB1的PDCCH CORESET配置",
+        "choices": [
+            "系统帧号",
+            "半帧指示",
+            "PHICH配置",
+            "SIB1的PDCCH CORESET配置"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-106",
+        "question": "NR系统中，UE收到RRCSetup后，会有以下哪些过程（   ）\nA: 进入RRC_CONNECTED，停止小区重选；\nB: 如果NAS层提供了多个S-NSSAI，则写入s-nssai-List；\nC: 发送RRCSetupComplete\nD: UE启动T300，将RRCSetupRequest消息传给底层后，然后继续做测量和小区重选",
+        "choices": [
+            "进入RRC_CONNECTED，停止小区重选；",
+            "如果NAS层提供了多个S-NSSAI，则写入s-nssai-List；",
+            "发送RRCSetupComplete",
+            "UE启动T300，将RRCSetupRequest消息传给底层后，然后继续做测量和小区重选"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-107",
+        "question": "以下哪些参数会对下行峰值速率有影响（）？\nA: PDSCH IBLER\nB: RI Num DL\nC: DL MCS\nD: Grant DL Num",
+        "choices": [
+            "PDSCH IBLER",
+            "RI Num DL",
+            "DL MCS",
+            "Grant DL Num"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-108",
+        "question": "5G信道编码技术主要采用哪些（ ）。\nA: Turbo\nB: 卷积码\nC: Polar\nD: LDPC",
+        "choices": [
+            "Turbo",
+            "卷积码",
+            "Polar",
+            "LDPC"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-109",
+        "question": "NR系统中，对于2.6G频谱的优势说法正确的是（  ）\nA: 2.6G覆盖能力优于3.5G，在300-350m站间距下，上行速率可达1Mbps\nB: 2.6G建网可复用现网4G部分资源\nC: 帧结构需要与4G同步，影响上行性能\nD: 2.6G是全球主流5G频谱",
+        "choices": [
+            "2.6G覆盖能力优于3.5G，在300-350m站间距下，上行速率可达1Mbps",
+            "2.6G建网可复用现网4G部分资源",
+            "帧结构需要与4G同步，影响上行性能",
+            "2.6G是全球主流5G频谱"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-110",
+        "question": "RRC连接建立完成后，对UE进行测量配置，根据38.300协议，测量类型包括（  ）\nA: 基于SSB的同频测量\nB: 基于SSB的异频测量\nC: 基于CSI-RS的同频测量\nD: 基于CSI-RS的异频测量",
+        "choices": [
+            "基于SSB的同频测量",
+            "基于SSB的异频测量",
+            "基于CSI-RS的同频测量",
+            "基于CSI-RS的异频测量"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-111",
+        "question": "EN-DC下可以建立哪些SRB ( )\nA: SRB0\nB: SRB1\nC: SRB2\nD: SRB3",
+        "choices": [
+            "SRB0",
+            "SRB1",
+            "SRB2",
+            "SRB3"
+        ],
+        "qtype": 1,
+        "answer": " ,A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-112",
+        "question": "5G无线系统中，NSA Option3是5G网络成熟阶段的目标架构.\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-113",
+        "question": "与LTE相比，NR中没有PCFICH和PHICH物理信道。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-114",
+        "question": "5G SRB3是当UE处于EN-DC时使用DCCH逻辑信道的特殊的RRC消息。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-115",
+        "question": "NR协议提供广播波束赋形/扫描手段，水平和垂直维度均提供动态窄波束。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-116",
+        "question": "5G大规模天线技术优势不包括（    ）。\nA: 系统容量和能量效率大幅度提升\nB: 发射机和接收机设计更复杂\nC: 用户间信道正交，干扰和噪声将被消除\nD: 信道的统计特性趋于稳定",
+        "choices": [
+            "系统容量和能量效率大幅度提升",
+            "发射机和接收机设计更复杂",
+            "用户间信道正交，干扰和噪声将被消除",
+            "信道的统计特性趋于稳定"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-117",
+        "question": "NR系统中，一个SS/PBCH block包含（ ）个OFDM symbols。\nA: 4\nB: 1\nC: 3\nD: 2",
+        "choices": [
+            "4",
+            "1",
+            "3",
+            "2"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-118",
+        "question": "NR系统架构中，gNB之间的接口类型为（  ）\nA: S1\nB: X2\nC: NG\nD: Xn",
+        "choices": [
+            "S1",
+            "X2",
+            "NG",
+            "Xn"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-119",
+        "question": "NR系统中，gNB-CU-CP与gNB-CU-UP之间的接口为（  ）\nA: F1-C\nB: F1-U\nC: E1-C\nD: S1-U",
+        "choices": [
+            "F1-C",
+            "F1-U",
+            "E1-C",
+            "S1-U"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-120",
+        "question": "NR支持的频段-（FR1）目前包含的频段是（  ）\nA: N41\nB: N257\nC: N258\nD: N260",
+        "choices": [
+            "N41",
+            "N257",
+            "N258",
+            "N260"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-121",
+        "question": "5G网络关键性能指标中，高速移动性要求达到（  ）每小时\nA: 100KM\nB: 1000KM\nC: 800KM\nD: 500KM",
+        "choices": [
+            "100KM",
+            "1000KM",
+            "800KM",
+            "500KM"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-122",
+        "question": "NR系统中,Normal cp配置，一个时隙一共多少个符号？（  ）\nA: 7\nB: 10\nC: 12\nD: 14",
+        "choices": [
+            "7",
+            "10",
+            "12",
+            "14"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-123",
+        "question": "以下5G关键能力描述不正确的是（）\nA: 峰值速率20Gbps\nB: 移动性500KM/H\nC: 流量密度1Tbps/Km^2\nD: 连接密度100万",
+        "choices": [
+            "峰值速率20Gbps",
+            "移动性500KM/H",
+            "流量密度1Tbps/Km^2",
+            "连接密度100万"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-124",
+        "question": "NR系统中，SSB组成部分不包含（  ）\nA: PSS\nB: SSS\nC: PBCH\nD: CSI-RS",
+        "choices": [
+            "PSS",
+            "SSS",
+            "PBCH",
+            "CSI-RS"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-125",
+        "question": "基于基站间的Xn链路切换，基站侧向核心网发的第一条信令为？\nA: HandoverRequest\nB: HandoverRequired\nC: HandoverRequestAcknowledge\nD: SNStatusTransfer",
+        "choices": [
+            "HandoverRequest",
+            "HandoverRequired",
+            "HandoverRequestAcknowledge",
+            "SNStatusTransfer"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-126",
+        "question": "相比于4G，5G NR 中增加了一种 RRC 状态，它是（    ）。\nA: RRC-connected\nB: RRC-idle\nC: RRC-inactive\nD: RRC-hibernated",
+        "choices": [
+            "RRC-connected",
+            "RRC-idle",
+            "RRC-inactive",
+            "RRC-hibernated"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-127",
+        "question": "车载测试不需要哪些工具（）\nA: 测试笔记本\nB: 测试终端\nC: GPS\nD: 罗盘",
+        "choices": [
+            "测试笔记本",
+            "测试终端",
+            "GPS",
+            "罗盘"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-128",
+        "question": "NR中哪类SRB承载RRC消息，映射到CCCH信道？\nA: SRB0\nB: SRB1\nC: SRB2\nD: SRB3",
+        "choices": [
+            "SRB0",
+            "SRB1",
+            "SRB2",
+            "SRB3"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-129",
+        "question": "SA组网，ATP抄到UE整个接入流程主要分为：①上下文建立以及PDU会话建立，②接收mib和sib，③随机接入，④注册、安全加密鉴权，时间先后顺序为（  ）\nA: ①②③④\nB: ②①④③\nC: ②③④①\nD: ②④③①",
+        "choices": [
+            "①②③④",
+            "②①④③",
+            "②③④①",
+            "②④③①"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-130",
+        "question": "SSB1波束、4波束、8波束拉网速率排行正确的是（）\nA: 8波束>4波束>1波束\nB: 4波束>1波束>8波束\nC: 1波束>4波束>8波束",
+        "choices": [
+            "8波束>4波束>1波束",
+            "4波束>1波束>8波束",
+            "1波束>4波束>8波束"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-131",
+        "question": "中移动测试规范要求，单用户好点2000bytes-Ping包平均时延（）ms\nA: 15\nB: 16\nC: 17\nD: 18",
+        "choices": [
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-132",
+        "question": "SS Block，包括主同步信号PSS/辅同步信号SSS/广播信道PBCH（PBCH DMRS），SSB的时频（）\nA: 占用4个连续符号；\nB: 占用20个RB；\nC: 占用240个子载波；\nD: 占用8个连续的符号。",
+        "choices": [
+            "占用4个连续符号；",
+            "占用20个RB；",
+            "占用240个子载波；",
+            "占用8个连续的符号。"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-133",
+        "question": "乡镇农村的覆盖，优先考虑如下哪一款AAU（）\nA: TDAU5264N41；\nB: TDAU5216N41；\nC: TDAU5164N79；\nD: TDRU5102N41。",
+        "choices": [
+            "TDAU5264N41；",
+            "TDAU5216N41；",
+            "TDAU5164N79；",
+            "TDRU5102N41。"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-134",
+        "question": "dBi和dBd是功率增益的单位，两者都是相对值，但参考基准不一样，其中dBi的参考基准（）。\nA: 全向天线；\nB: 偶极子；\nC: 定向天线。",
+        "choices": [
+            "全向天线；",
+            "偶极子；",
+            "定向天线。"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-135",
+        "question": "6GHZ以上频段，SSB块的发送个数最大为（）\nA: 8\nB: 16\nC: 32\nD: 64",
+        "choices": [
+            "8",
+            "16",
+            "32",
+            "64"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-136",
+        "question": "属于5G超密集组网应用场景有（    ）。\nA: 交通枢纽\nB: 密集住宅区\nC: 大型活动场馆\nD: 商业中心",
+        "choices": [
+            "交通枢纽",
+            "密集住宅区",
+            "大型活动场馆",
+            "商业中心"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-137",
+        "question": "5G大规模天线性能优势有（   ）。\nA: 分集增益\nB: 波束赋形增益\nC: 频分复用增益\nD: 空间复用增益",
+        "choices": [
+            "分集增益",
+            "波束赋形增益",
+            "频分复用增益",
+            "空间复用增益"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-138",
+        "question": "5G的基本特征包括（   ）\nA: 高移动性\nB: 低时延\nC: 海量连接\nD: 大带宽",
+        "choices": [
+            "高移动性",
+            "低时延",
+            "海量连接",
+            "大带宽"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-139",
+        "question": "5G NR中，3GPP指定了频率范围，主要包括（   ）\nA: FR2\nB: FR4\nC: FR1\nD: FR3",
+        "choices": [
+            "FR2",
+            "FR4",
+            "FR1",
+            "FR3"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-140",
+        "question": "5G NR中SSB组成包括(   )\nA: PSS\nB: SSS\nC: PBCH\nD: CSI-RS",
+        "choices": [
+            "PSS",
+            "SSS",
+            "PBCH",
+            "CSI-RS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-141",
+        "question": "NR中时隙内的OFDM符号被分为（   ）\nA: downlink\nB: flexible\nC: uplink\nD: GP",
+        "choices": [
+            "downlink",
+            "flexible",
+            "uplink",
+            "GP"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-142",
+        "question": "关于5G速率优化提升无线环境处理正确的为（）\nA: 针对无线弱场可通过调整周围小区方位角、下倾角、功率等相关参数来改善该区域覆盖\nB: 针对导频污染，通过确定主服务小区调整其他小区的方位角、下倾角、功率等相关参数来减小该区域的干扰问题\nC: 针对外部干扰，可在忙时闭站进行清频测试找出并处理干扰源\nD: 在某些切换设置不合理区域，比如切换较晚，通过调整切换参数提升切换性能。",
+        "choices": [
+            "针对无线弱场可通过调整周围小区方位角、下倾角、功率等相关参数来改善该区域覆盖",
+            "针对导频污染，通过确定主服务小区调整其他小区的方位角、下倾角、功率等相关参数来减小该区域的干扰问题",
+            "针对外部干扰，可在忙时闭站进行清频测试找出并处理干扰源",
+            "在某些切换设置不合理区域，比如切换较晚，通过调整切换参数提升切换性能。"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-143",
+        "question": "EN-DC下哪些SRB支持被配置成Split SRB  ( )\n\nA: SRB0\nB: SRB1\nC: SRB2\nD: SRB3",
+        "choices": [
+            "SRB0",
+            "SRB1",
+            "SRB2",
+            "SRB3"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-144",
+        "question": "5G NR 业务验证包含哪些类型\nA: 速率测试\nB: 系统基本性能测试\nC: 5G覆盖测试\nD: 时延测试",
+        "choices": [
+            "速率测试",
+            "系统基本性能测试",
+            "5G覆盖测试",
+            "时延测试"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-145",
+        "question": "5G覆盖测试中，关注的参数有哪些（）\nA: SS-RSRP\nB: SS-SINR\nC: CSI-RSRP\nD: CRS-RSRP",
+        "choices": [
+            "SS-RSRP",
+            "SS-SINR",
+            "CSI-RSRP",
+            "CRS-RSRP"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-146",
+        "question": "以下进行上行波束管理的参考信号信道为（）\nA: SSB\nB: CSI-RS\nC: PRACH\nD: SRS",
+        "choices": [
+            "SSB",
+            "CSI-RS",
+            "PRACH",
+            "SRS"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-147",
+        "question": "5G空中接口RLC子层的功能包括（  ）\nA: ARQ纠错\nB: HARQ纠错\nC: 分割、重分割\nD: 重组RLC SDU",
+        "choices": [
+            "ARQ纠错",
+            "HARQ纠错",
+            "分割、重分割",
+            "重组RLC SDU"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-148",
+        "question": "MEC在网络中部署位置描述正确的是（  ）\nA: MEC部署在接入机房，终端在10KM内，时延1ms\nB: MEC部署在汇聚机房，终端在50KM内，时延1-1.5ms\nC: MEC部署在核心机房，终端在200KM内，时延1.5-2.0ms",
+        "choices": [
+            "MEC部署在接入机房，终端在10KM内，时延1ms",
+            "MEC部署在汇聚机房，终端在50KM内，时延1-1.5ms",
+            "MEC部署在核心机房，终端在200KM内，时延1.5-2.0ms"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-149",
+        "question": "UE在上报NR邻区的MR中，会携带NR小区的哪些信息？\nA: TA\nB: PCI\nC: Path Loss\nD: RSRP",
+        "choices": [
+            "TA",
+            "PCI",
+            "Path Loss",
+            "RSRP"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-150",
+        "question": "关于智能天线描述正确的是（  ）\nA: 智能天线是由多根天线阵元组成天线阵列\nB: 智能天线的原理是通过调节各阵元信号的加权幅度和相位来改变阵列天线的方向图\nC: 智能天线可以抑制干扰、提高信噪比\nD: 智能天线能够实现天线和传播环境与用户和基站之间的最佳匹配。",
+        "choices": [
+            "智能天线是由多根天线阵元组成天线阵列",
+            "智能天线的原理是通过调节各阵元信号的加权幅度和相位来改变阵列天线的方向图",
+            "智能天线可以抑制干扰、提高信噪比",
+            "智能天线能够实现天线和传播环境与用户和基站之间的最佳匹配。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-151",
+        "question": "NR系统中，SDN架构不包括（ ）。\nA: 链路层\nB: 基础设施层\nC: 控制层\nD: 应用层",
+        "choices": [
+            "链路层",
+            "基础设施层",
+            "控制层",
+            "应用层"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-152",
+        "question": "5G技术中，用于提升接入用户数的技术是(  )\nA: Massive MIMO\nB: SOMA\nC: Massive CA\nD: CDMA",
+        "choices": [
+            "Massive MIMO",
+            "SOMA",
+            "Massive CA",
+            "CDMA"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-153",
+        "question": "NR系统中，以下哪种SSB必须在SS raster 上（）\nA: 用于NR Pcell接入的SSB\nB: 用于NR Scell接入的SSB\nC: 用于PScell接入的SSB\nD: 用于测量的SSB",
+        "choices": [
+            "用于NR Pcell接入的SSB",
+            "用于NR Scell接入的SSB",
+            "用于PScell接入的SSB",
+            "用于测量的SSB"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-154",
+        "question": "NR系统中仍有循环前缀，其作用为（   ）。\nA: 消除多径传播造成的ISIHE ICI干扰\nB: 较少内部干扰\nC: 消除阴影衰落\nD: 消除外部干扰",
+        "choices": [
+            "消除多径传播造成的ISIHE ICI干扰",
+            "较少内部干扰",
+            "消除阴影衰落",
+            "消除外部干扰"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-155",
+        "question": "有关5G Qos，下面说法错误的是（     ）\nA: 单个PDU session在一个用户面隧道承载，并只能传送一个QoS flow的数据报文\nB: 5G QoS管理的粒度细化为QoS flow\nC: 4G 为QCI参数，5G为5G QoS Indicator (5QI)参数\nD: 多个QoS flow可以根据QoS要求映射到已建立的RB或者根据需要新建RB来映射。",
+        "choices": [
+            "单个PDU session在一个用户面隧道承载，并只能传送一个QoS flow的数据报文",
+            "5G QoS管理的粒度细化为QoS flow",
+            "4G 为QCI参数，5G为5G QoS Indicator (5QI)参数",
+            "多个QoS flow可以根据QoS要求映射到已建立的RB或者根据需要新建RB来映射。"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-156",
+        "question": "一个SSB包括PSS、SSS、PBCH、PBCH DMRS\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-157",
+        "question": "Massive MIMO技术不可以明显提升高楼覆盖场景下的小区峰值速率。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-158",
+        "question": "5G Nr测试中，SSB RSRP非常好的区域，终端速率一定很高\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-159",
+        "question": "5G最小的物理资源单元是（ ）。\nA: RE\nB: RB\nC: DRB\nD: SRB",
+        "choices": [
+            "RE",
+            "RB",
+            "DRB",
+            "SRB"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-160",
+        "question": "以下哪个不是5G下行物理信道（   ）。\nA: PDSCH\nB: PBCH\nC: PDCCH\nD: PCFICH",
+        "choices": [
+            "PDSCH",
+            "PBCH",
+            "PDCCH",
+            "PCFICH"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-161",
+        "question": "NSA组网Option3X架构中的下行数据分流是在哪里实现（   ）。\nA: 物理层\nB: MAC层\nC: RLC层\nD: PDCP层",
+        "choices": [
+            "物理层",
+            "MAC层",
+            "RLC层",
+            "PDCP层"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-162",
+        "question": "5G标准中，BBU功能被重构为（ ）和（ ）两个功能实体。\nA: DU、RRU\nB: CU、AAU\nC: DU、AAU\nD: CU、DU",
+        "choices": [
+            "DU、RRU",
+            "CU、AAU",
+            "DU、AAU",
+            "CU、DU"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-163",
+        "question": "NSA组网系统中，划分SUL频段的意义是(  )\nA: 增大上行数据传输速率\nB: 增大下行数据传输速率\nC: 与3.5GHz搭配使用，补充上行覆盖范围\nD: 与3.5GHz搭配使用，补充下行覆盖范围",
+        "choices": [
+            "增大上行数据传输速率",
+            "增大下行数据传输速率",
+            "与3.5GHz搭配使用，补充上行覆盖范围",
+            "与3.5GHz搭配使用，补充下行覆盖范围"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-164",
+        "question": "4.9G频段中，哪项是中移动被分配的准确频段（    ）\nA: 4800~4900\nB: 4900~4960\nC: 4700~4800\nD: 4900~5000",
+        "choices": [
+            "4800~4900",
+            "4900~4960",
+            "4700~4800",
+            "4900~5000"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-165",
+        "question": "当TRS配置的带宽超过其关联BWP的带宽时，UE应该（ ）\nA: 在其关联的BWP带宽范围内接收TRS\nB: 在TRS配置的带宽范围内接收TRS\nC: 在UE支持的最小带宽范围内接收TRS\nD: 在小区载波的带宽范围内接收TRS",
+        "choices": [
+            "在其关联的BWP带宽范围内接收TRS",
+            "在TRS配置的带宽范围内接收TRS",
+            "在UE支持的最小带宽范围内接收TRS",
+            "在小区载波的带宽范围内接收TRS"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-166",
+        "question": "以下哪个不是5G核心网的网元（ ）。\nA: AMF\nB: SMF\nC: UPF\nD: AAU",
+        "choices": [
+            "AMF",
+            "SMF",
+            "UPF",
+            "AAU"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-167",
+        "question": "5G技术白皮书中，网络逻辑架构不包括（    ）\nA: 接入平面\nB: 汇聚平面\nC: 控制平面\nD: 转发平面",
+        "choices": [
+            "接入平面",
+            "汇聚平面",
+            "控制平面",
+            "转发平面"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-168",
+        "question": "基于基站间的NG链路切换，基站侧向核心网发的第一条信令为？\nA: HandoverRequest\nB: HandoverRequired\nC: HandoverRequestAcknowledge\nD: SNStatusTransfer",
+        "choices": [
+            "HandoverRequest",
+            "HandoverRequired",
+            "HandoverRequestAcknowledge",
+            "SNStatusTransfer"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-169",
+        "question": "5G NR帧结构的基本时间单位是(  )\nA: subframe\nB: slot\nC: Tc",
+        "choices": [
+            "subframe",
+            "slot",
+            "Tc"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-170",
+        "question": "NSA组网中，DC的架构下触发辅站变更的事件是（   ）\nA: A1\nB: A3\nC: A2\nD: B1",
+        "choices": [
+            "A1",
+            "A3",
+            "A2",
+            "B1"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-171",
+        "question": "NR路测中SINR中点一般是（   ）\nA: 0~5dB\nB: 5~10dB\nC: 15~20dB\nD: 20~25dB",
+        "choices": [
+            "0~5dB",
+            "5~10dB",
+            "15~20dB",
+            "20~25dB"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-172",
+        "question": "NR系统中，测试人员想要在基站侧查看信令过程，使用什么软件比较直观？\nA: ATP\nB: OMT\nC: LMT\nD: OMC",
+        "choices": [
+            "ATP",
+            "OMT",
+            "LMT",
+            "OMC"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-173",
+        "question": "EN-DC中，下面哪些信令可以携带SCG Failure information？\nA: LTE侧的SCGFailureInformationNR\nB: NR侧的SCGFailureInformation\nC: LTE侧的SCGFailureInformation\nD: NR侧的SCGFailureInformationNR",
+        "choices": [
+            "LTE侧的SCGFailureInformationNR",
+            "NR侧的SCGFailureInformation",
+            "LTE侧的SCGFailureInformation",
+            "NR侧的SCGFailureInformationNR"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-174",
+        "question": "为了减少混乱的方位角带来的网络干扰不确定性，应尽量保证各扇区天线的夹角为120度，最低要求不能小于（）度\nA: 70\nB: 80\nC: 90\nD: 100",
+        "choices": [
+            "70",
+            "80",
+            "90",
+            "100"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-175",
+        "question": "NSA网络中，以下哪一层的统计更能准确反映用户在5G NR获得的下行速率？\nA: RRC层\nB: RLC层\nC: 应用层\nD: PDCP层",
+        "choices": [
+            "RRC层",
+            "RLC层",
+            "应用层",
+            "PDCP层"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-176",
+        "question": "UE接入时的完整过程在发起了注册完成信令之后跟着一条下行直传信令再之后UE发起什么消息（  ）\nA: 上行直传消息\nB: 鉴权请求\nC: PDU请求\nD: 不发消息",
+        "choices": [
+            "上行直传消息",
+            "鉴权请求",
+            "PDU请求",
+            "不发消息"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-177",
+        "question": "中移动测试规范要求，单站验证要求好点速率大于（）Mbps\nA: 800\nB: 700\nC: 600\nD: 500",
+        "choices": [
+            "800",
+            "700",
+            "600",
+            "500"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-178",
+        "question": "上下行解耦网络部署时：网络侧为UE选择NR上行或SUL作为上行链路时通过什么消息指示UE要接入的上行链路？\nA: RRC重配置\nB: RAR响应\nC: RRC连接建立\nD: SIP消息",
+        "choices": [
+            "RRC重配置",
+            "RAR响应",
+            "RRC连接建立",
+            "SIP消息"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-179",
+        "question": "5G超密集组网面临的主要问题有（   ）。\nA: 部署成本问题\nB: 小区间干扰问题\nC: 站址难以选择问题\nD: 频繁切换重选问题",
+        "choices": [
+            "部署成本问题",
+            "小区间干扰问题",
+            "站址难以选择问题",
+            "频繁切换重选问题"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-180",
+        "question": "NR系统中，中国提出的非正交多址技术有哪些（  ）。\nA: PDMA\nB: MUSA\nC: SCMA\nD: NOMA",
+        "choices": [
+            "PDMA",
+            "MUSA",
+            "SCMA",
+            "NOMA"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-181",
+        "question": "5G空中接口PDCP子层的功能包括（  ）\nA: PDCP SN维护与排序\nB: 加密、解密\nC: 完整性保护、验证\nD: RoHC",
+        "choices": [
+            "PDCP SN维护与排序",
+            "加密、解密",
+            "完整性保护、验证",
+            "RoHC"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-182",
+        "question": "NR上行物理信号与信道，UL物理信道有？（）\nA: PRACH\nB: PUCCH\nC: PUSCH\nD: PDSCH",
+        "choices": [
+            "PRACH",
+            "PUCCH",
+            "PUSCH",
+            "PDSCH"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-183",
+        "question": "关于5G无线大规模关键技术，如下说法正确的是（）。\nA: 大规模天线为相对少的用户提供同传服务\nB: 大规模天线是基站使用大规模天线陈列（几十甚至上百根天线）\nC: 大规模天线技术优势，系统容量大幅度提升，但能量效率减少\nD: 5G无线关键技术原理，当基站天线数远大于用户天线数时，基站到各用户的信道将趋于正交",
+        "choices": [
+            "大规模天线为相对少的用户提供同传服务",
+            "大规模天线是基站使用大规模天线陈列（几十甚至上百根天线）",
+            "大规模天线技术优势，系统容量大幅度提升，但能量效率减少",
+            "5G无线关键技术原理，当基站天线数远大于用户天线数时，基站到各用户的信道将趋于正交"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-184",
+        "question": "NR系统中，PDMA技术优势有哪些？\nA: 发送端利用信号在时域、频域和广义空域的非正交信号特征图样对多个用户进行区分\nB: 有利于接收端采用低复杂度的多用户检测技术，如广义串行干扰消除和多用户联合迭代实现准最优多用户检测接收；\nC: 实现了多用户的非正交传输，大幅提升了频谱效率和系统容量。",
+        "choices": [
+            "发送端利用信号在时域、频域和广义空域的非正交信号特征图样对多个用户进行区分",
+            "有利于接收端采用低复杂度的多用户检测技术，如广义串行干扰消除和多用户联合迭代实现准最优多用户检测接收；",
+            "实现了多用户的非正交传输，大幅提升了频谱效率和系统容量。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-185",
+        "question": "5G网络规划与2/3/4G相比存在很大不同，主要面临的挑战有（ ）。\nA: 新业务的挑战\nB: 新架构的挑战\nC: 新空口的挑战\nD: 新频谱的挑战",
+        "choices": [
+            "新业务的挑战",
+            "新架构的挑战",
+            "新空口的挑战",
+            "新频谱的挑战"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-186",
+        "question": "NR系统中，哪些是边缘计算关键技术( )\nA: 解析数据包\nB: 本地缓存\nC: 本地转发\nD: 跨层优化",
+        "choices": [
+            "解析数据包",
+            "本地缓存",
+            "本地转发",
+            "跨层优化"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D, ",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-187",
+        "question": "5GNSA组网的KPI中，辅节点gNB不包含哪些KPI统计？\nA: PRB利用率\nB: 下行小区平均吞吐率\nC: 接入成功率\nD: 掉话率",
+        "choices": [
+            "PRB利用率",
+            "下行小区平均吞吐率",
+            "接入成功率",
+            "掉话率"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-188",
+        "question": "无线网络性能的测试主要工作？（ ）\nA: 拉网摸底测试\nB: 网络调整测试\nC: 网络故障测试\nD: 勘察设计",
+        "choices": [
+            "拉网摸底测试",
+            "网络调整测试",
+            "网络故障测试",
+            "勘察设计"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-189",
+        "question": "路测道路某点存在越区覆盖，越区站点存在物业纠纷，如何能尽快规避此问题（）\nA: 对越区小区进行天馈调整，控制覆盖\nB: 对越区小区进行整改，降低天线挂高；\nC: 降低问题小区的功率；\nD: 优化邻区关系，保证切换顺畅；",
+        "choices": [
+            "对越区小区进行天馈调整，控制覆盖",
+            "对越区小区进行整改，降低天线挂高；",
+            "降低问题小区的功率；",
+            "优化邻区关系，保证切换顺畅；"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-190",
+        "question": "5G D2D通信优势是（    ）。\nA: 终端近距离通信，高速率低时延低功耗\nB: 短距离通信可频谱资源复用\nC: 无线M2M功能\nD: 拓展网络覆盖范围",
+        "choices": [
+            "终端近距离通信，高速率低时延低功耗",
+            "短距离通信可频谱资源复用",
+            "无线M2M功能",
+            "拓展网络覆盖范围"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-191",
+        "question": "NR系统中，PDCCH CORESET可以支持几个symbol？（   ）\nA: 1\nB: 3\nC: 4\nD: 2",
+        "choices": [
+            "1",
+            "3",
+            "4",
+            "2"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D, ",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-192",
+        "question": "NR系统中，5G资源结构BWP的优势有（   ）\nA: UE无需支持全部带宽，只需满足最低带宽要求即可\nB: 当UE业务量不大时，UE可以切换到低带宽运行，可明显降低功耗\nC: 当5G添加新的技术时，可直接将新技术在新的BWP上运行，保证了系统的前向兼容\nD: 适应业务需求，为业务动态分配BWP",
+        "choices": [
+            "UE无需支持全部带宽，只需满足最低带宽要求即可",
+            "当UE业务量不大时，UE可以切换到低带宽运行，可明显降低功耗",
+            "当5G添加新的技术时，可直接将新技术在新的BWP上运行，保证了系统的前向兼容",
+            "适应业务需求，为业务动态分配BWP"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-193",
+        "question": "EN-DC场景下，以下哪些RB可以配置不同的PDCP Version (   )\nA: SRB1\nB: SRB2\nC: MNterminated MCG Bearer\nD: SNterminated MCG Bearer",
+        "choices": [
+            "SRB1",
+            "SRB2",
+            "MNterminated MCG Bearer",
+            "SNterminated MCG Bearer"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-194",
+        "question": "与LTE相比，5G的下行物理信道&信号少了哪些（  ）\nA: CRS\nB: PDSCH\nC: PHICH\nD: PCFICH",
+        "choices": [
+            "CRS",
+            "PDSCH",
+            "PHICH",
+            "PCFICH"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-195",
+        "question": "5G业务测试过程中，发现速率偏低，通过测试分析，发现MCS等级低，影响MCS等级低的原因可能有（）\nA: 调度资源不足\nB: 邻区/外部干扰\nC: MCS等级参数被固定\nD: CQI测量上报问题",
+        "choices": [
+            "调度资源不足",
+            "邻区/外部干扰",
+            "MCS等级参数被固定",
+            "CQI测量上报问题"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-196",
+        "question": "NR系统峰速测试中，速率低时可以观测终端的哪些指标（  ）\nA: RI\nB: MSC等级\nC: BLER\nD: PRB占用率",
+        "choices": [
+            "RI",
+            "MSC等级",
+            "BLER",
+            "PRB占用率"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-197",
+        "question": "NR测试中，ETG连接不上华为终端端口，可能原因有（   ）\nA: UE IP不正确\nB: PC IP 不正确\nC: 终端未开机\nD: 终端与电脑未连接",
+        "choices": [
+            "UE IP不正确",
+            "PC IP 不正确",
+            "终端未开机",
+            "终端与电脑未连接"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-198",
+        "question": "下面那个是5G网络引入的新技术\nA: IMS\nB: 切片\nC: CU分离\nD: 虚拟化",
+        "choices": [
+            "IMS",
+            "切片",
+            "CU分离",
+            "虚拟化"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-199",
+        "question": "下面哪个字段不是5G GUTI的组成部分\nA: AMF Set ID\nB: AMF Region ID\nC: 5G-TMSI\nD: M-TMSI",
+        "choices": [
+            "AMF Set ID",
+            "AMF Region ID",
+            "5G-TMSI",
+            "M-TMSI"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-200",
+        "question": "5G SUPI可以是\nA: MSISDN\nB: IMSI\nC: PEI\nD: IMEI",
+        "choices": [
+            "MSISDN",
+            "IMSI",
+            "PEI",
+            "IMEI"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-201",
+        "question": "5G系统架构引入了____作为位于PLMN网络边界的实体\nA: SEPP\nB: SCP\nC: BSF\nD: FW",
+        "choices": [
+            "SEPP",
+            "SCP",
+            "BSF",
+            "FW"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-202",
+        "question": "目前3GPP定义的标准化切片SST不包括\nA: eMBB\nB: URLLC\nC: MIoT\nD: V2X",
+        "choices": [
+            "eMBB",
+            "URLLC",
+            "MIoT",
+            "V2X"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-203",
+        "question": "如果UE会话建立流程为未携带S-NSSAI，则\nA: AMF随机选择一个S-NSSAI建立会话\nB: AMF随机选择用户签约的默认S-NSSAI建立会话（AMF支持该切片）\nC: AMF选择本局缺省S-NSSAI建立会话\nD: 流程失败",
+        "choices": [
+            "AMF随机选择一个S-NSSAI建立会话",
+            "AMF随机选择用户签约的默认S-NSSAI建立会话（AMF支持该切片）",
+            "AMF选择本局缺省S-NSSAI建立会话",
+            "流程失败"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-204",
+        "question": "下面那个关于SCUI的描述是正确的的\nA: 携号转网用户不可以使用SCUI卡\nB: SUCI是4G时代的技术\nC: SCUI卡使用Routing Indicator寻址UDM\nD: SUCI与IMSI相同",
+        "choices": [
+            "携号转网用户不可以使用SCUI卡",
+            "SUCI是4G时代的技术",
+            "SCUI卡使用Routing Indicator寻址UDM",
+            "SUCI与IMSI相同"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-205",
+        "question": "SMSF通过什么协议与SMSC对接\nA: MAP\nB: SIP\nC: HTTP2.0\nD: SOAP",
+        "choices": [
+            "MAP",
+            "SIP",
+            "HTTP2.0",
+            "SOAP"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-206",
+        "question": "3GPP R16定了新的网元以增强网络切片安全，该网元是\nA: SEPP\nB: NSSAAF\nC: AAA-S\nD: SEAF",
+        "choices": [
+            "SEPP",
+            "NSSAAF",
+            "AAA-S",
+            "SEAF"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-207",
+        "question": "3GPP R16通过引入哪个网元实现eSBA架构\nA: SCP\nB: SEPP\nC: NSSAAF\nD: SEAF",
+        "choices": [
+            "SCP",
+            "SEPP",
+            "NSSAAF",
+            "SEAF"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-208",
+        "question": "下面那个属于会话级策略控制\nA: UE接入选择策略控制\nB: PDU会话选择策略\nC: 计费策略控制\nD: 移动性管理策略控制",
+        "choices": [
+            "UE接入选择策略控制",
+            "PDU会话选择策略",
+            "计费策略控制",
+            "移动性管理策略控制"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-209",
+        "question": "5G NR帧结构的基本时间单位是\nA: subframe\nB: slot\nC: Tc\nD: symbol",
+        "choices": [
+            "subframe",
+            "slot",
+            "Tc",
+            "symbol"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-210",
+        "question": "5G无线帧长是多少ms\nA: 5\nB: 10\nC: 20\nD: 40",
+        "choices": [
+            "5",
+            "10",
+            "20",
+            "40"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-211",
+        "question": "5G中sub-6GHz频段能支持的最大带宽为\nA: 200MHz\nB: 100MHz\nC: 80MHz\nD: 60MHz",
+        "choices": [
+            "200MHz",
+            "100MHz",
+            "80MHz",
+            "60MHz"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-212",
+        "question": "5G每平方公里至少支持多少台设备\nA: 1000\nB: 1万\nC: 10万\nD: 100万",
+        "choices": [
+            "1000",
+            "1万",
+            "10万",
+            "100万"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-213",
+        "question": "NSA组网Option3X架构下的下行数据分流是在哪里实现的？\nA: 物理层\nB: MAC层\nC: RLC层\nD: PDCP层",
+        "choices": [
+            "物理层",
+            "MAC层",
+            "RLC层",
+            "PDCP层"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-214",
+        "question": "3GPP的第一个5G正式版本是哪个release？\nA: Release 13\nB: Release 14\nC: Release 15\nD: Release 16",
+        "choices": [
+            "Release 13",
+            "Release 14",
+            "Release 15",
+            "Release 16"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-215",
+        "question": "5G中，要求移动性能在高速列车达到_______km/h\nA: 400\nB: 500\nC: 600\nD: 700",
+        "choices": [
+            "400",
+            "500",
+            "600",
+            "700"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-216",
+        "question": "Option 7方案相对于Option 3的优势在于（）\nA: 改动小，投资少，建网速度快\nB: 支持5G 5GC引入的新业务\nC: 支持语音业务回落到2G和3G\nD: 语音业务对NR覆盖无要求",
+        "choices": [
+            "改动小，投资少，建网速度快",
+            "支持5G 5GC引入的新业务",
+            "支持语音业务回落到2G和3G",
+            "语音业务对NR覆盖无要求"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-217",
+        "question": "低频信道传播损耗组成不包括（）\nA: 自由空间传播损耗\nB: 穿透损耗\nC: 雨衰和大气影响\nD: 衍射绕射损耗",
+        "choices": [
+            "自由空间传播损耗",
+            "穿透损耗",
+            "雨衰和大气影响",
+            "衍射绕射损耗"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-218",
+        "question": "5G网络中su6G不可配置的带宽为（）\nA: 5M\nB: 15M\nC: 25M\nD: 80M",
+        "choices": [
+            "5M",
+            "15M",
+            "25M",
+            "80M"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-219",
+        "question": "5G语音解决方案有哪些\nA: VoNR\nB: EPSFB\nC: CSFB\nD: VoLTE",
+        "choices": [
+            "VoNR",
+            "EPSFB",
+            "CSFB",
+            "VoLTE"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-220",
+        "question": "切片的核心作用包括\nA: 用户接入选网\nB: SLA保障\nC: 提升网络性能\nD: 便于管理",
+        "choices": [
+            "用户接入选网",
+            "SLA保障",
+            "提升网络性能",
+            "便于管理"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-221",
+        "question": "5G与WIFI相比的主要技术优势包括\nA: 支持高速切换\nB: 双向认证\nC: QoS保障\nD: 授权频谱",
+        "choices": [
+            "支持高速切换",
+            "双向认证",
+            "QoS保障",
+            "授权频谱"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-222",
+        "question": "5QI包含以下特性\nA: 资源类型\nB: 优先级\nC: 平均窗口\nD: 最大数据突发\nE: 分组错误率\nF: 分组时延",
+        "choices": [
+            "资源类型",
+            "优先级",
+            "平均窗口",
+            "最大数据突发",
+            "分组错误率",
+            "分组时延"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D,E,F",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-223",
+        "question": "5G网络主要包含\nA: NGRAN\nB: NGCore\nC: UTN\nD: eNodeB",
+        "choices": [
+            "NGRAN",
+            "NGCore",
+            "UTN",
+            "eNodeB"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-224",
+        "question": "UE配置更新可由以下哪个网元发起\nA: AMF\nB: SMF\nC: PCF\nD: NSSF",
+        "choices": [
+            "AMF",
+            "SMF",
+            "PCF",
+            "NSSF"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-225",
+        "question": "与4G相比，下面那个属于5G特有的安全能力\nA: SUCI\nB: UE和网络双向认证\nC: 用户平面信息完整性保护\nD: 空口加密",
+        "choices": [
+            "SUCI",
+            "UE和网络双向认证",
+            "用户平面信息完整性保护",
+            "空口加密"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-226",
+        "question": "5G LAN需要以下哪些网元升级支持\nA: SMF\nB: UPF\nC: NEF\nD: UDM",
+        "choices": [
+            "SMF",
+            "UPF",
+            "NEF",
+            "UDM"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-227",
+        "question": "3GPP R16定义的新的高可靠性标准包括\nA: 端到端用户面路径冗余\nB: N3/N9 GTP-U隧道冗余\nC: N3/N9 传输路径冗余\nD: FULL MESH组网",
+        "choices": [
+            "端到端用户面路径冗余",
+            "N3/N9 GTP-U隧道冗余",
+            "N3/N9 传输路径冗余",
+            "FULL MESH组网"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-228",
+        "question": "下面属于5G频段的是\nA: 3300-3400MHz\nB: 3400-3600MHz\nC: 4800-5000MHz\nD: 1880-1900MHz",
+        "choices": [
+            "3300-3400MHz",
+            "3400-3600MHz",
+            "4800-5000MHz",
+            "1880-1900MHz"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-229",
+        "question": "中国可能使用的5G频段有哪几个频段：\nA: 2.5GHz-2.6GHz\nB: 3.3GHz-4.2GHz\nC: 4.4GHz-5.0GHz\nD: 26GHz/28GHz/39GHz。",
+        "choices": [
+            "2.5GHz-2.6GHz",
+            "3.3GHz-4.2GHz",
+            "4.4GHz-5.0GHz",
+            "26GHz/28GHz/39GHz。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-230",
+        "question": "毫米波路径损耗需要考虑哪些因素?\nA: 自由空间损耗\nB: 大气损耗\nC: 雨衰损耗\nD: 植被损耗\nE: 绕射损耗",
+        "choices": [
+            "自由空间损耗",
+            "大气损耗",
+            "雨衰损耗",
+            "植被损耗",
+            "绕射损耗"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D,E",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-231",
+        "question": "5G在哪几个组织开展标准化工作\nA: ITU\nB: 3GPP\nC: IEEE\nD: IMT",
+        "choices": [
+            "ITU",
+            "3GPP",
+            "IEEE",
+            "IMT"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-232",
+        "question": "5G高频新空口不适合下列那些覆盖场景？\nA: 连续广域覆盖\nB: 热点高容量\nC: 低时延高可靠\nD: 低功耗大连接",
+        "choices": [
+            "连续广域覆盖",
+            "热点高容量",
+            "低时延高可靠",
+            "低功耗大连接"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-233",
+        "question": "目前5G网络部署方式（）\nA: option2\nB: option3\nC: option4\nD: option7",
+        "choices": [
+            "option2",
+            "option3",
+            "option4",
+            "option7"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-234",
+        "question": "关于上下行解耦述正确的是\nA: Sub6G中的高频以3.5G 100M 64TRX 为例，下行覆盖和LTE 1.8G 2T2R 相比差异不大，3.5G上行覆盖由于UE发射功率原因是短板\nB: 上下行解耦的定义，下行在3.5G上传输，上行数据可以在其它频段（比如1.8G）中传输，达到提升上行覆盖的目标\nC: 上下行解耦场景，在小区近点位置，上行数据在1.8G传输，下行在3.5G中传输",
+        "choices": [
+            "Sub6G中的高频以3.5G 100M 64TRX 为例，下行覆盖和LTE 1.8G 2T2R 相比差异不大，3.5G上行覆盖由于UE发射功率原因是短板",
+            "上下行解耦的定义，下行在3.5G上传输，上行数据可以在其它频段（比如1.8G）中传输，达到提升上行覆盖的目标",
+            "上下行解耦场景，在小区近点位置，上行数据在1.8G传输，下行在3.5G中传输"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-235",
+        "question": "5G网络规划与4G网络规划主要差异包括哪些？\nA: 更高频段新的传模，更高的规划仿真准确性要求\nB: MassiveMIMO和FlexibleDuplex将改变传统网络规划方法\nC: 业务更丰富\nD: 场景更丰富",
+        "choices": [
+            "更高频段新的传模，更高的规划仿真准确性要求",
+            "MassiveMIMO和FlexibleDuplex将改变传统网络规划方法",
+            "业务更丰富",
+            "场景更丰富"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-236",
+        "question": "下面哪些子載波间隔是5G协议支持的？\nA: 15kHz\nB: 30kHz\nC: 45kHz\nD: 60kHz",
+        "choices": [
+            "15kHz",
+            "30kHz",
+            "45kHz",
+            "60kHz"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-237",
+        "question": "如下哪些场景，必须要考虑信号的穿透损耗影响？\nA: 郊区无线家庭宽带WTTx\nB: 城区无线家庭宽带WTTx\nC: 汽车自动驾驶\nD: 写字楼隔间覆盖",
+        "choices": [
+            "郊区无线家庭宽带WTTx",
+            "城区无线家庭宽带WTTx",
+            "汽车自动驾驶",
+            "写字楼隔间覆盖"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-238",
+        "question": "用户可基于PEI发起紧急注册\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-239",
+        "question": "网络切片是由5G基站+传输+核心网来实现的\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-240",
+        "question": "5G阶段基站只能基于PLMN ID选择核心网\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-241",
+        "question": "NB是5G mMTC的标准解决方案\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-242",
+        "question": "采用SUCI加密卡的的用户，AMF、SMF无法获取用户SUPI信息\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-243",
+        "question": "UDM可发起的去注册流程\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-244",
+        "question": "NSSP属于URSP的一部分\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-245",
+        "question": "UE 5G接入场景下只需为其分配IPv6地址\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-246",
+        "question": "GPSI是MSISDN\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-247",
+        "question": "5G加密卡初始注册流程中使用IMSI寻址UDM\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-248",
+        "question": "5G的功能分拆有A,B,C,D四种可选方式，具体采用哪一种会在3GPP R14中决定，采用最方便实现的一种。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-249",
+        "question": "具备D2D通信能力的无线终端要能够承担两个角色：  既可以作为基础设施节点，也可以作为传统的终端设备。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-250",
+        "question": "30GHz以上的频谱在非视距的环境中非常有用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-251",
+        "question": "高于60GHz的毫米波频谱，不适合于回传的短距离点对点链路\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-252",
+        "question": "5G eMBB方案中，上下行多址方案都是基于OFDM.\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-253",
+        "question": " 5G是2/3/4G技术的升级，主要面向用户体验的升级，如吞吐量，峰值速率\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-254",
+        "question": "NSA组网下5G不能独立建网必须依赖LTE网络。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-255",
+        "question": "从标准、芯片和体验的角度看，毫米波是5G的首选频段\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-256",
+        "question": "部署5G的频谱资源有Sub6G和高频(G30/G40)，低频支持连续覆盖，高频主要用于热点流量分担\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-257",
+        "question": "R16版本支持ITU定义的3个商业场景（eMBB、uRLLC、mMTC）\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-258",
+        "question": "最早适配5GNSA的3GPP版本是哪个（）\nA: R14\nB: R15\nC: R16\nD: R17",
+        "choices": [
+            "R14",
+            "R15",
+            "R16",
+            "R17"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-259",
+        "question": "以下哪两项通用技术在2G/3G/4G/5G网络中均存在（）\nA: 移动性管理，用户数据管理\nB: 计费单元，策略管理\nC: 用户数据管理，网络切片选择\nD: 鉴权功能，网络切片选择",
+        "choices": [
+            "移动性管理，用户数据管理",
+            "计费单元，策略管理",
+            "用户数据管理，网络切片选择",
+            "鉴权功能，网络切片选择"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-260",
+        "question": "5G承载网STN以大容量为基础，具备独立运营、快速使能行业业务能力。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-261",
+        "question": "SA组网情况下，为保证语音（EPSFallBack到4G）结束后，能够立即返回5G，需要采用哪种技术（）\nA: FastReturn\nB: 空闲态重选\nC: CSFB\nD: SRVCC",
+        "choices": [
+            "FastReturn",
+            "空闲态重选",
+            "CSFB",
+            "SRVCC"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-262",
+        "question": "5G系统的核心网用户面功能下沉、可以大幅度提升用户速率。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-263",
+        "question": "面向5G的STN承载网络架构总体保持与4G网络一致，由接入层、汇聚层、城域核心层、5GCCE组成。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-264",
+        "question": "旁挂部署的硬件负载均衡设备，需要在虚拟服务器(virtualserver)配置源地址转换达到来回路径一致。而这一方式带来的问题是：常用的web应用侧看到所有的应用访问均来自于硬件负载均衡设备。为使应用能获得用户端的真实IP,硬件负载均衡侧解决该问题的方式通常为()\nA: Cookieinsert\nB: IP层源地址insert\nC: TCP层源地址insert\nD: HTTP层源地址insert",
+        "choices": [
+            "Cookieinsert",
+            "IP层源地址insert",
+            "TCP层源地址insert",
+            "HTTP层源地址insert"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-265",
+        "question": "SA架构下，4G和5G互操作包括（）\nA: 重选\nB: 切换\nC: 重定向\nD: CSFB",
+        "choices": [
+            "重选",
+            "切换",
+            "重定向",
+            "CSFB"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-266",
+        "question": "采用FlexE做5G承载网切片，应用主要场景有（）\nA: 像本地WiFi一样方便、有线一样稳定\nB: 高可靠的现场操作远程化\nC: 低时延远程控制\nD: 高质量专用切片实现隔离",
+        "choices": [
+            "像本地WiFi一样方便、有线一样稳定",
+            "高可靠的现场操作远程化",
+            "低时延远程控制",
+            "高质量专用切片实现隔离"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-267",
+        "question": "主机访问存储路径顺序为（）\nA: 文件系统->应用系统->卷->I/O子系统->RAID控制器->磁盘\nB: 应用系统->文件系统->卷->I/O子系统->RAID控制器->磁盘\nC: 应用系统->文件系统->I/O子系统->卷->RAID控制器->磁盘\nD: 应用系统->文件系统->卷->RAID控制器->I/O子系统->磁盘",
+        "choices": [
+            "文件系统->应用系统->卷->I/O子系统->RAID控制器->磁盘",
+            "应用系统->文件系统->卷->I/O子系统->RAID控制器->磁盘",
+            "应用系统->文件系统->I/O子系统->卷->RAID控制器->磁盘",
+            "应用系统->文件系统->卷->RAID控制器->I/O子系统->磁盘"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-268",
+        "question": "5G新业务的要求，端到端时间同步精度可能提升到（）程度\nA: 几十纳秒\nB: 百毫秒\nC: 百纳秒\nD: 几十毫秒",
+        "choices": [
+            "几十纳秒",
+            "百毫秒",
+            "百纳秒",
+            "几十毫秒"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-269",
+        "question": "以下哪项技术是5G承载网的关键技术（）\nA: SRv6\nB: FlexE\nC: QoS",
+        "choices": [
+            "SRv6",
+            "FlexE",
+            "QoS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-270",
+        "question": "在一个端到端网络切片中，至少应包括（）\nA: 无线子切片\nB: 承载网子切片\nC: 核心网子切片\nD: 切片运营与管理系统",
+        "choices": [
+            "无线子切片",
+            "承载网子切片",
+            "核心网子切片",
+            "切片运营与管理系统"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-271",
+        "question": "以下哪几种技术需要区分电路域和分组域（）\nA: 2G\nB: 3G\nC: 4G\nD: 5G",
+        "choices": [
+            "2G",
+            "3G",
+            "4G",
+            "5G"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-272",
+        "question": "IPRAN网络中，用来承载4/5G基站（）业务的流量\nA: 回传\nB: 前传",
+        "choices": [
+            "回传",
+            "前传"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-273",
+        "question": "业界宣传的5G网络目标性能指标有（）\nA: 空口时延小于1ms\nB: 峰值吞吐率达到10Gbps\nC: 每平方公里连接数达到100万\nD: 支持500KM/h高速移动",
+        "choices": [
+            "空口时延小于1ms",
+            "峰值吞吐率达到10Gbps",
+            "每平方公里连接数达到100万",
+            "支持500KM/h高速移动"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-274",
+        "question": "农业传感器信息上报业务属于对5G三大类应用场景网络需求中的（）\nA: 增强移动宽带\nB: 海量大连接\nC: 低时延高可靠\nD: 低时延大带宽",
+        "choices": [
+            "增强移动宽带",
+            "海量大连接",
+            "低时延高可靠",
+            "低时延大带宽"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-275",
+        "question": "MEC的M是指Multi-access，多接入技术。C是指content，提供多种业务内容。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-276",
+        "question": "协议定义的切片管理架构主要有CSMF、NSMF、NSSMF\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-277",
+        "question": "HTTPS使用那些加密协议？\nA: SSL\nB: RSA\nC: TSL\nD: CA",
+        "choices": [
+            "SSL",
+            "RSA",
+            "TSL",
+            "CA"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-278",
+        "question": "下列哪些是NFV中数据平面的转发加速技术或项目？\nA: DPDK\nB: ODP （Open Data Plane）\nC: Ceph\nD: FD.io",
+        "choices": [
+            "DPDK",
+            "ODP （Open Data Plane）",
+            "Ceph",
+            "FD.io"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-279",
+        "question": "在ETSI NFV 架构中，下列哪些是MANO中VNFM的功能？\n\nA: 管理NFVI的基础设施资源（计算、网络、存储）\nB: 管理VNF的生命周期\nC: 管理网络服务的生命周期\nD: 通过与VIM或NFVO的接口，管理与VNF相关的虚拟化资源",
+        "choices": [
+            "管理NFVI的基础设施资源（计算、网络、存储）",
+            "管理VNF的生命周期",
+            "管理网络服务的生命周期",
+            "通过与VIM或NFVO的接口，管理与VNF相关的虚拟化资源"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-280",
+        "question": "关于VNF的扩缩容，下列哪些说法是正确的？\nA: 水平扩缩容（scale out/in）是指增加或减少VNF中现有VM的容量，VM的个数保持不变\nB: 垂直扩缩容（scale up/down）是指增加或减少VNF中VM的个数，每个VM的容量保持不变\nC: 当VNF性能指标低于门限时，由VNFM自动进行扩容\nD: 可以在EM发起VNF的人工扩缩容请求",
+        "choices": [
+            "水平扩缩容（scale out/in）是指增加或减少VNF中现有VM的容量，VM的个数保持不变",
+            "垂直扩缩容（scale up/down）是指增加或减少VNF中VM的个数，每个VM的容量保持不变",
+            "当VNF性能指标低于门限时，由VNFM自动进行扩容",
+            "可以在EM发起VNF的人工扩缩容请求"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-281",
+        "question": "CUPS架构是5G核心网必须支持的特性，EPC网络也可以升级支持。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-282",
+        "question": "5G的语音服务也是使用的IMS\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-283",
+        "question": "option3 的控制面是通过gnodeb传递的\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-284",
+        "question": "Gnode也可以接入EPC\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-285",
+        "question": "5G的四大场景分别是？\nA: eMBB连续广域覆盖场景\nB: eMBB热点高容量\nC: 低时延高可靠场景\nD: 低功耗大连接场景",
+        "choices": [
+            "eMBB连续广域覆盖场景",
+            "eMBB热点高容量",
+            "低时延高可靠场景",
+            "低功耗大连接场景"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-286",
+        "question": "目前 NFV 基于的云计算属于下述哪种类型？\nA: 私有 PaaS\nB: 公有 IaaS\nC: 混合 IaaS\nD: 私有 IaaS",
+        "choices": [
+            "私有 PaaS",
+            "公有 IaaS",
+            "混合 IaaS",
+            "私有 IaaS"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-287",
+        "question": "OpenStack 核心服务主要为哪一个对象服务？\nA: 网络\nB: 存储\nC: 虚拟机镜像\nD: 虚拟机",
+        "choices": [
+            "网络",
+            "存储",
+            "虚拟机镜像",
+            "虚拟机"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-288",
+        "question": "现阶段NSA组网架构为？\nA: Option3\nB: Option3X\nC: Option7\nD: Option7X",
+        "choices": [
+            "Option3",
+            "Option3X",
+            "Option7",
+            "Option7X"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-289",
+        "question": "在NFV架构中，哪个组件完成网络服务（NS）的生命周期管理？\nA: NFVO\nB: VNFM\nC: VIM\nD: PIM",
+        "choices": [
+            "NFVO",
+            "VNFM",
+            "VIM",
+            "PIM"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-290",
+        "question": "哪个开源产品是SDN业界最流行的SDN控制器？\nA: Floodlight\nB: Opendaylight\nC: Mininet\nD: Opencontrail",
+        "choices": [
+            "Floodlight",
+            "Opendaylight",
+            "Mininet",
+            "Opencontrail"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-291",
+        "question": "为了最快实现5G商用，3GPP提出采用哪种组网方案？\nA: Option 2\nB: Option 3\nC: Option 4\nD: Option 5",
+        "choices": [
+            "Option 2",
+            "Option 3",
+            "Option 4",
+            "Option 5"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-292",
+        "question": "哪个开源产品是SDN业界最流行的SDN控制器？\nA: Floodlight\nB: Opendaylight\nC: Mininet\nD: Opencontrail",
+        "choices": [
+            "Floodlight",
+            "Opendaylight",
+            "Mininet",
+            "Opencontrail"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-293",
+        "question": "是什么技术可以让运营商在一个硬件基础设施中切分出多个虚拟的端到端网络？\nA: 网络切片技术\nB: 网络优化技术\nC: 网络隔离技术\nD: 网络传输技术",
+        "choices": [
+            "网络切片技术",
+            "网络优化技术",
+            "网络隔离技术",
+            "网络传输技术"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-294",
+        "question": "NFV-O进行资源编排时，可以使用下列哪种格式的模板文件？\nA: HTML\nB: HOT\nC: OVF\nD: TOSCA",
+        "choices": [
+            "HTML",
+            "HOT",
+            "OVF",
+            "TOSCA"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-295",
+        "question": "OpenStack 核心服务支持的存储相关服务有哪些？\nA: Cinder\nB: Nova\nC: Neutron\nD: Swift",
+        "choices": [
+            "Cinder",
+            "Nova",
+            "Neutron",
+            "Swift"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-296",
+        "question": "在NFV架构中，哪个组件完成网络服务（NS）的生命周期管理？\nA: NFV-O\nB: VNF-M\nC: VIM\nD: PIM",
+        "choices": [
+            "NFV-O",
+            "VNF-M",
+            "VIM",
+            "PIM"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-297",
+        "question": "5G需求驱动力\nA: 大视频\nB: 物联网\nC: VR/AR\nD: 自动驾驶",
+        "choices": [
+            "大视频",
+            "物联网",
+            "VR/AR",
+            "自动驾驶"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-298",
+        "question": "5G的含义包括：无所不在、超宽带、（）的无线接入。\nA: 低延时\nB: 高密度\nC: 高可靠\nD: 高可信",
+        "choices": [
+            "低延时",
+            "高密度",
+            "高可靠",
+            "高可信"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-299",
+        "question": "5G每平方公里至少支持多少台设备（）\nA: 1000\nB: 1万\nC: 10万\nD: 100万",
+        "choices": [
+            "1000",
+            "1万",
+            "10万",
+            "100万"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-300",
+        "question": "5G NR的信道带宽利用率最高可达（）\nA: 0.9828\nB: 0.9028\nC: 0.9255\nD: 0.9732",
+        "choices": [
+            "0.9828",
+            "0.9028",
+            "0.9255",
+            "0.9732"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-301",
+        "question": "下列哪些是5G网络关键性能指标？\n\nA: 空口时延小于1ms\nB: 单用户峰值吞吐量大于10G+bps\nC: 每平方公里连接数大于1000万\nD: 支持时速大于350km",
+        "choices": [
+            "空口时延小于1ms",
+            "单用户峰值吞吐量大于10G+bps",
+            "每平方公里连接数大于1000万",
+            "支持时速大于350km"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-302",
+        "question": "以下说法正确的是\n\n\nA: OpenStack通过各种互补的服务提供了基础设施即服务（IaaS）的解决方案，每个服务提供API以进行集成。\nB: OpenStack是IaaS(基础设施即服务)组件，让任何人都可以自行建立和提供云端运算服务。\nC: Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。\nD: 容器是完全使用沙箱机制，相互之间不会有任何接口。",
+        "choices": [
+            "OpenStack通过各种互补的服务提供了基础设施即服务（IaaS）的解决方案，每个服务提供API以进行集成。",
+            "OpenStack是IaaS(基础设施即服务)组件，让任何人都可以自行建立和提供云端运算服务。",
+            "Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。",
+            "容器是完全使用沙箱机制，相互之间不会有任何接口。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-303",
+        "question": "5G独立组网的优势有\nA: 对现有2G/3G/4G网络无影响\nB: 不影响现网2G/3G/4G用户\nC: 可快速部署，直接引入5G新网元，不需要对现网改造\nD: 引入5GC，提供5G新功能新业务",
+        "choices": [
+            "对现有2G/3G/4G网络无影响",
+            "不影响现网2G/3G/4G用户",
+            "可快速部署，直接引入5G新网元，不需要对现网改造",
+            "引入5GC，提供5G新功能新业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-304",
+        "question": "AAU9611A S26支持2.6G频段，对于下列描述正确的是\nA: 支持100M5G频宽\nB: 支持160M5G频宽\nC: 支持1各100M5G频宽和60M4G频宽\nD: 支持4个eCPRI接口\nE: 支持1个eCPRI接口和3个CPRI接口",
+        "choices": [
+            "支持100M5G频宽",
+            "支持160M5G频宽",
+            "支持1各100M5G频宽和60M4G频宽",
+            "支持4个eCPRI接口",
+            "支持1个eCPRI接口和3个CPRI接口"
+        ],
+        "qtype": 1,
+        "answer": "A,C,E",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-305",
+        "question": "5G室分建设的特征的数字化指的是（）\nA: 网络结构数字化\nB: 运维数字化\nC: 业务数字化\nD: 建设数字化",
+        "choices": [
+            "网络结构数字化",
+            "运维数字化",
+            "业务数字化",
+            "建设数字化"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-306",
+        "question": "5G系统中终端共有哪些状态？\nA: Idle\nB: Connected\nC: Inactive",
+        "choices": [
+            "Idle",
+            "Connected",
+            "Inactive"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-307",
+        "question": "Option2组网的优势有哪些？\nA: 对现有2G/3G/4G网络无影响\nB: 不影响现网2G/3G/4G用户\nC: 可快速部署，直接引入5G新网元，不需要对现网改造\nD: 引入5GC，提供5G新功能新业务",
+        "choices": [
+            "对现有2G/3G/4G网络无影响",
+            "不影响现网2G/3G/4G用户",
+            "可快速部署，直接引入5G新网元，不需要对现网改造",
+            "引入5GC，提供5G新功能新业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-308",
+        "question": "传统DAS建设5G网络主要困难有（）\nA: 有源设备馈入改造\nB: 无源设备需要改造\nC: 工程难度大\nD: 天线点位利旧",
+        "choices": [
+            "有源设备馈入改造",
+            "无源设备需要改造",
+            "工程难度大",
+            "天线点位利旧"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-309",
+        "question": "CU/DU合一情况下，数据传输不包括\n\nA: 中传\nB: 前传\nC: 回传\nD: 远传",
+        "choices": [
+            "中传",
+            "前传",
+            "回传",
+            "远传"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-310",
+        "question": "5G与4G室分网络差异性\nA: 频段不同\nB: TDD与FDD区别\nC: 终端相同\nD: MIMO相同",
+        "choices": [
+            "频段不同",
+            "TDD与FDD区别",
+            "终端相同",
+            "MIMO相同"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-311",
+        "question": "NR核心网中用于会话管理的模块是\nA: AMF\nB: SMF\nC: UDM\nD: PCF",
+        "choices": [
+            "AMF",
+            "SMF",
+            "UDM",
+            "PCF"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-312",
+        "question": "下列组织属于中国5G组织的是()\nA: 3GPP\nB: IMT-2020(5G)推进组\nC: 5GPPP\nD: 5G Forum",
+        "choices": [
+            "3GPP",
+            "IMT-2020(5G)推进组",
+            "5GPPP",
+            "5G Forum"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-313",
+        "question": "3GPP 关于5G RAN切分标准已经确定的是（ ）\nA: BBU/RRU之间采用option 3\nB: CU/DU高层分割采用option 2\nC: RRU/AAU和DU\t分割采用option 7\nD: D-RAN和CU分割采用option 7",
+        "choices": [
+            "BBU/RRU之间采用option 3",
+            "CU/DU高层分割采用option 2",
+            "RRU/AAU和DU\t分割采用option 7",
+            "D-RAN和CU分割采用option 7"
+        ],
+        "qtype": 0,
+        "answer": " ,B, ",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-314",
+        "question": "在云计算平台中，（ ）是指平台即服务\nA: IaaS\nB: PaaS\nC: SaaS\nD: QaaS",
+        "choices": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "QaaS"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-315",
+        "question": "5G网络的部署方式分为（  ）\nA: 独立部署\nB: 非独立部署\nC: 联合部署\nD: 非联合部署",
+        "choices": [
+            "独立部署",
+            "非独立部署",
+            "联合部署",
+            "非联合部署"
+        ],
+        "qtype": 1,
+        "answer": " ,A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-316",
+        "question": "Option 3系优势包括（）\nA: 对NR覆盖无要求\nB: 语音业务连续性有保障\nC: 支持5G 5GC引入的新业务\nD: 不影响现网2G/3G/4G用户",
+        "choices": [
+            "对NR覆盖无要求",
+            "语音业务连续性有保障",
+            "支持5G 5GC引入的新业务",
+            "不影响现网2G/3G/4G用户"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-317",
+        "question": "目前低频使用的子载波带宽（）kHz\nA: 15\nB: 30\nC: 60\nD: 120",
+        "choices": [
+            "15",
+            "30",
+            "60",
+            "120"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-318",
+        "question": "以下不属于5G室分对业务要求的是\nA: 1) 支持高清语音\nB: 2) 急速上网100mbps-1Gbps\nC: 3) 时延1ms-10ms\nD: 4) 定位精度在10m",
+        "choices": [
+            "1) 支持高清语音",
+            "2) 急速上网100mbps-1Gbps",
+            "3) 时延1ms-10ms",
+            "4) 定位精度在10m"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-319",
+        "question": "5G系统终端特有的状态是()\nA: 1)Connected\nB: 2)IDLE\nC: 3)INACTIVE\nD: 4)",
+        "choices": [
+            "1)Connected",
+            "2)IDLE",
+            "3)INACTIVE",
+            "4)"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-320",
+        "question": "3GPP最终确定了5G eMBB(增强移动宽带)场景的信道编码技术方案，其中（）码作为控制信道的编码方案\nA: LDPC\nB: Polar\nC: 卷积码\nD: 差分复用码",
+        "choices": [
+            "LDPC",
+            "Polar",
+            "卷积码",
+            "差分复用码"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-321",
+        "question": "5G高频可以采用大规模天线阵列，对此表述错误的是（）\nA: 高频段波长很短，因此可以在有限的面积内部署非常多的天线阵子\nB: 通过大规模天线阵列可以形成具有非常高增益的窄波束来抵消传播损耗\nC: 相控阵天线可以通过调整移相器的相移量就使天线波束的最大指向做相应的变化，从而实现波束扫描和跟踪\nD: 由于大规模天线形成的波束非常窄，要想完整覆盖整个小区则需要部署多副天线",
+        "choices": [
+            "高频段波长很短，因此可以在有限的面积内部署非常多的天线阵子",
+            "通过大规模天线阵列可以形成具有非常高增益的窄波束来抵消传播损耗",
+            "相控阵天线可以通过调整移相器的相移量就使天线波束的最大指向做相应的变化，从而实现波束扫描和跟踪",
+            "由于大规模天线形成的波束非常窄，要想完整覆盖整个小区则需要部署多副天线"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-322",
+        "question": "3.5Ghz频率的波长是多少？\nA: 2mm\nB: 8.5cm\nC: 17cm\nD: 35cm",
+        "choices": [
+            "2mm",
+            "8.5cm",
+            "17cm",
+            "35cm"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-323",
+        "question": "5G 3GPP协议从那个版本开始：（）\nA: R8\nB: R14\nC: R15\nD: R16",
+        "choices": [
+            "R8",
+            "R14",
+            "R15",
+            "R16"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-324",
+        "question": "5G终端将沿着形态多样化与技术性能差异化方向发展。5G初期的终端产品形态以（）场景下手机为主\nA: ICIC\nB: eMBB\nC: mMTC\nD: URLLC",
+        "choices": [
+            "ICIC",
+            "eMBB",
+            "mMTC",
+            "URLLC"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-325",
+        "question": "SA是在３ＧＰＰ哪个版本中冻结的？　（）\nA: 3GPP Rel-15\nB: 3GPP Rel-1６\nC: 3GPP Rel-1７\nD: 3GPP Rel-1８",
+        "choices": [
+            "3GPP Rel-15",
+            "3GPP Rel-1６",
+            "3GPP Rel-1７",
+            "3GPP Rel-1８"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-326",
+        "question": "分配给中国电信的5G频段是\nA: 3.4~3.5G\nB: 3.5~3.6G\nC: 4.8~4.9G\nD: 2.515~2.675G",
+        "choices": [
+            "3.4~3.5G",
+            "3.5~3.6G",
+            "4.8~4.9G",
+            "2.515~2.675G"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-327",
+        "question": "关于超密集组网描述不正确的是？\nA: 获取更高的频谱复用效率\nB: 提升系统的容量\nC: 有效解决局部的干扰协调问题\nD: 面临站址、传输部署成本的挑战",
+        "choices": [
+            "获取更高的频谱复用效率",
+            "提升系统的容量",
+            "有效解决局部的干扰协调问题",
+            "面临站址、传输部署成本的挑战"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-328",
+        "question": "目前国内5G频段范围主要是\nA: 2.6G\nB: 3.3-3.6G\nC: 4.8-5G",
+        "choices": [
+            "2.6G",
+            "3.3-3.6G",
+            "4.8-5G"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-329",
+        "question": "智能电网对网络的诉求最主要体现是？\nA: 速率\nB: 连接数\nC: 时延\nD: 移动性",
+        "choices": [
+            "速率",
+            "连接数",
+            "时延",
+            "移动性"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-330",
+        "question": "5G是由ITU定义的第五代移动通信标准，它的正式名字是什么\nA: IMT-2000\nB: IMT-2005\nC: IMT-2010\nD: IMT-2020",
+        "choices": [
+            "IMT-2000",
+            "IMT-2005",
+            "IMT-2010",
+            "IMT-2020"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-331",
+        "question": "5G建网初期要达到随时随地多少Mbps的体验速率？\nA: 50Mbps\nB: 100Mbps\nC: 1Gbps\nD: 10Gbps",
+        "choices": [
+            "50Mbps",
+            "100Mbps",
+            "1Gbps",
+            "10Gbps"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-332",
+        "question": "5G支持的新业务类型不包括\nA: eMBB\nB: URLLC\nC: eMTC\nD: mMTC",
+        "choices": [
+            "eMBB",
+            "URLLC",
+            "eMTC",
+            "mMTC"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-333",
+        "question": "3GPP规范的5G UMa/UMi/RMa等LOS路损模型都是双截距的路损模型，下面因素和BreakPoint不相关的有：\nA: 频率\nB: 街道宽度\nC: 天线高度\nD: 移动台高度",
+        "choices": [
+            "频率",
+            "街道宽度",
+            "天线高度",
+            "移动台高度"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-334",
+        "question": "对FR1频段（450MHz~6000MHz）支持的信道带宽描述正确的是：\nA: 最小5MHz ，最大100MHz\nB: 最小5MHz ，最大400MHz\nC: 最小50MHz ，最大100MHz\nD: 最小50MHz ，最大400MHz",
+        "choices": [
+            "最小5MHz ，最大100MHz",
+            "最小5MHz ，最大400MHz",
+            "最小50MHz ，最大100MHz",
+            "最小50MHz ，最大400MHz"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-335",
+        "question": "（ ）技术是指在不增加硬件成本的条件下，利用多个4T4R pRRU覆盖的交叠区组成一个多发多收的虚拟网络。\nA: UDN\nB: 虚拟nTNR\nC: 动态虚拟小区",
+        "choices": [
+            "UDN",
+            "虚拟nTNR",
+            "动态虚拟小区"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-336",
+        "question": "5G业务体验车演示方案中不提供哪个业务演示？\nA: CXT打点\nB: 智能医疗\nC: 16路高清视频\nD: 两地视频互通",
+        "choices": [
+            "CXT打点",
+            "智能医疗",
+            "16路高清视频",
+            "两地视频互通"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-337",
+        "question": "5G实验局NSA组网建议采用____架构？\nA: Option3\nB: Option3a\nC: Option3x\nD: Option7x",
+        "choices": [
+            "Option3",
+            "Option3a",
+            "Option3x",
+            "Option7x"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-338",
+        "question": "我国的5G低频频段是哪个？\nA: 3.4-3.8GHz\nB: 3.3-3.6GHz\nC: 4.4-4.9GHz\nD: 700MHz",
+        "choices": [
+            "3.4-3.8GHz",
+            "3.3-3.6GHz",
+            "4.4-4.9GHz",
+            "700MHz"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-339",
+        "question": "目前低频5G带宽是（）MHz\nA: 100\nB: 20\nC: 50\nD: 200",
+        "choices": [
+            "100",
+            "20",
+            "50",
+            "200"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-340",
+        "question": "5G理论速度可达到（）\nA: 50Mbps\nB: 100Mbps\nC: 500Mbps\nD: 1Gbps",
+        "choices": [
+            "50Mbps",
+            "100Mbps",
+            "500Mbps",
+            "1Gbps"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-341",
+        "question": "工信部于2017年11月明确的5G系统的工作频段不包括\nA: 3.3-3.4GHz（限室内）\nB: 3.4-3.6GHz（室内/室外）\nC: 4.8-5.0GHz（室内/室外）\nD: 900M（室外）",
+        "choices": [
+            "3.3-3.4GHz（限室内）",
+            "3.4-3.6GHz（室内/室外）",
+            "4.8-5.0GHz（室内/室外）",
+            "900M（室外）"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-342",
+        "question": "3GPP组织建议5G网络在高铁场景下的下行体验速率应达到多少？\nA: 10Mbps\nB: 100Mbps\nC: 50Mbps\nD: 20Mbps",
+        "choices": [
+            "10Mbps",
+            "100Mbps",
+            "50Mbps",
+            "20Mbps"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-343",
+        "question": "4k视频业务对网络下行的带宽要求应不低于多少？\nA: 10Mbps\nB: 50Mbps\nC: 100Mbps\nD: 20Mbps",
+        "choices": [
+            "10Mbps",
+            "50Mbps",
+            "100Mbps",
+            "20Mbps"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-344",
+        "question": "云计算是一种什么模式\nA: 数据模式\nB: 概念模式\nC: 业务模式\nD: 空闲模式",
+        "choices": [
+            "数据模式",
+            "概念模式",
+            "业务模式",
+            "空闲模式"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-345",
+        "question": "NFV解决方案属于云计算的哪种应用场景\nA: 电信业务\nB: 个人业务\nC: 互联网业务\nD: 企业业务",
+        "choices": [
+            "电信业务",
+            "个人业务",
+            "互联网业务",
+            "企业业务"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-346",
+        "question": "下列关于云计算的部署模型描述，错误的是\nA: 公有云\nB: 私有云\nC: 混合云\nD: 单有云",
+        "choices": [
+            "公有云",
+            "私有云",
+            "混合云",
+            "单有云"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-347",
+        "question": "NFV技术本质是强调网络功能的软硬件（   ）能力，实现网络价值由硬件向软件的迁移。\nA: 转发\nB: 解耦\nC: 同化\nD: 协调",
+        "choices": [
+            "转发",
+            "解耦",
+            "同化",
+            "协调"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-348",
+        "question": "以下哪个不是虚拟机的优势\nA: 隔离性\nB: 安全性\nC: 独立性\nD: 封装性",
+        "choices": [
+            "隔离性",
+            "安全性",
+            "独立性",
+            "封装性"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-349",
+        "question": "SDN的特征不包括\nA: 控制转发分离\nB: 虚拟化网络\nC: 可编程接口\nD: 可切片",
+        "choices": [
+            "控制转发分离",
+            "虚拟化网络",
+            "可编程接口",
+            "可切片"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-350",
+        "question": "以下哪项不是5G网络逻辑视图的构成部分\nA: 接入平面\nB: 控制平面\nC: 管理编排平面\nD: 转发平面",
+        "choices": [
+            "接入平面",
+            "控制平面",
+            "管理编排平面",
+            "转发平面"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-351",
+        "question": "5G网络基本架构，AMF与gNB之间的接口是\nA: NG-U\nB: N11\nC: N2\nD: Xn",
+        "choices": [
+            "NG-U",
+            "N11",
+            "N2",
+            "Xn"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-352",
+        "question": "5G核心网采用了基于服务化架构的SBI(service based interface)串行总线接口协议，传输层统一采用了（ ）协议\nA: HTTP/2\nB: SOAP\nC: BICC\nD: SFTP",
+        "choices": [
+            "HTTP/2",
+            "SOAP",
+            "BICC",
+            "SFTP"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-353",
+        "question": "5G引入服务化架构，以下那个是服务口接口\nA: N1\nB: N2\nC: N6\nD: Naf",
+        "choices": [
+            "N1",
+            "N2",
+            "N6",
+            "Naf"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-354",
+        "question": "以下哪个组件不属于MANO？\nA: OSS\nB: NFVO\nC: VIM\nD: VNFM",
+        "choices": [
+            "OSS",
+            "NFVO",
+            "VIM",
+            "VNFM"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-355",
+        "question": "在5G服务化网络架构中，接入和移动性管理功能由（    ）来完成\nA: SMF\nB: AMF\nC: UPF\nD: PCRF",
+        "choices": [
+            "SMF",
+            "AMF",
+            "UPF",
+            "PCRF"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-356",
+        "question": "如下NF中，哪个NF具备QoS的最高决策权（）\nA: SMF\nB: UDM\nC: PCF\nD: UPF",
+        "choices": [
+            "SMF",
+            "UDM",
+            "PCF",
+            "UPF"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-357",
+        "question": "（）属于5GC的基本功能模块\nA: AMF\nB: SMF\nC: UPF\nD: RFS",
+        "choices": [
+            "AMF",
+            "SMF",
+            "UPF",
+            "RFS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-358",
+        "question": "5G的三朵云分别是？\nA: 接入云\nB: 控制云\nC: 转发云\nD: 计算云",
+        "choices": [
+            "接入云",
+            "控制云",
+            "转发云",
+            "计算云"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-359",
+        "question": "5G独立组网的优势有哪些\nA: 对现有BG/CG/DG网络无影响\nB: 不影响现网BG/CG/DG用户\nC: 可快速部署，直接引入5G新网元，不需要对现网改造\nD: 引入5GC，提供5G新功能新业务",
+        "choices": [
+            "对现有BG/CG/DG网络无影响",
+            "不影响现网BG/CG/DG用户",
+            "可快速部署，直接引入5G新网元，不需要对现网改造",
+            "引入5GC，提供5G新功能新业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-360",
+        "question": "5G多网络融合的主要技术挑战。具体包括（）\nA: 网络架构的挑战\nB: 数据分流的挑战\nC: 连接的挑战\nD: 移动性控制挑战",
+        "choices": [
+            "网络架构的挑战",
+            "数据分流的挑战",
+            "连接的挑战",
+            "移动性控制挑战"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-361",
+        "question": "5G时代可利用人工智能技术在（）等方面改变网络运营模式，推动实现智能 5G ：\nA: 网络管理\nB: 资源调度\nC: 绿色节能\nD: 边缘计算",
+        "choices": [
+            "网络管理",
+            "资源调度",
+            "绿色节能",
+            "边缘计算"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-362",
+        "question": "5G支持的频段更高 、载波带宽更宽、通道数更多 ，对模拟器件也提出了更高的要求，主要包括（）\nA: ADC/DAC\nB: 功放\nC: 滤波器\nD: 射频前端",
+        "choices": [
+            "ADC/DAC",
+            "功放",
+            "滤波器",
+            "射频前端"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-363",
+        "question": "5G组网架构中NSA组网时，如下哪些设备会连接到EPC？\nA: eNB\nB: BTS\nC: RNC\nD: gNB",
+        "choices": [
+            "eNB",
+            "BTS",
+            "RNC",
+            "gNB"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-364",
+        "question": "按照5G物理网络架构，Fronthaul（前向回传）是用来连接哪两类设施？\nA: AAU\nB: CU\nC: UPF\nD: DU",
+        "choices": [
+            "AAU",
+            "CU",
+            "UPF",
+            "DU"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-365",
+        "question": "传统DAS建设5G网络主要困难有（）\nA: 有源设备馈入改造\nB: 无源设备需要改造\nC: 工程难度大\nD: 天线点位利旧",
+        "choices": [
+            "有源设备馈入改造",
+            "无源设备需要改造",
+            "工程难度大",
+            "天线点位利旧"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-366",
+        "question": "微服务有下列的（）特点\nA: 架构去中心化，风险低\nB: 容错好\nC: 扩展性强\nD: 可以独立部署",
+        "choices": [
+            "架构去中心化，风险低",
+            "容错好",
+            "扩展性强",
+            "可以独立部署"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-367",
+        "question": "未来业务对网络的要求-三高两低一快，二低指哪些？\nA: 低时延\nB: 低速率\nC: 低成本\nD: 低功耗",
+        "choices": [
+            "低时延",
+            "低速率",
+            "低成本",
+            "低功耗"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-368",
+        "question": "以下哪些是5G典型业务？\nA: 虚拟现实\nB: 云存储\nC: 智能家居控制\nD: 移动在线游戏",
+        "choices": [
+            "虚拟现实",
+            "云存储",
+            "智能家居控制",
+            "移动在线游戏"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-369",
+        "question": "以下哪些是5G时代面临的挑战？\nA: MBB数据流量雪崩式增长\nB: 移动物联网需要支持切换功能\nC: 联网设备数量巨大增长\nD: 车与车之间的通信需要超低时延",
+        "choices": [
+            "MBB数据流量雪崩式增长",
+            "移动物联网需要支持切换功能",
+            "联网设备数量巨大增长",
+            "车与车之间的通信需要超低时延"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-370",
+        "question": "以下哪些是5G运维的挑战？\nA: 频段单一，网络也较为简单\nB: 业务单一化带来的问题\nC: 复杂的网络,OPEX不断攀升\nD: 业务多样性带来管理的复杂性",
+        "choices": [
+            "频段单一，网络也较为简单",
+            "业务单一化带来的问题",
+            "复杂的网络,OPEX不断攀升",
+            "业务多样性带来管理的复杂性"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-371",
+        "question": "已经宣布在18年提供5G芯片的厂家包括\nA: 华为\nB: 博通\nC: 高通\nD: intel",
+        "choices": [
+            "华为",
+            "博通",
+            "高通",
+            "intel"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-372",
+        "question": "未来运营商可以采用的运营模式包括\nA: 超级管道\nB: ICT使能的基础租赁\nC: 批发\nD: ICT使能的业务超市",
+        "choices": [
+            "超级管道",
+            "ICT使能的基础租赁",
+            "批发",
+            "ICT使能的业务超市"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-373",
+        "question": "运营商部署FWA业务的好处包括\nA: 为综合运营商解决了最后100米的入户问题\nB: 为移动运营商打开了走向FMC业务的大门\nC: 解决5G初期没有业务难题",
+        "choices": [
+            "为综合运营商解决了最后100米的入户问题",
+            "为移动运营商打开了走向FMC业务的大门",
+            "解决5G初期没有业务难题"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-374",
+        "question": "毫米波作为5G的补充频谱，主要用于下面几个场景\nA: 热点offload\nB: 家庭宽带业务\nC: 覆盖\nD: 自回传",
+        "choices": [
+            "热点offload",
+            "家庭宽带业务",
+            "覆盖",
+            "自回传"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-375",
+        "question": "以下哪些频段可以应用于5G建网\nA: C band\nB: 700M\nC: 600M\nD: 2.6G",
+        "choices": [
+            "C band",
+            "700M",
+            "600M",
+            "2.6G"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-376",
+        "question": "5G 的典型应用场景有哪些？\nA: AR/VR\nB: FWA\nC: 汽车自动驾驶\nD: 光纤入户",
+        "choices": [
+            "AR/VR",
+            "FWA",
+            "汽车自动驾驶",
+            "光纤入户"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-377",
+        "question": "5G连续组网场景，方位角规划主要遵循如下原则\nA: 天线方位角的设计应从整个网络的角度考虑，满足覆盖要求。天线的主瓣方向指向高话务密度区，可以加强该地区信号强度，提高覆盖质量。\nB: 对于已有3G/4G网络运营商，初始一般会考虑共站建设，3/4G网络天线的主瓣方向一般指向高话务密度区以加强该地区信号强度，5G初始方位角设置可参考现网3G/4G天线指向\nC: 城郊结合部、交通干道、郊区孤站等可根据重点覆盖目标对天线方位角进行调整\nD: 一般同基站相邻扇区天线方向夹角不宜小于90°；异站相邻扇区交叉覆盖深度不宜过深，尽量避免对打；为防止越区覆盖，密集城区应避免天线主瓣正对较直的街道",
+        "choices": [
+            "天线方位角的设计应从整个网络的角度考虑，满足覆盖要求。天线的主瓣方向指向高话务密度区，可以加强该地区信号强度，提高覆盖质量。",
+            "对于已有3G/4G网络运营商，初始一般会考虑共站建设，3/4G网络天线的主瓣方向一般指向高话务密度区以加强该地区信号强度，5G初始方位角设置可参考现网3G/4G天线指向",
+            "城郊结合部、交通干道、郊区孤站等可根据重点覆盖目标对天线方位角进行调整",
+            "一般同基站相邻扇区天线方向夹角不宜小于90°；异站相邻扇区交叉覆盖深度不宜过深，尽量避免对打；为防止越区覆盖，密集城区应避免天线主瓣正对较直的街道"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D, ",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-378",
+        "question": "以下哪些协议/数据归属于Uu接口的层三？\nA: RRC协议\nB: MAC协议\nC: RLC协议\nD: IP数据",
+        "choices": [
+            "RRC协议",
+            "MAC协议",
+            "RLC协议",
+            "IP数据"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-379",
+        "question": "虚拟机迁移特性带来了哪些价值\nA: 节能减排\nB: 主备切换\nC: 故障迁移\nD: 负载均衡",
+        "choices": [
+            "节能减排",
+            "主备切换",
+            "故障迁移",
+            "负载均衡"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-380",
+        "question": "虚拟机热迁移包含两部分数据，分别是什么设备中的数据\nA: 光盘\nB: 内存\nC: 磁盘\nD: CPU",
+        "choices": [
+            "光盘",
+            "内存",
+            "磁盘",
+            "CPU"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-381",
+        "question": "以下哪些是虚拟机故障迁移的特点\nA: 无业务中断时间\nB: 可配置的保护级别和告警\nC: 剩余服务器上智能负载均衡\nD: 服务器故障时自动重启虚拟机，无需引入第三方HA软件",
+        "choices": [
+            "无业务中断时间",
+            "可配置的保护级别和告警",
+            "剩余服务器上智能负载均衡",
+            "服务器故障时自动重启虚拟机，无需引入第三方HA软件"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-382",
+        "question": "NFV应用所必要的条件有哪些\nA: 底层性能提升是基础\nB: 网络功能生命周期管理是核心\nC: 网络叠加技术是关键\nD: 顶层业务编排及网络自动化管理是保障",
+        "choices": [
+            "底层性能提升是基础",
+            "网络功能生命周期管理是核心",
+            "网络叠加技术是关键",
+            "顶层业务编排及网络自动化管理是保障"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-383",
+        "question": "虚拟机特点包括\nA: 隔离\nB: 独立\nC: 分区\nD: 封装性",
+        "choices": [
+            "隔离",
+            "独立",
+            "分区",
+            "封装性"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-384",
+        "question": "服务器虚拟化之后有哪些特点\nA: 上层操作系统与硬件解耦，操作系统从资源池中分配资源\nB: 操作系统必须与硬件紧耦合\nC: 资源抽象成共享资源池\nD: 硬件性能提升",
+        "choices": [
+            "上层操作系统与硬件解耦，操作系统从资源池中分配资源",
+            "操作系统必须与硬件紧耦合",
+            "资源抽象成共享资源池",
+            "硬件性能提升"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-385",
+        "question": "虚拟化类型有几种\nA: 网络虚拟化\nB: 存储虚拟化\nC: 计算虚拟化\nD: 服务虚拟化",
+        "choices": [
+            "网络虚拟化",
+            "存储虚拟化",
+            "计算虚拟化",
+            "服务虚拟化"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-386",
+        "question": "5G语音方案有哪些？\nA: NSA CSFB\nB: NSA VOLTE\nC: SA EPS FB\nD: SA VONR",
+        "choices": [
+            "NSA CSFB",
+            "NSA VOLTE",
+            "SA EPS FB",
+            "SA VONR"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-387",
+        "question": "5G的三个主要商业场景是\nA: Embb\nB: uRLLC\nC: mMTC\nD: IoT",
+        "choices": [
+            "Embb",
+            "uRLLC",
+            "mMTC",
+            "IoT"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-388",
+        "question": "5G和MM产品类似，实验网选址应尽量周围环境开阔的站点。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-389",
+        "question": "5G为了追求更高的吞吐量更低的空口用户面时延，采更短的调度周期及更快的 HARQ\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-390",
+        "question": "VBPc1支持5G的基带业务处理\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-391",
+        "question": "对于5G部署，大部分运营商都已经有足够C波段频率，无需使用毫米波。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-392",
+        "question": "高频毫米波mmWAVE产品，受限于传播损耗，基本不具备穿透墙体覆盖能力。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-393",
+        "question": "多路视频直播广泛应用在电视节目导播车，应急指挥车，影视剧拍摄等场景。以4K视频为例，一路视频传输需要50Mbps，16路4K视频的传输速率最低要求800Mbps，保证稳定运行需要1Gbps。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-394",
+        "question": "一个容器就是一个完整的执行环境，不依赖外部任何的东西,容器可以在秒级进行创建和销毁，非常适合服务的快速构建和重组\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-395",
+        "question": "5G初期部署阶段，我司建议CU/DU合设为主，分离为辅\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-396",
+        "question": "NSA Option3与Option7对比，Option3需要对LTE进行升级改造为eLTE，改动较大。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-397",
+        "question": "相对于Option7/7a，Option3对4G LTE现网改造更大，但不依赖于5GC的产业成熟度。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-398",
+        "question": "Docker主要针对Paas平台，是以应用为中心, OpenStack主要针对Iaas平台，以资源为中心，可以为上层的PaaS平台提供存储、网络、计算等资源\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-399",
+        "question": "56采用F-OFDM技术有利于频首利用率的提升。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-400",
+        "question": "5GC运维架构使用分层云运维架构\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-401",
+        "question": "5G网络部署存在多种Option,中国区主要涉及Option3a和Option2\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-402",
+        "question": "NSA对于的核心网业界称之为EPC+，SA对于的核心网称之为NGC。相比于NGC，EPC+只支持eMBB业务\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-403",
+        "question": "服务化架构为5G网络基础架构，网络功能基于模块化拆解，解耦的网络功能可独立扩容、独立演进、按需部署\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-404",
+        "question": "MANO的组成部分：VIM、VNFM、NFVO\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-405",
+        "question": "NSSF：是一个提供注册和发现功能的新功能，可以使网络功能（NF）相互发现并通过API接口进行通信\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-406",
+        "question": "5G将控制面的网元功能进行功能解耦，相同的功能内聚以服务的形式呈现，各解耦后的网络功能抽象为网络的服务后，可独立扩容、独立演进、按需部署\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-407",
+        "question": "5G的移动性管理除了沿用4G的Idle、Connected两个连接管理状态，还为对省电有高要求的终端引入了RRC-Inactive状态\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-408",
+        "question": "下行参考信号包括哪些项？\nA: CSI-RS\nB: PT-RS\nC: SRS\nD: DMRS",
+        "choices": [
+            "CSI-RS",
+            "PT-RS",
+            "SRS",
+            "DMRS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-409",
+        "question": "以下哪个接口是4G同5G基站之间的接口？\nA: X2\nB: Xn\nC: S1\nD: Ng",
+        "choices": [
+            "X2",
+            "Xn",
+            "S1",
+            "Ng"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-410",
+        "question": "以下哪个信号在NR中主要用于相位跟踪和补偿？\nA: CRS-RS\nB: PT-RS\nC: DMRS\nD: SRS",
+        "choices": [
+            "CRS-RS",
+            "PT-RS",
+            "DMRS",
+            "SRS"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-411",
+        "question": "在3GPP Rel15 的numerologies中定义的最大子载波带宽为以下哪项？\nA: 30kHz\nB: 60kHz\nC: 120kHz\nD: 240kHz",
+        "choices": [
+            "30kHz",
+            "60kHz",
+            "120kHz",
+            "240kHz"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-412",
+        "question": "如果当前小区没有用户，那么gNB会发送哪个些参考信号？\nA: PSS/SSS\nB: CSI-RS\nC: DM-RS\nD: PT-RS",
+        "choices": [
+            "PSS/SSS",
+            "CSI-RS",
+            "DM-RS",
+            "PT-RS"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-413",
+        "question": "关于NR物理层处理，以下说法错误的是哪项？\nA: 最大的层数是8，对于2个码字\nB: 上行也可以支持多层数据，最大层为4\nC: 天线端口数必须等于层数\nD: 天线端口数可以大于层数",
+        "choices": [
+            "最大的层数是8，对于2个码字",
+            "上行也可以支持多层数据，最大层为4",
+            "天线端口数必须等于层数",
+            "天线端口数可以大于层数"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-414",
+        "question": "以下哪个不是NR中RLC层的功能？\nA: 数据缓存\nB: 数据分段\nC: ARQ\nD: 数据加密",
+        "choices": [
+            "数据缓存",
+            "数据分段",
+            "ARQ",
+            "数据加密"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-415",
+        "question": "以下哪些是NR PUCCH的功能？\nA: HARQ反馈\nB: 调度请求反馈\nC: CQI 反馈\nD: LI(layer indicator)反馈",
+        "choices": [
+            "HARQ反馈",
+            "调度请求反馈",
+            "CQI 反馈",
+            "LI(layer indicator)反馈"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-416",
+        "question": "5G FR1频段最大的带宽为哪项？\nA: 20MHz\nB: 40MHz\nC: 80MHz\nD: 100MHz",
+        "choices": [
+            "20MHz",
+            "40MHz",
+            "80MHz",
+            "100MHz"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-417",
+        "question": "NR 3GPP R15数据信道支持的子载波间隔有哪些？\nA: 15kHz\nB: 30kHz\nC: 60kHz\nD: 120kHz",
+        "choices": [
+            "15kHz",
+            "30kHz",
+            "60kHz",
+            "120kHz"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-418",
+        "question": "关于NR系统带宽描述，以下说法错误的是哪项？\nA: FR1频段下，任何频带都能支持100MHz带宽\nB: FR1频段下的最大带宽为273RB\nC: FR2频段下只有120kHz的子载波带宽能够支持400MHz小区带宽\nD: FR2频段下的最大带宽为264RB",
+        "choices": [
+            "FR1频段下，任何频带都能支持100MHz带宽",
+            "FR1频段下的最大带宽为273RB",
+            "FR2频段下只有120kHz的子载波带宽能够支持400MHz小区带宽",
+            "FR2频段下的最大带宽为264RB"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-420",
+        "question": "以下哪个不是NR空口MAC层的功能？\nA: HARQ\nB: 逻辑信道映射及复用\nC: 调度\nD: QoS管理",
+        "choices": [
+            "HARQ",
+            "逻辑信道映射及复用",
+            "调度",
+            "QoS管理"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-421",
+        "question": "对于SCS 30kHz，BS侧100MHz带宽可以使用的RB数最多有几个？\nA: 50\nB: 100\nC: 272\nD: 273",
+        "choices": [
+            "50",
+            "100",
+            "272",
+            "273"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-423",
+        "question": "关于NR PUSCH的物理层处理，以下说法正确的是哪些项?\nA: 支持单载波（DFT-s-OFDM）和多载波（CP-OFDM）两种波形\nB: 单载波和多载波都可以支持上行多流MIMO\nC: 支持单符号和双符号的DMRS配置\nD: 只有多载波场景才需要进行层映射处理",
+        "choices": [
+            "支持单载波（DFT-s-OFDM）和多载波（CP-OFDM）两种波形",
+            "单载波和多载波都可以支持上行多流MIMO",
+            "支持单符号和双符号的DMRS配置",
+            "只有多载波场景才需要进行层映射处理"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-424",
+        "question": "关于slot上下行配比的配置，以下哪些说法是正确的?\nA: 半静态的Slot配比可以通过系统消息进行配置\nB: 配比周期和子载波带宽相关\nC: NR中最大支持四级配比方案\nD: 和LTE相比，NR支持符号级动态TDD配置",
+        "choices": [
+            "半静态的Slot配比可以通过系统消息进行配置",
+            "配比周期和子载波带宽相关",
+            "NR中最大支持四级配比方案",
+            "和LTE相比，NR支持符号级动态TDD配置"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-425",
+        "question": "UE在空闲态是测量的是SSB的RSRP来进行相关的小区选择。\nA: 对\nB: 错",
+        "choices": [
+            "对",
+            "错"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-426",
+        "question": "在3GPP R15版本中，调制方式可以支持到1024QAM。\nA: 对\nB: 错",
+        "choices": [
+            "对",
+            "错"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-427",
+        "question": "如下哪些是Massive MIMO的典型应用场景。\nA: 密集城区，16流多用户复用，大幅提升网络容量。\nB: CBD场景，大规模天线阵列SU BF、MU BF、立体波束赋型，带来容量提升和高楼覆盖增强。\nC: 大型场馆，精确地用户级赋形波束及跟踪，有效的干扰控制。\nD: 室内场景，提升容量。\nE: 高楼场景，立体波束赋形，增强高楼深度覆盖，大幅提升边缘体验。",
+        "choices": [
+            "密集城区，16流多用户复用，大幅提升网络容量。",
+            "CBD场景，大规模天线阵列SU BF、MU BF、立体波束赋型，带来容量提升和高楼覆盖增强。",
+            "大型场馆，精确地用户级赋形波束及跟踪，有效的干扰控制。",
+            "室内场景，提升容量。",
+            "高楼场景，立体波束赋形，增强高楼深度覆盖，大幅提升边缘体验。"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,E",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-428",
+        "question": "5G两个基站之间的接口是哪项？\nA: X2\nB: Xn\nC: NG\nD: S1",
+        "choices": [
+            "X2",
+            "Xn",
+            "NG",
+            "S1"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-429",
+        "question": "目前5G已经确定采用哪些编码方式？\nA: Polar码\nB: LDPC码\nC: Turbo码\nD: RS码",
+        "choices": [
+            "Polar码",
+            "LDPC码",
+            "Turbo码",
+            "RS码"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-430",
+        "question": "以下选项中， 哪个不是毫米波的主要应用场景？\nA: 容量提升\nB: 自回传，有电即有站\nC: 家庭宽度接入\nD: 广覆盖",
+        "choices": [
+            "容量提升",
+            "自回传，有电即有站",
+            "家庭宽度接入",
+            "广覆盖"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-432",
+        "question": "如下业务中， 哪个业务需要考虑用户面下沉的设计？\nA: 抄表物联网\nB: 视频监控网\nC: 移动电视网\nD: 移动互联网",
+        "choices": [
+            "抄表物联网",
+            "视频监控网",
+            "移动电视网",
+            "移动互联网"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-433",
+        "question": "5G基于系统功能的架构中，哪个功能是属于用户面功能？\nA: AUSF\nB: AMF\nC: SMF\nD: UPF",
+        "choices": [
+            "AUSF",
+            "AMF",
+            "SMF",
+            "UPF"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-434",
+        "question": "在切片设计时，无线网络协议各层功能中，哪一层，一般总是切到DU（分布单元）实现？\nA: RRC层\nB: PDCP层\nC: RLC层\nD: MAC层",
+        "choices": [
+            "RRC层",
+            "PDCP层",
+            "RLC层",
+            "MAC层"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-435",
+        "question": "未来的业务场景对网络的差异化需求可以从如下哪些维度进行衡量？\nA: 连接性能要求\nB: 网络功能要求\nC: 网络安全性及可靠性\nD: 可操作维护需求",
+        "choices": [
+            "连接性能要求",
+            "网络功能要求",
+            "网络安全性及可靠性",
+            "可操作维护需求"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-436",
+        "question": "边缘的云计算可以实现5G网络哪些功能？\nA: 无线网络DU功能\nB: 无线网络CU功能\nC: 核心网功能\nD: 业务应用功能",
+        "choices": [
+            "无线网络DU功能",
+            "无线网络CU功能",
+            "核心网功能",
+            "业务应用功能"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-437",
+        "question": "如果对于抄表物联网做切片设计， 如下哪个功能可以考虑做剪裁？\nA: 话单功能\nB: 移动性管理功能\nC: 会话管理功能\nD: 设备管理",
+        "choices": [
+            "话单功能",
+            "移动性管理功能",
+            "会话管理功能",
+            "设备管理"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-438",
+        "question": "5G可以每平方公里至少支持多少个连接？\nA: 1000\nB: 1万\nC: 10万\nD: 100万",
+        "choices": [
+            "1000",
+            "1万",
+            "10万",
+            "100万"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-439",
+        "question": "非独立组网（NSA）的协议将在什么时候冻结？\nA: 2017年底\nB: 2018年中\nC: 2018年底\nD: 2019年底",
+        "choices": [
+            "2017年底",
+            "2018年中",
+            "2018年底",
+            "2019年底"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-440",
+        "question": "NR空口协议栈新增了哪个协议层？\nA: RRC\nB: SDAP\nC: PDCP\nD: MAC",
+        "choices": [
+            "RRC",
+            "SDAP",
+            "PDCP",
+            "MAC"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-441",
+        "question": "5G SA网络架构中，以下哪一个是gNB与gNB之间的接口？\nA: Xn\nB: X2\nC: Ng\nD: S1",
+        "choices": [
+            "Xn",
+            "X2",
+            "Ng",
+            "S1"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-442",
+        "question": "在Option3X架构中，数据的分流锚点在哪个网元上？\nA: eNodeB\nB: gNodeB\nC: SGW\nD: PGW",
+        "choices": [
+            "eNodeB",
+            "gNodeB",
+            "SGW",
+            "PGW"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-443",
+        "question": "5G技术应用中的mMTC（海量连接的物联网业务），要求每平方公里可以实现1万的连接数量\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-444",
+        "question": "5G高频终端至少需要支持多少根接收天线？\nA: 4\nB: 3\nC: 1\nD: 8",
+        "choices": [
+            "4",
+            "3",
+            "1",
+            "8"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-445",
+        "question": "5G对未来的定义可以用以下哪些技术指标来描述？\nA: 速率\nB: 连接数\nC: 时延\nD: 建立成功率",
+        "choices": [
+            "速率",
+            "连接数",
+            "时延",
+            "建立成功率"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-446",
+        "question": "5G NR的多址技术不再是OFDMA。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-447",
+        "question": "上行MU-MIMO有哪些增益？\nA: 提升小区上行容量\nB: 提升用户上行峰值速率\nC: 提升上行频率效率\nD: 提升用户上行覆盖",
+        "choices": [
+            "提升小区上行容量",
+            "提升用户上行峰值速率",
+            "提升上行频率效率",
+            "提升用户上行覆盖"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-448",
+        "question": "在3GPP Rel15 的numerologies中定义的最大子载波带宽是多少？\nA: 30kHz\nB: 60kHz\nC: 120kHz\nD: 240kHz",
+        "choices": [
+            "30kHz",
+            "60kHz",
+            "120kHz",
+            "240kHz"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-449",
+        "question": "NR中UE进行小区搜索会用到哪些信道/信号？\nA: PSS/SSS\nB: PBCH\nC: CSI-RS\nD: PDCCH",
+        "choices": [
+            "PSS/SSS",
+            "PBCH",
+            "CSI-RS",
+            "PDCCH"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-450",
+        "question": "5G的Options3架构中，需要EPC对用户面数据进行分流。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-451",
+        "question": "以下属于NR业务信道的是哪项？\nA: BCCH\nB: PCH\nC: RACH\nD: DTCH",
+        "choices": [
+            "BCCH",
+            "PCH",
+            "RACH",
+            "DTCH"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-452",
+        "question": "Xn接口可以存在于哪些网元之间？\nA: gNB之间\nB: gNB与eNB之间\nC: eNB之间\nD: eLTE与eNB之间",
+        "choices": [
+            "gNB之间",
+            "gNB与eNB之间",
+            "eNB之间",
+            "eLTE与eNB之间"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-453",
+        "question": "以下哪些模块属于防雷设备?\nA: GPS防雷器\nB: SLPU\nC: UELP\nD: eBat",
+        "choices": [
+            "GPS防雷器",
+            "SLPU",
+            "UELP",
+            "eBat"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-454",
+        "question": "NSA架构中控制面锚点在NR上。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-455",
+        "question": "gNodeB不需要增加跟踪区信息。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-456",
+        "question": "gNodeB多个小区可以分别被包含在不同的跟踪区内。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-457",
+        "question": "扇区是由一组相同覆盖的射频天线组成的无线覆盖区域。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-458",
+        "question": "C-Band频段n77计算小区绝对频点时使用的Δfraster为多少kHz？\nA: 5\nB: 15\nC: 60\nD: 100",
+        "choices": [
+            "5",
+            "15",
+            "60",
+            "100"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-459",
+        "question": "5G系统中，由切换触发RA的事件，既可以采取非竞争的RA过程，也可以采取竞争的RA过程。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-460",
+        "question": "减小A3事件门限，可以使辅站变更容易发生。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-461",
+        "question": "5G C波段规划时， 推荐连续频谱带宽至少为哪项？\nA: 10M\nB: 20M\nC: 100M\nD: 400M",
+        "choices": [
+            "10M",
+            "20M",
+            "100M",
+            "400M"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-462",
+        "question": "以下哪个信道的天线端口数可以大于1？  \n\nA: PRACH\nB: PDCCH\nC: SRS\nD: PUCCH",
+        "choices": [
+            "PRACH",
+            "PDCCH",
+            "SRS",
+            "PUCCH"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-463",
+        "question": "关于NR子载波带宽描述，以下描述正确的是哪些？\nA: SSB最大的子载波带宽可以支持240kHz\nB: Sub6G场景下，业务信道最大子载波带宽可以支持60kHz\nC: Above场景下，业务信道最大子载波带宽可以支持240kHz\nD: 长格式的PRACH信道可以支持60kHz子载波带宽",
+        "choices": [
+            "SSB最大的子载波带宽可以支持240kHz",
+            "Sub6G场景下，业务信道最大子载波带宽可以支持60kHz",
+            "Above场景下，业务信道最大子载波带宽可以支持240kHz",
+            "长格式的PRACH信道可以支持60kHz子载波带宽"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-464",
+        "question": "gNB调度器调度用户并给用户分配资源时会考虑哪些项？\nA: CQI\nB: RI\nC: PMI\nD: TA",
+        "choices": [
+            "CQI",
+            "RI",
+            "PMI",
+            "TA"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-465",
+        "question": "Massive MIMO在规划时，需要考虑的特点有哪些项？\nA: 广播信道波束赋形增益\nB: 业务信道的波束赋形增益\nC: 边缘覆盖干扰的增加\nD: 上行噪声系数的增加",
+        "choices": [
+            "广播信道波束赋形增益",
+            "业务信道的波束赋形增益",
+            "边缘覆盖干扰的增加",
+            "上行噪声系数的增加"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-466",
+        "question": "SMF和UPF的接口是？\nA: N1\nB: N2\nC: N3\nD: N4",
+        "choices": [
+            "N1",
+            "N2",
+            "N3",
+            "N4"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-467",
+        "question": "当5G的UE处于MICO模式时，数据网络有下行数据送来，5G核心网怎样处理？\nA: AMF寻呼UE\nB: SMF检查PCF策略\nC: 网络不会寻呼UE，丢弃数据\nD: AMF要求UE重注册",
+        "choices": [
+            "AMF寻呼UE",
+            "SMF检查PCF策略",
+            "网络不会寻呼UE，丢弃数据",
+            "AMF要求UE重注册"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-468",
+        "question": "下述哪个标识符是由AMF分配的？\nA: GPSI\nB: SUPI\nC: 5G-GUTI\nD: SUCI",
+        "choices": [
+            "GPSI",
+            "SUPI",
+            "5G-GUTI",
+            "SUCI"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-469",
+        "question": "5G核心网中的哪个功能负责UE的鉴权？\nA: AUSF\nB: SMF\nC: UPF\nD: AMF",
+        "choices": [
+            "AUSF",
+            "SMF",
+            "UPF",
+            "AMF"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-470",
+        "question": "CUPS架构引入新接口，其控制平面上运行的是什么协议？\nA: HTTP\nB: PFCP\nC: NG-AP\nD: Diameter",
+        "choices": [
+            "HTTP",
+            "PFCP",
+            "NG-AP",
+            "Diameter"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-471",
+        "question": "5GC中核心网元的信令主要采用什么协议？\nA: Diameter\nB: MAP\nC: HTTP2\nD: GTP-C",
+        "choices": [
+            "Diameter",
+            "MAP",
+            "HTTP2",
+            "GTP-C"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-472",
+        "question": "以下哪个是5G的QoS参数？\nA: QCI\nB: GBR\nC: MFBR\nD: APN-AMBR",
+        "choices": [
+            "QCI",
+            "GBR",
+            "MFBR",
+            "APN-AMBR"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-473",
+        "question": "5G网络里面5G软件功能由细粒度的“服务”来定义，便于网络按照业务场景以什么为粒度定制及编排？    \nA: 服务\nB: 业务\nC: 协议\nD: 接口",
+        "choices": [
+            "服务",
+            "业务",
+            "协议",
+            "接口"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-474",
+        "question": "以下哪个NF，在5G用户注册流程中，没有被使用到？\nA: AMF\nB: SMF\nC: UPF\nD: AUSF",
+        "choices": [
+            "AMF",
+            "SMF",
+            "UPF",
+            "AUSF"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-475",
+        "question": "5G核心网中哪些网元可以引入前后端结构，并且利用UDR保持其数据？\nA: AMF\nB: UDM\nC: PCF\nD: NEF",
+        "choices": [
+            "AMF",
+            "UDM",
+            "PCF",
+            "NEF"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-476",
+        "question": "3GPP定义的用例包括哪些类别？\nA: eMBB\nB: mMTC\nC: URLLC\nD: MBB",
+        "choices": [
+            "eMBB",
+            "mMTC",
+            "URLLC",
+            "MBB"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-477",
+        "question": "5G网络支持并实施的鉴权方式有哪些？\nA: 5G-AKA\nB: EPS-AKA\nC: EAP-AKA'\nD: EAP-TLS",
+        "choices": [
+            "5G-AKA",
+            "EPS-AKA",
+            "EAP-AKA'",
+            "EAP-TLS"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-478",
+        "question": "5G核心网的功能开放包括哪些？\nA: 可以对外网开放核心网的监视功能\nB: 可以对外网开放业务开通功能\nC: 可以对外网开放策略和计费功能\nD: 可以将5G核心网NF的功能开放给外部合作伙伴",
+        "choices": [
+            "可以对外网开放核心网的监视功能",
+            "可以对外网开放业务开通功能",
+            "可以对外网开放策略和计费功能",
+            "可以将5G核心网NF的功能开放给外部合作伙伴"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-479",
+        "question": "以下哪些是5G网络切片的特征？\nA: 定制性\nB: 隔离/专用性\nC: 质量可保证\nD: 统一平台",
+        "choices": [
+            "定制性",
+            "隔离/专用性",
+            "质量可保证",
+            "统一平台"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-480",
+        "question": "用户在5GC注册流程需要使用哪些接口？\nA: N3\nB: N2\nC: N8\nD: N12",
+        "choices": [
+            "N3",
+            "N2",
+            "N8",
+            "N12"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-481",
+        "question": "VNF软件包中包含以下哪些组件？\nA: VNF descriptor (VNFD)\nB: VNF软件镜像\nC: 管理VNF的可选附加文件（厂商特定的配置文件、脚本等）\nD: Network Service Descriptor (NSD)",
+        "choices": [
+            "VNF descriptor (VNFD)",
+            "VNF软件镜像",
+            "管理VNF的可选附加文件（厂商特定的配置文件、脚本等）",
+            "Network Service Descriptor (NSD)"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-482",
+        "question": "下列哪些是SDN的开源项目？ \nA: OpenDaylight\nB: OpenStack\nC: OPNFV\nD: ONOS",
+        "choices": [
+            "OpenDaylight",
+            "OpenStack",
+            "OPNFV",
+            "ONOS"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-483",
+        "question": "OpenStack的Heat模块进行资源编排时，可以使用下列哪种格式的模板文件？\nA: HTML\nB: HOT\nC: OVF\nD: TOSCA",
+        "choices": [
+            "HTML",
+            "HOT",
+            "OVF",
+            "TOSCA"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-484",
+        "question": "一个VM虚拟机应该具备以下哪些组件？\nA: Guest OS\nB: 虚拟的计算资源，例如vCPU、虚拟内存\nC: 虚拟的网络资源，例如vNIC\nD: 虚拟的存储资源，例如虚拟硬盘",
+        "choices": [
+            "Guest OS",
+            "虚拟的计算资源，例如vCPU、虚拟内存",
+            "虚拟的网络资源，例如vNIC",
+            "虚拟的存储资源，例如虚拟硬盘"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-485",
+        "question": "在下列哪些场景下可以使用SDN网络？\nA: 通过VIM提供的网络控制接口（Nf-Vl）连接到SDN控制器，来实现NFVI中虚拟网络的管理\nB: 通过NFVO提供的控制接口连接到SDN控制器，来管理WAN网络\nC: 基于PCRF的用户签约数据，通过PCRF连接SDN控制器来实现对未成年人的数据流量进行内容过滤\nD: 基于VxLAN，NVGRE等隧道技术实现的Overlay网络，完成多数据中心的互连",
+        "choices": [
+            "通过VIM提供的网络控制接口（Nf-Vl）连接到SDN控制器，来实现NFVI中虚拟网络的管理",
+            "通过NFVO提供的控制接口连接到SDN控制器，来管理WAN网络",
+            "基于PCRF的用户签约数据，通过PCRF连接SDN控制器来实现对未成年人的数据流量进行内容过滤",
+            "基于VxLAN，NVGRE等隧道技术实现的Overlay网络，完成多数据中心的互连"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-486",
+        "question": "下列关于RESTful的描述正确的是：\nA: REST提供一组架构约束条件和原则，是一种软件架构/设计风格。如果一个架构符合REST的约束条件和原则，它就是RESTful架构\nB: 客户端和服务器之间的交互是有状态的\nC: 在服务器端，应用程序状态和功能可以分为各种资源，每个资源都可以有多个URI标识\nD: 使用标准的HTTP方法对资源进行操作",
+        "choices": [
+            "REST提供一组架构约束条件和原则，是一种软件架构/设计风格。如果一个架构符合REST的约束条件和原则，它就是RESTful架构",
+            "客户端和服务器之间的交互是有状态的",
+            "在服务器端，应用程序状态和功能可以分为各种资源，每个资源都可以有多个URI标识",
+            "使用标准的HTTP方法对资源进行操作"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-487",
+        "question": "以下关于OVS的描述哪些是正确的？\nA: OVS的Datapath是Linux内核模块，可以缓存流表并根据流表项进行数据包的转发\nB: 支持DPDK的OVS的Datapath是运行在用户空间的\nC: OpenStack Neutron只能使用OVS作为虚拟交换机\nD: OVS可以使用OpenFlow协议作为控制协议",
+        "choices": [
+            "OVS的Datapath是Linux内核模块，可以缓存流表并根据流表项进行数据包的转发",
+            "支持DPDK的OVS的Datapath是运行在用户空间的",
+            "OpenStack Neutron只能使用OVS作为虚拟交换机",
+            "OVS可以使用OpenFlow协议作为控制协议"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-488",
+        "question": "5G核心网中所有网元既可以作为服务提供方，也可以作为服务应用方。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-489",
+        "question": "5G EPC支持的5G组网方案中，EPC NAS信令消息一定通过eNodeB基站送到核心网，用户数据平面可以锚定在5G基站上。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-490",
+        "question": "非3GPP接入到5G核心网，如果不漫游总是可以和3GPP接入连接到同一个AMF。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-491",
+        "question": "5G PDU会话建立的信令流程一定都是由UE发起的。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-492",
+        "question": "5G网络中的寻呼信令流程可以由核心网中很多控制面上的NF触发，比如SMSF，PCF等。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-493",
+        "question": "N3传输的是信令面的数据\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-494",
+        "question": "NSA架构是基于5G核心网搭建的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-495",
+        "question": "SMF也参与到了5G用户的注册流程当中\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-496",
+        "question": "UPF和EPC中的PGW作用相同\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-497",
+        "question": "N11是AMF和SMF之间的参考点\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-498",
+        "question": "AMF是通过DNS查询到SMF的地址的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-499",
+        "question": "UPF与SMF之间是通过HTTP协议进行通信的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-500",
+        "question": "用户的鉴权信息是存储在AMF上的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-501",
+        "question": "AMF使用Nudm访问UDM中的用户数据管理和UE上下文管理服务\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-502",
+        "question": "AMF使用Nausf从AUSF请求UE身份验证服务\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-503",
+        "question": "5GC支持用户从2/3G语音直接切换到5G语音\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-504",
+        "question": "5G终端可以无缝的从3GPP接入方式切换到None-3GPP的接入方式\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-505",
+        "question": "用户的IP地址是UPF分配的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-506",
+        "question": "SUCI是AMF解密的为SUPI的\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-507",
+        "question": "5GC的基础架构是在Realease 15阶段定义的  \n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-508",
+        "question": "5GC架构中，控制面才是使用的SBA架构\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-509",
+        "question": "NSA架构下推荐Option 3X由LTE提供语音，未来演进到SA Option 2\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-510",
+        "question": "在遇到自然灾害时，无人机可以通过搭载小基站，解决应急通信问题。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-511",
+        "question": "C-BAND频段，100MHz小区BWP带宽组网时，支持SCS15Khz，SCS30Khz，SCS60Khz。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-512",
+        "question": "为了支持今后的智慧城市，5G网络需要大幅提升终端连接数，目标要求达到10万/平方公里。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-513",
+        "question": "Massive MIMO本质上就是天线技术。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-514",
+        "question": "网络切片的驱动力是5G网络的业务差异化需求。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-515",
+        "question": "因为今后自动驾驶使用的都是单车控制系统，网络时延对自动驾驶的安全性没有影响。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-516",
+        "question": "3G/4G网络无法支撑无人机，主要原因是因为传输带宽太小。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-517",
+        "question": "车联网应用中，用户可以通过车载屏幕点播高清视频，所以车联网同样属于eMBB的一种应用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-518",
+        "question": "毫米波是NR新增频段，小区带宽最大，但是覆盖能力差，对射频器件性能要求高，一般只适合视距覆盖。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-519",
+        "question": "越高阶的QAM调制，对信噪比的要求也越高，系统复杂度也越高，因此不能无限制的增加调制阶数。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-520",
+        "question": "sub3G频段低，覆盖性能好，但是小区带宽受限。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-521",
+        "question": "云化的无线网络可以大幅度地提升用户速率。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-522",
+        "question": "频谱资源是无线通信的重要资源，也是影响5G空口速率的关键因素之一。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-523",
+        "question": "FR1频段所有的子载波配置都能实现100MHz的小区带宽。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-524",
+        "question": "FR2频段必须要在60KHz以上的子载波间隔配置下，才能实现400MHz的小区带宽。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-525",
+        "question": "未来5G的网络频谱将会以多层次组网，低频提供局部广覆盖、中频作为基础覆盖和基本容量层、高频作为话务热点容量吸收层。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-526",
+        "question": "​5G网络eMBB场景中，业务信道使用的信道编码方式是（）\nA: LDPC码\nB: 卷积码\nC: Polar码\nD: Turbo码",
+        "choices": [
+            "LDPC码",
+            "卷积码",
+            "Polar码",
+            "Turbo码"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-527",
+        "question": "5G网络关键性能指标中，高速移动性达到（）/每小时。\nA: 100KM\nB: 500KM\nC: 800KM\nD: 1000KM",
+        "choices": [
+            "100KM",
+            "500KM",
+            "800KM",
+            "1000KM"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-528",
+        "question": "5G语音VONR属于以下哪种语音承载类型？\nA: CS语音\nB: IMS语音\nC: OTT语音\nD: CSFB语音",
+        "choices": [
+            "CS语音",
+            "IMS语音",
+            "OTT语音",
+            "CSFB语音"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-529",
+        "question": "NR时域帧结构中，1个Slot（时隙）包含（）个符号？\nA: 12\nB: 14\nC: 10\nD: 15",
+        "choices": [
+            "12",
+            "14",
+            "10",
+            "15"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-530",
+        "question": " 关于SA和NSA两组组网方式，以下说法正确的是哪个选项？\nA: 根据是否新建5G核心网分为NSA（非独立组网）和（SA（独立组网）两种组网方式\nB: 为满足部分运营商快速部署5G需求，标准新引入一种新的组网架构——NSA非独立组网\nC: SA（独立组网）：5G依附于4G基站工作的网络架构，5G无线网与核心网之间的NAS信令(如注册，鉴权等)通过4G基站传递,5G无法独立工作\nD: 根据信令锚点是否需要锚点在4G基站上分为NSA（非独立组网）和（SA（独立组网）两种组网方式",
+        "choices": [
+            "根据是否新建5G核心网分为NSA（非独立组网）和（SA（独立组网）两种组网方式",
+            "为满足部分运营商快速部署5G需求，标准新引入一种新的组网架构——NSA非独立组网",
+            "SA（独立组网）：5G依附于4G基站工作的网络架构，5G无线网与核心网之间的NAS信令(如注册，鉴权等)通过4G基站传递,5G无法独立工作",
+            "根据信令锚点是否需要锚点在4G基站上分为NSA（非独立组网）和（SA（独立组网）两种组网方式"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-531",
+        "question": "以下哪个业务对5G网络带宽要求最高？\nA: VR\nB: 车联网\nC: 直播业务\nD: 4k视频",
+        "choices": [
+            "VR",
+            "车联网",
+            "直播业务",
+            "4k视频"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-532",
+        "question": "大多数运营商对Vo5G演进路径的共识是？\nA: VoLTE->EPS-FB->VoNR，将VoLTE做为话音基础网\nB: VoNR + 5G到3G SRVCC，跳过VoLTE，用5G NR作为语音覆盖\nC: CSFB->RAT-FB->VoNR\nD: CSFB->EPS-FB->VoNR",
+        "choices": [
+            "VoLTE->EPS-FB->VoNR，将VoLTE做为话音基础网",
+            "VoNR + 5G到3G SRVCC，跳过VoLTE，用5G NR作为语音覆盖",
+            "CSFB->RAT-FB->VoNR",
+            "CSFB->EPS-FB->VoNR"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-533",
+        "question": "NR中定义一个子帧时间长度是多长？\nA: 0.5ms\nB: 1ms\nC: 5ms\nD: 10ms",
+        "choices": [
+            "0.5ms",
+            "1ms",
+            "5ms",
+            "10ms"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-534",
+        "question": "对于SCS30kHz,BS侧100MHz带宽可以使用的RB数最多有几个？\nA: 50\nB: 100\nC: 272\nD: 273",
+        "choices": [
+            "50",
+            "100",
+            "272",
+            "273"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-535",
+        "question": "用户多天线蜂值体验特性提升的用户哪个方向体验？\nA: 下行\nB: 上行\nC: 上下行",
+        "choices": [
+            "下行",
+            "上行",
+            "上下行"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-536",
+        "question": "5G两个基站之间的接口是？\nA: X2\nB: Xn\nC: NG\nD: S1",
+        "choices": [
+            "X2",
+            "Xn",
+            "NG",
+            "S1"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-537",
+        "question": "上下行解耦场景，RRU用于服务于？\nA: 上行小区\nB: 下行小区\nC: 上行和下行小区",
+        "choices": [
+            "上行小区",
+            "下行小区",
+            "上行和下行小区"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-538",
+        "question": "Sub6G频段能支持的最大带宽为（）\nA: 200MHz\nB: 100MHz\nC: 80MHz\nD: 60MHz",
+        "choices": [
+            "200MHz",
+            "100MHz",
+            "80MHz",
+            "60MHz"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-539",
+        "question": "5GNR的信道带宽利用率最高可达（）\nA: 0.9828\nB: 0.9\nC: 0.9246\nD: 0.9686",
+        "choices": [
+            "0.9828",
+            "0.9",
+            "0.9246",
+            "0.9686"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-540",
+        "question": "下列哪种技术有利于支持NR的海量连接数？\nA: Massive MIMO\nB: 正交频分多址\nC: 非正交频分多址\nD: 高阶调制",
+        "choices": [
+            "Massive MIMO",
+            "正交频分多址",
+            "非正交频分多址",
+            "高阶调制"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-541",
+        "question": "以下哪些不属于5G时代面临的挑战？\nA: MBB数据流量\n雪崩式增长\nB: 移动物联网需要支持切换功能\nC: 车辆无人驾驶需要超低时延\nD: 联网设备数量\n巨大增长",
+        "choices": [
+            "MBB数据流量\n雪崩式增长",
+            "移动物联网需要支持切换功能",
+            "车辆无人驾驶需要超低时延",
+            "联网设备数量\n巨大增长"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-542",
+        "question": "下列业务场景中，哪项对网络端到端时延最不敏感？\nA: VR\nB: 智能抄表\nC: 车联网\nD: 远程医疗",
+        "choices": [
+            "VR",
+            "智能抄表",
+            "车联网",
+            "远程医疗"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-543",
+        "question": "5G网络中，6Ghz以上的频段适合用于以下哪种场景？\nA: 室内宽带覆盖\nB: 连续广覆盖\nC: 热点高话务区域\nD: 自回传",
+        "choices": [
+            "室内宽带覆盖",
+            "连续广覆盖",
+            "热点高话务区域",
+            "自回传"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-544",
+        "question": "5G核心网网元包括\nA: AMF\nB: SMF\nC: UPF\nD: NEF",
+        "choices": [
+            "AMF",
+            "SMF",
+            "UPF",
+            "NEF"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-545",
+        "question": "5G无线接入的关键技术主要包含\nA: 大规模天线阵列\nB: 超密集组网（UDN）\nC: 全频谱接入\nD: 新型多址\nE: 新型多载波\nF: 终端直连",
+        "choices": [
+            "大规模天线阵列",
+            "超密集组网（UDN）",
+            "全频谱接入",
+            "新型多址",
+            "新型多载波",
+            "终端直连"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D,E,F",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-546",
+        "question": "5G的典型应用场景有：\nA: AR/VR\nB: FWA\nC: 汽车自动驾驶\nD: 光纤入户",
+        "choices": [
+            "AR/VR",
+            "FWA",
+            "汽车自动驾驶",
+            "光纤入户"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-547",
+        "question": "关于NR的MassiveMIMO，如下描述不正确的是：\nA: LTE的广播信道是窄波束设计\nB: NR的广播信道是宽波束设计\nC: LTE的PDSCH/PUSCH是窄波束设计\nD: NR的PDSCH/PUSCH是窄波束设计",
+        "choices": [
+            "LTE的广播信道是窄波束设计",
+            "NR的广播信道是宽波束设计",
+            "LTE的PDSCH/PUSCH是窄波束设计",
+            "NR的PDSCH/PUSCH是窄波束设计"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-548",
+        "question": "以下哪些是NR中定义的BWP概念？\nA: InitialBWP\nB: DedicatedBWP\nC: ActiveBWP\nD: DefaultBWP",
+        "choices": [
+            "InitialBWP",
+            "DedicatedBWP",
+            "ActiveBWP",
+            "DefaultBWP"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-549",
+        "question": "下列哪些业务适合较小的子载波间隔（SCS）配置？\nA: 深度覆盖业务\nB: 小包业务\nC: 广覆盖业务\nD: 高移动性业务",
+        "choices": [
+            "深度覆盖业务",
+            "小包业务",
+            "广覆盖业务",
+            "高移动性业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-550",
+        "question": "良好的VR业务体验对5G网络有哪些性能需求？\nA: 频谱效率\nB: 峰值速率\nC: 时延\nD: 移动性",
+        "choices": [
+            "频谱效率",
+            "峰值速率",
+            "时延",
+            "移动性"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-551",
+        "question": "下列说法不正确的是？\nA: 子载波间隔越小，功率谱密度越低\nB: 子载波间隔越大，时隙长度越长\nC: 子载波间隔越小，CP长度越大，适合广覆盖\nD: 子载波间隔越大，符号数越多",
+        "choices": [
+            "子载波间隔越小，功率谱密度越低",
+            "子载波间隔越大，时隙长度越长",
+            "子载波间隔越小，CP长度越大，适合广覆盖",
+            "子载波间隔越大，符号数越多"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-552",
+        "question": "如下5G的关键技术中，哪个可以提升网络频谱效率？\nA: 灵活子载波带宽\nB: 新信道编码\nC: Massive MIMO\nD: 256QAM高阶调制",
+        "choices": [
+            "灵活子载波带宽",
+            "新信道编码",
+            "Massive MIMO",
+            "256QAM高阶调制"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-553",
+        "question": "下列哪些时隙长度可能会在NR中出现？\nA: 10ms\nB: 1ms\nC: 0.5ms\nD: 0.25ms",
+        "choices": [
+            "10ms",
+            "1ms",
+            "0.5ms",
+            "0.25ms"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-554",
+        "question": "在信道编码的选择上，需要考虑哪些基本原则？\nA: 编码技术的新旧\nB: 纠错能力以及编码冗余率\nC: 复杂程度及能效\nD: 编码的数据块大小，能否支持IR-HARQ",
+        "choices": [
+            "编码技术的新旧",
+            "纠错能力以及编码冗余率",
+            "复杂程度及能效",
+            "编码的数据块大小，能否支持IR-HARQ"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-555",
+        "question": "5G部署初期，主要支撑哪种业务场景？\nA: mMTC\nB: uRLLC\nC: WTTx\nD: eMBB",
+        "choices": [
+            "mMTC",
+            "uRLLC",
+            "WTTx",
+            "eMBB"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-556",
+        "question": "下列哪些属于5G采用C-Band作为主力频段的原因？\nA: 中频虽然覆盖效果比低频差，但结合CRS FREE和mMIMO，下行覆盖问题不大\nB: 3.5GHz频段上行覆盖和1.8G相比存在很大差距\nC: 低频被占用较多，空闲频谱很零碎\nD: 毫米波覆盖范围有限",
+        "choices": [
+            "中频虽然覆盖效果比低频差，但结合CRS FREE和mMIMO，下行覆盖问题不大",
+            "3.5GHz频段上行覆盖和1.8G相比存在很大差距",
+            "低频被占用较多，空闲频谱很零碎",
+            "毫米波覆盖范围有限"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-557",
+        "question": "Massive MIMO可以给NR带来哪些好处？\nA: 上行多用户虚拟MIMO增益，提升小区上行容量\nB: 3维波束赋形增益，增强用户覆盖\nC: 多用户虚拟波束赋形增益，提升小区下行容量和频谱效率\nD: 实现波束跟踪管理，降低干扰",
+        "choices": [
+            "上行多用户虚拟MIMO增益，提升小区上行容量",
+            "3维波束赋形增益，增强用户覆盖",
+            "多用户虚拟波束赋形增益，提升小区下行容量和频谱效率",
+            "实现波束跟踪管理，降低干扰"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-558",
+        "question": "如下哪几个频段是我国工信部明确可以用于5G的？\nA: 3000MHz-3100MHz\nB: 3100MHz-3200MHz\nC: 3400MHz-3600MHz\nD: 4800MHz-5000MHz",
+        "choices": [
+            "3000MHz-3100MHz",
+            "3100MHz-3200MHz",
+            "3400MHz-3600MHz",
+            "4800MHz-5000MHz"
+        ],
+        "qtype": 1,
+        "answer": "C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-559",
+        "question": "车联网业务对5G网络有哪些性能需求？\nA: 频谱效率\nB: 可靠性\nC: 时延\nD: 移动性",
+        "choices": [
+            "频谱效率",
+            "可靠性",
+            "时延",
+            "移动性"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-560",
+        "question": "NR中物理层小区ID共有（）个\nA: 504\nB: 168\nC: 1008\nD: 336",
+        "choices": [
+            "504",
+            "168",
+            "1008",
+            "336"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-561",
+        "question": "5G2.5ms双周期帧结构支持的最大广播波束为（）个\nA: 2\nB: 4\nC: 7\nD: 8",
+        "choices": [
+            "2",
+            "4",
+            "7",
+            "8"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-562",
+        "question": "不属于5G网络部署方式\nA: option2\nB: option3\nC: option5\nD: option8",
+        "choices": [
+            "option2",
+            "option3",
+            "option5",
+            "option8"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-563",
+        "question": "5G可以配置的PCI有（）个\nA: 504\nB: 512\nC: 1008\nD: 1024",
+        "choices": [
+            "504",
+            "512",
+            "1008",
+            "1024"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-564",
+        "question": "NR中一个RB(Resource Block)，在频域连续的（    ）个子载波。\nA: 13\nB: 12\nC: 6\nD: 5",
+        "choices": [
+            "13",
+            "12",
+            "6",
+            "5"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-565",
+        "question": "以下不属于下行物理信道的是（    ）\nA: PDSCH\nB: PDCCH\nC: PBCH\nD: PRACH",
+        "choices": [
+            "PDSCH",
+            "PDCCH",
+            "PBCH",
+            "PRACH"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-566",
+        "question": "广播信道传输的物理层模型由一个固定预定义的传输格式来表征。BCH每（    ）ms一个传输块\nA: 40\nB: 80\nC: 160\nD: 320",
+        "choices": [
+            "40",
+            "80",
+            "160",
+            "320"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-567",
+        "question": "30KHz子载波间隔最大支持RB个数为（    ）\nA: 270\nB: 271\nC: 272\nD: 273",
+        "choices": [
+            "270",
+            "271",
+            "272",
+            "273"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-568",
+        "question": "PSS/SSS长度为（    ）。\nA: 126\nB: 127\nC: 128\nD: 129",
+        "choices": [
+            "126",
+            "127",
+            "128",
+            "129"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-569",
+        "question": "3GPP最终确定了5G eMBB(增强移动宽带)场景的信道编码技术方案，其中，（    ）码作为控制信道的编码方案；\nA: LDPC\nB: Polar\nC: 卷积码\nD: 差分复用码",
+        "choices": [
+            "LDPC",
+            "Polar",
+            "卷积码",
+            "差分复用码"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-570",
+        "question": "UE search space中用于放置用于用于放置系统消息的空间称为（    ）\nA: pss\nB: uss\nC: css\nD: sss",
+        "choices": [
+            "pss",
+            "uss",
+            "css",
+            "sss"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-571",
+        "question": "为了有效规避LTE与NR异系统同频干扰，对齐LTE与NR的上下行时隙转换点，可对NR进行帧头偏移（    ）保持同步。\nA: 1ms\nB: 21ms\nC: 2.51ms\nD: 31ms",
+        "choices": [
+            "1ms",
+            "21ms",
+            "2.51ms",
+            "31ms"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-572",
+        "question": "关于4G向5G演进策略和原则说法错误的（    ）\nA: 5G网络性能持续增强，向LTE-A Pro演进\nB: 热点优化、eMBB优先可以帮助运营商以更小的投资有针对性部署Pre5G和5G\nC: 网络虚拟化、云化改造，平滑演进支持5G部署\nD: 拓展4G网络业务，以大视频、物联网驱动网络价值最大化",
+        "choices": [
+            "5G网络性能持续增强，向LTE-A Pro演进",
+            "热点优化、eMBB优先可以帮助运营商以更小的投资有针对性部署Pre5G和5G",
+            "网络虚拟化、云化改造，平滑演进支持5G部署",
+            "拓展4G网络业务，以大视频、物联网驱动网络价值最大化"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-573",
+        "question": "哪些方案不属于NSA组网（    ）\nA: option3\nB: option2\nC: option7\nD: option4",
+        "choices": [
+            "option3",
+            "option2",
+            "option7",
+            "option4"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-574",
+        "question": "关于5G MIMO说法错误的（    ）\nA: 大规模天线陈列、波束赋形，波束跟踪\nB: 支持更多天线，更多流数，接入更多用户\nC: 更低SRS周期、更窄SRS载波带宽\nD: mmWave实现芯片级超密大规模集成天线阵元",
+        "choices": [
+            "大规模天线陈列、波束赋形，波束跟踪",
+            "支持更多天线，更多流数，接入更多用户",
+            "更低SRS周期、更窄SRS载波带宽",
+            "mmWave实现芯片级超密大规模集成天线阵元"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-575",
+        "question": "5G的空口时延要求小于（    ）。\nA: 5ms\nB: 10ms\nC: 1ms\nD: 100ms",
+        "choices": [
+            "5ms",
+            "10ms",
+            "1ms",
+            "100ms"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-576",
+        "question": "以下哪个频段作为5G的主频段（    ）。\nA: C波段\nB: P波段\nC: L波段\nD: S波段",
+        "choices": [
+            "C波段",
+            "P波段",
+            "L波段",
+            "S波段"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-577",
+        "question": "不属于5G关键性能指标是？（）\n\n\nA: 每平方公里连接数量达到1000K\nB: 空口时延小于5ms\nC: 峰值速率打到10Gbps\nD: 支持500KM/h移动速度",
+        "choices": [
+            "每平方公里连接数量达到1000K",
+            "空口时延小于5ms",
+            "峰值速率打到10Gbps",
+            "支持500KM/h移动速度"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-578",
+        "question": "option3X中锚点为（    ）\nA: NR gNB\nB: LTE eNB\nC: eLTE eNB\nD: 以上均不对",
+        "choices": [
+            "NR gNB",
+            "LTE eNB",
+            "eLTE eNB",
+            "以上均不对"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-579",
+        "question": "eLTE eNB 和gNB之间的接口称为（    ）接口\nA: X1\nB: X2\nC: Xn\nD: Xx",
+        "choices": [
+            "X1",
+            "X2",
+            "Xn",
+            "Xx"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-580",
+        "question": "Option2组网的优势有哪些\nA: 对现有2G/3G/4G网络无影响\nB: 不影响现网2G/3G/4G用户\nC: 可快速部署，直接引入5G新网元，不需要对现网改造\nD: 引入5GC，提供5G新功能新业务",
+        "choices": [
+            "对现有2G/3G/4G网络无影响",
+            "不影响现网2G/3G/4G用户",
+            "可快速部署，直接引入5G新网元，不需要对现网改造",
+            "引入5GC，提供5G新功能新业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-581",
+        "question": "5G使用的主要编码方式是（）\nA: Polar\nB: Turbo\nC: LDPC\nD: FMO",
+        "choices": [
+            "Polar",
+            "Turbo",
+            "LDPC",
+            "FMO"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-582",
+        "question": "SA组网的优势包括\nA: SA组网是5G的终极方案\nB: SA组网支持5G新业务和网络切片\nC: SA可以按需插花建网，建网快速，投资回报快\nD: Option 2方式组网对4G无影响，一步到位",
+        "choices": [
+            "SA组网是5G的终极方案",
+            "SA组网支持5G新业务和网络切片",
+            "SA可以按需插花建网，建网快速，投资回报快",
+            "Option 2方式组网对4G无影响，一步到位"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-583",
+        "question": "承载网络为适应5G需求形成了多种组网组态，分别包含（    ）\nA: 前传网\nB: 中传网\nC: 回传网\nD: 骨干网",
+        "choices": [
+            "前传网",
+            "中传网",
+            "回传网",
+            "骨干网"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-584",
+        "question": "5G eMBB场景的信道编码技术方案有（）。\nA: Polar\nB: Turbo\nC: LDPC\nD: 卷积码",
+        "choices": [
+            "Polar",
+            "Turbo",
+            "LDPC",
+            "卷积码"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-585",
+        "question": "下面属于5G频段的是()\nA: 3400-3600MHz\nB: 1880-1900MHz\nC: 4800-5000MHz\nD: 2515-2675MHz",
+        "choices": [
+            "3400-3600MHz",
+            "1880-1900MHz",
+            "4800-5000MHz",
+            "2515-2675MHz"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-586",
+        "question": "5GNR子载波间隔是（）\nA: 15KHz\nB: 30KHz\nC: 60KHz\nD: 120KHz",
+        "choices": [
+            "15KHz",
+            "30KHz",
+            "60KHz",
+            "120KHz"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-587",
+        "question": "BWP切换有哪些方式（）\nA: TCI\nB: DCI\nC: Timer\nD: RMSI",
+        "choices": [
+            "TCI",
+            "DCI",
+            "Timer",
+            "RMSI"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-588",
+        "question": "5G无线接入的关键技术主要包含（）\nA: 大规模天线阵列\nB: 超密集组网（UDN）\nC: 全频谱接入\nD: 新型多址",
+        "choices": [
+            "大规模天线阵列",
+            "超密集组网（UDN）",
+            "全频谱接入",
+            "新型多址"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-589",
+        "question": "5G需求驱动力（）\nA: 大视频\nB: 物联网\nC: VR/AR\nD: 自动驾驶",
+        "choices": [
+            "大视频",
+            "物联网",
+            "VR/AR",
+            "自动驾驶"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-590",
+        "question": "4/5G链路预算的主要差异\n\nA: 最大带宽不同\nB: 所处频段不同\nC: 基站天线端口数不同\nD: 终端天线端口数不同",
+        "choices": [
+            "最大带宽不同",
+            "所处频段不同",
+            "基站天线端口数不同",
+            "终端天线端口数不同"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-591",
+        "question": "未来业务的需求差异主要体现在（）\nA: 用户行为差异\nB: 连接性能差异\nC: 网络功能差异\nD: 网络安全可靠性差异",
+        "choices": [
+            "用户行为差异",
+            "连接性能差异",
+            "网络功能差异",
+            "网络安全可靠性差异"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-592",
+        "question": "网络切片可涉及哪些网络域（）\nA: 无线网\nB: 传输网\nC: 核心网\nD: 互联网",
+        "choices": [
+            "无线网",
+            "传输网",
+            "核心网",
+            "互联网"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-593",
+        "question": "5G低时延包含以下哪些关键技术（）\nA: 网络切片\nB: 控制转发分离\nC: 移动边缘计算\nD: 新型帧结构",
+        "choices": [
+            "网络切片",
+            "控制转发分离",
+            "移动边缘计算",
+            "新型帧结构"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-594",
+        "question": "电信运营商面临哪些方面（）的挑战？\nA: 手机用户方面\nB: 流量方面\nC: 宽带方面\nD: 政企方面",
+        "choices": [
+            "手机用户方面",
+            "流量方面",
+            "宽带方面",
+            "政企方面"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-595",
+        "question": "5G的三多云分别是？\nA: 接入云\nB: 控制云\nC: 转发云\nD: 计算云",
+        "choices": [
+            "接入云",
+            "控制云",
+            "转发云",
+            "计算云"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-596",
+        "question": "64TR产品推荐应用于以下哪些场景\nA: 密集城区\nB: 一般城区\nC: 郊区\nD: 农村",
+        "choices": [
+            "密集城区",
+            "一般城区",
+            "郊区",
+            "农村"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-597",
+        "question": "5G低频（＜=6Ghz）子载波带宽可以使用15KHz，30KHz和60KHz。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-598",
+        "question": "基带处理和射频处理也可以采用虚拟化技术\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-599",
+        "question": "5G控制面锚点不同区分为两大类：独立部署（SA）和非独立部署(NSA)。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-600",
+        "question": "基站根据不同UE的SRS判断UE间上行信道的相关性，并选择不相关的UE进行MU-MIMO配对。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-601",
+        "question": "gNB-CU与gNB-DU间接口称为F2接口。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-602",
+        "question": "超密集组网通过增加站点密集度，提升单位面积容量，增加N倍小区数，单位面积吞吐量增长N倍。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-603",
+        "question": "Massive MIMO引入后，与现网统一网管，无需改变即可实现统一管理。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-604",
+        "question": "5G的峰值吞吐率为10G+bps。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-605",
+        "question": "远程手术属于eMBB典型应用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-606",
+        "question": "智能家居属于mMTC典型应用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-607",
+        "question": "Massive MIMO天线通道数可达到256个。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-608",
+        "question": "5G的基站功能重构为CU和DU两个功能实体，CU主要处理物理层功能和实时性需求的层2功能。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-609",
+        "question": "5G NR的子载波间隔是灵活可变的\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-610",
+        "question": "Polar码作为数据信道的编码方案。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-611",
+        "question": "LDPC码作为数据信道的编码方案。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-612",
+        "question": "PRACH本身就是个序列，不需要调制\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-613",
+        "question": "链状组网的可靠性高于星型组网，适合用户密度较小区域\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-614",
+        "question": "LTE与5G NR的无线帧结构完全相同。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-615",
+        "question": "LTE与5G NR中PCI的个数相同。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-616",
+        "question": "5G不再单纯地强调峰值速率，而是综合考虑多个技术指标。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-617",
+        "question": "5G 的特性之一就是拥有很高的灵活性，它能够使用多个频谱，为不同需求的设备提供服务\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "5G基础-618",
+        "question": "DU和AAU之间是标准接口，可以支持异厂家设备\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    }
+]

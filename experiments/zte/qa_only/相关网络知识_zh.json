@@ -1,0 +1,1479 @@
+[
+    {
+        "id": "相关网络知识-1",
+        "question": "( )是现阶段物联网普遍应用形式，是实现物联网的第一步。\nA: C2M\nB: M2C\nC: P2P\nD: M2M",
+        "choices": [
+            "C2M",
+            "M2C",
+            "P2P",
+            "M2M"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-2",
+        "question": "未来的车联网不仅包括车与网络之间的远程通信，还包括车车、车路、车人的频繁交互的短程通信，这些短程通信统称为？( )\nA: V2X\nB: V2A\nC: V2N\nD: V2E",
+        "choices": [
+            "V2X",
+            "V2A",
+            "V2N",
+            "V2E"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-3",
+        "question": "未来的车联网不仅包括车与网络之间的远程通信，还包括车车、车路、车人的频繁交互的短程通信，这些短程通信统称为V2X。( )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-4",
+        "question": "未来业务对网络的要求中的一快是快速灵活的业务部署。( )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-5",
+        "question": "移动互联网和物联网是未来移动通信5G发展的两大驱动力。( )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-6",
+        "question": "移动互联网和物联网为5G发展提供广阔发展空间。( )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-7",
+        "question": "4K视频业务对网络下行的带宽要求应不低于多少？\nA: 10Mbps\nB: 50Mbps\nC: 100Mbps\nD: 160Mbps",
+        "choices": [
+            "10Mbps",
+            "50Mbps",
+            "100Mbps",
+            "160Mbps"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-8",
+        "question": "远程手术和诊断的时延要求为_____\nA: 1ms\nB: 5ms\nC: 10ms\nD: 100ms",
+        "choices": [
+            "1ms",
+            "5ms",
+            "10ms",
+            "100ms"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-9",
+        "question": "以下哪种业务属于uRLLC场景应用？\nA: 物流跟踪\nB: 车载多媒体\nC: 3D全息\nD: 远程驾驶",
+        "choices": [
+            "物流跟踪",
+            "车载多媒体",
+            "3D全息",
+            "远程驾驶"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-10",
+        "question": "以下哪种业务属于eMBB场景应用？\nA: 车联网\nB: 抄表业务\nC: 远程医疗\nD: 高清视频",
+        "choices": [
+            "车联网",
+            "抄表业务",
+            "远程医疗",
+            "高清视频"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-11",
+        "question": "如果对于抄表物联网做切片设计，如下哪个功能可以考虑做剪裁？\nA: 移动性管理功能\nB: 设备管理功能\nC: 话单功能\nD: 会话管理功能",
+        "choices": [
+            "移动性管理功能",
+            "设备管理功能",
+            "话单功能",
+            "会话管理功能"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-12",
+        "question": "对MEC描述错误的是？\nA: 支持CUPS架构\nB: 将基站与互联网业务深度融合的一种技术\nC: 全称为Mobile Edge Computing\nD: 已可以大规模部署",
+        "choices": [
+            "支持CUPS架构",
+            "将基站与互联网业务深度融合的一种技术",
+            "全称为Mobile Edge Computing",
+            "已可以大规模部署"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-13",
+        "question": "在云计算平台中，（ ）平台即服务\nA: IaaS\nB: PaaS\nC: SaaS\nD: QaaS",
+        "choices": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "QaaS"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-14",
+        "question": "设备到设备通信也称作D2D通信，下列哪些场景属于D2D通信的典型用例？\nA: 数据分享\nB: 中继D2D通信（覆盖延伸）\nC: 单跳或多跳局域通信\nD: D2D发现",
+        "choices": [
+            "数据分享",
+            "中继D2D通信（覆盖延伸）",
+            "单跳或多跳局域通信",
+            "D2D发现"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-15",
+        "question": "车联网5G业务场景可以满足那些需求？\nA: 自动驾驶\nB: 运营优化\nC: 车内信息娱乐\nD: 远程操控",
+        "choices": [
+            "自动驾驶",
+            "运营优化",
+            "车内信息娱乐",
+            "远程操控"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-16",
+        "question": "D2D通信将作为未来的5G系统的基本配置，可获得的增益主要包括：\nA: 容量/速率增益\nB: 时延增益\nC: 可用性和可靠性增益\nD: 赋能新业务",
+        "choices": [
+            "容量/速率增益",
+            "时延增益",
+            "可用性和可靠性增益",
+            "赋能新业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-17",
+        "question": "5G将为运营商带来基于切片的商业模式，主要包括下面几种模式\nA: 基于时间的切片\nB: 基于地点的切片\nC: 基本业务的切片\nD: 基于用户的切片",
+        "choices": [
+            "基于时间的切片",
+            "基于地点的切片",
+            "基本业务的切片",
+            "基于用户的切片"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-18",
+        "question": "五个面向打造TDD/FDD/CIOT融合目标网是指什么？ \nA: 面向规划\nB: 面向建设\nC: 面向演进\nD: 面向用户\nE: 面向运维\nF: 面向互操",
+        "choices": [
+            "面向规划",
+            "面向建设",
+            "面向演进",
+            "面向用户",
+            "面向运维",
+            "面向互操"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,E,F",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-19",
+        "question": "云计算的三层组成包括\nA: IaaS\nB: PaaS\nC: SaaS\nD: OS",
+        "choices": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "OS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-20",
+        "question": "5G目标网络架构有哪些特点？\nA: 全融合云化网络\nB: 服务化架构(SBA\nC: 分布式架构\nD: 端到端网络切片",
+        "choices": [
+            "全融合云化网络",
+            "服务化架构(SBA",
+            "分布式架构",
+            "端到端网络切片"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-21",
+        "question": "以下关于SDN的关键价值描述正确的是有哪些\nA: 简化运维\nB: 自动化调度\nC: 支撑QOS等带宽和流量经营\nD: 节约IP地址",
+        "choices": [
+            "简化运维",
+            "自动化调度",
+            "支撑QOS等带宽和流量经营",
+            "节约IP地址"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-22",
+        "question": "关于NFV 说法正确的是\nA: 硬件通用，资源可共享\nB: 网元软件化，业务更灵活\nC: 引入资源管理，高效灵活调度\nD: 网络更开放",
+        "choices": [
+            "硬件通用，资源可共享",
+            "网元软件化，业务更灵活",
+            "引入资源管理，高效灵活调度",
+            "网络更开放"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-23",
+        "question": "道路安全与高效交通和工业制造使用mMTC\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-24",
+        "question": "NFV 最重要的优势是降低资产和运营开销的同时，缩短功能发布时间。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-25",
+        "question": "Docker主要针对Paas平台，是以应用为中心, OpenStack主要针对Iaas平台，以资源为中心，可以为上层的PaaS平台提供存储、网络、计算等资源\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-26",
+        "question": "IMT-2020定义的5G愿景中， 网络端到端时延应该达到0.1ms以内（）\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-27",
+        "question": "docker容器可以为上层Iaas平台提供存储，网络和计算功能\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-28",
+        "question": "基带处理和射频处理也可以采用虚拟化技术\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-29",
+        "question": "毫米波在5G将会用于WTTx、广覆盖、热点话务吸收、接入回传一体化等方面\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-30",
+        "question": "云化的5G无线网络中，PDCP协议层属于RAN-CU。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-31",
+        "question": "Docker是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-32",
+        "question": "OpenStack是IaaS（基础设施即服务）组件，让任何人都可以自行建立和提供云端运算服务。\n",
+        "choices": [],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-33",
+        "question": "下面关于聚类分析说法错误的是（）\nA: 一定存在一个最优的分类\nB: 聚类分析是无监督学习\nC: 聚类分析可以用于判断异常值\nD: 聚类分析即:物以类聚,人以群分",
+        "choices": [
+            "一定存在一个最优的分类",
+            "聚类分析是无监督学习",
+            "聚类分析可以用于判断异常值",
+            "聚类分析即:物以类聚,人以群分"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-34",
+        "question": "对于IPSec，以下描述不正确的是？\nA: 推荐DEVIP和逻辑IP不同\nB: IPSec会加网路传输流量和时延\nC: IPSec必须部署\nD: IPSec是否部署根据运营商要求",
+        "choices": [
+            "推荐DEVIP和逻辑IP不同",
+            "IPSec会加网路传输流量和时延",
+            "IPSec必须部署",
+            "IPSec是否部署根据运营商要求"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-35",
+        "question": "ISIS协议工作在TCP/IP协议栈的哪一层（）\nA: 网络层\nB: 数据链路层\nC: 传输层\nD: 应用层",
+        "choices": [
+            "网络层",
+            "数据链路层",
+            "传输层",
+            "应用层"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-36",
+        "question": "5G承载网中，能够同时实现时隙复用、端口绑定、管道切片的技术是（）\nA: SR-TP\nB: SDN\nC: FlexE\nD: 大容量设备",
+        "choices": [
+            "SR-TP",
+            "SDN",
+            "FlexE",
+            "大容量设备"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-37",
+        "question": "对于NSA的模式，信令面走的是5G网络通道（）\nA: 是\nB: 否",
+        "choices": [
+            "是",
+            "否"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-38",
+        "question": "以下属于无监督算法的是（）\nA: 分类\nB: 聚类\nC: 降维\nD: 回归",
+        "choices": [
+            "分类",
+            "聚类",
+            "降维",
+            "回归"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-39",
+        "question": "深度学习最常用的算法包含（）\nA: CNN\nB: RNN\nC: ANN\nD: MPP",
+        "choices": [
+            "CNN",
+            "RNN",
+            "ANN",
+            "MPP"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-40",
+        "question": "移动边缘计算技术适用的场景是:（）\nA: 广覆盖\nB: 高带宽\nC: 低功耗\nD: 低时延",
+        "choices": [
+            "广覆盖",
+            "高带宽",
+            "低功耗",
+            "低时延"
+        ],
+        "qtype": 1,
+        "answer": "B,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-41",
+        "question": "关于数据资产说法正确的是（）\nA: 有数据质量保证的数据才能称为数据资产\nB: 没有质量保证的数据整合没有意义，更不能应用和共享\nC: 数据资产的整合会创造更大价值\nD: 数据资产的价值随时间增长",
+        "choices": [
+            "有数据质量保证的数据才能称为数据资产",
+            "没有质量保证的数据整合没有意义，更不能应用和共享",
+            "数据资产的整合会创造更大价值",
+            "数据资产的价值随时间增长"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-42",
+        "question": "5G承载网络协议简化的目的包括（）\nA: 设备配置简化\nB: 运维人员要求降低，提升运维效率\nC: 业务自动下发，缩短TTM\nD: 降低成本",
+        "choices": [
+            "设备配置简化",
+            "运维人员要求降低，提升运维效率",
+            "业务自动下发，缩短TTM",
+            "降低成本"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-43",
+        "question": "docker已成为业界容器化的主流技术，大数据组件容器化尚不成熟，目前主流的容器化技术主要用于计算资源管理。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-44",
+        "question": "一般的文件IO访问路径：业务应用->系统调用->文件系统->设备驱动->存储设备\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-45",
+        "question": "深度学习是端到端学习，系统自动提取不同层次的特征。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-46",
+        "question": "5G切片将有可能由运营商和行业租户共同维护。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-47",
+        "question": "NB-IOT技术可以应用于无人驾驶、视频监控、远程医疗和VR领域\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-48",
+        "question": "NB-IoT与GSM独立部署，需要通过保护带确保干扰可控\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-49",
+        "question": "NB-IOT系统连接态DRX下，NB-IoT支持长周期和短周期\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-50",
+        "question": "NB-IoT系统下行支持空分复用(   )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-51",
+        "question": "NB-IoT上行信号有SRS和DMRS(   )\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-52",
+        "question": "在美国首商用的use case是FWA场景，主要用于家庭DSL上网的升级改造：\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-53",
+        "question": "韩国运营商关注的use case是AR/VR等B2C业务以及车联网\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-54",
+        "question": "Cloud VR主要使用到5G的高带宽和低延迟的能力\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-55",
+        "question": "Cloud VR主要有以下使用场景\nA: 游戏\nB: 直播演唱会\nC: 远程教育\nD: 直播体育赛事",
+        "choices": [
+            "游戏",
+            "直播演唱会",
+            "远程教育",
+            "直播体育赛事"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-56",
+        "question": "5G部署初期会面临的挑战有\nA: 覆盖不足\nB: 终端种类少\nC: 业务难于寻找",
+        "choices": [
+            "覆盖不足",
+            "终端种类少",
+            "业务难于寻找"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-57",
+        "question": "运营商在联网无人机的商业模式上，会考虑提供哪些服务\nA: 联网\nB: 云服务\nC: 应用市场\nD: 无人机飞行实施",
+        "choices": [
+            "联网",
+            "云服务",
+            "应用市场",
+            "无人机飞行实施"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-58",
+        "question": "通过nTnR的改造保证数据业务的一致性体验，通过4G低频来确保VoLTE体验保证5G语音的一致性体验\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-59",
+        "question": "采用option3的好处是分组数据包通过NR转发给LTE，从而避免了对LTE的持续投资\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-60",
+        "question": "以下哪些频段可以应用于5G建网\nA: C band\nB: 700M\nC: 600M\nD: 2.6G",
+        "choices": [
+            "C band",
+            "700M",
+            "600M",
+            "2.6G"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-61",
+        "question": "哪些技术属于核心网的极简网络方案\nA: CUPS\nB: 云化\nC: 大容量\nD: 专有硬件",
+        "choices": [
+            "CUPS",
+            "云化",
+            "大容量",
+            "专有硬件"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-62",
+        "question": "核心网的演进分了3个阶段，在5G来临前，运营商要尽快完成核心网架构的ready，包括\nA: CORE DC改造\nB: Regional DC的改造\nC: CUPS\nD: NGC",
+        "choices": [
+            "CORE DC改造",
+            "Regional DC的改造",
+            "CUPS",
+            "NGC"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-63",
+        "question": "下面描述错误的是？\nA: eMBB类切片在2018年6月份3GPP R15中定义\nB: uRLLC类切片将在2019年12月份3GPP R16中定义\nC: mMTC类切片预计将在2020年 3GPP R17或以后版本定义\nD: eMBB类切片在2019年12月份3GPP R16中定义 正确",
+        "choices": [
+            "eMBB类切片在2018年6月份3GPP R15中定义",
+            "uRLLC类切片将在2019年12月份3GPP R16中定义",
+            "mMTC类切片预计将在2020年 3GPP R17或以后版本定义",
+            "eMBB类切片在2019年12月份3GPP R16中定义 正确"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-64",
+        "question": "下列哪个不是核心网实现切片的关键技术？\nA: 可保障的SLA\nB: 网络按需灵活自动分配\nC: 网络资源隔离关键技术\nD: 网络功能动态加载\nE: 网络自愈",
+        "choices": [
+            "可保障的SLA",
+            "网络按需灵活自动分配",
+            "网络资源隔离关键技术",
+            "网络功能动态加载",
+            "网络自愈"
+        ],
+        "qtype": 0,
+        "answer": "E",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-65",
+        "question": "下面几个对于5G切片部署的理解，哪些是错误的？\nA: 部署5G就一定要部署切片\nB: 切片可以在5G NSA架构下实现\nC: 切片就是QoS,通过QoS可以完全实现切片的功能。\nD: 切片不仅仅是QoS，QoS仅仅是切片实现方式中的一种",
+        "choices": [
+            "部署5G就一定要部署切片",
+            "切片可以在5G NSA架构下实现",
+            "切片就是QoS,通过QoS可以完全实现切片的功能。",
+            "切片不仅仅是QoS，QoS仅仅是切片实现方式中的一种"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-66",
+        "question": "5GC网络中，N4接口是一个控制面接口，在这个接口上，没有任何用户面数据传输\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-67",
+        "question": "5GC网络中的Registration流程和4G网络中的attach流程是一样的\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-68",
+        "question": "下面那些是5G网络中定义的registration流程\nA: 初始注册\nB: 移动性注册更新\nC: 周期性注册更新\nD: 紧急注册",
+        "choices": [
+            "初始注册",
+            "移动性注册更新",
+            "周期性注册更新",
+            "紧急注册"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-70",
+        "question": "OpenStack包含两个主要模块：()和()\nA: nava和swift\nB: nova和swift\nC: Manila和Neutron\nD: Octavia和Ironic",
+        "choices": [
+            "nava和swift",
+            "nova和swift",
+            "Manila和Neutron",
+            "Octavia和Ironic"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-71",
+        "question": "\"镜像存储服务Glance主要功能有()\"\nA: A.镜像服务\nB: B.对虚拟机执行快照创建新的镜像\nC: C.通过REST API提供服务\nD: D.支持多种后端存储系统",
+        "choices": [
+            "A.镜像服务",
+            "B.对虚拟机执行快照创建新的镜像",
+            "C.通过REST API提供服务",
+            "D.支持多种后端存储系统"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-72",
+        "question": "VMWare vSphere 的两个核心组件是VMware vCenter Server和()\nA: VMWare Client\nB: VMware ESXi\nC: VMWare Shell\nD: VMWare Surface",
+        "choices": [
+            "VMWare Client",
+            "VMware ESXi",
+            "VMWare Shell",
+            "VMWare Surface"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-73",
+        "question": "关于精简置备说法正确的是\nA: 精简置备在创建磁盘时，占用磁盘的空间大小根据实际使用量计算\nB: 用多少分多少，提前不分配空间\nC: 对磁盘保留数据不置零\nD: 最大不超过划分磁盘的大小",
+        "choices": [
+            "精简置备在创建磁盘时，占用磁盘的空间大小根据实际使用量计算",
+            "用多少分多少，提前不分配空间",
+            "对磁盘保留数据不置零",
+            "最大不超过划分磁盘的大小"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-74",
+        "question": "以下说法正确的是（）。\nA: 如果到达目的地有多条可选道路，Cost值最小的那条道路会被选择\nB: 如果到达目的地有多条可选道路，Cost值最大的那条道路会被选择\nC: 如果到达目的地有多条可选道路，随机选择一条路\nD: 以上都不对",
+        "choices": [
+            "如果到达目的地有多条可选道路，Cost值最小的那条道路会被选择",
+            "如果到达目的地有多条可选道路，Cost值最大的那条道路会被选择",
+            "如果到达目的地有多条可选道路，随机选择一条路",
+            "以上都不对"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-75",
+        "question": "Cinder的调度器Cinder-Scheduler通过两个步骤选择合适的存储节点，这两步中第一步是()，第二步是权重计算(weighting)\nA: 随机选择（random）\nB: 过滤器（filter）\nC: 选举（election）\nD: 投票（vote）",
+        "choices": [
+            "随机选择（random）",
+            "过滤器（filter）",
+            "选举（election）",
+            "投票（vote）"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-76",
+        "question": "OpenStack作为一个操作系统,管理资源是它的首要任务,OpenStack管理资源主要有三个方面：\nA: A.计算\nB: B.存储\nC: C.网络\nD: D.监控",
+        "choices": [
+            "A.计算",
+            "B.存储",
+            "C.网络",
+            "D.监控"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-77",
+        "question": "在IPv4网络中RIP有两个版本V1和V2，下列说法中正确是（）\nA: A.RIPv1为有类别路由协议，不支持VLSM和CIDR\nB: B.RIPv1以广播的形式发送报文，不支持认证\nC: C.RIPv2为无类别路由协议，支持VLSM和CIDR\nD: D.RIPv2支持以广播或组播（224.0.0.9）方式发送报文，支持明文认证和MD5密文认证",
+        "choices": [
+            "A.RIPv1为有类别路由协议，不支持VLSM和CIDR",
+            "B.RIPv1以广播的形式发送报文，不支持认证",
+            "C.RIPv2为无类别路由协议，支持VLSM和CIDR",
+            "D.RIPv2支持以广播或组播（224.0.0.9）方式发送报文，支持明文认证和MD5密文认证"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-78",
+        "question": "（）将许多类型的网络设备构建为一个Data Center Network，通过借用IT的虚拟化技术虚拟化形成VM，然后将传统的CT业务部署到VM上。\nA: NFV\nB: VIM\nC: NFVO\nD: VNFM",
+        "choices": [
+            "NFV",
+            "VIM",
+            "NFVO",
+            "VNFM"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-79",
+        "question": "NFV的经典部署流程下列说法正确的是（ ）\nA: A.首先规划VNF的网络和业务\nB: B.生成业务部署模板\nC: C.向NFVO传递部署指令\nD: D.NFVO收到指令后指示VNFM创建相应的网络、存储、VNF实例",
+        "choices": [
+            "A.首先规划VNF的网络和业务",
+            "B.生成业务部署模板",
+            "C.向NFVO传递部署指令",
+            "D.NFVO收到指令后指示VNFM创建相应的网络、存储、VNF实例"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-80",
+        "question": "Nova是OpenStack最核心的服务,具有哪些主要功能\nA: A.Nova可以实现对虚拟机实现运行、重启、关机、暂停、迁移等操作\nB: B.对所有的计算节点进行管理，获取计算节点上的虚拟机信息，统计可用资源\nC: C.使用libvirt API与计算节点Hypervisor进行交互，实现异构虚拟化的统一纳管\nD: D.Nova可以为OpenStack提供一种分布式、持续虚拟对象存储",
+        "choices": [
+            "A.Nova可以实现对虚拟机实现运行、重启、关机、暂停、迁移等操作",
+            "B.对所有的计算节点进行管理，获取计算节点上的虚拟机信息，统计可用资源",
+            "C.使用libvirt API与计算节点Hypervisor进行交互，实现异构虚拟化的统一纳管",
+            "D.Nova可以为OpenStack提供一种分布式、持续虚拟对象存储"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-81",
+        "question": "当一台物理服务具备4socket8core(即4路8核)的cpu资源时，将CPU可以虚拟化成多个vCPU提供到虚拟机使用，在未开启超线程的情况下最多不能分配超过()个vCPU\nA: 12\nB: 16\nC: 24\nD: 32",
+        "choices": [
+            "12",
+            "16",
+            "24",
+            "32"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-82",
+        "question": "I/O虚拟化主要包括了哪几项\nA: A.输入输出设备虚拟化\nB: B.网卡虚拟化\nC: C.磁盘虚拟化\nD: D.内存虚拟化",
+        "choices": [
+            "A.输入输出设备虚拟化",
+            "B.网卡虚拟化",
+            "C.磁盘虚拟化",
+            "D.内存虚拟化"
+        ],
+        "qtype": 1,
+        "answer": "B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-83",
+        "question": "Swift为了保证访问的安全性，首先在()认证访问者的身份和权限，获取获取访问令牌，然后才可以访问数据\nA: Authentication Server\nB: Account Server\nC: Object Container\nD: Manager Server",
+        "choices": [
+            "Authentication Server",
+            "Account Server",
+            "Object Container",
+            "Manager Server"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-84",
+        "question": "关于标准列表和扩展列表应用位置说法正确的是（）\nA: A.标准列表应用在距离目的近的位置\nB: B.标准列表应用在距离源头近的位置\nC: C.扩展列表应用在距离目的近的位置\nD: D.扩展列表应用在距离源头近的位置",
+        "choices": [
+            "A.标准列表应用在距离目的近的位置",
+            "B.标准列表应用在距离源头近的位置",
+            "C.扩展列表应用在距离目的近的位置",
+            "D.扩展列表应用在距离源头近的位置"
+        ],
+        "qtype": 1,
+        "answer": "A,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-85",
+        "question": "SRIOV与OVS谁的转发性能高\nA: OVS\nB: SRIOV\nC: 一样\nD: 分场景，不一定",
+        "choices": [
+            "OVS",
+            "SRIOV",
+            "一样",
+            "分场景，不一定"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-86",
+        "question": "\"虚拟化使用（ ）的方法重新定义划分资源，可以实现资源的动态分配、灵活调度、跨域共享，提高资源利用率，使资源能够真正成为社会基础设施，服务于各行各业中灵活多变的应用需求。\nA: 硬件\nB: 软件\nC: 解耦\nD: 耦合\"",
+        "choices": [
+            "硬件",
+            "软件",
+            "解耦",
+            "耦合\""
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-87",
+        "question": "CU-DU分离不包含以下哪种场景\nA: DRAN+DU\nB: CU+DU\nC: CU+DU集\nD: DU+DU",
+        "choices": [
+            "DRAN+DU",
+            "CU+DU",
+            "CU+DU集",
+            "DU+DU"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-88",
+        "question": "CU/DU合一情况下，数据传输不包括\nA: 中传\nB: 前传\nC: 回传\nD: 远传",
+        "choices": [
+            "中传",
+            "前传",
+            "回传",
+            "远传"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-89",
+        "question": "5G业务体验车演示方案中不提供哪个业务演示？\nA: CXT打点\nB: 智能医疗\nC: 16路高清视频\nD: 两地视频互通",
+        "choices": [
+            "CXT打点",
+            "智能医疗",
+            "16路高清视频",
+            "两地视频互通"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-90",
+        "question": "在5G技术中，用于提升接入用户数的技术是（    ）\nA: Massive MIMO\nB: SOMA\nC: Massive CA\nD: 1msTTI",
+        "choices": [
+            "Massive MIMO",
+            "SOMA",
+            "Massive CA",
+            "1msTTI"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-91",
+        "question": "NOMA的应用场景不包括（    ）\nA: mMTC\nB: RLLC\nC: eMMB\nD: BLER",
+        "choices": [
+            "mMTC",
+            "RLLC",
+            "eMMB",
+            "BLER"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-92",
+        "question": "关于5G室分部署测量说法错误的（    ）\nA: 3.5GHz波长较高频长，路径损耗较高频小，覆盖范围较高较广，建议作为5G基础覆盖\nB: 现有低频和高频可用频谱资源丰富，运营商可以根据需要灵活部署室分系统\nC: 建议优先采用室内外异频组网，避免同频组网带来的室分干扰\nD: 26GHz/40GHz为毫米波，可用频带宽，可提供几十GHz带宽，提供高速用户体验，更适合微站补热场景",
+        "choices": [
+            "3.5GHz波长较高频长，路径损耗较高频小，覆盖范围较高较广，建议作为5G基础覆盖",
+            "现有低频和高频可用频谱资源丰富，运营商可以根据需要灵活部署室分系统",
+            "建议优先采用室内外异频组网，避免同频组网带来的室分干扰",
+            "26GHz/40GHz为毫米波，可用频带宽，可提供几十GHz带宽，提供高速用户体验，更适合微站补热场景"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-93",
+        "question": "5G的峰值吞吐率为（    ）。\nA: 50Mbps\nB: 100Mbps\nC: 1Gbps\nD: 10Gbps",
+        "choices": [
+            "50Mbps",
+            "100Mbps",
+            "1Gbps",
+            "10Gbps"
+        ],
+        "qtype": 0,
+        "answer": "D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-94",
+        "question": "VR属于以下哪种典型应用场景（    ）。\nA: URLLC\nB: eMBB\nC: mMTC\nD: eMTC",
+        "choices": [
+            "URLLC",
+            "eMBB",
+            "mMTC",
+            "eMTC"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-95",
+        "question": "关于SDN和NFV说法不正确的是（    ）。\nA: NFV侧重于网络级的集中控制、虚拟化。\nB: SDN控制网络的动态连接，NFV实现灵活网络功能。\nC: VFV侧重于网络功能单元的虚拟化、软硬分离、设备通用化\nD: SDN和NFV结合，通过业务编排进行统一调度构成完美解决方案",
+        "choices": [
+            "NFV侧重于网络级的集中控制、虚拟化。",
+            "SDN控制网络的动态连接，NFV实现灵活网络功能。",
+            "VFV侧重于网络功能单元的虚拟化、软硬分离、设备通用化",
+            "SDN和NFV结合，通过业务编排进行统一调度构成完美解决方案"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-96",
+        "question": "在5G站点建设针对性规划中，超高热区域建议采用（    ）设备形态。\nA: 64T64R\nB: 16T16R\nC: 8T8R\nD: 4T4R",
+        "choices": [
+            "64T64R",
+            "16T16R",
+            "8T8R",
+            "4T4R"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-97",
+        "question": "5G有哪些关键应用场景\nA: mMTC\nB: eMBB\nC: URLLC\nD: NB-IOT",
+        "choices": [
+            "mMTC",
+            "eMBB",
+            "URLLC",
+            "NB-IOT"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-98",
+        "question": "4G向5G演进策略和原则（    ）\nA: 平滑引入5G\nB: 现有网络价值最大化\nC: 深度加强布局5G商用\nD: 热点优先，eMBB优先",
+        "choices": [
+            "平滑引入5G",
+            "现有网络价值最大化",
+            "深度加强布局5G商用",
+            "热点优先，eMBB优先"
+        ],
+        "qtype": 1,
+        "answer": "A,B,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-99",
+        "question": "5G无线接入的关键技术主要包含（    ）\nA: 大规模天线阵列\nB: 超密集组网UDN\nC: NOMA\nD: 可扩展OFDM\nE: mmWave毫米波技术",
+        "choices": [
+            "大规模天线阵列",
+            "超密集组网UDN",
+            "NOMA",
+            "可扩展OFDM",
+            "mmWave毫米波技术"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D,E",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-100",
+        "question": "多天线技术包括（    ）\nA: 发送分集\nB: 空间复用\nC: 波束赋形\nD: 多用户MIMO",
+        "choices": [
+            "发送分集",
+            "空间复用",
+            "波束赋形",
+            "多用户MIMO"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-101",
+        "question": "5G网络关键性能指标有（    ）\nA: 空口时延小于1ms\nB: 峰值吞吐率达到10Gbps\nC: 每平方公里连接数达到1000K\nD: 支持500KM/h高速移动",
+        "choices": [
+            "空口时延小于1ms",
+            "峰值吞吐率达到10Gbps",
+            "每平方公里连接数达到1000K",
+            "支持500KM/h高速移动"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-102",
+        "question": "以下场景属于URLLC的典型应用的是（    ）\nA: 自动驾驶\nB: 远程手术\nC: 超高清视频\nD: 智能测量",
+        "choices": [
+            "自动驾驶",
+            "远程手术",
+            "超高清视频",
+            "智能测量"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-103",
+        "question": "5G需求驱动力（）\n\n\nA: 大视频\nB: 物联网\nC: VR/AR\nD: 自动驾驶",
+        "choices": [
+            "大视频",
+            "物联网",
+            "VR/AR",
+            "自动驾驶"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-104",
+        "question": "5G无线接入的关键技术主要包含（）\nA: 大规模天线阵列\nB: 超密集组网（UDN）\nC: 全频谱接入\nD: 新型多址",
+        "choices": [
+            "大规模天线阵列",
+            "超密集组网（UDN）",
+            "全频谱接入",
+            "新型多址"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-105",
+        "question": "5G需求驱动力（）\nA: 大视频\nB: 物联网\nC: VR/AR\nD: 自动驾驶",
+        "choices": [
+            "大视频",
+            "物联网",
+            "VR/AR",
+            "自动驾驶"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-106",
+        "question": "下面哪些协议属于OSI参考模型第七层？（）\nA: FTP\nB: SPX\nC: Telnet\nD: PPP",
+        "choices": [
+            "FTP",
+            "SPX",
+            "Telnet",
+            "PPP"
+        ],
+        "qtype": 1,
+        "answer": "A,C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-107",
+        "question": "一般天线安装位置需要有相应的隔离度保证相互之间不受干扰，GPS天线也一样\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-108",
+        "question": "SA相对于NSA的劣势在于前期需要5GNR成片连续覆盖，初期投资成本高。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-109",
+        "question": "远程手术属于eMBB典型应用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-110",
+        "question": "智能家居属于mMTC典型应用。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-111",
+        "question": "5G 的特性之一就是拥有很高的灵活性，它能够使用多个频谱，为不同需求的设备提供服务\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-112",
+        "question": "DU和AAU之间是标准接口，可以支持异厂家设备\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-113",
+        "question": "多模光纤的传输距离长于单模光纤\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-114",
+        "question": "由于高频段的波长小，高频的衍射和绕射能力都强于低频。\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-115",
+        "question": "以太网同步技术是很成熟时同步方式，5G基站TDD时同步可以采用该方式．\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-116",
+        "question": "gNB基站支持GPS和和1588V2两种时钟源；优选GPS，\nA: 正确\nB: 错误",
+        "choices": [
+            "正确",
+            "错误"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-117",
+        "question": "移动互联网和( )是5G发展的主要驱动力。\nA: 智慧城市\nB: 车联网\nC: 物联网\nD: 智能网",
+        "choices": [
+            "智慧城市",
+            "车联网",
+            "物联网",
+            "智能网"
+        ],
+        "qtype": 0,
+        "answer": "C",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-118",
+        "question": "以下属于5G网络发展方向的是( )。\nA: 异构网络融合\nB: 超密小区\nC: 弹性资源管理和网络智能\nD: 云计算",
+        "choices": [
+            "异构网络融合",
+            "超密小区",
+            "弹性资源管理和网络智能",
+            "云计算"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-119",
+        "question": "5G典型业务有\nA: 视频监控\nB: 虚拟现实\nC: 移动在线游戏\nD: 车联网",
+        "choices": [
+            "视频监控",
+            "虚拟现实",
+            "移动在线游戏",
+            "车联网"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-120",
+        "question": "5G支持的业务有\nA: 增强现实AR\nB: 自动驾驶\nC: 4K/8K/3D高清视频\nD: 虚拟现实VR",
+        "choices": [
+            "增强现实AR",
+            "自动驾驶",
+            "4K/8K/3D高清视频",
+            "虚拟现实VR"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C,D",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-121",
+        "question": "3GPP 关于5G RAN切分标准已经确定的是\nA: BBU/RRU之间采用option 3\nB: CU/DU高层分割采用option 2\nC: RRU/AAU和DU\t分割采用option 7\nD: D-RAN和CU分割采用option 7",
+        "choices": [
+            "BBU/RRU之间采用option 3",
+            "CU/DU高层分割采用option 2",
+            "RRU/AAU和DU\t分割采用option 7",
+            "D-RAN和CU分割采用option 7"
+        ],
+        "qtype": 0,
+        "answer": "B",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-122",
+        "question": "云化的5G无线网络中，以下哪个协议层不属于RAN-DU?\nA: RRC\nB: 物理层\nC: RLC\nD: MAC",
+        "choices": [
+            "RRC",
+            "物理层",
+            "RLC",
+            "MAC"
+        ],
+        "qtype": 0,
+        "answer": "A",
+        "solution": ""
+    },
+    {
+        "id": "相关网络知识-123",
+        "question": "关于URLLC场景描述正确的是\nA: 适用无人驾驶\nB: 可以在智慧工厂领域得到应用\nC: 适用于大规模物联网业务\nD: 适用于3D/超高清视频等大流量业务",
+        "choices": [
+            "适用无人驾驶",
+            "可以在智慧工厂领域得到应用",
+            "适用于大规模物联网业务",
+            "适用于3D/超高清视频等大流量业务"
+        ],
+        "qtype": 1,
+        "answer": "A,B",
+        "solution": ""
+    }
+]

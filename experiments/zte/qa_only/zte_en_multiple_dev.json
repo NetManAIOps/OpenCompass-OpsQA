@@ -1,0 +1,41 @@
+[
+    {
+        "id": "5G基础-419",
+        "question": "\"Which of the following are functions of the RRC layer in NR?\nA: Broadcast message delivery\nB: Idle mode mobility management\nC: Connected mode mobility management\nD: Wireless resource management\"",
+        "choices": [
+            "广播消息下发",
+            "空闲态移动性管理",
+            "连接态移动性管理",
+            "无线资源管理"
+        ],
+        "qtype": 1,
+        "answer": "A,C,D",
+        "solution": "A: Broadcast message delivery: This is one of the functions of the RRC layer in NR. The RRC layer is responsible for broadcasting system information, including the configuration information of the network, for use by UE devices. Therefore, option A is correct.\n\nB: Idle state mobility management: This is not a function of the RRC layer in NR. In the idle state, mobility management is mainly handled by the NAS layer, not the RRC layer. Therefore, option B is incorrect.\n\nC: Connected state mobility management: This is one of the functions of the RRC layer in NR. In the connected state, the RRC layer is responsible for managing the mobility of UE devices, including deciding when and where to switch. Therefore, option C is correct.\n\nD: Wireless resource management: This is also one of the functions of the RRC layer in NR. The RRC layer is responsible for the management of wireless resources, including the allocation and scheduling of spectrum resources and time resources. Therefore, option D is correct."
+    },
+    {
+        "id": "5G基础-422",
+        "question": "\"What channels and signals are included in SSB?\nA: PSS\nB: SSS\nC: PBCH\nD: CSI-RS\"",
+        "choices": [
+            "PSS",
+            "SSS",
+            "PBCH",
+            "CSI-RS"
+        ],
+        "qtype": 1,
+        "answer": "A,B,C",
+        "solution": "A: PSS (Primary Synchronization Signal): This is part of the SSB (Synchronization Signal Block). The PSS is used to help the UE (User Equipment) synchronize with the base station in the time domain. Therefore, option A is correct.\n\nB: SSS (Secondary Synchronization Signal): This is also part of the SSB. The SSS is used to help the UE synchronize with the base station in the frequency domain and also provides some basic system information. Therefore, option B is correct.\n\nC: PBCH (Physical Broadcast Channel): This is also part of the SSB. The PBCH carries some important system information, such as the system frame number. Therefore, option C is correct.\n\nD: CSI-RS (Channel State Information Reference Signal): This is not part of the SSB. The CSI-RS is a reference signal used to measure channel state information, and it is not included in the SSB. Therefore, option D is incorrect."
+    },
+    {
+        "id": "5G基础-431",
+        "question": "\"Which of the following 5G key technologies can improve network spectrum efficiency?\nA: Flexible subcarrier bandwidth\nB: New channel coding\nC: Massive MIMO\nD: 256QAM high-order modulation\"",
+        "choices": [
+            "灵活子载波带宽",
+            "新信道编码",
+            "Massive MIMO",
+            "256QAM高阶调整"
+        ],
+        "qtype": 1,
+        "answer": "B,C,D",
+        "solution": "A: Flexible subcarrier bandwidth: This technology mainly improves the flexibility and adaptability of the network, allowing the network to adjust the bandwidth of the subcarrier flexibly according to different business needs and environmental conditions. However, it cannot directly improve the spectral efficiency of the network. Therefore, option A is incorrect.\n\nB: New channel coding: New channel coding technologies, such as LDPC and Polar codes, can improve the reliability and efficiency of data transmission, thereby improving the spectral efficiency of the network. Therefore, option B is correct.\n\nC: Massive MIMO: Massive MIMO technology can significantly improve the spectral efficiency and energy efficiency of the network by using a large number of antenna elements. Therefore, option C is correct.\n\nD: 256QAM high-order adjustment: 256QAM is a high-order modulation technology, which can transmit more data under the same spectrum resources, thereby improving the spectral efficiency of the network. Therefore, option D is correct."
+    }
+]
