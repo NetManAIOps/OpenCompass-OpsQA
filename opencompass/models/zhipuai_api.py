@@ -107,7 +107,8 @@ class ZhiPuAI(BaseAPIModel):
                     model=self.model,
                     prompt=messages
                 )
-                print(response)
+                if response['code'] != 200:
+                    return ''
                 return response['data']['choices'][0]['content'].strip()
             except Exception as e:
                 self.logger.error(e)

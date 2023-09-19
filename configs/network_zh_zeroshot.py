@@ -15,6 +15,7 @@ with read_base():
     from .local_models.internlm_chat_7b import models as internlm_chat_7b
     from .local_models.llama2_7b_chat import models as llama2_chat_7b
     from .local_models.llama2_13b_chat import models as llama2_chat_13b
+    from .local_models.llama2_70b_chat import models as llama2_chat_70b
     from .local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
     from .local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
     from .local_models.xverse_13b import models as xverse_13b
@@ -28,37 +29,42 @@ datasets = [
 ]
 
 models = [ 
-    *chatglm2_6b,
-    *qwen_chat_7b,
-    *internlm_chat_7b,
-    *llama2_chat_7b,
-    *baichuan_13b_chat,
-    *llama2_chat_13b,
-    *chinese_llama_2_13b,
-    *chinese_alpaca_2_13b,
+    #*chatglm2_6b,
+    #*qwen_chat_7b,
+    #*internlm_chat_7b,
+    #*llama2_chat_7b,
+    #*baichuan_13b_chat,
+    #*llama2_chat_13b,
+    *llama2_chat_70b,
+    #*chinese_llama_2_13b,
+    #*chinese_alpaca_2_13b,
     #*xverse_13b,
 ]
 
 for model in models:
+    model['max_out_len'] = 16
     model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    if 'GPT' not in model['abbr'] and 'zhipu' not in model['abbr'] and '70b' not in model['abbr']:
+        model['run_cfg'] = dict(num_gpus=2, num_procs=1) if '7b' in model['abbr'] or '6b' in model['abbr'] else dict(num_gpus=4, num_procs=1)
+        model['batch_size'] = 16
 
 for dataset in datasets:
     dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    dataset['sample_setting'] = dict(sample_size=1)
+    #dataset['sample_setting'] = dict(sample_size=1)
+    dataset['sample_setting'] = dict(load_list='/gpudata/home/cbh/lyh/OpenCompass-OpsQA/network_list.json')
 
 infer = dict(
     partitioner=dict(
-        # type=SizePartitioner,
-        # max_task_size=100,
-        # gen_task_coef=1,
-        type=NaivePartitioner
+        type=SizePartitioner,
+        max_task_size=1000,
+        gen_task_coef=1,
+        #type=NaivePartitioner
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=16,
-        max_workers_per_gpu=6,
+        max_num_workers=1,
+        max_workers_per_gpu=1,
         task=dict(type=OpenICLInferTask),
     ),
 )
