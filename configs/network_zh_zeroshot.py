@@ -12,6 +12,7 @@ with read_base():
     from .local_models.chatglm2_6b import models as chatglm2_6b
     from .local_models.qwen_chat_7b import models as qwen_chat_7b
     from .local_models.baichuan_13b_chat import models as baichuan_13b_chat
+    from .local_models.baichuan2_13b_chat import models as baichuan2_13b_chat
     from .local_models.internlm_chat_7b import models as internlm_chat_7b
     from .local_models.llama2_7b_chat import models as llama2_chat_7b
     from .local_models.llama2_13b_chat import models as llama2_chat_13b
@@ -22,8 +23,8 @@ with read_base():
     from .models.gpt_4_peiqi import models as gpt_4
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
-ROOT_DIR = '/mnt/mfs/opsgpt/'
-# ROOT_DIR = '/gpudata/home/cbh/opsgpt/'
+#ROOT_DIR = '/mnt/mfs/opsgpt/'
+ROOT_DIR = '/gpudata/home/cbh/opsgpt/'
 
 datasets = [
     #*zeroshot_naiive, # ok
@@ -37,12 +38,17 @@ models = [
     #*internlm_chat_7b,
     #*llama2_chat_7b,
     #*baichuan_13b_chat,
+    *baichuan2_13b_chat,
     #*llama2_chat_13b,
     #*llama2_chat_70b,
     #*chinese_llama_2_13b,
     #*chinese_alpaca_2_13b,
-    *xverse_13b,
+    #*xverse_13b,
 ]
+
+for dataset in datasets:
+    if 'cot' in dataset['abbr']:
+        dataset['infer_cfg']['inferencer']['max_out_len'] = 1024
 
 for model in models:
     model['max_out_len'] = 16
@@ -67,8 +73,8 @@ infer = dict(
     ),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=1,
-        max_workers_per_gpu=1,
+        max_num_workers=6,
+        max_workers_per_gpu=3,
         task=dict(type=OpenICLInferTask),
     ),
 )

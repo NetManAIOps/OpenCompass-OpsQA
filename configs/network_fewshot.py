@@ -26,11 +26,11 @@ with read_base():
     from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
     from .local_models.zhipu import models as zhipu
 
-ROOT_DIR = '/mnt/mfs/opsgpt/' 
-# ROOT_DIR = '/gpudata/home/cbh/opsgpt/'
+#ROOT_DIR = '/mnt/mfs/opsgpt/' 
+ROOT_DIR = '/gpudata/home/cbh/opsgpt/'
 
 datasets = [
-    # *fewshot_naiive, # ok
+    #*fewshot_naiive, # ok
     *fewshot_sc, 
     *fewshot_sc_cot,
 ]
@@ -40,28 +40,32 @@ models = [
     #*qwen_chat_7b,
     #*internlm_chat_7b,
     #*llama2_chat_7b,
-    #*baichuan2_13b_chat,
+    *baichuan2_13b_chat,
     #*baichuan_13b_chat,
     #*llama2_chat_13b,
     #*llama2_chat_70b,
     #*llama2_70b,
     #*chinese_llama_2_13b,
     #*chinese_alpaca_2_13b,
-    *xverse_13b,
+    #*xverse_13b,
 ]
+
+for dataset in datasets:
+    if 'cot' in dataset['abbr']:
+        dataset['infer_cfg']['inferencer']['max_out_len'] = 1024
 
 for model in models:
     model['max_out_len'] = 16
     model['path'] = model['path'].replace('/mnt/mfs/opsgpt/', ROOT_DIR)
     model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', ROOT_DIR)
     if 'GPT' not in model['abbr'] and 'zhipu' not in model['abbr'] and '70b' not in model['abbr']:
-        model['run_cfg'] = dict(num_gpus=2, num_procs=1) if '7b' in model['abbr'] or '6b' in model['abbr'] else dict(num_gpus=2, num_procs=1)
+        model['run_cfg'] = dict(num_gpus=2, num_procs=1) if '7b' in model['abbr'] or '6b' in model['abbr'] else dict(num_gpus=4, num_procs=1)
         model['batch_size'] = 16
 
 for dataset in datasets:
     dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/', ROOT_DIR)
     sample_path = '/mnt/mfs/opsgpt/evaluation/ops-cert-eval/network_list.json'.replace('/mnt/mfs/opsgpt', ROOT_DIR)
-    # dataset['sample_setting'] = dict(sample_size=32)
+    #dataset['sample_setting'] = dict(sample_size=32)
     dataset['sample_setting'] = dict(load_list=sample_path)
 
 infer = dict(
