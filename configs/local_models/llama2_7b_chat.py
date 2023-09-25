@@ -1,13 +1,6 @@
-from opencompass.models import Llama2Chat, HuggingFaceCausalLM
+from opencompass.models import HuggingFaceCausalLM
 
-# Please follow the instruction in the Meta AI website https://github.com/facebookresearch/llama
-# and download the LLaMA-2-Chat model and tokenizer to the path './models/llama2/llama/'.
-#
-# The LLaMA requirement is also needed to be installed.
-#
-# git clone https://github.com/facebookresearch/llama.git
-# cd llama
-# pip install -e .
+ROOT_DIR = '/mnt/mfs/opsgpt/'
 
 _meta_template = dict(
     round=[
@@ -19,10 +12,9 @@ _meta_template = dict(
 models = [
     dict(
         abbr="llama-2-7b-chat",
-        # type=Llama2Chat,
         type=HuggingFaceCausalLM, 
-        path="/mnt/mfs/opsgpt/models/llama-hf/Llama-2-7b-chat-hf/",
-        tokenizer_path="/mnt/mfs/opsgpt/models/llama-hf/Llama-2-7b-chat-hf/",
+        path=ROOT_DIR+"models/llama-hf/Llama-2-7b-chat-hf/",
+        tokenizer_path=ROOT_DIR+"models/llama-hf/Llama-2-7b-chat-hf/",
         meta_template=_meta_template,
         max_out_len=100,
         max_seq_len=2048,

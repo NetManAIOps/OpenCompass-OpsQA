@@ -1,4 +1,5 @@
-from .cot_inferencer import CoTInferencer  # noqa
+#from .cot_inferencer import CoTInferencer  # noqa
+from .icl_cot_inferencer import CoTInferencer  # noqa
 from .icl_base_inferencer import BaseInferencer  # noqa
 from .icl_clp_inferencer import CLPInferencer  # noqa
 from .icl_gen_inferencer import GenInferencer  # noqa

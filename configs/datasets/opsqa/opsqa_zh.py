@@ -16,7 +16,7 @@ opsqa_infer_cfg = dict(
                 dict(
                     role="HUMAN",
                     prompt=
-                    f"Answer the {{task}} question about {{topic}}.\n{{question}}\nAnswer:\n"
+                    f"回答关于{{topic}}的{{task}}问题。\n{{question}}\n答：\n"
                 ),
                 dict(role="BOT", prompt="{answer}")
             ]
@@ -38,7 +38,7 @@ opsqa_datasets = [
     dict(
         type=OpsQADataset,
         abbr='OpsQA',
-        path='/gpudata/home/cbh/opsgpt/evaluation/ops-cert-eval/opsqa.json',
+        path='/gpudata/home/cbh/opsgpt/evaluation/ops-cert-eval/opsqa_zh.json',
         reader_cfg=opsqa_reader_cfg,
         infer_cfg=opsqa_infer_cfg,
         eval_cfg=opsqa_eval_cfg)
