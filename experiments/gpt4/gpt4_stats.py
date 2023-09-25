@@ -154,14 +154,18 @@ def main():
 
 """
 network_gpt GPT-3.5-turbo network-zh-3shot-sc+cot-multiple.json
-this file:  440
+this file:  wrong 440  all 750    310     0.48409091        0.697333
 network_gpt GPT-3.5-turbo network-zh-3shot-sc+cot-single.json
-this file:  831
+this file:  831    3151              0.614921781             0.898444938118375
 network_gpt GPT-3.5-turbo oreilly-3shot-sc+cot-multiple.json
-this file:  380
+this file:  380      750              0.486842105            0.7467580
 network_gpt GPT-3.5-turbo oreilly-3shot-sc+cot-single.json
-this file:  693
-693
+this file:  693     3151              0.6378066378            0.920342748
+693 
+
+
+zh: 0.859779479
+en: 0.886969622
 """
 
 if __name__ == "__main__":
