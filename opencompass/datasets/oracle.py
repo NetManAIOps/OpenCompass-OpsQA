@@ -67,6 +67,7 @@ class OracleDataset(BaseDataset):
                     'question': data['question'],
                     'answer': data['answer'],
                     'solution': data['solution'],
+                    'id': data['id'],
                 }
                 raw_data.append(item)
             dataset[split] = Dataset.from_list(raw_data)
