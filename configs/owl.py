@@ -5,7 +5,7 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    # from .datasets.owl_mc.cot import owl_datasets as owl_cot
+    from .datasets.owl_mc.cot import owl_datasets as owl_cot
     from .datasets.owl_mc.naive import owl_datasets as owl_naive
     # Models
     from .local_models.chatglm2_6b import models as chatglm2_6b
@@ -22,6 +22,7 @@ with read_base():
 
 datasets = [
     *owl_naive, 
+    *owl_cot,
 ]
 
 models = [ 
