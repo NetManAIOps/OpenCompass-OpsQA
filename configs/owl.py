@@ -47,7 +47,7 @@ for model in models:
 
 for dataset in datasets:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    dataset['sample_setting'] = dict(sample_size=2)
+    dataset['sample_setting'] = dict()
     
 
 infer = dict(

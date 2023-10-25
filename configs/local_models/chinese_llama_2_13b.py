@@ -1,11 +1,11 @@
-from opencompass.models import HuggingFace
+from opencompass.models import HuggingFaceCausalLM
 
 ROOT_DIR = '/mnt/mfs/opsgpt/'
 
 models = [
     dict(
         abbr="chinese-llama-2-13b",
-        type=HuggingFace, 
+        type=HuggingFaceCausalLM, 
         path=ROOT_DIR+"models/chinese-llama-2/chinese-llama-2-13b/",
         tokenizer_path=ROOT_DIR+"models/chinese-llama-2/chinese-llama-2-13b/",
         tokenizer_kwargs=dict(padding_side='left',
