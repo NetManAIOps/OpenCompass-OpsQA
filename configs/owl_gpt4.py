@@ -32,24 +32,32 @@ models = [
     # *internlm_chat_7b,
     # *llama2_chat_7b,
     # *baichuan_13b_chat,
-    *baichuan2_13b_chat,
+    # *baichuan2_13b_chat,
     # *llama2_chat_13b,
     # *chinese_llama_2_13b,
     # *chinese_alpaca_2_13b,
     # *chatgpt,
-    # *gpt_4,
+    *gpt_4,
     #*xverse_13b,
 ]
 
 for model in models:
     # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    model['run_cfg'] = dict(num_gpus=4, num_procs=1)
+    # model['run_cfg'] = dict(num_gpus=4, num_procs=1)
     pass
 
 for dataset in datasets:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     dataset['sample_setting'] = dict()
+    dataset['infer_cfg']['inferencer']['sc_size'] = 1
+    dataset['infer_cfg']['inferencer']['save_every'] = 1
+    dataset['eval_cfg']['sc_size'] = 1
+    if 'owl' in dataset['abbr']:
+        if 'zh' in dataset['abbr']:
+            dataset['sample_setting'] = dict(load_list='/mnt/mfs/opsgpt/outputs/gpt35_fails/owl/owl-Zero-shot-zh-sc+cot.json')
+        else:
+            dataset['sample_setting'] = dict(load_list='/mnt/mfs/opsgpt/outputs/gpt35_fails/owl/owl-Zero-shot-en-sc+cot.json')
     
 
 infer = dict(

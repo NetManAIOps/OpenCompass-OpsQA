@@ -5,20 +5,20 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from .datasets.oracle.cot import oracle_datasets as oracle_cot
-    from .datasets.oracle.naive import oracle_datasets as oracle_naive
+    from ..datasets.oracle.cot import oracle_datasets as oracle_cot
+    from ..datasets.oracle.naive import oracle_datasets as oracle_naive
     # Models
-    from .local_models.chatglm2_6b import models as chatglm2_6b
-    from .local_models.qwen_chat_7b import models as qwen_chat_7b
-    from .local_models.baichuan_13b_chat import models as baichuan_13b_chat
-    from .local_models.internlm_chat_7b import models as internlm_chat_7b
-    from .local_models.llama2_7b_chat import models as llama2_chat_7b
-    from .local_models.llama2_13b_chat import models as llama2_chat_13b
-    from .local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
-    from .local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
-    from .local_models.xverse_13b import models as xverse_13b
-    from .models.gpt_4_peiqi import models as gpt_4
-    from .models.gpt_3dot5_turbo_peiqi import models as chatgpt
+    from ..local_models.chatglm2_6b import models as chatglm2_6b
+    from ..local_models.qwen_chat_7b import models as qwen_chat_7b
+    from ..local_models.baichuan_13b_chat import models as baichuan_13b_chat
+    from ..local_models.internlm_chat_7b import models as internlm_chat_7b
+    from ..local_models.llama2_7b_chat import models as llama2_chat_7b
+    from ..local_models.llama2_13b_chat import models as llama2_chat_13b
+    from ..local_models.chinese_llama_2_13b import models as chinese_llama_2_13b
+    from ..local_models.chinese_alpaca_2_13b import models as chinese_alpaca_2_13b
+    from ..local_models.xverse_13b import models as xverse_13b
+    from ..models.gpt_4_peiqi import models as gpt_4
+    from ..models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
     *oracle_cot, 

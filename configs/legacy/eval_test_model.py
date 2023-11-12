@@ -5,19 +5,19 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from .datasets.oreilly.oreilly_test_gen import oreilly_datasets as oreilly
+    from ..datasets.oreilly.oreilly_test_gen import oreilly_datasets as oreilly
     # Models
-    from .models.gpt_4_peiqi import models as gpt_4
-    from .models.gpt_3dot5_turbo_peiqi import models as chatgpt_3dot5_turbo
-    from .local_models.chatglm2_6b import models as chatglm2_6b
-    from .local_models.internlm_chat_7b import models as internlm_chat_7b
-    from .local_models.xverse_13b import models as xverse_13b
-    from .local_models.qwen_chat_7b import models as qwen_chat_7b
-    from .local_models.llama2_7b_chat import models as llama2_chat_7b
-    from .local_models.baichuan_7b import models as baichuan_7b
-    from .models.hf_llama2_7b import models as hf_llama2_7b
-    from .models.hf_chatglm2_6b import models as hf_chatglm2_6b
-    from .models.hf_internlm_chat_7b import models as hf_internlm_chat_7b
+    from ..models.gpt_4_peiqi import models as gpt_4
+    from ..models.gpt_3dot5_turbo_peiqi import models as chatgpt_3dot5_turbo
+    from ..local_models.chatglm2_6b import models as chatglm2_6b
+    from ..local_models.internlm_chat_7b import models as internlm_chat_7b
+    from ..local_models.xverse_13b import models as xverse_13b
+    from ..local_models.qwen_chat_7b import models as qwen_chat_7b
+    from ..local_models.llama2_7b_chat import models as llama2_chat_7b
+    from ..local_models.baichuan_7b import models as baichuan_7b
+    from ..models.hf_llama2_7b import models as hf_llama2_7b
+    from ..models.hf_chatglm2_6b import models as hf_chatglm2_6b
+    from ..models.hf_internlm_chat_7b import models as hf_internlm_chat_7b
     
 
 datasets = [

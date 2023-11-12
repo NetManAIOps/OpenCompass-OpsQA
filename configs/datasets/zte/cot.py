@@ -39,7 +39,7 @@ zte_datasets = [
     dict(
         type=OracleDataset,
         abbr=f'zte-{shot_abbr}-{lang}-{qtype}-sc+cot',
-        path='/mnt/mfs/opsgpt/evaluation/zte/', 
+        path='/mnt/mfs/opsgpt/evaluation/opseval/zte/', 
         name=f'zte_{lang}_{qtype}',
         reader_cfg=oracle_reader_cfg,
         infer_cfg=dict(
