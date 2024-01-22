@@ -5,13 +5,13 @@ from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import QADataset
 
-tencent_reader_cfg = dict(
+rzy_reader_cfg = dict(
     input_columns=['question'],
     output_column='answer',
     train_split='dev'
 )
 
-tencent_eval_cfg = dict(
+rzy_eval_cfg = dict(
     evaluator=dict(type=AccEvaluator))
 
 rzy_datasets = [
@@ -20,7 +20,7 @@ rzy_datasets = [
         abbr=f'rzy_qa-{shot_abbr}',
         path=f'/mnt/mfs/opsgpt/evaluation/opseval/rzy/', 
         name=f'rzy_qa',
-        reader_cfg=tencent_reader_cfg,
+        reader_cfg=rzy_reader_cfg,
         infer_cfg=dict(
             ice_template=dict(
                 type=PromptTemplate,
@@ -57,7 +57,7 @@ rzy_datasets = [
                 **fixidlist
             ),
         ),
-        eval_cfg=tencent_eval_cfg)
+        eval_cfg=rzy_eval_cfg)
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
             [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
