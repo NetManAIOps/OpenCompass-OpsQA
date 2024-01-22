@@ -7,12 +7,14 @@ icl_inference_output/
 .vscode/
 tmp/
 configs/openai_key.py
+configs/paths.py
 configs/api_key.py
 configs/secrets.py
 configs/datasets/log.json
 configs/eval_debug*.py
 configs/viz_*.py
 data/*
+models/*
 work_dirs
 
 # not ignoring OpsQA dataset

@@ -5,7 +5,7 @@ from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OracleDataset
 
-SAMPLE_SIZE = 5
+SAMPLE_SIZE = 3
 
 company_reader_cfg = dict(
     input_columns=['question'],
