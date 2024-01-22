@@ -1,5 +1,6 @@
 from .game24 import *  # noqa: F401, F403
 # from .others.longbench import *  # noqa: F401, F403
+from .qa import *  # noqa: F401, F403
 from .owl import *  # noqa: F401, F403
 from .opsqa import *  # noqa: F401, F403
 from .opssub import * # noqa: F401, F403

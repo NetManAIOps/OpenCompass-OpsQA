@@ -38,7 +38,12 @@ prompts = [
 companies = [
     'dfcdata',
     'huaweicloud',
-    'pufa'
+    'pufa',
+    'gtja',
+    'bosc',
+    'lenovo',
+    'rzy',
+    'zabbix'
 ]
 
 company_datasets = [

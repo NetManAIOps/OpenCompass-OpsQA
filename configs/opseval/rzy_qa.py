@@ -5,8 +5,7 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from ..datasets.company.cot import company_datasets as company_cot
-    from ..datasets.company.naive import company_datasets as company_naive
+    from ..datasets.simple_qa.rzy import rzy_datasets as rzy_qa 
     # Models
     from ..local_models.chatglm2_6b import models as chatglm2_6b
     from ..local_models.qwen_chat_7b import models as qwen_chat_7b
@@ -21,8 +20,7 @@ with read_base():
     from ..models.gpt_3dot5_turbo_peiqi import models as chatgpt
 
 datasets = [
-    *company_cot, 
-    *company_naive, 
+    *rzy_qa,
 ]
 
 models = [ 
@@ -48,9 +46,7 @@ for model in models:
 
 for dataset in datasets:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    dataset['infer_cfg']['inferencer']['sc_size'] = 1
     dataset['infer_cfg']['inferencer']['save_every'] = 1
-    dataset['eval_cfg']['sc_size'] = 1
     dataset['sample_setting'] = dict()
     
 
