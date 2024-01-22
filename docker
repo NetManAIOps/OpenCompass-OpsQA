@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+#####################################
+SSH_PORT=${3:-10210}  # OpenSSH
+TB_PORT=${4:-16610}  # TensorBoard
+PROJECT_NAME="opencompass"
+#####################################
+CMD=${1:-start}
+CONTAINER_NAME=${2:-"$(basename "$(pwd)")_$(whoami)"}  # Container Name
+echo CMD=${CMD}
+echo CONTAINER_NAME=${CONTAINER_NAME}
+#####################################
+IMAGE=${PROJECT_NAME}
+echo IMAGE="${IMAGE}"
+if nvidia-smi; then
+    GPU_OPT="--gpus all"
+else
+    GPU_OPT=""
+fi
+echo GPU_OPT=${GPU_OPT}
+MEMORY_LIMIT="$(($(free -g | grep -oP "Mem:\s+\K\d+")-1))g"
+MEMORY_SWAP_LIMIT="-1"
+echo MEMORY_LIMIT=${MEMORY_LIMIT}
+echo MEMORY_SWAP_LIMIT=${MEMORY_SWAP_LIMIT}
+
+
+build () {
+  sudo docker build . -t ${IMAGE}
+}
+
+
+start () {
+    sudo docker run -dit --name ${CONTAINER_NAME} --restart=unless-stopped --ipc="host" \
+    -v "$(realpath .)":/${PROJECT_NAME} \
+    -v /mnt/mfs/opsgpt/:/mnt/mfs/opsgpt \
+    -v "$(realpath .cache)":/root/.cache \
+    -v "$(realpath .ssh)":/root/.ssh \
+    --hostname "${PROJECT_NAME}-$(hostname)" \
+    ${GPU_OPT} \
+    --memory ${MEMORY_LIMIT} \
+    -v /tmp:/tmp \
+    -w /${PROJECT_NAME} \
+    --env http_proxy="" --env https_proxy="" \
+    -p ${SSH_PORT}:22 -p ${TB_PORT}:6006 \
+    ${IMAGE} \
+    /bin/bash;
+    sudo docker logs --tail 100 ${CONTAINER_NAME};
+    sudo docker exec ${CONTAINER_NAME} bash -c "cd /${PROJECT_NAME} && direnv allow .";
+    sudo docker exec ${CONTAINER_NAME} bash -c "sudo killall sshd; sudo mkdir /run/sshd || echo exists; sudo /usr/sbin/sshd";
+}
+
+stop () {
+    sudo docker stop ${CONTAINER_NAME};
+    sudo docker rm ${CONTAINER_NAME};
+}
+
+shell () {
+  sudo docker exec -it ${CONTAINER_NAME} bash
+}
+
+
+if [ ${CMD} == "start" ]; then
+  start
+elif [ ${CMD} == "stop" ]; then
+  stop
+elif [ ${CMD} == "restart" ]; then
+  stop;
+  start;
+elif [ ${CMD} == "build" ]; then
+  build;
+elif [ ${CMD} == "shell" ]; then
+  shell;
+fi

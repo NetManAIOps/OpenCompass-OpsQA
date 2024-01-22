@@ -1,0 +1,15 @@
+2023.8.15
+给oreilly数据集类加了sample_setting选项
+
+魔改了框架使得输出的predictions文件夹里能进一步包含正确答案和题目的id
+魔改列表：
+icl_base_inferencer.py:
+GenInferencerOutputHandler: save_results添加参数reference
+icl_gen_inferencer.py:
+GenInferencer类：
+inference
+get_generation_prompt_list_from_retriever_indices
+icl_base_retriever.py:
+BaseRetriever类新加了get_test_labels和get_label_by_idx两个函数
+
+本次魔改非常丑陋
