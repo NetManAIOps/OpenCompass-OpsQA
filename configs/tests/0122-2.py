@@ -24,20 +24,28 @@ datasets = [
 ]
 
 models = [ 
-    internlm2_chat_7b,
+    internlm2_chat_20b,
     # *chatgpt
 ]
 
 for model in models:
     # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
     # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    # model['run_cfg'] = dict(num_gpus=1, num_procs=1)
+    model['run_cfg'] = dict(num_gpus=2, num_procs=1)
     pass
 
 for dataset in datasets:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/evaluation','/mnt/home/opseval/evaluation/')
-    dataset['sample_setting'] = dict(sample_size=1)
-    
+    # dataset['sample_setting'] = dict(sample_size=1)
+    dataset['sample_setting'] = dict()
+    dataset['infer_cfg']['inferencer']['save_every'] = 8
+    dataset['infer_cfg']['inferencer']['sc_size'] = 3
+    dataset['eval_cfg']['sc_size'] = 3
+    if 'network' in dataset['abbr']:
+        dataset['sample_setting'] = dict(load_list=f'{ROOT_DIR}data/opseval/network/network_annotated.json')
+    if 'zte' in dataset['abbr']:
+        dataset['sample_setting'] = dict(sample_size=500)
+
 
 infer = dict(
     partitioner=dict(
