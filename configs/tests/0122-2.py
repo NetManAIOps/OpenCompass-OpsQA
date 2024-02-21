@@ -14,6 +14,7 @@ with read_base():
     from ..models.gpt_3dot5_turbo_peiqi import models as chatgpt
     from ..local_models.zhipu.chatglm import chatglm3_6b
     from ..local_models.internlm.internlm import internlm2_chat_20b, internlm2_chat_7b
+    from ..paths import ROOT_DIR
 
 datasets = [
     *company_cot, *company_naive, 
