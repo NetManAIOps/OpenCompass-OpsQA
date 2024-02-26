@@ -1,6 +1,6 @@
 from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Optional, Union
-
+from zhipuai import ZhipuAI
 from opencompass.registry import MODELS
 from opencompass.utils import PromptList
 
@@ -46,15 +46,17 @@ class ZhiPuAI(BaseAPIModel):
             raise ImportError('Import zhipuai failed. Please install it '
                               'with "pip install zhipuai" and try again.')
 
-        zhipuai.api_key = key
+        self.client = ZhipuAI(api_key=key)
+        # zhipuai.api_key = key
         self.model = path
-        self.zhipuai = zhipuai.model_api
+        # self.zhipuai = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
         self.temperature = temperature
 
     def generate(
         self,
         inputs: List[str or PromptList],
         max_out_len: int = 512,
+        temperature: float = 0,
     ) -> List[str]:
         """Generate results given a list of inputs.
 
@@ -103,13 +105,18 @@ class ZhiPuAI(BaseAPIModel):
         while num_retries < self.retry:
             self.wait()
             try:
-                response = self.zhipuai.invoke(
+                # response = self.zhipuai.invoke(
+                #     model=self.model,
+                #     prompt=messages
+                # )
+                response = self.client.chat.completions.create(
                     model=self.model,
-                    prompt=messages
+                    messages=messages,
+                    temperature=self.temperature,
                 )
-                if response['code'] != 200:
-                    return ''
-                return response['data']['choices'][0]['content'].strip()
+                # if response['code'] != 200:
+                #     return ''
+                return response.choices[0].message.content
             except Exception as e:
                 self.logger.error(e)
             num_retries += 1
