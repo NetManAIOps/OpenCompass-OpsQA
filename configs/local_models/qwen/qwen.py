@@ -2,7 +2,7 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM
 
 qwen_1_8b_base = dict(
         type=HuggingFaceCausalLM,
-        abbr='qwen-1.8b-chat',
+        abbr='qwen-1.8b-base',
         path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B",
         tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B',
         tokenizer_kwargs=dict(padding_side='left',

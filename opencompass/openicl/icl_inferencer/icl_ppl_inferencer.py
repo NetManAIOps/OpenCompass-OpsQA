@@ -88,11 +88,18 @@ class PPLInferencer(BaseInferencer):
             labels = self.labels
 
         # 4. Generate in-context examples for testing inputs
+        #   (OpsEval) and get reference
+        reference_list = []
         for idx in range(len(ice_idx_list)):
             ice.append(
                 retriever.generate_ice(ice_idx_list[idx],
                                        ice_template=ice_template))
+            reference = retriever.get_label_by_idx(idx)
+            reference_list.append(reference)
         output_handler.save_ice(self.model.parse_template(ice, mode='ppl'))
+
+        # 4.5 OpsEval: Save Reference for answer and id
+        output_handler.save_reference(reference_list=reference_list)
 
         # 5. Calculating PPL for prompts in each label's class
         for label in labels:
