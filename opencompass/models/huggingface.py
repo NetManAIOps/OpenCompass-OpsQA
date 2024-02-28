@@ -304,6 +304,8 @@ class HuggingFace(BaseModel):
 
         shift_labels = inputs['tokens']['input_ids'][..., 1:].contiguous()
 
+        if not self.tokenizer.pad_token_id:
+            self.tokenizer.pad_token_id = 151643 # TODO: temporally measure!!! PLEASE FIX LATER!!
         loss_fct = torch.nn.CrossEntropyLoss(
             reduction='none', ignore_index=self.tokenizer.pad_token_id)
         loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)),
@@ -320,7 +322,7 @@ class HuggingFace(BaseModel):
                 self.tokenizer.pad_token_id).sum(-1).cpu().numpy()
         if mask_length is not None:
             lens -= np.array(mask_length)
-        ce_loss = loss.sum(-1).cpu().detach().numpy() / lens
+        ce_loss = loss.sum(-1).cpu().detach().to(torch.float).cpu().numpy() / lens  # FIXING ERROR BFloat16 unsupported
         return ce_loss
 
     def get_token_len(self, prompt: str) -> int:

@@ -6,6 +6,7 @@ from mmengine.config import ConfigDict
 
 def model_abbr_from_cfg(cfg: ConfigDict) -> str:
     """Generate model abbreviation from the model's confg."""
+    # print(cfg)
     if 'abbr' in cfg:
         return cfg['abbr']
     model_abbr = cfg['type'] + '_' + '_'.join(

@@ -9,7 +9,7 @@ from .huggingface import QwenLM  # noqa: F401, F403
 from .intern_model import InternLM  # noqa: F401, F403
 from .llama2 import Llama2, Llama2Chat  # noqa: F401, F403
 from .openai_api import OpenAI  # noqa: F401
-from .zhipuai_api import ZhiPuAI  # noqa
+# from .zhipuai_api import ZhiPuAI  # noqa
 from .qwen_api import QwenAPI  # noqa
 from .vllm_api import VllmAPI  # noqa
 # from .custom import CustomModel  # noqa

@@ -149,6 +149,12 @@ class PPLInferencerOutputHandler:
         """Dump the result to a json file."""
         dump_results_dict(self.results_dict, Path(save_dir) / filename)
 
+    def save_reference(self, reference_list):
+        for idx, reference in enumerate(reference_list):
+            if str(idx) not in self.results_dict.keys():
+                self.results_dict[str(idx)] = {}
+            self.results_dict[str(idx)]['reference'] = reference
+
     def save_ice(self, ice):
         for idx, example in enumerate(ice):
             if str(idx) not in self.results_dict.keys():
