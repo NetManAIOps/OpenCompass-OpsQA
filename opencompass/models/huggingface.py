@@ -91,8 +91,11 @@ class HuggingFace(BaseModel):
             tokenizer_path if tokenizer_path else path, **tokenizer_kwargs)
         if self.tokenizer.pad_token_id is None:
             self.logger.warning('pad_token_id is not set for the tokenizer. '
-                                'Using eos_token_id as pad_token_id.')
+                                'Using eos_token_id as pad_token_id.'
+                                f'Which is {self.tokenizer.eos_token_id}')
             self.tokenizer.pad_token = self.tokenizer.eos_token
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
+            
 
         # A patch for llama when batch_padding = True
         if 'decapoda-research/llama' in path or \
@@ -304,8 +307,8 @@ class HuggingFace(BaseModel):
 
         shift_labels = inputs['tokens']['input_ids'][..., 1:].contiguous()
 
-        if not self.tokenizer.pad_token_id:
-            self.tokenizer.pad_token_id = 151643 # TODO: temporally measure!!! PLEASE FIX LATER!!
+        # if not self.tokenizer.pad_token_id:
+        #     self.tokenizer.pad_token_id = 151643 # TODO: temporally measure!!! PLEASE FIX LATER!!
         loss_fct = torch.nn.CrossEntropyLoss(
             reduction='none', ignore_index=self.tokenizer.pad_token_id)
         loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)),

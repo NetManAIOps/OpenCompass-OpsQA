@@ -27,9 +27,9 @@ models = [
     # internlm2_chat_7b,
     # zzr1
     qwen_14b_base,
-    nm_qwen_14b_3gpp_mix,
-    nm_qwen_14b_ptlora_book_16x2,
-    nm_qwen_14b_ptlora_book_8x2
+    # nm_qwen_14b_3gpp_mix,
+    # nm_qwen_14b_ptlora_book_16x2,
+    # nm_qwen_14b_ptlora_book_8x2
 ]
 
 for model in models:
