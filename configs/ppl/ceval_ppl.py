@@ -7,26 +7,29 @@ with read_base():
     # Datasets
     from ..datasets.company.company import company_cot, company_naive
     from ..datasets.network.network import network_cot, network_naive
-    from ..datasets.zte.zte import zte_cot, zte_naive
+    from ..datasets.zte.zte_ppl import zte_naive
+    from ..datasets.opseval_ceval.ceval_ppl import ceval_naive_ppl
     from ..datasets.oracle.oracle import oracle_cot, oracle_naive
     from ..datasets.owl_mc.owl_mc import owl_cot, owl_naive
-    from ..datasets.zte.zte_ppl import zte_naive_ppl
+    
     #/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/mixture/mix5_1-sft_owl-model
     # Models
-    # from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb as zzr1
-    # from ..netman_models.qwen import nm_qwen_14b_ptlora_book as zzr1
-    from ..netman_models.qwen import nm_qwen_14b_ptlora_book_8x2,nm_qwen_14b_ptlora_book_16x2
+    from ..netman_models.qwen import nm_qwen_1_8b_mix5_1 as zzr1
+    from ..netman_models.qwen import nm_qwen_14b_3gpp_mix, nm_qwen_14b_ptlora_book_16x2, nm_qwen_14b_ptlora_book_8x2
+    from ..local_models.qwen.qwen import qwen_14b_base
     # from ..netman_models.qwen import nm_qwen_1_8b_books_all_lora as zzr1
 datasets = [
-    # *zte_naive_ppl,
-    *zte_cot, *zte_naive,     
-    *owl_cot, *owl_naive, 
-    *network_cot, *network_naive, 
+    *zte_naive, 
+    # *ceval_naive_ppl,
 ]
 
 models = [ 
     # internlm2_chat_7b,
-    nm_qwen_14b_ptlora_book_16x2
+    # zzr1
+    qwen_14b_base,
+    nm_qwen_14b_3gpp_mix,
+    nm_qwen_14b_ptlora_book_16x2,
+    nm_qwen_14b_ptlora_book_8x2
 ]
 
 for model in models:

@@ -3,8 +3,8 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM
 qwen_1_8b_base = dict(
         type=HuggingFaceCausalLM,
         abbr='qwen-1.8b-base',
-        path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B",
-        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B',
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-1_8B",
+        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-1_8B',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,
@@ -19,8 +19,8 @@ qwen_1_8b_base = dict(
 qwen_1_8b_chat = dict(
         type=HuggingFaceCausalLM,
         abbr='qwen-1.8b-chat',
-        path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B-Chat",
-        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-1_8B-Chat',
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-1_8B-Chat",
+        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-1_8B-Chat',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,
@@ -36,8 +36,8 @@ qwen_1_8b_chat = dict(
 qwen_14b_base = dict(
         type=HuggingFaceCausalLM,
         abbr='qwen-14b-base',
-        path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B",
-        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B',
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B",
+        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,
@@ -52,8 +52,8 @@ qwen_14b_base = dict(
 qwen_14b_chat = dict(
         type=HuggingFaceCausalLM,
         abbr='qwen-14b-chat',
-        path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B-Chat",
-        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B-Chat',
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
+        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,
