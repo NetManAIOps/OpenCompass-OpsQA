@@ -535,3 +535,20 @@ nm_qwen_14b_ptlora_book_8x2= dict(
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
         run_cfg=dict(num_gpus=1, num_procs=1),
     )
+
+nm_qwen_14b_chat = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_chat',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
+        tokenizer_path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )

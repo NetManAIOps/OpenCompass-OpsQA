@@ -5,8 +5,8 @@ models = [
     dict(
         type=HuggingFaceCausalLM,
         abbr='qwen-14b-chat',
-        path="/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B-Chat",
-        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/models/Qwen/Qwen-14B-Chat',
+        path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
+        tokenizer_path='/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat',
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,

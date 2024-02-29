@@ -8,13 +8,15 @@ with read_base():
     from ..datasets.zte.zte_ppl import zte_naive
     # Models
     from ..local_models.qwen.qwen import qwen1_5_14b_base
+    from ..local_models.qwen.qwen import qwen_14b_base
 datasets = [
     *zte_naive, 
     # *ceval_naive_ppl,
 ]
 
 models = [
-    qwen1_5_14b_base,
+    # qwen1_5_14b_base,
+    qwen_14b_base
 ]
 
 for model in models:

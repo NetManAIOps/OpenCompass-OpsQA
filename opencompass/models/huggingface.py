@@ -89,6 +89,13 @@ class HuggingFace(BaseModel):
         from transformers import AutoTokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
             tokenizer_path if tokenizer_path else path, **tokenizer_kwargs)
+        
+        # A patch for QwenTokenizer
+        if self.tokenizer.__class__.__name__ == 'QWenTokenizer':
+            self.tokenizer.pad_token_id = self.tokenizer.eod_id
+            self.tokenizer.bos_token_id = self.tokenizer.eod_id
+            self.tokenizer.eos_token_id = self.tokenizer.eod_id
+        
         if self.tokenizer.pad_token_id is None:
             self.logger.warning('pad_token_id is not set for the tokenizer. '
                                 'Using eos_token_id as pad_token_id.'
