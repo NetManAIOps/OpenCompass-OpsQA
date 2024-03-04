@@ -37,9 +37,6 @@ zte_naive = [
                     'C' : prompt_hint+f'\n{{question}}\nAnswer: C\n',
                     'D' : prompt_hint+f'\n{{question}}\nAnswer: D\n'
                 }
-                # template={
-                #     chr(ord('A')+cid): prompt_hint+' {{question}} '+chr(ord('A')+cid)+': {{choices['+cid+']}}' for cid in enumerate(choices)
-                # }
             ),
             prompt_template=dict(
                 type=PromptTemplate,

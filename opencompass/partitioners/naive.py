@@ -17,6 +17,12 @@ class NaivePartitioner(BasePartitioner):
     Args:
         config (ConfigDict): The full config dict.
     """
+    
+    def __init__(self,
+                 out_dir: str,
+                 model_first=False):
+        super().__init__(out_dir)
+        self.model_first = model_first
 
     def partition(self, models: List[ConfigDict], datasets: List[ConfigDict],
                   work_dir: str, out_dir: str) -> List[Dict]:
@@ -46,15 +52,29 @@ class NaivePartitioner(BasePartitioner):
         """
 
         tasks = []
-        for dataset in datasets:
+        
+        if self.model_first:
             for model in models:
-                filename = get_infer_output_path(model, dataset, out_dir)
-                if osp.exists(filename):
-                    continue
-                task = Config({
-                    'models': [model],
-                    'datasets': [[dataset]],
-                    'work_dir': work_dir
-                })
-                tasks.append(task)
+                for dataset in datasets:
+                    filename = get_infer_output_path(model, dataset, out_dir)
+                    if osp.exists(filename):
+                        continue
+                    task = Config({
+                        'models': [model],
+                        'datasets': [[dataset]],
+                        'work_dir': work_dir
+                    })
+                    tasks.append(task)
+        else:
+            for dataset in datasets:
+                for model in models:
+                    filename = get_infer_output_path(model, dataset, out_dir)
+                    if osp.exists(filename):
+                        continue
+                    task = Config({
+                        'models': [model],
+                        'datasets': [[dataset]],
+                        'work_dir': work_dir
+                    })
+                    tasks.append(task)
         return tasks

@@ -167,6 +167,13 @@ class PPLInferencerOutputHandler:
                 self.results_dict[str(idx)] = {}
             self.results_dict[str(idx)]['prediction'] = prediction
 
+    def save_qa_prompt_and_ppl(self, input, prompt, ppl, idx):
+        if str(idx) not in self.results_dict.keys():
+            self.results_dict[str(idx)] = {}
+        self.results_dict[str(idx)]['testing input'] = input
+        self.results_dict[str(idx)]['prompt'] = prompt
+        self.results_dict[str(idx)]['prediction'] = dict(PPL=ppl)
+
     def save_prompt_and_ppl(self, label, input, prompt, ppl, idx):
         if str(idx) not in self.results_dict.keys():
             self.results_dict[str(idx)] = {}

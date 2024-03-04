@@ -184,8 +184,13 @@ def main():
                          'or viz mode!')
 
     # update "actual" work_dir
+
     cfg['work_dir'] = osp.join(cfg.work_dir, dir_time_str)
     os.makedirs(osp.join(cfg.work_dir, 'configs'), exist_ok=True)
+    
+    # write dir_time_str to a temporary file for automatic script
+    with open(osp.join(cfg.work_dir, "version.txt"), "w") as f:
+        f.write(dir_time_str)
 
     # dump config
     output_config_path = osp.join(cfg.work_dir, 'configs',

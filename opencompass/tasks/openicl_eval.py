@@ -137,7 +137,7 @@ class OpenICLEvalTask(BaseTask):
                     pred_strs = [proc(s, **kwargs) for s in pred_strs]
 
             # Get majority voting predictions if use self-consistency
-            if sc_size is not None:
+            if sc_size is not None and pred_strs[0] is list:
                 pred_strs = [
                     Counter(s).most_common(1)[0][0] for s in pred_strs
                 ]

@@ -16,23 +16,23 @@ with read_base():
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     #/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/mixture/mix5_1-sft_owl-model
     # Models
-    from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb
+    # from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb as zzr1
     # from ..netman_models.qwen import nm_qwen_14b_ptlora_book as zzr1
     from ..netman_models.qwen import nm_qwen_14b_ptlora_book_8x2,nm_qwen_14b_ptlora_book_16x2,nm_qwen14b_epochlab_models,nm_qwen_14b_chat_3gpp_mix_sft_sharegpt
     # from ..netman_models.qwen import nm_qwen_1_8b_books_all_lora as zzr1
     # from ..netman_models.qwen import nm_qwen_1_8b_books_all_lora as zzr1
 datasets =  [
-    *zte_ppl, *network_ppl, *owl_ppl,
+    # *zte_ppl, *network_ppl, *owl_ppl,
     # *owl_qa_datasets,
-    # *owl_ppl_qa_datasets,
-    *ceval_naive_ppl,
+    *owl_ppl_qa_datasets,
+    # *ceval_naive_ppl,
     # *zte_cot, *zte_naive,     
     # *owl_cot, *owl_naive, 
     # *network_cot, *network_naive, 
 ]
 
 models = [
-    nm_qwen_14b_3gpp_mix_sft_owlb
+    nm_qwen_14b_chat_3gpp_mix_sft_sharegpt
 ]
 
 for model in models:

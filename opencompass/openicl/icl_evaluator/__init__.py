@@ -3,3 +3,4 @@ from .icl_base_evaluator import BaseEvaluator  # noqa
 from .icl_em_evaluator import EMEvaluator  # noqa
 from .icl_hf_evaluator import *  # noqa
 from .icl_toxic_evaluator import ToxicEvaluator  # noqa
+from .icl_stat_evaluator import *  # noqa

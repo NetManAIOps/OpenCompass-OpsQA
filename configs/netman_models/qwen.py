@@ -118,8 +118,8 @@ nm_qwen_14b_full_mixture_sft_owlbench = dict(
 nm_qwen_14b_full_concat_sft_owlbench = dict(
     type=HuggingFaceCausalLM,
     abbr='nm_qwen_14b_full_concat_sft_owlbench',
-    path=f"{ROOT_DIR}models/xll_sft_models/owl_bench/lora_concat_dataset/merged_model",
-    tokenizer_path=f"{ROOT_DIR}models/xll_sft_models/owl_bench/lora_concat_dataset/merged_model",
+    path=f"{ROOT_DIR}models/xll_sft_models/owlbench/lora_concat_dataset/merged_model",
+    tokenizer_path=f"{ROOT_DIR}models/xll_sft_models/owlbench/lora_concat_dataset/merged_model",
     tokenizer_kwargs=dict(padding_side='left',
                             truncation_side='left',
                             trust_remote_code=True,
@@ -542,6 +542,145 @@ nm_qwen_14b_chat = dict(
         # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
         path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
         tokenizer_path="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen-14B-Chat",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+
+
+netman_qwen_models = [
+    nm_qwen_14b_3gpp_mix,
+    nm_qwen_14b_3gpp_mix_sft_owlb,
+    nm_qwen_14b_bookall_lora,
+    nm_qwen_14b_chat,
+    nm_qwen_14b_freeze,
+    nm_qwen_14b_freeze_3gpp_general,
+    nm_qwen_14b_freeze_3gpp_general_sft_owlinstruct,
+    nm_qwen_14b_lora_3gpp_general,
+    nm_qwen_14b_lora_3gpp_general_sft_owlinstruct,
+    nm_qwen_14b_full_concat,
+    nm_qwen_14b_full,
+    nm_qwen_14b_full_concat_sft_owlbench_instruct,
+    nm_qwen_14b_full_concat_sft_owlinstruct,
+    nm_qwen_14b_full_concat_sft_owlbench,
+    nm_qwen_14b_full_cp12000,
+    nm_qwen_14b_full_cp18000,
+    nm_qwen_14b_full_cp6000,
+    nm_qwen_14b_full_mixture_sft_owlbench,
+    nm_qwen_14b_full_mixture_sft_owlinstruct,
+    nm_qwen_14b_full_mixture_sft_owlbench_instruct,
+    nm_qwen_1_8b_schedule,
+    nm_qwen_1_8b_multiple_test,
+    nm_qwen_1_8b_mix5_1_sft_owl,
+    nm_qwen_1_8b_mix5_1,
+    nm_qwen_1_8b_full_concat,
+    nm_qwen_1_8b_books_all_freeze,
+    nm_qwen_1_8b_books_all,
+    nm_qwen_1_8b_full_mixture,
+    nm_qwen_1_8b_books_all_lora
+]
+
+# Epoch 实验
+nm_qwen_14b_ptfull_3gpp_1epoch = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_ptfull_3gpp_1epoch',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp_per_epoch/checkpoint-1150/model",
+        tokenizer_path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp_per_epoch/checkpoint-1150/model",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+nm_qwen_14b_ptfull_3gpp_3epoch = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_ptfull_3gpp_3epoch',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp_per_epoch/checkpoint-3450/model",
+        tokenizer_path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp_per_epoch/checkpoint-3450/model",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+nm_qwen_14b_ptlora_3gpp_1epoch = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_ptlora_3gpp_1epoch',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/ptlora-3gpp/checkpoint-863/model",
+        tokenizer_path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/ptlora-3gpp/checkpoint-863/model",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+nm_qwen_14b_ptlora_3gpp_3epoch = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_ptlora_3gpp_3epoch',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/ptlora-3gpp/checkpoint-2589/model",
+        tokenizer_path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/ptlora-3gpp/checkpoint-2589/model",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+nm_qwen14b_epochlab_models = [
+    nm_qwen_14b_ptfull_3gpp_1epoch,
+    nm_qwen_14b_ptfull_3gpp_3epoch,
+    nm_qwen_14b_ptlora_3gpp_1epoch,
+    nm_qwen_14b_ptlora_3gpp_3epoch
+]
+
+nm_qwen_14b_3gpp_mix_sft_sharegpt = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_3gpp_mix_sft_sharegpt',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/home/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp-sft_lora_sharegpt/merged_model",
+        tokenizer_path="/mnt/home/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b/3gpp-sft_lora_sharegpt/merged_model",
+        tokenizer_kwargs=dict(padding_side='left',
+                              truncation_side='left',
+                              trust_remote_code=True,
+                              use_fast=False,),
+        max_out_len=400,
+        max_seq_len=2048,
+        batch_size=8,
+        model_kwargs=dict(device_map='auto', trust_remote_code=True),
+        run_cfg=dict(num_gpus=1, num_procs=1),
+    )
+
+nm_qwen_14b_chat_3gpp_mix_sft_sharegpt = dict(
+        type=HuggingFaceCausalLM,
+        abbr='nm_qwen_14b_chat_3gpp_mix_sft_sharegpt',
+        # /mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/lora/Qwen-14B-bookall-lora
+        path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b-chat/ptfull-3gpp/sft_owl_sharegpt/model",
+        tokenizer_path="/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/14b-chat/ptfull-3gpp/sft_owl_sharegpt/model",
         tokenizer_kwargs=dict(padding_side='left',
                               truncation_side='left',
                               trust_remote_code=True,

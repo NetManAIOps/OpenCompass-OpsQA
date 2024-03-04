@@ -167,6 +167,48 @@ class BaseRetriever:
             self.test_ds['id'][idx] if 'id' in self.test_ds.features else None
         }
 
+    def generate_prompt_for_ppl_task(
+            self,
+            idx,
+            ice,
+            ice_template: Optional[PromptTemplate] = None,
+            prompt_template: Optional[PromptTemplate] = None):
+        """Generate the prompt for one test example in ppl evaluation
+        with `prompt_template`. If `prompt_template` is not provided, the
+        `ice_template` will be used to generate the prompt.
+
+        Args:
+            idx (`int`): The index of the test example.
+            ice (`str`): The in-context example for the test example.
+            ice_template (`Optional[PromptTemplate]`): The template for
+                in-context example. Defaults to None.
+            prompt_template (`Optional[PromptTemplate]`): The template for
+                prompt. Defaults to None.
+        """
+        if prompt_template is not None and ice_template is not None:
+            if prompt_template.ice_token is not None:
+                return prompt_template.generate_item(
+                    self.test_ds[idx],
+                    ice_field_replace_token=ice)
+            else:
+                raise NotImplementedError(
+                    'ice_token of prompt_template is not provided')
+        elif ice_template is not None and prompt_template is None:
+            if ice_template.ice_token is not None:
+                return ice_template.generate_item(
+                    self.test_ds[idx],
+                    ice_field_replace_token=ice)
+            else:
+                raise NotImplementedError(
+                    'ice_token of ice_template is not provided')
+        elif ice_template is None and prompt_template is not None:
+            return prompt_template.generate_item(
+                self.test_ds[idx],
+                ice_field_replace_token=ice)
+        else:
+            raise NotImplementedError(
+                'Leaving prompt as empty is not supported')
+
     def generate_prompt_for_generate_task(
             self,
             idx,

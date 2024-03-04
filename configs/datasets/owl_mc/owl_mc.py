@@ -1,6 +1,6 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
-from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer
+from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer, PPLInferencer
 from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OwlDataset
@@ -144,6 +144,64 @@ owl_naive = [
             retriever=dict(type=retriever),
             inferencer=dict(
                 type=SCInferencer,
+                save_every=20,
+                generation_kwargs=dict(temperature=0.7),
+                infer_type='SC',
+                sc_size = SAMPLE_SIZE,  
+                max_out_len = 400,
+                **fixidlist
+            ),
+        ),
+        eval_cfg=owl_eval_cfg)
+        for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
+            ['Zero-shot', '3-shot'],
+            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [0, 1],
+            [ZeroRetriever, FixKRetriever]
+        )
+        for lang, prompt_hint in zip(
+            ['en', 'zh'],
+            [
+                f"Here is a multiple-answer question about {{category}} Operation and Maintainance.{prompts[shot_hint_id][0]}\n{{question}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\nAnswer: \n",
+                f"以下关于{{category}}的选择题。{prompts[shot_hint_id][1]}\n{{question}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：\n"
+            ],
+        )
+]
+
+owl_ppl = [
+    dict(
+        type=OwlDataset,
+        abbr=f'owl-{shot_abbr}-{lang}-sc-ppl',
+        path=owl_path, 
+        name=f'{lang}',
+        # reader_cfg=choice_qa_reader_cfg,
+        reader_cfg=owl_reader_cfg,
+        infer_cfg=dict(
+            ice_template=dict(
+                type=PromptTemplate,
+                template={
+                    'A' : prompt_hint+f'\n{{question}}\nAnswer: A\n',
+                    'B' : prompt_hint+f'\n{{question}}\nAnswer: B\n',
+                    'C' : prompt_hint+f'\n{{question}}\nAnswer: C\n',
+                    'D' : prompt_hint+f'\n{{question}}\nAnswer: D\n'
+                }
+                # template={
+                #     chr(ord('A')+cid): prompt_hint+' {{question}} '+chr(ord('A')+cid)+': {{choices['+cid+']}}' for cid in enumerate(choices)
+                # }
+            ),
+            prompt_template=dict(
+                type=PromptTemplate,
+                template={
+                    'A' : "</E>" + prompt_hint+'\n{question}\nAnswer: A\n',
+                    'B' : "</E>" + prompt_hint+'\n{question}\nAnswer: B\n',
+                    'C' : "</E>" + prompt_hint+'\n{question}\nAnswer: C\n',
+                    'D' : "</E>" + prompt_hint+'\n{question}\nAnswer: D\n'
+                },
+                ice_token="</E>",
+            ),
+            retriever=dict(type=retriever),
+            inferencer=dict(
+                type=PPLInferencer,
                 save_every=20,
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',

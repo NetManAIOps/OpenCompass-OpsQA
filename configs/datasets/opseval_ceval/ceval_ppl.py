@@ -31,10 +31,10 @@ ceval_naive_ppl = [
             ice_template=dict(
                 type=PromptTemplate,
                 template={
-                    'A' : prompt_hint+f'\n{{question}}\nAnswer: A\n',
-                    'B' : prompt_hint+f'\n{{question}}\nAnswer: B\n',
-                    'C' : prompt_hint+f'\n{{question}}\nAnswer: C\n',
-                    'D' : prompt_hint+f'\n{{question}}\nAnswer: D\n'
+                    'A' : prompt_hint+f'\n{{question}}\n答案： A\n',
+                    'B' : prompt_hint+f'\n{{question}}\n答案： B\n',
+                    'C' : prompt_hint+f'\n{{question}}\n答案： C\n',
+                    'D' : prompt_hint+f'\n{{question}}\n答案： D\n'
                 }
                 # template={
                 #     chr(ord('A')+cid): prompt_hint+' {{question}} '+chr(ord('A')+cid)+': {{choices['+cid+']}}' for cid in enumerate(choices)
@@ -43,10 +43,10 @@ ceval_naive_ppl = [
             prompt_template=dict(
                 type=PromptTemplate,
                 template={
-                    'A' : "</E>" + prompt_hint+'\n{question}\nAnswer: A\n',
-                    'B' : "</E>" + prompt_hint+'\n{question}\nAnswer: B\n',
-                    'C' : "</E>" + prompt_hint+'\n{question}\nAnswer: C\n',
-                    'D' : "</E>" + prompt_hint+'\n{question}\nAnswer: D\n'
+                    'A' : "</E>" + prompt_hint+'\n{question}\n答案： A\n',
+                    'B' : "</E>" + prompt_hint+'\n{question}\n答案： B\n',
+                    'C' : "</E>" + prompt_hint+'\n{question}\n答案： C\n',
+                    'D' : "</E>" + prompt_hint+'\n{question}\n答案： D\n'
                 },
                 ice_token="</E>",
             ),
