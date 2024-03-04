@@ -1,9 +1,10 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer, PPLInferencer
-from opencompass.openicl.icl_evaluator import AccEvaluator
+from opencompass.openicl.icl_evaluator import AccEvaluator, OpsEvalGenMCEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OwlDataset
+from mmengine import read_base
 with read_base():
     from ...paths import ROOT_DIR
 
@@ -19,6 +20,11 @@ owl_eval_cfg = dict(
     evaluator=dict(type=AccEvaluator),
     sc_size=SAMPLE_SIZE, 
     pred_postprocessor=dict(type='owl-choice'))
+
+owl_gen_eval_cfg = dict(
+    evaluator=dict(type=OpsEvalGenMCEvaluator),
+    sc_size=SAMPLE_SIZE,
+)
 
 prompts = [
     # Zero-shot
@@ -86,7 +92,7 @@ owl_cot = [
                 **fixidlist
             ),
         ),
-        eval_cfg=owl_eval_cfg)
+        eval_cfg=owl_gen_eval_cfg)
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
             [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
@@ -105,7 +111,6 @@ owl_cot = [
             ]
         )
 ]
-
 
 owl_naive = [
     dict(
@@ -152,7 +157,7 @@ owl_naive = [
                 **fixidlist
             ),
         ),
-        eval_cfg=owl_eval_cfg)
+        eval_cfg=owl_gen_eval_cfg)
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
             [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],

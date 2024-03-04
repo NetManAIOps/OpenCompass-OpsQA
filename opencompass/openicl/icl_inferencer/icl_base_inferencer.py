@@ -134,7 +134,7 @@ class CoTInferencerOutputHandler:
         self.results_dict[str(idx)] = {
             'thoughts': thoughts,
             'origin_prompt': origin_prompt,
-            'prediction': prediction,
+            'prediction': thoughts,
             'reference': reference
         }
 
