@@ -15,10 +15,10 @@ SAMPLE_SIZE = 3
 
 ceval_path = f'{ROOT_DIR}data/opseval/ceval/'
 
-ceval_naive_ppl = [
+ceval_naive = [
     dict(
         type=OracleDataset,
-        abbr=f'ceval-{shot_abbr}-{lang}-{qtype}-sc-ppl',
+        abbr=f'ceval-{shot_abbr}-{lang}-{qtype}-sc',
         path=ceval_path, 
         name=f'ceval_{lang}_{qtype}_ppl',
         # reader_cfg=choice_qa_reader_cfg,
@@ -30,29 +30,33 @@ ceval_naive_ppl = [
         infer_cfg=dict(
             ice_template=dict(
                 type=PromptTemplate,
-                template={
-                    'A' : prompt_hint+f'\n{{question}}\n答案： A\n',
-                    'B' : prompt_hint+f'\n{{question}}\n答案： B\n',
-                    'C' : prompt_hint+f'\n{{question}}\n答案： C\n',
-                    'D' : prompt_hint+f'\n{{question}}\n答案： D\n'
-                }
-                # template={
-                #     chr(ord('A')+cid): prompt_hint+' {{question}} '+chr(ord('A')+cid)+': {{choices['+cid+']}}' for cid in enumerate(choices)
-                # }
+                template=dict( 
+                    round=[
+                        dict(
+                            role="HUMAN",
+                            prompt=prompt_hint
+                        ),
+                        dict(role="BOT", prompt=f"{{answer}}\n"),
+                    ]
+                ),
             ),
             prompt_template=dict(
                 type=PromptTemplate,
-                template={
-                    'A' : "</E>" + prompt_hint+'\n{question}\n答案： A\n',
-                    'B' : "</E>" + prompt_hint+'\n{question}\n答案： B\n',
-                    'C' : "</E>" + prompt_hint+'\n{question}\n答案： C\n',
-                    'D' : "</E>" + prompt_hint+'\n{question}\n答案： D\n'
-                },
+                template=dict(
+                    begin="</E>", 
+                    round=[
+                        dict(
+                            role="HUMAN",
+                            prompt=prompt_hint
+                        ),
+                        dict(role="BOT", prompt="{answer}\n")
+                    ]
+                ),
                 ice_token="</E>",
             ),
             retriever=dict(type=retriever),
             inferencer=dict(
-                type=PPLInferencer,
+                type=SCInferencer,
                 save_every=20,
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
@@ -61,7 +65,10 @@ ceval_naive_ppl = [
                 **fixidlist
             ),
         ),
-        eval_cfg=dict(evaluator=dict(type=AccEvaluator)))
+        eval_cfg=dict(
+            evaluator=dict(type=AccEvaluator),
+            sc_size=SAMPLE_SIZE, 
+            pred_postprocessor=dict(type='oracle-choice')))
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-Shot'],
             [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
@@ -75,7 +82,7 @@ ceval_naive_ppl = [
         for lang, prompt_hint in zip(
             ['zh'],
             [
-                f"{prompts[shot_hint_id][qtype_hint_id][1]}"
+                f"以下是选择题。{prompts[shot_hint_id][qtype_hint_id][1]}\n{{question}}\n答案：\n"
             ],
         )
 ]

@@ -14,7 +14,10 @@ with read_base():
     # from ..datasets.zte.zte_ppl import zte_naive_ppl
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
+    from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
+    from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
     from ..datasets.opseval_ceval.ceval_ppl import ceval_naive_ppl
+    from ..datasets.opseval_ceval.ceval_naive import ceval_naive
     #/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/mixture/mix5_1-sft_owl-model
     # Models
     # from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb as zzr1
