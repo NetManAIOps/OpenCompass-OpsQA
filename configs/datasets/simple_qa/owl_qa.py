@@ -1,7 +1,7 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer
-from opencompass.openicl.icl_evaluator import AccEvaluator
+from opencompass.openicl.icl_evaluator import AccEvaluator, BleuRougeEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import QADataset
 from mmengine.config import read_base
@@ -19,7 +19,7 @@ owl_qa_reader_cfg = dict(
 )
 
 owl_qa_eval_cfg = dict(
-    evaluator=dict(type=AccEvaluator))
+    evaluator=dict(type=BleuRougeEvaluator))
 
 owl_qa_datasets = [
     dict(
@@ -72,7 +72,10 @@ owl_qa_datasets = [
             [ZeroRetriever, FixKRetriever]
         )
     for lang, prompt_hint in zip(
-        ['zh', 'en'],
+        [
+            'zh', 
+            'en'
+            ],
         [
             f"你是一名运维专家，请回答下面这个问题：\n{{question}}\n",
             f"You are an IT operations expert, please answer the following question: \n{{question}}\n"

@@ -3,6 +3,7 @@ from opencompass.models import HuggingFaceCausalLM
 from mmengine.config import read_base
 with read_base():
     from ...paths import ROOT_DIR
+    from ..model_template import get_default_model
 
 internlm2_chat_7b = dict(
         type=HuggingFaceCausalLM,
@@ -29,3 +30,5 @@ internlm2_chat_20b = dict(
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
         run_cfg=dict(num_gpus=2, num_procs=1),
     )
+
+internlm2_7b = get_default_model(abbr="internlm2-7b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-7b")

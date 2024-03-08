@@ -69,12 +69,17 @@ rzy_ppl_qa_datasets = [
             [ZeroRetriever, FixKRetriever]
         )
     for lang, prompt_hint, answer_hint in zip(
-        ['zh'],
         [
-            f"你是一名运维专家，请回答下面这个问题：\n{{question}}\n"
+            'zh', 
+            # 'en'
         ],
         [
-            '答案： '
+            f"你是一名运维专家，请回答下面这个问题：\n{{question}}\n",
+            # f"You are an IT operations expert, please answer the following question: \n{{question}}\n"
+        ],
+        [
+            '答案： ',
+            # 'Answer: '
         ]
     )
 ]

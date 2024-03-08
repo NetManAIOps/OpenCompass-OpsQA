@@ -324,7 +324,7 @@ class PPLQAInferencer(BaseInferencer):
                         idx, 
                         ice[idx],
                         ice_template=ice_template,
-                        prmopt_template=prompt_template,
+                        prompt_template=prompt_template,
                     )
                     prompt_token_num = self.model.get_token_len_from_template(  # noqa
                         prompt, mode='ppl')  # noqa

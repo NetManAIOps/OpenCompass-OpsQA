@@ -80,6 +80,82 @@ class HuggingfaceEvaluator(BaseEvaluator):
         return result
 
 
+class HuggingfaceMultiEvaluator(BaseEvaluator):
+    """Use huggingface evaluate module to calculate the target metrics.
+
+    Args:
+        metric (str): Metric name in evaluate module.
+        seed (int): There exists some randomness during the calculation of some
+            metrics, thus we set a fixed random seed for reproducing. Defaults
+            to 0.
+    """
+
+    def __init__(self, metrics: List[str], seed: int = 0) -> None:
+        self.metrics = metrics
+        self.seed = seed
+        super().__init__()
+
+    def _preprocess(self, predictions: List, references: List) -> dict:
+        """Preprocess the final predictions and references to needed format.
+
+        Args:
+            predictions (List): List of predictions of each sample.
+            references (List): List of targets for each sample.
+
+        Returns:
+            dict: preprocessed results.
+        """
+        return {
+            'predictions': predictions,
+            'references': references,
+        }
+
+    def _postprocess(self, scores: dict) -> dict:
+        """Postprocess for final scores.
+
+        Args:
+            scores (dict): Dict of calculated scores of metrics.
+
+        Returns:
+            dict: postprocessed scores.
+        """
+        return scores
+
+    def score(self, predictions: List, references: List) -> dict:
+        """Calculate scores.
+
+        Args:
+            predictions (List): List of predictions of each sample.
+            references (List): List of targets for each sample.
+
+        Returns:
+            dict: calculated scores.
+        """
+        random_state = random.getstate()
+        np_random_state = np.random.get_state()
+
+        random.seed(self.seed)
+        np.random.seed(self.seed)
+        if len(predictions) != len(references):
+            return {
+                'error':
+                'predictions and references have different '
+                f'length. len(predictions): {len(predictions)}, '
+                f'len(references): {len(references)}'
+            }
+        metrics = [evaluate.load(metric) for metric in self.metrics]
+        scores = [metric.compute(**self._preprocess(predictions, references)) for metric in metrics]
+        # scores是dict的列表，每个dict的键可能不同，合并它们得到一个新的dict
+        merged_scores = scores[0]
+        for d in scores[1:]:
+            merged_scores |= d
+
+        result = self._postprocess(merged_scores)
+        random.setstate(random_state)
+        np.random.set_state(np_random_state)
+        return result
+
+
 @ICL_EVALUATORS.register_module()
 class AccEvaluator(HuggingfaceEvaluator):
     """Accuracy evaluator."""
@@ -150,6 +226,14 @@ class BleuEvaluator(HuggingfaceEvaluator):
 
     def __init__(self) -> None:
         super().__init__(metric='sacrebleu')
+
+
+@ICL_EVALUATORS.register_module()
+class BleuRougeEvaluator(HuggingfaceMultiEvaluator):
+    """Rouge and Bleu evaluator"""
+
+    def __init__(self) -> None:
+        super().__init__(metrics=['rouge', 'sacrebleu'])
 
 
 @ICL_EVALUATORS.register_module()
