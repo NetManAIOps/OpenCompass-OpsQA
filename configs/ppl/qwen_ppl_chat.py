@@ -5,27 +5,22 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from ..datasets.zte.zte_ppl import zte_naive
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets 
     from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
     # Models
-    from ..local_models.qwen.qwen import qwen1_5_base_models
+    from ..local_models.qwen.qwen import qwen1_5_base_models, qwen1_5_chat_models
 datasets = [
-    # *zte_naive, 
     *owl_ppl_qa_datasets,
     *rzy_ppl_qa_datasets,
     *owl_qa_datasets,
-    *rzy_qa_datasets,
-    # *ceval_naive_ppl,
+    *rzy_qa_datasets
 ]
 
 models = [
-    # qwen1_5_14b_base,
-    # qwen_14b_base
-    # qwen_1_8b_base,
-    *[model for model in qwen1_5_base_models if '1.8b' in model['abbr']]
+    *qwen1_5_base_models,
+    *qwen1_5_chat_models
 ]
 
 for model in models:
@@ -35,11 +30,9 @@ for dataset in datasets:
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
     dataset['infer_cfg']['inferencer']['sc_size'] = 1
-    dataset['infer_cfg']['inferencer']['max_out_len'] = 20
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
         dataset['sample_setting'] = dict(load_list='/mnt/tenant-home_speed/lyh/evaluation/opseval/network/network_annotated.json')
-    dataset['sample_setting'] = dict(sample_size=5)
 
 infer = dict(
     partitioner=dict(

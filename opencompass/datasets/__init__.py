@@ -2,10 +2,10 @@
 # from .others.longbench import *  # noqa: F401, F403
 from .qa import *  # noqa: F401, F403
 from .owl import *  # noqa: F401, F403
-from .opsqa import *  # noqa: F401, F403
 from .opssub import * # noqa: F401, F403
 from .oracle import *  # noqa: F401, F403
 from .oreilly import *  # noqa: F401, F403
+from .opseval import OpsEvalMCDataset, OpsEvalQADataset  # noqa: F401, F403
 # from .others.advglue import *  # noqa: F401, F403
 # from .others.afqmcd import *  # noqa: F401, F403
 # from .others.agieval import *  # noqa: F401, F403

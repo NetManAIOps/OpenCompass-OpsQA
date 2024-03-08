@@ -4,6 +4,7 @@ from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTI
 from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.datasets import OracleDataset
+from mmengine import read_base
 with read_base():
     from ...commons.cfgs import choice_qa_reader_cfg, choice_single_eval_cfg
     from ...commons.prompts import prompts
