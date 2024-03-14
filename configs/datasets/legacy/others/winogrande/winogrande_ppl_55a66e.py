@@ -4,11 +4,14 @@ from opencompass.openicl.icl_inferencer import PPLInferencer
 from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.datasets import winograndeDataset
 
+# WARNING: This config cannot reproduce results in the paper.
+# e.g. LLAMA2-7B Winogrande 69.2 (paper) -> 62.27 (this config)
+# Please try winogrande_ll_c5cf57
+
 winogrande_reader_cfg = dict(
     input_columns=['opt1', 'opt2'],
     output_column='answer',
-    train_split='validation',
-    test_split='validation')
+)
 
 winogrande_infer_cfg = dict(
     prompt_template=dict(
@@ -28,8 +31,7 @@ winogrande_datasets = [
     dict(
         abbr='winogrande',
         type=winograndeDataset,
-        path='winogrande',
-        name='winogrande_xs',
+        path='./data/winogrande',
         reader_cfg=winogrande_reader_cfg,
         infer_cfg=winogrande_infer_cfg,
         eval_cfg=winogrande_eval_cfg)

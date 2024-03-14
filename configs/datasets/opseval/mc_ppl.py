@@ -32,7 +32,7 @@ def get_mc_ppl_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_ppl_ice_template(prompt_hint, answer_hint),
                 prompt_template=mc_abcd_ppl_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever),
+                retriever=dict(type=retriever, fix_id_list=fixidlist),
                 inferencer=get_ppl_inferencer(fixidlist=fixidlist),
             ),
             eval_cfg=dict(evaluator=dict(type=AccEvaluator)))

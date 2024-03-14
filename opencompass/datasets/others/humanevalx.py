@@ -5,6 +5,7 @@ import os.path as osp
 import re
 import subprocess
 import tempfile
+import time
 from shutil import copyfile
 from typing import Dict, Iterable
 
@@ -12,7 +13,12 @@ from datasets import Dataset
 
 from opencompass.openicl.icl_evaluator import BaseEvaluator
 
+<<<<<<< HEAD:opencompass/datasets/others/humanevalx.py
 from ..base import BaseDataset
+=======
+from .base import BaseDataset
+from .humaneval import humaneval_postprocess_v2
+>>>>>>> upstream/main:opencompass/datasets/humanevalx.py
 
 _LANGUAGE_NAME_DICT = {
     'cpp': 'CPP',
@@ -73,7 +79,8 @@ class HumanevalXEvaluator(BaseEvaluator):
                  language,
                  ip_address='localhost',
                  port=5000,
-                 timeout=180) -> None:
+                 retry=2,
+                 timeout=600) -> None:
         assert language in _LANGUAGE_NAME_DICT.keys(), (
             f'language must be in {list(_LANGUAGE_NAME_DICT.keys())}')
         if language == 'rust':
@@ -81,14 +88,17 @@ class HumanevalXEvaluator(BaseEvaluator):
         self.language = language
         self.ip_address = ip_address
         self.port = port
+        self.retry = retry
         self.timeout = timeout
         super().__init__()
 
     def score(self, predictions, references):
         predictions = [{
-            'task_id': f'{_LANGUAGE_NAME_DICT[self.language]}/{i}',
-            'generation': _clean_up_code(pred, self.language),
-        } for i, pred in enumerate(predictions)]
+            'task_id':
+            f'{_LANGUAGE_NAME_DICT[self.language]}/{i}',
+            'generation':
+            _clean_up_code(pred, self.language, refer),
+        } for i, (pred, refer) in enumerate(zip(predictions, references))]
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_out_path = osp.join(tmp_dir,
                                     f'humanevalx_{self.language}.json')
@@ -96,7 +106,17 @@ class HumanevalXEvaluator(BaseEvaluator):
                 for pred in predictions:
                     f.write(json.dumps(pred) + '\n')
 
-            succeed, output = self._code_eval_service(file_path=tmp_out_path)
+            num_retry = 0
+            while num_retry < self.retry:
+                succeed, output = self._code_eval_service(
+                    file_path=tmp_out_path)
+                if not succeed and '(56) Recv failure' in output:
+                    # only retry when connection failed
+                    num_retry += 1
+                    # wait a min in case the service load is too high
+                    time.sleep(60)
+                else:
+                    break
 
             if succeed:
                 if isinstance(output, str):
@@ -104,9 +124,15 @@ class HumanevalXEvaluator(BaseEvaluator):
                 elif isinstance(output, dict):
                     return output
 
-            ref_url = 'https://github.com/Ezra-Yu/code-evaluator'
-            result_file_path = os.path.join(
-                'outputs', f'humanevalx_{self.language}.json')
+            ref_url = 'https://opencompass.readthedocs.io/en/latest/advanced_guides/code_eval_service.html'  # noqa
+            if hasattr(self, '_out_dir'):
+                result_file_path = re.sub('results', 'mid_results',
+                                          self._out_dir) + '.json'  # noqa
+                if not osp.exists(osp.dirname(result_file_path)):
+                    os.makedirs(osp.dirname(result_file_path))
+            else:
+                result_file_path = os.path.join(
+                    'outputs', f'humanevalx_{self.language}.json')
             copyfile(tmp_out_path, result_file_path)
             raise Exception(
                 f'Call CodeEvalService Error in `HumanevalXEvaluator`, The '
@@ -142,9 +168,29 @@ class HumanevalXEvaluator(BaseEvaluator):
             return False, err
 
 
-def _clean_up_code(text: str, language_type: str) -> str:
+def _clean_up_code(text: str, language_type: str, reference) -> str:
     """Cleans up the generated code."""
+    try:
+        # for chatGLM related text
+        text = eval(text)
+    except Exception:
+        pass
+    # extract code from code block
+    text = text.lstrip('\n')
+    if '```' in text:
+        blocks = re.findall(r'```(.*?)```', text, re.DOTALL)
+        if len(blocks) == 0:
+            text = text.split('```')[1]  # fall back to default strategy
+        else:
+            text = blocks[0]  # fetch the first code block
+            if not text.startswith('\n'):  # in case starting with ```xxx
+                text = text[max(text.find('\n') + 1, 0):]
     if language_type.lower() == 'python':
+        text = humaneval_postprocess_v2(text)
+        # we need to take care of the first line
+        # append extra space for first line for correct indentation
+        text = '    ' + text.lstrip()
+
         text_splits = text.split('\n')
         is_empty_line = False
         ind_empty_line = None
@@ -163,7 +209,13 @@ def _clean_up_code(text: str, language_type: str) -> str:
             for w in end_words:
                 if w in text:
                     text = text[:text.rfind(w)]
-    elif language_type.lower() == 'java':
+    # strip function head for all other language
+    func_name = reference.strip().split('\n')[-1]
+    if func_name:
+        func_name = func_name.strip().strip('{')
+        if func_name in text:
+            text = '\n'.join(text[text.find(func_name):].split('\n')[1:])
+    if language_type.lower() == 'java':
         main_pos = text.find('public static void main')
         if main_pos != -1:
             text = text[:main_pos] + '}'

@@ -5,7 +5,7 @@ with read_base():
     from ..ceval.ceval_ppl_578f8d import ceval_datasets
     from ..agieval.agieval_mixed_2f14ad import agieval_datasets
     from ..GaokaoBench.GaokaoBench_mixed_f2038e import GaokaoBench_datasets
-    from ..bbh.bbh_gen_6bd693 import bbh_datasets
+    from ..bbh.bbh_gen_5b92b0 import bbh_datasets
     from ..humaneval.humaneval_gen_8e312c import humaneval_datasets
     from ..mbpp.mbpp_gen_1e1056 import mbpp_datasets
     from ..CLUE_C3.CLUE_C3_ppl_e24a31 import C3_datasets
@@ -47,15 +47,10 @@ with read_base():
     from ..piqa.piqa_ppl_1cf9f0 import piqa_datasets
     from ..siqa.siqa_ppl_ced5f6 import siqa_datasets
     from ..strategyqa.strategyqa_gen_1180a7 import strategyqa_datasets
-    from ..winogrande.winogrande_ppl_55a66e import winogrande_datasets
+    from ..winogrande.winogrande_ll_c5cf57 import winogrande_datasets
     from ..obqa.obqa_ppl_c7c154 import obqa_datasets
     from ..nq.nq_gen_c788f6 import nq_datasets
     from ..triviaqa.triviaqa_gen_2121ce import triviaqa_datasets
     from ..flores.flores_gen_806ede import flores_datasets
-    from ..crowspairs.crowspairs_ppl_e811e1 import crowspairs_datasets
-    from ..civilcomments.civilcomments_clp_a3c5fd import civilcomments_datasets
-    from ..jigsawmultilingual.jigsawmultilingual_clp_fe50d8 import jigsawmultilingual_datasets
-    from ..realtoxicprompts.realtoxicprompts_gen_7605e4 import realtoxicprompts_datasets
-    from ..truthfulqa.truthfulqa_gen_5ddc62 import truthfulqa_datasets
 
 datasets = sum((v for k, v in locals().items() if k.endswith('_datasets')), [])

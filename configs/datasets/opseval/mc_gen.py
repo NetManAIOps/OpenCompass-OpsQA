@@ -31,7 +31,7 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_gen_ice_template(prompt_hint, answer_hint),
                 prompt_template=mc_abcd_gen_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever),
+                retriever=dict(type=retriever, fix_id_list=fixidlist),
                 inferencer=get_gen_inferencer(sc_size=SAMPLE_SIZE, fixidlist=fixidlist),
             ),
             eval_cfg=dict(evaluator=dict(type=OpsEvalGenMCEvaluator))
@@ -68,7 +68,7 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_cot_ice_template(prompt_hint, cot_think_hint, cot_conclude_hint),
                 prompt_template=mc_abcd_cot_prompt_template(prompt_hint, cot_think_hint),
-                retriever=dict(type=retriever),
+                retriever=dict(type=retriever, fix_id_list=fixidlist),
                 inferencer=get_cot_inferencer(sc_size=SAMPLE_SIZE, fixidlist=fixidlist, cot_prompts=cot_conclude_hint),
             ),
             eval_cfg=dict(evaluator=dict(type=OpsEvalGenMCEvaluator)))

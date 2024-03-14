@@ -36,7 +36,7 @@ class SCInferencer(BaseInferencer):
         gen_field_replace_token (:obj:`str`, optional): Used to replace the
             generation field token when generating prompts.
         save_every (:obj:`int`, optional): Save intermediate results every
-            `save_every` epochs.
+            `save_every` iters. Defaults to 1.
         generation_kwargs (:obj:`Dict`, optional): Parameters for the
             :obj:`model.generate()` method.
         sc_size (:obj:`int`, optional): Sample size for Self-Consistency
@@ -53,8 +53,7 @@ class SCInferencer(BaseInferencer):
             gen_field_replace_token: Optional[str] = '',
             output_json_filepath: Optional[str] = './icl_inference_output',
             output_json_filename: Optional[str] = 'predictions',
-            save_every: Optional[int] = None,
-            fix_id_list: Optional[List[int]] = None,
+            save_every: Optional[int] = 1,
             sc_size: Optional[int] = 1,
             infer_type: Optional[str] = '',
             generation_kwargs: dict = {},
@@ -71,7 +70,6 @@ class SCInferencer(BaseInferencer):
         self.gen_field_replace_token = gen_field_replace_token
         self.generation_kwargs = generation_kwargs
         self.max_out_len = max_out_len
-        self.fix_id_list = fix_id_list
         self.sc_size = sc_size
 
         if self.model.is_api and save_every is None:
@@ -93,10 +91,7 @@ class SCInferencer(BaseInferencer):
             output_json_filename = self.output_json_filename
 
         # 2. Get results of retrieval process
-        if 'Fix' in retriever.__class__.__name__:
-            ice_idx_list = retriever.retrieve(self.fix_id_list)
-        else:
-            ice_idx_list = retriever.retrieve()
+        ice_idx_list = retriever.retrieve()
 
         # 3. Generate prompts for testing input
         prompt_list, reference_list = self.get_generation_prompt_list_from_retriever_indices(  # noqa
@@ -106,6 +101,12 @@ class SCInferencer(BaseInferencer):
             max_seq_len=self.max_seq_len,
             ice_template=ice_template,
             prompt_template=prompt_template)
+
+        # 3.1 Fetch and zip prompt & gold answer if output column exists
+        ds_reader = retriever.dataset_reader
+        if ds_reader.output_column:
+            gold_ans = ds_reader.dataset['test'][ds_reader.output_column]
+            prompt_list = list(zip(prompt_list, gold_ans))
 
         # Create tmp json file for saving intermediate results and future
         # resuming
@@ -125,19 +126,21 @@ class SCInferencer(BaseInferencer):
 
         # 5. Inference for prompts in each batch
         logger.info('Starting inference process...')
-        for entry in tqdm(dataloader, disable=not self.is_main_process):
-            template_entries = [t[0] for t in entry]
-
-            reference_entries = [t[1] for t in entry]
+        for datum in tqdm(dataloader, disable=not self.is_main_process):
+            if ds_reader.output_column:
+                entry, golds = list(zip(*datum))
+            else:
+                entry = datum
+                golds = [None for _ in range(len(entry))]
             # TODO: add more types of CoT method
             # 5-1. Inference sc_size times with local model
             with torch.no_grad():
-                parsed_entries = self.model.parse_template(template_entries,
+                parsed_entries = self.model.parse_template(entry,
                                                            mode='gen')
                 sc_results = []
                 for _ in range(self.sc_size):
                     results = self.model.generate_from_template(
-                        template_entries,
+                        entry,
                         max_out_len=self.max_out_len,
                         **self.generation_kwargs)
                     sc_results.append(results)
@@ -145,10 +148,12 @@ class SCInferencer(BaseInferencer):
                 generated = sc_prediction
 
             # 5-3. Save current output
-            for prompt, prediction, reference in zip(parsed_entries, generated,
-                                                     reference_entries):
-                output_handler.save_results(prompt, prediction, reference,
-                                            index)
+            for prompt, prediction, gold in zip(parsed_entries, generated,
+                                                golds):
+                output_handler.save_results(prompt,
+                                            prediction,
+                                            index,
+                                            gold=gold)
                 index = index + 1
 
             # 5-4. Save intermediate results

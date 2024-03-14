@@ -31,7 +31,7 @@ def get_qa_ppl_datasets(dataset_name, path, langs=['zh'], qtypes=None):
             infer_cfg=dict(
                 ice_template=qa_ppl_ice_template(prompt_hint, answer_hint),
                 prompt_template=qa_ppl_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever),
+                retriever=dict(type=retriever, fix_id_list=fixidlist),
                 inferencer=get_ppl_inferencer(fixidlist=fixidlist),
             ),
             eval_cfg=dict(evaluator=dict(type=AccEvaluator))

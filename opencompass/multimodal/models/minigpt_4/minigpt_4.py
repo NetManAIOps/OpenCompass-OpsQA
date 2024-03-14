@@ -27,7 +27,13 @@ def load_package():
     current_folder_path = os.path.dirname(current_file_path)
 
     sys.path.append(os.path.join(current_folder_path, 'MiniGPT-4'))  # noqa
-    from minigpt4.models.mini_gpt4 import MiniGPT4
+
+    try:
+        # the latest version of MiniGPT4
+        from minigpt4.models.minigpt4 import MiniGPT4
+    except ImportError:
+        # the old version of MiniGPT4
+        from minigpt4.models.mini_gpt4 import MiniGPT4
 
     sys.path.pop(-1)
 
@@ -50,6 +56,8 @@ class MiniGPT4Inferencer(MiniGPT4):
         img_size (int): The size of image. Defaults to 224.
         low_resource (bool): Whether loaded in low precision.
             Defaults to False.
+        is_caption_task (bool): Whether the task is caption task.
+            Defaults to False.
     """
 
     def __init__(self,
@@ -60,6 +68,7 @@ class MiniGPT4Inferencer(MiniGPT4):
                  max_length: int = 30,
                  img_size: int = 224,
                  low_resource: bool = False,
+                 is_caption_task: bool = False,
                  mode: str = 'generation',
                  n_segments: int = 1) -> None:
         super().__init__(llama_model=llama_model,
@@ -83,6 +92,7 @@ class MiniGPT4Inferencer(MiniGPT4):
                 post_processor, MM_MODELS)
         self.do_sample = do_sample
         self.max_length = max_length
+        self.is_caption_task = is_caption_task
 
     def forward(self, batch):
         if self.mode == 'generation':
@@ -193,7 +203,10 @@ class MiniGPT4Inferencer(MiniGPT4):
             output_token = outputs[i]
             output_text = self.post_processor(output_token,
                                               self.llama_tokenizer)
-            data_sample.pred_answer = output_text
+            if self.is_caption_task:
+                data_sample.pred_caption = output_text
+            else:
+                data_sample.pred_answer = output_text
             data_samples[i] = data_sample
         return data_samples
 
