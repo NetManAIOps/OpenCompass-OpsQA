@@ -73,18 +73,27 @@ class OpsEvalMCDataset(BaseDataset):
 
             raw_data = []
             for data in json_data:
-                item = {
-                    'question': data['question'],
-                    'answer': data['answer'],
-                    'A': data['A'],
-                    'B': data['B'],
-                    'C': data['C'] if 'C' in data else '',
-                    'D': data['D'] if 'D' in data else '',
-                    'choices': data['choices'] if 'choices' in data else [],
-                    'solution': data['solution'] if 'solution' in data else '',
-                    'id': data['id'],
-                }
-                raw_data.append(item)
+                try:
+                    item = {
+                        'question': data['question'],
+                        'answer': data['answer'],
+                        'A': data['A'],
+                        'B': data['B'],
+                        'C': data['C'] if 'C' in data else '',
+                        'D': data['D'] if 'D' in data else '',
+                        'choices': data['choices'] if 'choices' in data else [],
+                        'solution': data['solution'] if 'solution' in data else '',
+                        'id': data['id'],
+                    }
+                    # 检查E到H是否存在，如果存在则加入，（但是模板里我们不会考虑这种情况）
+                    for i in range(4, 8):
+                        if chr(65 + i) in data:
+                            item[chr(65 + i)] = data[chr(65 + i)]
+
+                    raw_data.append(item)
+                except KeyError as err:
+                    print("[DATASET DEBUG]: data", data)
+                    raise err
             dataset[split] = Dataset.from_list(raw_data)
         return dataset
 

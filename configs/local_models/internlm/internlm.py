@@ -32,3 +32,7 @@ internlm2_chat_20b = dict(
     )
 
 internlm2_7b = get_default_model(abbr="internlm2-7b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-7b")
+internlm2_20b = get_default_model(abbr="internlm2-20b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-20b", num_gpus=2)
+
+internlm2_bases = [internlm2_7b, internlm2_20b]
+internlm2_chats = [internlm2_chat_20b, internlm2_chat_7b]

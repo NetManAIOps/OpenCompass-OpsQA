@@ -120,6 +120,7 @@ class OpenICLInferTask(BaseTask):
                                  prompt_template=prompt_template,
                                  output_json_filepath=out_dir,
                                  output_json_filename=out_file)
+        # TODO: add normalizing_str to pplinferencer
         else:
             inferencer.inference(retriever,
                                  ice_template=ice_template,

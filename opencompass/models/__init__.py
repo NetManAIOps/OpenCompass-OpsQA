@@ -14,3 +14,4 @@ from .qwen_api import QwenAPI  # noqa
 from .vllm_api import VllmAPI  # noqa
 # from .custom import CustomModel  # noqa
 from .wenxin_api import WenXinAI  # noqa
+from .t5 import T5  # noqa

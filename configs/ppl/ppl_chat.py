@@ -5,21 +5,25 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets 
-    from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
-    from ..datasets.simple_qa.owl_qa import owl_qa_datasets
-    from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
+    from ..datasets.opseval.datasets import all_ppl_mc, all_ppl_qa, all_gen_mc, all_gen_qa
     # Models
-    from ..local_models.qwen.qwen import qwen1_5_base_models, qwen1_5_chat_models
+    from ..local_models.qwen.qwen import qwen1_5_chat_models
+    from ..local_models.internlm.internlm import internlm2_chats
+    from ..local_models.baichuan.baichuan import baichuan2_chats
+    # Paths
+    from ..paths import ROOT_DIR
+
 datasets = [
-    *owl_ppl_qa_datasets,
-    *rzy_ppl_qa_datasets,
-    *owl_qa_datasets,
-    *rzy_qa_datasets
+    *all_ppl_mc,
+    *all_ppl_qa,
+    *all_gen_mc,
+    *all_gen_qa,
 ]
 
 models = [
-    *qwen1_5_base_models,
+    *qwen1_5_chat_models,
+    *internlm2_chats,
+    *baichuan2_chats
 ]
 
 for model in models:
@@ -31,7 +35,7 @@ for dataset in datasets:
     dataset['infer_cfg']['inferencer']['sc_size'] = 1
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
-        dataset['sample_setting'] = dict(load_list='/mnt/tenant-home_speed/lyh/evaluation/opseval/network/network_annotated.json')
+        dataset['sample_setting'] = dict(load_list=f'{ROOT_DIR}data/opseval/network/network_annotated.json')
 
 infer = dict(
     partitioner=dict(

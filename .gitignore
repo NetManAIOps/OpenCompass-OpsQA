@@ -16,6 +16,7 @@ configs/viz_*.py
 data/*
 models/*
 work_dirs
+core
 
 # not ignoring OpsQA dataset
 !data/OpsQA/

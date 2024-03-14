@@ -3,7 +3,7 @@ from mmengine.config import read_base
 with read_base():
     from ...paths import ROOT_DIR
 
-def get_default_model(abbr, path):
+def get_default_model(abbr, path, num_gpus=1):
     return dict(
         type=HuggingFaceCausalLM,
         abbr=abbr,
@@ -17,7 +17,7 @@ def get_default_model(abbr, path):
         max_seq_len=2048,
         batch_size=8,
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
-        run_cfg=dict(num_gpus=1, num_procs=1),
+        run_cfg=dict(num_gpus=num_gpus, num_procs=1),
     )
 
 qwen1_5_0_5b_base = get_default_model(abbr="qwen1.5-0.5b-base", path=f"{ROOT_DIR}models/Qwen/Qwen1.5-0.5B")
@@ -28,7 +28,7 @@ qwen1_5_4b_base = get_default_model(abbr="qwen1.5-4b-base", path=f"{ROOT_DIR}mod
 qwen1_5_4b_chat = get_default_model(abbr="qwen1.5-4b-chat", path=f"{ROOT_DIR}models/Qwen/Qwen1.5-4B-Chat")
 
 qwen1_5_base_models = [
-    get_default_model(abbr=f"qwen1.5-{quant}b-base", path=f"{ROOT_DIR}models/Qwen/Qwen1.5-{quant}B")
+    get_default_model(abbr=f"qwen1.5-{quant}b-base", path=f"{ROOT_DIR}models/Qwen/Qwen1.5-{quant}B", num_gpus=1)
         for quant in ["0.5", "1.8", "4", "7", "14"]
 ]
 

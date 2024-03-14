@@ -99,8 +99,9 @@ def patch_fileio(global_vars=None):
 
     @patch_func(torch, 'load')
     def load(f, *args, **kwargs):
-        if isinstance(f, str):
-            f = io.BytesIO(fileio.get(f))
+        # print("[DEBUG]: ", f, args, kwargs)
+        # if isinstance(f, str):
+        #     f = io.BytesIO(fileio.get(f))
         return load._fallback(f, *args, **kwargs)
 
     try:
