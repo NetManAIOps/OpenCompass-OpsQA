@@ -43,6 +43,7 @@ class FixKRetriever(BaseRetriever):
     def retrieve(self):
         """Retrieve the in-context example index for each test example."""
         num_idx = len(self.index_ds)
+        print(num_idx, self.fix_id_list)
         for idx in self.fix_id_list:
             assert idx < num_idx, f'Index {idx} is out of range of {num_idx}'
         rtr_idx_list = []

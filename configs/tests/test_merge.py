@@ -7,7 +7,7 @@ with read_base():
     # Datasets
     from ..datasets.opseval.datasets import owl_mc, owl_qa
     # Models
-    from ..local_models.qwen.qwen import qwen1_5_0_5b_base
+    from ..local_models.qwen.qwen import qwen1_5_4b_base
     from ..paths import ROOT_DIR
 
 datasets = [
@@ -16,16 +16,16 @@ datasets = [
 
 
 models = [
-    qwen1_5_0_5b_base
+    qwen1_5_4b_base
 ]
 
 for dataset in datasets:
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
-    dataset['infer_cfg']['inferencer']['sc_size'] = 2
+    dataset['infer_cfg']['inferencer']['sc_size'] = 3
     dataset['infer_cfg']['inferencer']['max_token_len'] = 20
-    dataset['eval_cfg']['sc_size'] = 2
-    dataset['sample_setting'] = dict(sample_size=2)     # !!!WARNING: Use for testing only!!!
+    dataset['eval_cfg']['sc_size'] = 3
+    dataset['sample_setting'] = dict(sample_size=10)     # !!!WARNING: Use for testing only!!!
     
 
 infer = dict(

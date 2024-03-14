@@ -32,15 +32,14 @@ def get_mc_ppl_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_ppl_ice_template(prompt_hint, answer_hint),
                 prompt_template=mc_abcd_ppl_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever, fix_id_list=fixidlist),
-                inferencer=get_ppl_inferencer(fixidlist=fixidlist),
+                retriever=retriever_dict,
+                inferencer=get_ppl_inferencer(),
             ),
             eval_cfg=dict(evaluator=dict(type=AccEvaluator)))
-            for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
+            for shot_abbr, shot_hint_id, retriever_dict in zip(
                 ['Zero-shot', '3-shot'],
-                [dict(fix_id_list=None), dict(fix_id_list=[0, 1, 2])],
                 [0, 1],
-                [ZeroRetriever, FixKRetriever]
+                [dict(type=ZeroRetriever), dict(type=FixKRetriever, fix_id_list=[0,1,2])]
             )
             for qtype, qtype_hint_id in zip(
                 ['single'],

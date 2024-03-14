@@ -48,7 +48,7 @@ def mc_abcd_gen_prompt_template(prompt_hint, answer_hint):
                     role="HUMAN",
                     prompt=f'{prompt_hint}{{question}}\nA: {{A}}\nB: {{B}}\nC: {{C}}\nD: {{D}}\n{answer_hint}'
                 ),
-                dict(role="BOT", prompt="{answer}")
+                # dict(role="BOT", prompt="{answer}")
             ],
         ),
         ice_token="</E>",
@@ -85,7 +85,7 @@ def mc_abcd_cot_prompt_template(prompt_hint, cot_think_hint):
                     role="HUMAN",
                     prompt=f'{prompt_hint}{{question}}\nA: {{A}}\nB: {{B}}\nC: {{C}}\nD: {{D}}\n{cot_think_hint}'
                 ),
-                dict(role="BOT", prompt="{answer}")
+                # dict(role="BOT", prompt="{answer}")
             ]
         ),
         ice_token="</E>",
@@ -116,7 +116,7 @@ def qa_gen_prompt_template(prompt_hint, answer_hint):
                     role="HUMAN",
                     prompt=f'{prompt_hint}{{question}}\n{answer_hint}'
                 ),
-                dict(role="BOT", prompt="{answer}")
+                # dict(role="BOT", prompt="{answer}")
             ],
         ),
         ice_token="</E>",
