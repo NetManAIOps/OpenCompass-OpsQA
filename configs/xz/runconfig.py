@@ -14,14 +14,17 @@ with read_base():
     # from ..datasets.zte.zte_ppl import zte_naive_ppl
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
+    from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
+    from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
     from ..datasets.opseval_ceval.ceval_ppl import ceval_naive_ppl
+    from ..datasets.opseval_ceval.ceval_naive import ceval_naive
     #/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/mixture/mix5_1-sft_owl-model
     # Models
     # from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb as zzr1
     # from ..netman_models.qwen import nm_qwen_14b_ptlora_book as zzr1
     # from ..netman_models.qwen import *
     # from ..netman_models.qwen import nm_qwen_1_8b_books_all_lora as zzr1
-datasets = [*zte_ppl,*network_ppl,*owl_ppl,*owl_qa_datasets,*owl_ppl_qa_datasets,*ceval_naive_ppl,*zte_naive,*owl_naive,*network_naive]
+datasets = [*zte_ppl,*network_ppl,*owl_ppl,*owl_qa_datasets,*owl_ppl_qa_datasets,*ceval_naive_ppl,*zte_naive,*owl_naive,*network_naive,*ceval_naive]
 # datasets = [
 #     *zte_ppl, *network_ppl, *owl_ppl,
 #     *owl_qa_datasets,
@@ -32,9 +35,9 @@ datasets = [*zte_ppl,*network_ppl,*owl_ppl,*owl_qa_datasets,*owl_ppl_qa_datasets
 #     *network_cot, *network_naive, 
 # ]
 
-model_name = 'qwen-14b-base-sharegpt_sft'
-model_abbr = 'nm_qwen_14b_qwen_14b_base_sharegpt_sft'
-model_path = '/mnt/tenant-home_speed/xz/sft_checkpoint/qwen-14b-base-sharegpt_sft'
+model_name = 'qwen-14b-full-dsir_10000-mmlu-sft-20epochs'
+model_abbr = 'nm_qwen_14b_qwen_14b_full_dsir_10000_mmlu_sft_20epochs'
+model_path = '/mnt/tenant-home_speed/xz/sft_checkpoint/qwen-14b-full-dsir_10000-mmlu-sft-20epochs'
 
 if model_name is None:
     raise NotImplementedError("Model is none!")

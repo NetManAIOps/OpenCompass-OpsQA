@@ -189,8 +189,8 @@ def main():
     os.makedirs(osp.join(cfg.work_dir, 'configs'), exist_ok=True)
     
     # write dir_time_str to a temporary file for automatic script
-    with open(osp.join(cfg.work_dir, "version.txt"), "w") as f:
-        f.write(dir_time_str)
+    # with open(osp.join(cfg.work_dir, "version.txt"), "w") as f:
+    #     f.write(dir_time_str)
 
     # dump config
     output_config_path = osp.join(cfg.work_dir, 'configs',
