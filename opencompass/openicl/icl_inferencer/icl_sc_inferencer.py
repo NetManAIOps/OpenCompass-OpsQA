@@ -102,11 +102,11 @@ class SCInferencer(BaseInferencer):
             ice_template=ice_template,
             prompt_template=prompt_template)
 
-        # 3.1 Fetch and zip prompt & gold answer if output column exists
+        # # 3.1 Fetch and zip prompt & gold answer if output column exists
         ds_reader = retriever.dataset_reader
         if ds_reader.output_column:
             gold_ans = ds_reader.dataset['test'][ds_reader.output_column]
-            prompt_list = list(zip(prompt_list, gold_ans))
+            # prompt_list = list(zip(prompt_list, gold_ans))
 
         # Create tmp json file for saving intermediate results and future
         # resuming
@@ -132,11 +132,16 @@ class SCInferencer(BaseInferencer):
             else:
                 entry = datum
                 golds = [None for _ in range(len(entry))]
+            # entry = [t[0] for t in datum]
+            # golds = [t[1] for t in datum]
             # TODO: add more types of CoT method
             # 5-1. Inference sc_size times with local model
             with torch.no_grad():
                 parsed_entries = self.model.parse_template(entry,
                                                            mode='gen')
+                
+                # print("[MERGE DEBUG]: ENTRY", entry)
+                # print("[MERGE DEBUG]: PARSED_ENTRIES", parsed_entries)
                 sc_results = []
                 for _ in range(self.sc_size):
                     results = self.model.generate_from_template(

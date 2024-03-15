@@ -107,7 +107,7 @@ class GenInferencer(BaseInferencer):
         ds_reader = retriever.dataset_reader
         if ds_reader.output_column:
             gold_ans = ds_reader.dataset['test'][ds_reader.output_column]
-            prompt_list = list(zip(prompt_list, gold_ans))
+            # prompt_list = list(zip(prompt_list, gold_ans))
 
         # Create tmp json file for saving intermediate results and future
         # resuming

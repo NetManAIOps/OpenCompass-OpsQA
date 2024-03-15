@@ -91,8 +91,8 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
                 f"让我们逐个选项分析：\n"
             ],
             [
-                [f'{prompts[shot_hint_id][qtype_hint_id][0]}Therefore the answer is: \n'],
-                [f'{prompts[shot_hint_id][qtype_hint_id][1]}因此答案是：\n']
+                f'{prompts[shot_hint_id][qtype_hint_id][0]}Therefore the answer is: \n',
+                f'{prompts[shot_hint_id][qtype_hint_id][1]}因此答案是：\n'
             ]
         )
     ]
