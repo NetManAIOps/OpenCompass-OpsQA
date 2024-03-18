@@ -2,6 +2,7 @@ import argparse
 import os.path as osp
 import random
 import time
+from shutil import which
 from typing import Any
 
 from mmengine.config import Config, ConfigDict
@@ -42,13 +43,16 @@ class OpenICLInferTask(BaseTask):
                 the command.
         """
         script_path = __file__
-        if self.num_gpus > 0:
+        has_vllm = ('VLLM' in str(self.model_cfgs[0].get('type', ''))) or \
+            'VLLM' in str(self.model_cfgs[0].get('llm', {}).get('type', ''))
+        if self.num_gpus > 0 and not has_vllm:
             port = random.randint(12000, 32000)
             command = (f'torchrun --master_port={port} '
                        f'--nproc_per_node {self.num_procs} '
                        f'{script_path} {cfg_path}')
         else:
-            command = f'python {script_path} {cfg_path}'
+            python = 'python3' if which('python3') else 'python'
+            command = f'{python} {script_path} {cfg_path}'
 
         return template.format(task_cmd=command)
 
@@ -57,6 +61,7 @@ class OpenICLInferTask(BaseTask):
         for model_cfg, dataset_cfgs in zip(self.model_cfgs, self.dataset_cfgs):
             self.max_out_len = model_cfg.get('max_out_len', None)
             self.batch_size = model_cfg.get('batch_size', None)
+            self.min_out_len = model_cfg.get('min_out_len', None)
             self.model = build_model_from_cfg(model_cfg)
 
             for dataset_cfg in dataset_cfgs:
@@ -98,8 +103,10 @@ class OpenICLInferTask(BaseTask):
         inferencer_cfg['model'] = self.model
         self._set_default_value(inferencer_cfg, 'max_out_len',
                                 self.max_out_len)
+        self._set_default_value(inferencer_cfg, 'min_out_len',
+                                self.min_out_len)
         self._set_default_value(inferencer_cfg, 'batch_size', self.batch_size)
-        inferencer_cfg['max_seq_len'] = self.model_cfg['max_seq_len']
+        inferencer_cfg['max_seq_len'] = self.model_cfg.get('max_seq_len')
         inferencer = ICL_INFERENCERS.build(inferencer_cfg)
 
         out_path = get_infer_output_path(
@@ -129,7 +136,6 @@ class OpenICLInferTask(BaseTask):
 
     def _set_default_value(self, cfg: ConfigDict, key: str, value: Any):
         if key not in cfg:
-            assert value, (f'{key} must be specified!')
             cfg[key] = value
 
 

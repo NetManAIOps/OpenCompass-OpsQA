@@ -1,8 +1,10 @@
+import os
 import random
 from typing import List
 
 import evaluate
 import numpy as np
+from datasets import Dataset
 
 from opencompass.registry import ICL_EVALUATORS
 
@@ -72,7 +74,13 @@ class HuggingfaceEvaluator(BaseEvaluator):
                 f'length. len(predictions): {len(predictions)}, '
                 f'len(references): {len(references)}'
             }
-        metric = evaluate.load(self.metric)
+        # use codes pre-downloaded to opencompass repo, avoid downloading
+        local_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                  'hf_metrics', self.metric + '.py')
+        if os.path.exists(local_path):
+            metric = evaluate.load(local_path)
+        else:
+            metric = evaluate.load(self.metric)
         scores = metric.compute(**self._preprocess(predictions, references))
         result = self._postprocess(scores)
         random.setstate(random_state)
@@ -202,8 +210,58 @@ class AccEvaluator(HuggingfaceEvaluator):
 
 
 @ICL_EVALUATORS.register_module()
+class AccContaminationEvaluator(AccEvaluator):
+    """Accuracy evaluator."""
+
+    def score(self, predictions: List, references: List,
+              test_set: Dataset) -> dict:
+        # group the predictions and references by their contamination status
+        clean_predictions, clean_references = [], []
+        input_contaminated_predictions, input_contaminated_references = [], []
+        input_and_label_contaminated_predictions, \
+            input_and_label_contaminated_references = [], []
+        for pred, ref, is_clean in zip(predictions, references,
+                                       test_set['is_clean']):
+            if is_clean == 'clean':
+                clean_predictions.append(pred)
+                clean_references.append(ref)
+            elif is_clean == 'input contamination':
+                input_contaminated_predictions.append(pred)
+                input_contaminated_references.append(ref)
+            elif is_clean == 'input-and-label contamination':
+                input_and_label_contaminated_predictions.append(pred)
+                input_and_label_contaminated_references.append(ref)
+        clean_results = super().score(clean_predictions, clean_references)
+        input_contaminated_results = super().score(
+            input_contaminated_predictions, input_contaminated_references)
+        input_and_label_contaminated_results = super().score(
+            input_and_label_contaminated_predictions,
+            input_and_label_contaminated_references)
+
+        # rename the keys of the results, add 'clean, 'input contaminated',
+        # 'input-and-label contaminated' as prefixes
+        clean_results = {f'{k} - clean': v for k, v in clean_results.items()}
+        input_contaminated_results = {
+            f'{k} - input contaminated': v
+            for k, v in input_contaminated_results.items()
+        }
+        input_and_label_contaminated_results = {
+            f'{k} - input-and-label contaminated': v
+            for k, v in input_and_label_contaminated_results.items()
+        }
+        return {
+            **clean_results,
+            **input_contaminated_results,
+            **input_and_label_contaminated_results
+        }
+
+
+@ICL_EVALUATORS.register_module()
 class RougeEvaluator(HuggingfaceEvaluator):
-    """Rouge evaluator."""  # noqa
+    """Rouge evaluator.
+
+    Note: this evaluator is not suitable for chinese datasets.
+    """
 
     def __init__(self) -> None:
         super().__init__(metric='rouge')
@@ -226,6 +284,20 @@ class BleuEvaluator(HuggingfaceEvaluator):
 
     def __init__(self) -> None:
         super().__init__(metric='sacrebleu')
+
+
+class BleuFloresEvaluator(HuggingfaceEvaluator):
+    """Bleu evaluator using flores200 tokenize."""
+
+    def __init__(self) -> None:
+        super().__init__(metric='sacrebleu')
+
+    def _preprocess(self, predictions: List, references: List) -> dict:
+        return {
+            'predictions': predictions,
+            'references': references,
+            'tokenize': 'flores200',
+        }
 
 
 @ICL_EVALUATORS.register_module()
@@ -340,7 +412,13 @@ class EDAccEvaluator(AccEvaluator):
 
         for i in range(len(predictions)):
             pred, ref = predictions[i], references[i]
-            dists = [self.dist(pred, cand) for cand in ref['candidates']]
+            dists = []
+            for cands in ref['candidates']:
+                if isinstance(cands, str):
+                    d = self.dist(pred, cands)
+                else:
+                    d = np.min([self.dist(pred, cand) for cand in cands])
+                dists.append(d)
             preds.append(np.argmin(dists))
             golds.append(ref['label'])
 

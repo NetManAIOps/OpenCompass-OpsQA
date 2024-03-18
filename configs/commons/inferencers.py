@@ -1,7 +1,7 @@
 from opencompass.openicl.icl_inferencer import PPLInferencer, SCInferencer, CoTInferencer, GenInferencer
 
 
-def get_ppl_inferencer(save_every=20, fixidlist=dict(fix_id_list=None)):
+def get_ppl_inferencer(save_every=20):
     ppl_inferencer = dict(
                     type=PPLInferencer,
                     save_every=save_every,
@@ -13,7 +13,6 @@ def get_ppl_inferencer(save_every=20, fixidlist=dict(fix_id_list=None)):
 def get_gen_inferencer(save_every=20, 
                        max_out_len=400, 
                        sc_size=1, 
-                       fixidlist=dict(fix_id_list=None), 
                        generation_kwargs=dict(temperature=0.7),
                        sc=True,
                        ):
@@ -25,7 +24,6 @@ def get_gen_inferencer(save_every=20,
             infer_type='SC',
             sc_size=sc_size,  
             max_out_len=max_out_len,
-            # **fixidlist
         )
     else:
         inferencer = dict(
@@ -34,11 +32,14 @@ def get_gen_inferencer(save_every=20,
             generation_kwargs=generation_kwargs,
             infer_type='Gen',
             max_out_len=max_out_len,
-            # **fixidlist
         )
     return inferencer
 
-def get_cot_inferencer(save_every=20, max_out_len=400, sc_size=1, fixidlist=dict(fix_id_list=None), generation_kwargs=dict(temperature=0.7), cot_prompts=None):
+def get_cot_inferencer(save_every=20, 
+                       max_out_len=400, 
+                       sc_size=1, 
+                       generation_kwargs=dict(temperature=0.7), 
+                       cot_prompts=None):
     inferencer = dict(
                     type=CoTInferencer,
                     save_every=save_every,
@@ -47,6 +48,5 @@ def get_cot_inferencer(save_every=20, max_out_len=400, sc_size=1, fixidlist=dict
                     infer_type='SC',
                     sc_size=sc_size, 
                     max_out_len=max_out_len,
-                    # **fixidlist
                 )
     return inferencer

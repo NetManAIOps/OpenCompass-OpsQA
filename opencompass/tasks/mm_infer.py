@@ -15,7 +15,6 @@ from mmengine.dist import init_dist
 from mmengine.evaluator import Evaluator
 from mmengine.logging import print_log
 from mmengine.model.wrappers import MMDistributedDataParallel
-from mmengine.runner import Runner
 from mmengine.utils import track_iter_progress
 
 from opencompass.registry import MM_MODELS, TASKS
@@ -115,6 +114,8 @@ class MultimodalInferTask:
         return template.format(task_cmd=command)
 
     def run(self):
+        from mmengine.runner import Runner
+
         # only support slurm, pytorch, mpi
         init_dist(self.cfg.launcher)
         self.logger.info(f'Task {self.name}')
@@ -122,6 +123,7 @@ class MultimodalInferTask:
         dataloader = Runner.build_dataloader(self.dataloader)
         # build model
         model = build_model(self.cfg)
+        model.eval()
         # build evaluator
         evaluator = Evaluator(self.evaluator)
 

@@ -6,12 +6,10 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel,
 
 with read_base():
     # Datasets
-    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen
-    from ..datasets.simple_qa.owl_qa import owl_qa_datasets
-    from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
-    from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
-    from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
-datasets = [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*owl_qa_datasets,*owl_ppl_qa_datasets,*rzy_qa_datasets,*rzy_ppl_qa_datasets]
+    from ..datasets.opseval.datasets import owl_mc_gen
+datasets = [
+    *owl_mc_gen
+    ]
 model_name = 'yi-34b-chat'
 model_abbr = 'nm_yi_34b_chat'
 model_path = '/mnt/home/opsfm-xz/models/01ai/Yi-34B-Chat'
@@ -20,18 +18,32 @@ if model_name is None:
     raise NotImplementedError("Model is none!")
 models = [dict(
             type=LmdeployPytorchModel,
-            abbr=model_abbr,
+            abbr=model_abbr+'_lmdp',
             path=model_path,
             engine_config=dict(session_len=2048,
-                           max_batch_size=8,pt=2),
+                           max_batch_size=8,tp=1),
             gen_config=dict(top_k=1, top_p=0.8,
                         max_new_tokens=100),
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
-            run_cfg=dict(num_gpus=2, num_procs=1),
+            run_cfg=dict(num_gpus=1, num_procs=1),
             meta_template=None
-        )]
+        ),
+          dict(
+            type=TurboMindModel,
+            abbr=model_abbr+'_trbm',
+            path=model_path,
+            engine_config=dict(session_len=2048,
+                           max_batch_size=8,tp=1),
+            gen_config=dict(top_k=1, top_p=0.8,
+                        max_new_tokens=100),
+            max_out_len=400,
+            max_seq_len=2048,
+            batch_size=8,
+            run_cfg=dict(num_gpus=1, num_procs=1),
+            meta_template=None)
+        ]
 
 for model in models:
     # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
