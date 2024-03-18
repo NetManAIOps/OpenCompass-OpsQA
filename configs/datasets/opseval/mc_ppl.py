@@ -46,13 +46,14 @@ def get_mc_ppl_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
                 [0]
             )
             for lang, prompt_hint, answer_hint in zip(
-                ['zh'],
+                # ['zh'],
+                langs,
                 [
-                    f"{prompts[shot_hint_id][qtype_hint_id][1]}"
+                    f"{prompts[shot_hint_id][qtype_hint_id][1 if l == 'zh' else 0]}"
+                    for l in langs
                 ],
                 [
-                    '答案：',
-                    'Answer:'
+                    "答案：" if l == 'zh' else "Answer:" for l in langs
                 ]
             )
     ]

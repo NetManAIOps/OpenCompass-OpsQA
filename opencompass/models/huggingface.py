@@ -398,6 +398,13 @@ class HuggingFace(BaseModel):
                                    max_length=self.max_seq_len -
                                    max_out_len)['input_ids']
         input_ids = torch.tensor(input_ids, device=self.model.device)
+        # with open('/mnt/home/opsfm-xz/opencompass.log', 'at+') as f:
+        #     f.write(f"""--------------------------------------------------------
+        #             {inputs=}
+        #             {input_ids=}
+        #             {max_out_len=}
+        #             {kwargs=}
+        #             {stopping_criteria=}\n""")
         if stopping_criteria:
             # Construct huggingface stopping criteria
             if self.tokenizer.eos_token is not None:
@@ -435,6 +442,28 @@ class HuggingFace(BaseModel):
 
         if self.end_str:
             decodeds = [token.split(self.end_str)[0] for token in decodeds]
+            
+        with open('/mnt/home/opsfm-xz/opencompass.log', 'at+') as f:
+            try:
+                original_decoded = self.tokenizer.batch_decode(outputs)
+                f.write(f"""--------------------------------------------------------
+                        {inputs=}
+                        {input_ids=}
+                        {max_out_len=}
+                        {kwargs=}
+                        {outputs=}
+                        {decodeds=}
+                        {original_decoded=}\n""")
+            except Exception as err:
+                f.write(f"""-----------------ERROR!!!!!!-----------------------------
+                        {err=}
+                        {inputs=}
+                        {input_ids=}
+                        {max_out_len=}
+                        {kwargs=}
+                        {outputs=}
+                        {decodeds=}""")
+            
         return decodeds
 
     def get_logits(self, inputs: List[str]):

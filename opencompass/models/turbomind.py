@@ -74,6 +74,7 @@ class TurboMindModel(BaseModel):
         self,
         inputs: List[str],
         max_out_len: int = 512,
+        **kwargs
     ) -> List[str]:
         """Generate results given a list of inputs.
 
