@@ -2,60 +2,38 @@ from mmengine.config import read_base
 from opencompass.partitioners import SizePartitioner, NaivePartitioner
 from opencompass.runners import LocalRunner
 from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
-from opencompass.models import HuggingFace, HuggingFaceCausalLM
+from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel, LmdeployPytorchModel
 
 with read_base():
     # Datasets
-    from ..datasets.company.company import company_cot, company_naive
-    from ..datasets.network.network import network_cot, network_naive, network_ppl
-    from ..datasets.zte.zte import zte_cot, zte_naive, zte_ppl
-    from ..datasets.oracle.oracle import oracle_cot, oracle_naive
-    from ..datasets.owl_mc.owl_mc import owl_cot, owl_naive, owl_ppl
-    # from ..datasets.zte.zte_ppl import zte_naive_ppl
+    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
     from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
     from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
-    from ..datasets.opseval_ceval.ceval_ppl import ceval_naive_ppl
-    from ..datasets.opseval_ceval.ceval_naive import ceval_naive
-    #/mnt/tenant-home_speed/lyh/OpenCompass-OpsQA-lyh/models/xll_models/Qwen-1_8B/mixture/mix5_1-sft_owl-model
-    # Models
-    # from ..netman_models.qwen import nm_qwen_14b_3gpp_mix_sft_owlb as zzr1
-    # from ..netman_models.qwen import nm_qwen_14b_ptlora_book as zzr1
-    # from ..netman_models.qwen import *
-    # from ..netman_models.qwen import nm_qwen_1_8b_books_all_lora as zzr1
-datasets = [*zte_ppl,*network_ppl,*owl_ppl,*owl_qa_datasets,*owl_ppl_qa_datasets,*ceval_naive_ppl,*zte_naive,*owl_naive,*network_naive,*ceval_naive]
-# datasets = [
-#     *zte_ppl, *network_ppl, *owl_ppl,
-#     *owl_qa_datasets,
-#     *owl_ppl_qa_datasets,
-#     *ceval_naive_ppl,
-#     *zte_cot, *zte_naive,     
-#     *owl_cot, *owl_naive, 
-#     *network_cot, *network_naive, 
-# ]
-
-model_name = 'qwen-14b-full-dsir_10000-mmlu-sft-20epochs'
-model_abbr = 'nm_qwen_14b_qwen_14b_full_dsir_10000_mmlu_sft_20epochs'
-model_path = '/mnt/tenant-home_speed/xz/sft_checkpoint/qwen-14b-full-dsir_10000-mmlu-sft-20epochs'
+    from ..datasets.zte.zte import zte_naive
+datasets = [*zte_mc_gen]
+model_name = 'qwen-14b-base-ztemcgen'
+model_abbr = 'nm_qwen_14b_base_ztemcgen'
+model_path = '/mnt/home/opsfm-xz/models/Qwen/Qwen-14B'
 
 if model_name is None:
     raise NotImplementedError("Model is none!")
 models = [dict(
-        type=HuggingFaceCausalLM,
-        abbr=model_abbr,
-        path=model_path,
-        tokenizer_path=model_path,
-        tokenizer_kwargs=dict(padding_side='left',
-                              truncation_side='left',
-                              trust_remote_code=True,
-                              use_fast=False,),
-        max_out_len=400,
-        max_seq_len=2048,
-        batch_size=8,
-        model_kwargs=dict(device_map='auto', trust_remote_code=True),
-        run_cfg=dict(num_gpus=1, num_procs=1),
-    )]
+            type=TurboMindModel,
+            abbr=model_abbr,
+            path=model_path,
+            engine_config=dict(session_len=2048,
+                           max_batch_size=8),
+            gen_config=dict(top_k=1, top_p=0.8,
+                        max_new_tokens=100, stop_words=[]),
+            max_out_len=400,
+            max_seq_len=2048,
+            batch_size=8,
+            run_cfg=dict(num_gpus=1, num_procs=1),
+            meta_template=None,
+            end_str='<|im_end|>'
+        )]
 
 for model in models:
     # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
@@ -71,6 +49,17 @@ for dataset in datasets:
     dataset['infer_cfg']['inferencer']['save_every'] = 8
     dataset['infer_cfg']['inferencer']['sc_size'] = 1
     dataset['infer_cfg']['inferencer']['max_out_len'] = 20
+    # dataset['infer_cfg']['inferencer']['generation_kwargs'] = {'stopping_criteria': ['<|im_end|>', '<|endoftext|>']}
+    if 'qa' in dataset['abbr'].replace('-', '_').split('_'):
+        dataset['infer_cfg']['inferencer']['max_out_len'] = 50
+    # if 'en' in dataset['abbr'].replace('-', '_').split('_'):
+    #     continue
+    if 'sc+cot' in dataset['abbr']:
+        continue
+    # if 'mc' in dataset['abbr'].replace('-', '_').split('_'):
+    #     dataset['sample_setting']= dict(sample_size=500)
+    # if 'owl_qa' in dataset['abbr']:
+    #     dataset['sample_setting']= dict(sample_size=500)
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
         dataset['sample_setting'] = dict(load_list='/mnt/tenant-home_speed/lyh/evaluation/opseval/network/network_annotated.json')

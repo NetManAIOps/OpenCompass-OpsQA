@@ -1,4 +1,7 @@
-from datasets import load_dataset
+import json
+import os
+
+from datasets import Dataset, DatasetDict
 
 from opencompass.registry import LOAD_DATASET
 
@@ -7,38 +10,77 @@ from ..base import BaseDataset
 
 @LOAD_DATASET.register_module()
 class winograndeDataset(BaseDataset):
+    """Disconnect from Huggingface, winograndeDataset."""
 
     @staticmethod
-    def load(**kwargs):
-
-        dataset = load_dataset(**kwargs)
-
-        def preprocess(example):
-            prompt = example.pop('sentence')
-            example['opt1'] = prompt.replace('_', example.pop('option1'))
-            example['opt2'] = prompt.replace('_', example.pop('option2'))
-            return example
-
-        return dataset.map(preprocess)
+    def load(path):
+        path = os.path.join(path, 'dev.jsonl')
+        dataset_list = []
+        with open(path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = json.loads(line)
+                prompt = line['sentence']
+                continue_prompt = prompt.split('_')[1]
+                data_item = {
+                    'opt1': prompt.replace('_', line['option1']),
+                    'opt2': prompt.replace('_', line['option2']),
+                    'answer': line['answer'],
+                    'cont': continue_prompt,
+                }
+                dataset_list.append(data_item)
+        dataset_list = Dataset.from_list(dataset_list)
+        return dataset_list
 
 
 @LOAD_DATASET.register_module()
 class winograndeDataset_V2(BaseDataset):
+    """Disconnect from Huggingface, winograndeDataset_V2."""
 
     @staticmethod
-    def load(**kwargs):
+    def load(path):
+        path = os.path.join(path, 'dev.jsonl')
+        dataset_list = []
+        with open(path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = json.loads(line)
+                prompt = line['sentence']
+                continue_prompt = prompt.split('_')[1]
+                answer = line['answer']
+                answer = ' AB'[int(answer)] if answer != '' else 'NULL'
+                data_item = {
+                    'opt1': prompt.replace('_', line['option1']),
+                    'opt2': prompt.replace('_', line['option2']),
+                    'answer': answer,
+                    'cont': continue_prompt,
+                }
+                dataset_list.append(data_item)
+        dataset_list = Dataset.from_list(dataset_list)
+        return dataset_list
 
-        dataset = load_dataset(**kwargs)
 
-        def preprocess(example):
-            prompt = example.pop('sentence')
-            example['opt1'] = prompt.replace('_', example.pop('option1'))
-            example['opt2'] = prompt.replace('_', example.pop('option2'))
-            answer = example.pop('answer')
-            if answer == '':
-                example['label'] = 'NULL'
-            else:
-                example['label'] = ' AB'[int(answer)]
-            return example
+@LOAD_DATASET.register_module()
+class winograndeDataset_V3(BaseDataset):
+    """Disconnect from Huggingface, winograndeDataset_V2."""
 
-        return dataset.map(preprocess)
+    @staticmethod
+    def load(path):
+        dataset_dict = DatasetDict()
+        for split in ['train_xs', 'dev']:
+            filename = os.path.join(path, f'{split}.jsonl')
+            dataset_list = []
+            with open(filename, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = json.loads(line)
+                    prompt = line['sentence']
+                    continue_prompt = prompt.split('_')[1]
+                    answer = line['answer']
+                    answer = ' AB'[int(answer)] if answer != '' else 'NULL'
+                    data_item = {
+                        'opt1': prompt.replace('_', line['option1']),
+                        'opt2': prompt.replace('_', line['option2']),
+                        'answer': answer,
+                        'cont': continue_prompt,
+                    }
+                    dataset_list.append(data_item)
+            dataset_dict[split] = Dataset.from_list(dataset_list)
+        return dataset_dict

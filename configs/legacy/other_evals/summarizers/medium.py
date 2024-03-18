@@ -3,11 +3,14 @@ from mmengine.config import read_base
 with read_base():
     from .groups.agieval import agieval_summary_groups
     from .groups.mmlu import mmlu_summary_groups
+    from .groups.cmmlu import cmmlu_summary_groups
     from .groups.ceval import ceval_summary_groups
     from .groups.bbh import bbh_summary_groups
     from .groups.GaokaoBench import GaokaoBench_summary_groups
     from .groups.flores import flores_summary_groups
     from .groups.jigsaw_multilingual import jigsaw_multilingual_summary_groups
+    from .groups.tydiqa import tydiqa_summary_groups
+    from .groups.xiezhi import xiezhi_summary_groups
 
 summarizer = dict(
     dataset_abbrs=[
@@ -84,22 +87,7 @@ summarizer = dict(
         'eprstmt-dev',
         'lambada',
         'tnews-dev',
-        '--------- 安全 Safety ---------',  # category
-        # '偏见', # subcategory
-        'crows_pairs',
-        # '有毒性（判别）', # subcategory
-        'civil_comments',
-        # '有毒性（判别）多语言', # subcategory
-        'jigsaw_multilingual',
-        # '有毒性（生成）', # subcategory
-        'real-toxicity-prompts',
-        # '真实性/有用性', # subcategory
-        'truthful_qa',
     ],
     summary_groups=sum(
         [v for k, v in locals().items() if k.endswith("_summary_groups")], []),
-    prompt_db=dict(
-        database_path='configs/datasets/log.json',
-        config_dir='configs/datasets',
-        blacklist='.promptignore'),
 )

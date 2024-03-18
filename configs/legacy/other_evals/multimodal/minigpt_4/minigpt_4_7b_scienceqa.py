@@ -14,7 +14,7 @@ val_pipeline = [
          std=(0.26862954, 0.26130258, 0.27577711)),
     dict(type='mmpretrain.PackInputs',
          algorithm_keys=[
-             'question', 'gt_answer', 'choices', 'hint', 'lecture', 'solution'
+             'question', 'gt_answer', 'choices', 'hint', 'lecture', 'solution', 'has_image'
          ])
 ]
 
@@ -40,7 +40,7 @@ minigpt_4_scienceqa_model = dict(
     low_resource=False,
     img_size=224,
     max_length=10,
-    llama_model='/path/to/vicuna-7b/',
+    llama_model='/path/to/vicuna_weights_7b/',
     prompt_constructor=dict(type=MiniGPT4ScienceQAPromptConstructor,
                             image_prompt='###Human: <Img><ImageHere></Img>',
                             reply_prompt='###Assistant:'),

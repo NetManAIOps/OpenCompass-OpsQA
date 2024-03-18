@@ -25,9 +25,6 @@ class BaseInferencer:
             `JSON` file.
         output_json_filename (:obj:`str`, optional): File name for output
             `JSON` file.
-        api_name (:obj:`str`, optional): Name of API service.
-        call_api (:obj:`bool`): If ``True``, an API for LM models will be used,
-            determined by :obj:`api_name`.
     """
     model = None
 
@@ -38,8 +35,15 @@ class BaseInferencer:
         batch_size: Optional[int] = 1,
         output_json_filepath: Optional[str] = './icl_inference_output',
         output_json_filename: Optional[str] = 'predictions',
+        fix_id_list: Optional[List[int]] = None,
         **kwargs,
     ) -> None:
+
+        if fix_id_list:
+            raise ValueError('Passing fix_id_list to Inferencer is no longer '
+                             'allowed. Please pass it to FixKRetriever '
+                             'instead.')
+
         self.model = model
 
         self.max_seq_len = max_seq_len
@@ -47,8 +51,7 @@ class BaseInferencer:
         self.output_json_filepath = output_json_filepath
         self.output_json_filename = output_json_filename
         self.is_main_process = is_main_process()
-        if not os.path.exists(self.output_json_filepath):
-            os.makedirs(self.output_json_filepath)
+        os.makedirs(self.output_json_filepath, exist_ok=True)
 
     def inference(self,
                   retriever: BaseRetriever,
@@ -108,11 +111,11 @@ class GenInferencerOutputHandler:
         """Dump the result to a json file."""
         dump_results_dict(self.results_dict, Path(save_dir) / filename)
 
-    def save_results(self, origin_prompt, prediction, reference, idx):
+    def save_results(self, origin_prompt, prediction, idx, gold=None):
         self.results_dict[str(idx)] = {
             'origin_prompt': origin_prompt,
             'prediction': prediction,
-            'reference': reference
+            'reference': gold
         }
 
 
@@ -184,6 +187,12 @@ class PPLInferencerOutputHandler:
         self.results_dict[str(idx)]['label: ' + str(label)]['prompt'] = prompt
         self.results_dict[str(idx)]['label: ' + str(label)]['PPL'] = ppl
 
+    def save_golds(self, golds):
+        for idx, gold in enumerate(golds):
+            if str(idx) not in self.results_dict.keys():
+                self.results_dict[str(idx)] = {}
+            self.results_dict[str(idx)]['gold'] = gold
+
 
 class CLPInferencerOutputHandler:
     results_dict = {}
@@ -201,7 +210,13 @@ class CLPInferencerOutputHandler:
                 self.results_dict[str(idx)] = {}
             self.results_dict[str(idx)]['in-context examples'] = example
 
-    def save_prompt_and_condprob(self, input, prompt, cond_prob, idx, choices):
+    def save_prompt_and_condprob(self,
+                                 input,
+                                 prompt,
+                                 cond_prob,
+                                 idx,
+                                 choices,
+                                 gold=None):
         if str(idx) not in self.results_dict.keys():
             self.results_dict[str(idx)] = {}
         # TODO:
@@ -214,3 +229,4 @@ class CLPInferencerOutputHandler:
         self.results_dict[str(idx)]['prediction'] = cond_prob
         # set pred label in case needed
         self.results_dict[str(idx)]['pred_label'] = int(np.argmax(cond_prob))
+        self.results_dict[str(idx)]['gold'] = gold

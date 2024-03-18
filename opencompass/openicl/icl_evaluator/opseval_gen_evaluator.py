@@ -113,6 +113,6 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
             correct += not_sc(pred, ans)
             sc_correct += sc_cot(pred, ans)
         return {
-            'Accuracy': correct / tot * 100,
-            'SC-Accuracy': sc_correct / tot * 100,
+            'accuracy': correct / tot * 100,
+            'sc-accuracy': sc_correct / tot * 100,
         }

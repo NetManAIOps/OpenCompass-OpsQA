@@ -31,29 +31,29 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_gen_ice_template(prompt_hint, answer_hint),
                 prompt_template=mc_abcd_gen_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever),
-                inferencer=get_gen_inferencer(sc_size=SAMPLE_SIZE, fixidlist=fixidlist),
+                retriever=retriever_dict,
+                inferencer=get_gen_inferencer(sc_size=SAMPLE_SIZE),
             ),
             eval_cfg=dict(evaluator=dict(type=OpsEvalGenMCEvaluator))
             )
-            for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
+            for shot_abbr, shot_hint_id, retriever_dict in zip(
                 ['Zero-shot', '3-shot'],
-                [dict(fix_id_list=None), dict(fix_id_list=[0, 1, 2])],
                 [0, 1],
-                [ZeroRetriever, FixKRetriever]
+                [dict(type=ZeroRetriever), dict(type=FixKRetriever, fix_id_list=[0,1,2])]
             )
             for qtype, qtype_hint_id in zip(
-                ['single'],
-                [0]
+                qtypes,
+                [0 if qt == 'single' else 1 for qt in qtypes]
             )
             for lang, prompt_hint, answer_hint in zip(
-                ['zh'],
+                # ['zh'],
+                langs,
                 [
-                    f"{prompts[shot_hint_id][qtype_hint_id][1]}"
+                    f"{prompts[shot_hint_id][qtype_hint_id][1 if l == 'zh' else 0]}"
+                    for l in langs
                 ],
                 [
-                    "答案：",
-                    "Answer:"
+                    "答案：" if l == 'zh' else "Answer:" for l in langs
                 ]
             )
     ]
@@ -68,33 +68,34 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
             infer_cfg=dict(
                 ice_template=mc_abcd_cot_ice_template(prompt_hint, cot_think_hint, cot_conclude_hint),
                 prompt_template=mc_abcd_cot_prompt_template(prompt_hint, cot_think_hint),
-                retriever=dict(type=retriever),
-                inferencer=get_cot_inferencer(sc_size=SAMPLE_SIZE, fixidlist=fixidlist, cot_prompts=cot_conclude_hint),
+                retriever=retriever_dict,
+                inferencer=get_cot_inferencer(sc_size=SAMPLE_SIZE, cot_prompts=cot_conclude_hint),
             ),
             eval_cfg=dict(evaluator=dict(type=OpsEvalGenMCEvaluator)))
-        for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
+        for shot_abbr, shot_hint_id, retriever_dict in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
             [0, 1],
-            [ZeroRetriever, FixKRetriever]
+            [dict(type=ZeroRetriever), dict(type=FixKRetriever, fix_id_list=[0,1,2])]
         )
         for qtype, qtype_hint_id in zip(
-            ['single', 'multiple'],
-            [0, 1]
+            # ['single', 'multiple'],
+            qtypes,
+            [0 if qt == 'single' else 1 for qt in qtypes]
         )
         for lang, prompt_hint, cot_think_hint, cot_conclude_hint in zip(
-            ['en', 'zh'],
+            # ['en', 'zh'],
+            langs,
             [
-                "Here is a multiple-choice question.\n",
-                "以下是一个选择题。\n"
+                "Here is a multiple-choice question.\n" if l == 'en' 
+                else "以下是一个选择题。\n" for l in langs
             ],
             [
-                f"Let's think step by step.\n",
-                f"让我们逐个选项分析：\n"
+                f"Let's think step by step.\n" if l == 'en'
+                else f"让我们逐个选项分析：\n" for l in langs
             ],
             [
-                [f'{prompts[shot_hint_id][qtype_hint_id][0]}Therefore the answer is: \n'],
-                [f'{prompts[shot_hint_id][qtype_hint_id][1]}因此答案是：\n']
+                f'{prompts[shot_hint_id][qtype_hint_id][0]}Therefore the answer is: \n' if l == 'en'
+                else f'{prompts[shot_hint_id][qtype_hint_id][1]}因此答案是：\n' for l in langs
             ]
         )
     ]

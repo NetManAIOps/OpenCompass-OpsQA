@@ -54,25 +54,24 @@ owl_ppl_qa_datasets = [
                 ),
                 ice_token="</E>",
             ),
-            retriever=dict(type=retriever),
+            retriever=dict(type=retriever, **fixidlist),
             inferencer=dict(
                 type=PPLQAInferencer,
-                save_every=20,
-                **fixidlist
+                save_every=20
             ),
         ),
         eval_cfg=owl_qa_eval_cfg)
     for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [dict(), dict(fix_id_list=[0,1,2])],
             [0, 1],
             [ZeroRetriever, FixKRetriever]
         )
     for lang, prompt_hint, answer_hint in zip(
         ['zh', 'en'],
         [
-            f"你是一名运维专家，请回答下面这个问题：\n{{question}}\n",
-            f"You are an IT operations expert, please answer the following question: \n{{question}}\n"
+            f"你是一名运维专家，请用一句话回答下面这个问题：\n{{question}}\n",
+            f"You are an IT operations expert, please answer the following question in one sentence: \n{{question}}\n"
         ],
         [
             '答案： ',

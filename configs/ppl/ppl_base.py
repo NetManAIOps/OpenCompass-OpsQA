@@ -7,7 +7,7 @@ with read_base():
     # Datasets
     from ..datasets.opseval.datasets import all_ppl_mc, all_ppl_qa
     # Models
-    from ..local_models.qwen.qwen import qwen1_5_base_models
+    from ..local_models.qwen.qwen import qwen1_5_base_models, qwen1_5_72b_base, qwen1_5_72b_chat
     from ..local_models.lmsys.vicuna import vicuna_bases
     from ..local_models.yi.yi import yi_bases
     from ..local_models.mistral.mistral import mistral_7b
@@ -22,16 +22,14 @@ datasets = [
 ]
 
 models = [
-    t5_base, 
-    *qwen1_5_base_models,
-    *vicuna_bases,
-    *yi_bases,
-    mistral_7b,
-    *internlm2_bases,
-]
-
-models = [
-    model for model in models if '34b' not in model['abbr']
+    # t5_base, 
+    # *qwen1_5_base_models,
+    # *vicuna_bases,
+    # *yi_bases,
+    # mistral_7b,
+    # *internlm2_bases,
+    # qwen1_5_72b_chat,
+    qwen1_5_72b_base
 ]
 
 for model in models:

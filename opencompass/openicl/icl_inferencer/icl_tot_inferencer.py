@@ -43,10 +43,9 @@ class ToTInferencer(GenInferencer):
         gen_field_replace_token (:obj:`str`, optional): Used to replace the
             generation field token when generating prompts.
         save_every (:obj:`int`, optional): Save intermediate results every
-            `save_every` epochs.
+            `save_every` iters. Defaults to 1.
         generation_kwargs (:obj:`Dict`, optional): Parameters for the
             :obj:`model.generate()` method.
-        fix_id_list (:obj:`List[int]`, optional): List of indices to fix
         naive_run (:obj:`bool`): if True, run naive IO/CoT sampling instead of
             ToT + BFS.
         prompt_wrapper (:obj:`dict`): wrapper for prompts
@@ -75,8 +74,7 @@ class ToTInferencer(GenInferencer):
             gen_field_replace_token: Optional[str] = '',
             output_json_filepath: Optional[str] = './icl_inference_output',
             output_json_filename: Optional[str] = 'predictions',
-            save_every: Optional[int] = None,
-            fix_id_list: Optional[List[int]] = None,
+            save_every: Optional[int] = 1,
             naive_run: bool = False,
             prompt_wrapper: dict = {},
             prompt_sample: str = 'standard',
@@ -97,7 +95,6 @@ class ToTInferencer(GenInferencer):
             output_json_filename=output_json_filename,
             output_json_filepath=output_json_filepath,
             save_every=save_every,
-            fix_id_list=fix_id_list,
             sc_size=n_evaluate_sample,
             **kwargs,
         )
@@ -319,10 +316,7 @@ class ToTInferencer(GenInferencer):
             output_json_filename = self.output_json_filename
 
         # 2. Get results of retrieval process
-        if 'Fix' in retriever.__class__.__name__:
-            ice_idx_list = retriever.retrieve(self.fix_id_list)
-        else:
-            ice_idx_list = retriever.retrieve()
+        ice_idx_list = retriever.retrieve()
 
         # 3. Generate prompts for testing input
         prompt_list = self.get_generation_prompt_list_from_retriever_indices(
@@ -332,6 +326,12 @@ class ToTInferencer(GenInferencer):
             max_seq_len=self.max_seq_len,
             ice_template=ice_template,
             prompt_template=prompt_template)
+
+        # 3.1 Fetch and zip prompt & gold answer if output column exists
+        ds_reader = retriever.dataset_reader
+        if ds_reader.output_column:
+            gold_ans = ds_reader.dataset['test'][ds_reader.output_column]
+            prompt_list = list(zip(prompt_list, gold_ans))
 
         # Create tmp json file for saving intermediate results and future
         # resuming
@@ -349,15 +349,24 @@ class ToTInferencer(GenInferencer):
 
         # 5. Inference for prompts in each batch
         logger.info('Starting ToT inference process...')
-        for entries in tqdm(dataloader, disable=not self.is_main_process):
+        for datum in tqdm(dataloader, disable=not self.is_main_process):
+            if ds_reader.output_column:
+                entries, golds = list(zip(*datum))
+            else:
+                entries = datum
+                golds = [None for _ in range(len(entries))]
             # 5-1. Inference with ToT and local model
             with torch.no_grad():
                 parsed_entries = self.model.parse_template(entries, mode='gen')
                 generated = [self.tot_solve(entry) for entry in entries]
 
             # 5-2. Save current output
-            for prompt, prediction in zip(parsed_entries, generated):
-                output_handler.save_results(prompt, prediction, index)
+            for prompt, prediction, gold in zip(parsed_entries, generated,
+                                                golds):
+                output_handler.save_results(prompt,
+                                            prediction,
+                                            index,
+                                            gold=gold)
                 index = index + 1
 
             # 5-3. Save intermediate results
