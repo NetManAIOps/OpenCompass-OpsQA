@@ -5,9 +5,9 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from ..datasets.opseval.datasets import all_ppl_mc, all_ppl_qa
+    from ..datasets.opseval.datasets import all_gen_mc, all_gen_qa
     # Models
-    from ..local_models.qwen.qwen import qwen1_5_base_models, qwen1_5_72b_base, qwen1_5_72b_chat
+    from ..local_models.qwen.qwen import qwen1_5_72b_base, qwen1_5_72b_chat
     from ..local_models.lmsys.vicuna import vicuna_bases
     from ..local_models.yi.yi import yi_bases
     from ..local_models.mistral.mistral import mistral_7b
@@ -17,8 +17,8 @@ with read_base():
     from ..paths import ROOT_DIR
 
 datasets = [
-    *all_ppl_mc,
-    *all_ppl_qa,
+    *all_gen_mc, 
+    *all_gen_qa,
 ]
 
 models = [
@@ -28,8 +28,8 @@ models = [
     # *yi_bases,
     # mistral_7b,
     # *internlm2_bases,
-    # qwen1_5_72b_chat,
-    qwen1_5_72b_base
+    qwen1_5_72b_chat,
+    # qwen1_5_72b_base
 ]
 
 for model in models:
@@ -38,10 +38,12 @@ for model in models:
 for dataset in datasets:
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
-    dataset['infer_cfg']['inferencer']['sc_size'] = 1
-    dataset['eval_cfg']['sc_size'] = 1
+    dataset['infer_cfg']['inferencer']['sc_size'] = 3
+    dataset['eval_cfg']['sc_size'] = 3
     if 'network' in dataset['abbr']:
         dataset['sample_setting'] = dict(load_list=f'{ROOT_DIR}data/opseval/network/network_annotated.json')
+    if 'zte' in dataset['abbr']:
+        dataset['sample_setting'] = dict(sample_size=500)
 
 infer = dict(
     partitioner=dict(

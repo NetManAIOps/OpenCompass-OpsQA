@@ -1,8 +1,6 @@
 from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Optional, Union
 
-import numpy as np
-
 from opencompass.models.base import BaseModel
 from opencompass.utils.logging import get_logger
 from opencompass.utils.prompt import PromptList
@@ -20,12 +18,11 @@ def valid_str(string, coding='utf-8'):
     return ret
 
 
-class TurboMindModel(BaseModel):
-    """Model wrapper for TurboMind Python API.
+class LmdeployPytorchModel(BaseModel):
+    """Model wrapper for lmdeploy pytorch engine through python API.
 
     Args:
-        path (str): path of the turbomind model
-        concurrency (int): the maximum allowed concurrency of turbomind.
+        path (str): path of the supported pytorch model.
         max_seq_len (int): The maximum allowed sequence length of a model.
             Note that the length of prompt + generated tokens shall not exceed
             this value. Defaults to 2048.
@@ -52,16 +49,21 @@ class TurboMindModel(BaseModel):
         super().__init__(path=path,
                          max_seq_len=max_seq_len,
                          meta_template=meta_template)
-        from lmdeploy.turbomind import TurboMind
+        from lmdeploy.pytorch import engine as tm
 
         if engine_config is not None:
-            from lmdeploy.messages import TurbomindEngineConfig
-            engine_config = TurbomindEngineConfig(**engine_config)
+            from lmdeploy.messages import PytorchEngineConfig
+            engine_config = PytorchEngineConfig(**engine_config)
+            # set thread_safe
+            if hasattr(engine_config, 'thread_safe'):
+                engine_config.thread_safe = True
+
         if gen_config is not None:
             from lmdeploy.messages import EngineGenerationConfig
             gen_config = EngineGenerationConfig(**gen_config)
+
         self.logger = get_logger()
-        tm_model = TurboMind.from_pretrained(path, engine_config=engine_config)
+        tm_model = tm.Engine(path, engine_config)
         self.tokenizer = tm_model.tokenizer
         self.generators = [
             tm_model.create_instance() for i in range(concurrency)
@@ -103,7 +105,6 @@ class TurboMindModel(BaseModel):
                         self.generators[:len(batch_input)],
                         self.generator_ids[:len(batch_input)],
                         batch_input,
-                        [max_out_len] * len(batch_input),
                         [self.gen_config] * len(batch_input),
                         [self.end_str] * len(batch_input),
                     ))
@@ -125,7 +126,6 @@ class TurboMindModel(BaseModel):
                   generator,
                   session_id,
                   prompt: str or PromptList,
-                  max_out_len: int,
                   gen_config=None,
                   end_str: Optional[str] = None) -> str:
         """Generate results given a list of inputs.
@@ -134,7 +134,6 @@ class TurboMindModel(BaseModel):
             prompt (str or PromptList): A string or PromptDict.
                 The PromptDict should be organized in OpenCompass'
                 API format.
-            max_out_len (int): The maximum length of the output.
             gen_config (EngineGenerationConfig, optional): Generation
                 config to set arguments like top_k, top_p, temperature.
             end_str (str, optional): Whether to trim generated strings
@@ -146,47 +145,18 @@ class TurboMindModel(BaseModel):
         """
         assert type(
             prompt) is str, 'We only support string for TurboMind Python API'
-
         input_ids = self.tokenizer.encode(prompt)
-
-        for outputs in generator.stream_infer(session_id=session_id,
-                                              input_ids=[input_ids],
-                                              gen_config=gen_config,
-                                              request_output_len=max_out_len,
-                                              sequence_start=True,
-                                              sequence_end=True,
-                                              step=0,
-                                              stream_output=False):
-            _, output_ids, _ = outputs
-            response = self.tokenizer.decode(output_ids)
-            response = valid_str(response)
-        # used to trim
+        _, output_ids, _ = generator.infer(session_id,
+                                           input_ids,
+                                           gen_config=gen_config)
+        # stop engine
+        if hasattr(generator, 'end'):
+            generator.end(session_id)
+        # decode output
+        response_all = self.tokenizer.decode(output_ids)
+        # trim output
         if end_str:
-            response = response.split(end_str)[0]
-        return response
-
-    def get_ppl(self,
-                inputs: List[str],
-                mask_length: Optional[List[int]] = None) -> List[float]:
-        """Get perplexity scores given a list of inputs.
-
-        Args:
-            inputs (List[str]): A list of strings.
-            mask_length (Optional[List[int]]): A list of mask lengths. If
-                provided, the perplexity scores will be calculated with the
-                first mask_length[i] tokens masked out. It's okay to skip
-                its implementation if advanced features in PPLInfernecer is
-                not needed.
-
-        Returns:
-            np.ndarray:  The perplexity scores in shape of (N,)
-        """
-        assert isinstance(
-            inputs, List), f'List(str) is expected, but got {type(inputs)}'
-        results = []
-        for text in inputs:
-            input_ids = self.tokenizer.encode(text)
-            res = self.generators[0].get_ppl(input_ids)
-            results.append(res)
-        results = np.concatenate(results)
-        return results
+            response_all = response_all.split(end_str)[0]
+        # remove invalid characters
+        response_all = valid_str(response_all)
+        return response_all

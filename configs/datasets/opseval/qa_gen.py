@@ -31,14 +31,14 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
             infer_cfg=dict(
                 ice_template=qa_gen_ice_template(prompt_hint, answer_hint),
                 prompt_template=qa_gen_prompt_template(prompt_hint, answer_hint),
-                retriever=dict(type=retriever),
+                retriever=dict(type=retriever, **fixidlist),
                 inferencer=get_gen_inferencer(sc=False, fixidlist=fixidlist),
             ),
             eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
             )
             for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
                 ['Zero-shot', '3-shot'],
-                [dict(fix_id_list=None), dict(fix_id_list=[0, 1, 2])],
+                [dict(), dict(fix_id_list=[0, 1, 2])],
                 [0, 1],
                 [ZeroRetriever, FixKRetriever]
             )

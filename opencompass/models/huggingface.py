@@ -231,6 +231,15 @@ class HuggingFace(BaseModel):
 
         decodeds = self.tokenizer.batch_decode(outputs,
                                                skip_special_tokens=True)
+        # with open('/mnt/home/opsfm-xz/opencompass.log', 'at+') as f:
+        #     f.write(f"""--------------------------------------------------------
+        #             {inputs=}
+        #             {input_ids=}
+        #             {max_out_len=}
+        #             {kwargs=}
+        #             {outputs=}
+        #             {decodeds=}
+        #             {self.tokenizer.batch_decode(outputs)=}\n""")
 
         if self.extract_pred_after_decode:
             decodeds = [

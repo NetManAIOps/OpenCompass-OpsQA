@@ -55,7 +55,7 @@ zte_cot = [
                 ),
                 ice_token="</E>",
             ),
-            retriever=dict(type=retriever),
+            retriever=dict(type=retriever, **fixidlist),
             inferencer=dict(
                 type=CoTInferencer,
                 save_every=20,
@@ -63,14 +63,13 @@ zte_cot = [
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE, 
-                max_out_len = 400,
-                **fixidlist
+                max_out_len = 400
             ),
         ),
         eval_cfg=choice_single_eval_cfg)
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [dict(), dict(fix_id_list=[0,1,2])],
             [0, 1],
             [ZeroRetriever, FixKRetriever]
         )
@@ -127,21 +126,20 @@ zte_naive = [
                 ),
                 ice_token="</E>",
             ),
-            retriever=dict(type=retriever),
+            retriever=dict(type=retriever, **fixidlist),
             inferencer=dict(
                 type=SCInferencer,
                 save_every=20,
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE,  
-                max_out_len = 400,
-                **fixidlist
+                max_out_len = 400
             ),
         ),
         eval_cfg=choice_single_eval_cfg)
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [dict(), dict(fix_id_list=[0,1,2])],
             [0, 1],
             [ZeroRetriever, FixKRetriever]
         )
@@ -193,21 +191,20 @@ zte_ppl = [
                 },
                 ice_token="</E>",
             ),
-            retriever=dict(type=retriever),
+            retriever=dict(type=retriever, **fixidlist),
             inferencer=dict(
                 type=PPLInferencer,
                 save_every=20,
                 generation_kwargs=dict(temperature=0.7),
                 infer_type='SC',
                 sc_size = SAMPLE_SIZE,  
-                max_out_len = 400,
-                **fixidlist
+                max_out_len = 400
             ),
         ),
         eval_cfg=dict(evaluator=dict(type=AccEvaluator)))
         for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [dict(), dict(fix_id_list=[0,1,2])],
             [0, 1],
             [ZeroRetriever, FixKRetriever]
         )

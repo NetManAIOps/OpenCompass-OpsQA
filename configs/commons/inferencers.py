@@ -6,7 +6,7 @@ def get_ppl_inferencer(save_every=20, fixidlist=dict(fix_id_list=None)):
                     type=PPLInferencer,
                     save_every=save_every,
                     infer_type='PPL',
-                    **fixidlist
+                    # **fixidlist
                 )
     return ppl_inferencer
 
@@ -25,7 +25,7 @@ def get_gen_inferencer(save_every=20,
             infer_type='SC',
             sc_size=sc_size,  
             max_out_len=max_out_len,
-            **fixidlist
+            # **fixidlist
         )
     else:
         inferencer = dict(
@@ -34,7 +34,7 @@ def get_gen_inferencer(save_every=20,
             generation_kwargs=generation_kwargs,
             infer_type='Gen',
             max_out_len=max_out_len,
-            **fixidlist
+            # **fixidlist
         )
     return inferencer
 
@@ -47,6 +47,6 @@ def get_cot_inferencer(save_every=20, max_out_len=400, sc_size=1, fixidlist=dict
                     infer_type='SC',
                     sc_size=sc_size, 
                     max_out_len=max_out_len,
-                    **fixidlist
+                    # **fixidlist
                 )
     return inferencer

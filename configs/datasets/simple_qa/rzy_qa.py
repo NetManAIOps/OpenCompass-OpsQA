@@ -55,19 +55,18 @@ rzy_qa_datasets = [
                 ),
                 ice_token="</E>",
             ),
-            retriever=dict(type=retriever),
+            retriever=dict(type=retriever, **fixidlist),
             inferencer=dict(
                 type=GenInferencer,
                 save_every=20,
                 generation_kwargs=dict(temperature=0),
                 max_out_len = 1000,
-                **fixidlist
             ),
         ),
         eval_cfg=rzy_qa_eval_cfg)
     for shot_abbr, fixidlist, shot_hint_id, retriever in zip(
             ['Zero-shot', '3-shot'],
-            [dict(fix_id_list=None), dict(fix_id_list=[0,1,2])],
+            [dict(), dict(fix_id_list=[0,1,2])],
             [0, 1],
             [ZeroRetriever, FixKRetriever]
         )
@@ -77,7 +76,7 @@ rzy_qa_datasets = [
             # 'en'
             ],
         [
-            f"你是一名运维专家，请回答下面这个问题：\n{{question}}\n",
+            f"你是一名运维专家，请用一句话回答下面这个问题：\n{{question}}\n",
             # f"You are an IT operations expert, please answer the following question: \n{{question}}\n"
         ]
     )
