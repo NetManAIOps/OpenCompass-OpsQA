@@ -9,7 +9,7 @@ from opencompass.openicl.icl_inferencer import PPLInferencer
 from opencompass.datasets import OpsEvalQADataset
 from mmengine import read_base
 with read_base():
-    from ...commons.cfgs import mc_abcd_reader_cfg
+    from ...commons.cfgs import qa_gen_reader_cfg
     from ...commons.prompts import prompts
     from ...commons.inferencers import get_gen_inferencer, get_cot_inferencer
     from ...commons.templates import qa_gen_ice_template, qa_gen_prompt_template
@@ -27,7 +27,7 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
             abbr=f'{dataset_name}-qa-{shot_abbr}-{lang}-sc-gen',
             path=path, 
             name=f'{dataset_name}_qa_{lang}',
-            reader_cfg=mc_abcd_reader_cfg,
+            reader_cfg=qa_gen_reader_cfg,
             infer_cfg=dict(
                 ice_template=qa_gen_ice_template(prompt_hint, answer_hint),
                 prompt_template=qa_gen_prompt_template(prompt_hint, answer_hint),
@@ -44,8 +44,8 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
             for lang, prompt_hint, answer_hint in zip(
                 ['zh', 'en'],
                 [
-                    f"你是一名运维专家，请回答下面这个问题：\n",
-                    f"You are an IT operations expert, please answer the following question: \n"
+                    f"你是一名运维专家，请用一句话回答下面这个问题：\n",
+                    f"You are an IT operations expert, please answer the following question in one sentence: \n"
                 ],
                 [
                     "答案：",
@@ -56,7 +56,7 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
     datasets = naive_gen_datasets
     selected = []
     for lang in langs:
-        selected.extend([d for d in datasets if f'{lang}' in d['abbr']])
+        selected.extend([d for d in datasets if f'{lang}' in d['abbr'].replace('_', '-').split('-')])
     return selected
 
 

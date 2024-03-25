@@ -18,3 +18,15 @@ mc_abcd_reader_cfg = dict(
     output_column='answer',
     train_split='dev'
 )
+
+qa_gen_reader_cfg = dict(
+    input_columns=['question'],
+    output_column='answer',
+    train_split='dev'
+)
+
+qa_ppl_reader_cfg = dict(
+    input_columns=['question', 'answer'],
+    output_column='answer',
+    train_split='dev'
+)

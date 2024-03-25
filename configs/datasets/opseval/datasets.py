@@ -93,3 +93,6 @@ all_gen_mc = zte_mc_gen + oracle_mc_gen + owl_mc_gen + network_mc_gen + company_
 all_ppl_qa = owl_qa_ppl + rzy_qa_ppl
 all_gen_qa = owl_qa_gen + rzy_qa_gen
 
+ceval_mc_ppl = get_selected_datasets([get_mc_ppl_datasets], 'ceval', f'{ROOT_DIR}data/opseval/ceval/splitted_dev', langs=['zh'], qtypes=['single'])
+ceval_mc_gen = get_selected_datasets([get_mc_gen_datasets], 'ceval', f'{ROOT_DIR}data/opseval/ceval/splitted_dev', langs=['zh'], qtypes=['single'])
+ceval_mc = ceval_mc_ppl + ceval_mc_gen

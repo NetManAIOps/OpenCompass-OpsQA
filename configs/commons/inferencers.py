@@ -1,4 +1,4 @@
-from opencompass.openicl.icl_inferencer import PPLInferencer, SCInferencer, CoTInferencer, GenInferencer
+from opencompass.openicl.icl_inferencer import PPLInferencer, SCInferencer, CoTInferencer, GenInferencer, PPLQAInferencer
 
 
 def get_ppl_inferencer(save_every=20):
@@ -9,6 +9,13 @@ def get_ppl_inferencer(save_every=20):
                     # **fixidlist
                 )
     return ppl_inferencer
+
+def get_ppl_qa_inferencer():
+    ppl_qa_inferencer = dict(
+                type=PPLQAInferencer,
+                save_every=20,
+            )
+    return ppl_qa_inferencer
 
 def get_gen_inferencer(save_every=20, 
                        max_out_len=400, 

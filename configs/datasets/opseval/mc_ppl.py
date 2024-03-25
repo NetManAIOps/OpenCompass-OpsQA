@@ -53,7 +53,7 @@ def get_mc_ppl_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
                     for l in langs
                 ],
                 [
-                    "答案：" if l == 'zh' else "Answer:" for l in langs
+                    "请直接给出正确选项：" if l == 'zh' else "Please provide the correct answer option directly: " for l in langs
                 ]
             )
     ]

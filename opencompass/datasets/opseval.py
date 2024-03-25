@@ -81,6 +81,8 @@ class OpsEvalMCDataset(BaseDataset):
                         'B': data['B'],
                         'C': data['C'] if 'C' in data else '',
                         'D': data['D'] if 'D' in data else '',
+                        'E': data['E'] if 'E' in data else '',
+                        'F': data['E'] if 'F' in data else '',
                         'choices': data['choices'] if 'choices' in data else [],
                         'solution': data['solution'] if 'solution' in data else '',
                         'id': data['id'],

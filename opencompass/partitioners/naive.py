@@ -20,19 +20,15 @@ class NaivePartitioner(BasePartitioner):
         keep_keys (List[str]): The keys to be kept from the experiment config
             to the task config.
     """
-    
-    def __init__(self,
-                 out_dir: str,
-                 model_first=False):
-        super().__init__(out_dir)
-        self.model_first = model_first
 
     def __init__(self,
                  out_dir: str,
                  n: int = 1,
+                 model_first=False,
                  keep_keys: Optional[List[str]] = None):
         super().__init__(out_dir=out_dir, keep_keys=keep_keys)
         self.n = n
+        self.model_first = model_first
 
     def partition(self,
                   model_dataset_combinations: List[Dict[str,
