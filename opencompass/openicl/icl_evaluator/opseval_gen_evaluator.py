@@ -5,6 +5,9 @@ from opencompass.registry import ICL_EVALUATORS
 from .icl_base_evaluator import BaseEvaluator
 import re
 from collections import Counter
+import jieba
+from rouge import Rouge
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 def extract_answer(text: str) -> str:
     """
@@ -116,3 +119,40 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
             'Accuracy': correct / tot * 100,
             'SC-Accuracy': sc_correct / tot * 100,
         }
+    
+class OpsEvalGenQAEvaluator(BaseEvaluator):
+    
+    def __init__(self, language='en'):
+        super().__init__()
+        self.language = language
+    
+    def score(self, predictions: List, references: List) -> dict:
+        tot_bleu, tot_rouge = 0, 0
+        for pred, ans in zip(predictions, references):
+            bleu_score, rouge_score = self.get_rouge_bleu(pred, ans, self.language)
+            tot_bleu += bleu_score
+            tot_rouge += rouge_score
+        return {
+            "bleu": tot_bleu / len(predictions),
+            "rouge": tot_rouge / len(predictions)
+        }
+    
+    def get_rouge_bleu(self, pred, answer, language='en'):
+        rouge = Rouge()
+        smoothie = SmoothingFunction().method7
+        def clean_word(words):
+            punctuations = """！？｡＂＃＄％＆＇（）＊＋，－／：；＜＝＞＠［＼］＾＿｀｛｜｝～、。，·ˉˇ¨〃‘’“”々〆〇〈〉《》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏."""
+            return [word for word in words if word.strip() and word not in punctuations]
+        try:
+            if language == 'en':
+                bleu_score = sentence_bleu([clean_word(answer.split())], clean_word(pred.split()), smoothing_function=smoothie)
+                rouge_score = rouge.get_scores(' '.join(clean_word(pred.split())), ' '.join(clean_word(answer.split())), avg=True)['rouge-l']['f']
+            else:
+                answer_tokenized = clean_word(list(jieba.cut(answer)))
+                pred_tokenized = clean_word(list(jieba.cut(pred)))
+                bleu_score = sentence_bleu([answer_tokenized], pred_tokenized, smoothing_function=smoothie)
+                rouge_score = rouge.get_scores(' '.join(pred_tokenized), ' '.join(answer_tokenized), avg=True)['rouge-l']['f']
+        except Exception as err:
+            print(f"[WARNING] Error when calculating bleu and rouge: {err}")
+            bleu_score, rouge_score = 0.0, 0.0
+        return bleu_score, rouge_score

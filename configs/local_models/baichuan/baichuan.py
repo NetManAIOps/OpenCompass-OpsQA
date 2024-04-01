@@ -3,7 +3,7 @@ from opencompass.models import HuggingFaceCausalLM, BaichuanAPI
 from mmengine import read_base
 with read_base():
     from ...paths import ROOT_DIR
-    from ..model_template import get_default_model
+    from ..model_template import get_default_model, get_vllm_model
     from ...api_key import baichuan_key
 
 _meta_template = dict(
@@ -21,6 +21,16 @@ baichuan2_13b_chat = get_default_model(abbr="baichuan2-13b-chat", path=f"{ROOT_D
 
 baichuan2_bases = [baichuan2_7b_base, baichuan2_13b_base]
 baichuan2_chats = [baichuan2_7b_chat, baichuan2_13b_chat]
+
+
+baichuan2_7b_base_vllm = get_vllm_model(abbr="baichuan2-7b", path=f"{ROOT_DIR}models/baichuan-inc/Baichuan2-7B-Base")
+baichuan2_7b_chat_vllm = get_vllm_model(abbr="baichuan2-7b-chat", path=f"{ROOT_DIR}models/baichuan-inc/Baichuan2-7B-Chat", meta_template=_meta_template)
+
+baichuan2_13b_base_vllm = get_vllm_model(abbr="baichuan2-13b", path=f"{ROOT_DIR}models/baichuan-inc/Baichuan2-13B-Base")
+baichuan2_13b_chat_vllm = get_vllm_model(abbr="baichuan2-13b-chat", path=f"{ROOT_DIR}models/baichuan-inc/Baichuan2-13B-Chat", meta_template=_meta_template, num_gpus=1)
+
+baichuan2_bases_vllm = [baichuan2_7b_base_vllm, baichuan2_13b_base_vllm]
+baichuan2_chats_vllm = [baichuan2_7b_chat_vllm, baichuan2_13b_chat_vllm]
 
 
 baichuan2_turbo = dict(abbr='Baichuan2-Turbo',

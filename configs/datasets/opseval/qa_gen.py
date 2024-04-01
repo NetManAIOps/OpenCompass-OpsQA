@@ -2,7 +2,7 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer
-from opencompass.openicl.icl_evaluator import AccEvaluator, BleuRougeEvaluator
+from opencompass.openicl.icl_evaluator import AccEvaluator, BleuRougeEvaluator, OpsEvalGenQAEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.openicl.icl_retriever import ZeroRetriever
 from opencompass.openicl.icl_inferencer import PPLInferencer
@@ -34,7 +34,8 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
                 retriever=retriever_dict,
                 inferencer=get_gen_inferencer(sc=False),
             ),
-            eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
+            # eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
+            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang))
             )
             for shot_abbr, shot_hint_id, retriever_dict in zip(
                 ['Zero-shot', '3-shot'],
