@@ -119,7 +119,7 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
             'Accuracy': correct / tot * 100,
             'SC-Accuracy': sc_correct / tot * 100,
         }
-    
+
 class OpsEvalGenQAEvaluator(BaseEvaluator):
     
     def __init__(self, language='en'):

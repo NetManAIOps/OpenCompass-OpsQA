@@ -13,9 +13,9 @@ with read_base():
     from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
     from ..datasets.zte.zte import zte_naive
 datasets = [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*owl_qa_gen,*owl_qa_ppl,*rzy_qa_gen,*rzy_qa_ppl]
-model_name = 'qwen-14b-chat'
-model_abbr = 'nm_qwen_14b_chat'
-model_path = '/mnt/home/opsfm-xz/models/Qwen/Qwen-14B-Chat'
+model_name = 'yi-34b-dsir_150000-full-owl-network-sft-2000steps'
+model_abbr = 'nm_yi_34b_dsir_150000_full_owl_network_sft_2000steps'
+model_path = '/mnt/tenant-home_speed/xz/sft_checkpoint/yi-34b-dsir_150000-full-owl-network-sft-2000steps/merged_model'
 
 if model_name is None:
     raise NotImplementedError("Model is none!")
@@ -26,7 +26,7 @@ models = [dict(
             engine_config=dict(session_len=2048,
                            max_batch_size=8),
             gen_config=dict(top_k=1, top_p=0.8,
-                        max_new_tokens=100, stop_words=[151643, 151645]),
+                        max_new_tokens=100, stop_words=[2, 7]),
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
@@ -36,7 +36,6 @@ models = [dict(
             dict(role="HUMAN", begin='<|im_start|>user\n', end='<|im_end|>'),
             dict(role="BOT", begin="<|im_start|>assistant\n", end='<|im_end|>', generate=True),
         ],
-        reserved_roles=[dict(role='SYSTEM', begin="<|im_start|>system\nYou are a helpful assistant.", end="<|im_end|>"),]
     ),
             end_str='<|im_end|>'
         )]
