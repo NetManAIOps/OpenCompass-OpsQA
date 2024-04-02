@@ -68,6 +68,11 @@ class OpenAIPeiqi(BaseAPIModel):
                          retry=retry)
         import tiktoken
         self.tiktoken = tiktoken
+        try:
+            enc = self.tiktoken.encoding_for_model(self.path)
+            self.tiktoken_model = self.path
+        except KeyError:
+            self.tiktoken_model = 'gpt-4'
         self.temperature = temperature
 
         if isinstance(key, str):
@@ -219,7 +224,7 @@ class OpenAIPeiqi(BaseAPIModel):
         Returns:
             int: Length of the input tokens
         """
-        enc = self.tiktoken.encoding_for_model(self.path)
+        enc = self.tiktoken.encoding_for_model(self.tiktoken_model)
         return len(enc.encode(prompt))
 
     def get_ppl(self,
