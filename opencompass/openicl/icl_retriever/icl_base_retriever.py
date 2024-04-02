@@ -164,7 +164,8 @@ class BaseRetriever:
             self.dataset_reader.output_column:
             self.test_ds[self.dataset_reader.output_column][idx],
             'id':
-            self.test_ds['id'][idx] if 'id' in self.test_ds.features else None
+            self.test_ds['id'][idx] if 'id' in self.test_ds.features else None,
+            'question': self.test_ds['question'][idx] if 'question' in self.test_ds.features else None,
         }
 
     def generate_prompt_for_ppl_task(

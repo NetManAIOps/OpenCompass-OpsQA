@@ -119,8 +119,7 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
             'Accuracy': correct / tot * 100,
             'SC-Accuracy': sc_correct / tot * 100,
         }
-        
-        
+
 class OpsEvalGenQAEvaluator(BaseEvaluator):
     
     def __init__(self, language='en'):
@@ -138,7 +137,7 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
             "rouge": tot_rouge / len(predictions)
         }
     
-    def get_rouge_bleu(pred, answer, language='en'):
+    def get_rouge_bleu(self, pred, answer, language='en'):
         rouge = Rouge()
         smoothie = SmoothingFunction().method7
         def clean_word(words):

@@ -33,6 +33,7 @@ from .vllm_api import VllmAPI  # noqa
 # from .custom import CustomModel  # noqa
 from .wenxin_api import WenXinAI  # noqa
 from .t5 import T5  # noqa
+from .bert import Bert  # noqa
 from .pangu_api import PanGu  # noqa: F401
 from .qwen_api import Qwen  # noqa: F401
 from .sensetime_api import SenseTime  # noqa: F401

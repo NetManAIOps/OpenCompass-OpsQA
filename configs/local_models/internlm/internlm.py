@@ -3,7 +3,7 @@ from opencompass.models import HuggingFaceCausalLM
 from mmengine.config import read_base
 with read_base():
     from ...paths import ROOT_DIR
-    from ..model_template import get_default_model
+    from ..model_template import get_default_model, get_vllm_model
 
 internlm2_chat_7b = dict(
         type=HuggingFaceCausalLM,
@@ -36,3 +36,12 @@ internlm2_20b = get_default_model(abbr="internlm2-20b", path=ROOT_DIR+"models/Sh
 
 internlm2_bases = [internlm2_7b, internlm2_20b]
 internlm2_chats = [internlm2_chat_20b, internlm2_chat_7b]
+
+internlm2_7b_vllm = get_vllm_model(abbr="internlm2-7b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-7b")
+internlm2_20b_vllm = get_vllm_model(abbr="internlm2-20b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-20b", num_gpus=4)
+
+internlm2_chat_7b_vllm = get_vllm_model(abbr="internlm2-chat-7b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-chat-7b")
+internlm2_chat_20b_vllm = get_vllm_model(abbr="internlm2-chat-20b", path=ROOT_DIR+"models/Shanghai_AI_Laboratory/internlm2-chat-20b", num_gpus=4)
+
+internlm2_bases_vllm = [internlm2_7b_vllm, internlm2_20b_vllm]
+internlm2_chats_vllm = [internlm2_chat_20b_vllm, internlm2_chat_7b_vllm]

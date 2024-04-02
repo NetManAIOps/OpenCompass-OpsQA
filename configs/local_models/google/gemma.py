@@ -3,6 +3,7 @@ from opencompass.models import HuggingFaceCausalLM
 from mmengine.config import read_base
 with read_base():
     from ...paths import ROOT_DIR
+    from ..model_template import get_default_model, get_vllm_model
 
 gemma_2b = dict(
         type=HuggingFaceCausalLM,
@@ -29,3 +30,8 @@ gemma_7b = dict(
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
         run_cfg=dict(num_gpus=1, num_procs=1),
     )
+
+gemma_2b_vllm = get_vllm_model(abbr="gemma-2b", path=ROOT_DIR+"models/google/gemma-2b")
+gemma_7b_vllm = get_vllm_model(abbr="gemma-7b", path=ROOT_DIR+"models/google/gemma-7b")
+
+gemma_vllm = [gemma_2b_vllm, gemma_7b_vllm]

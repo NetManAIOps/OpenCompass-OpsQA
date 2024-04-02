@@ -2,7 +2,7 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM
 from mmengine.config import read_base
 with read_base():
     from ...paths import ROOT_DIR
-    from ..model_template import get_default_model
+    from ..model_template import get_default_model, get_vllm_model
     
 qwen_meta_template = dict(
     round=[
@@ -127,3 +127,20 @@ qwen1_5_14b_chat = dict(
         model_kwargs=dict(device_map='auto', trust_remote_code=True),
         run_cfg=dict(num_gpus=1, num_procs=1),
     )
+
+qwen1_5_base_vllm_models = [
+    get_vllm_model(
+        abbr=f"qwen1.5-{quant}b-base", 
+        path=f"{ROOT_DIR}models/Qwen/Qwen1.5-{quant}B", 
+        num_gpus=1 if "72" not in quant else 4)
+        for quant in ["0.5", "1.8", "4", "7", "14", "72"]
+]
+
+qwen1_5_chat_vllm_models = [
+    get_vllm_model(
+        abbr=f"qwen1.5-{quant}b-chat", 
+        meta_template=qwen_meta_template, 
+        num_gpus=1 if "72" not in quant else 4,
+        path=f"{ROOT_DIR}models/Qwen/Qwen1.5-{quant}B-Chat")
+        for quant in ["0.5", "1.8", "4", "7", "14", "72"]
+]
