@@ -18,7 +18,9 @@ datasets = [
 ]
 
 # Remove COT and 3-shot datasets
-datasets = [dataset for dataset in datasets if 'cot' not in dataset['abbr'] and '3-shot' not in dataset['abbr']]
+# datasets = [dataset for dataset in datasets if 'cot' not in dataset['abbr'] and '3-shot' not in dataset['abbr']]
+# Naive COT only
+datasets = [dataset for dataset in datasets if 'cot' in dataset['abbr'] and '3-shot' not in dataset['abbr']]
 
 models = [
     claude_3_opus

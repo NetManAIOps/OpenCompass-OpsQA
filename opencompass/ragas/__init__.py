@@ -1,3 +1,3 @@
-from config import *
-from judge import *
-from metric import *
+from .config import *
+from .judge import *
+from .metric import *

@@ -11,6 +11,7 @@ configs/openai_key.py
 configs/paths.py
 configs/api_key.py
 configs/secrets.py
+configs/ragas_config.toml
 configs/datasets/log.json
 configs/eval_debug*.py
 configs/viz_*.py

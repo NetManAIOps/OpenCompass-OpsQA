@@ -126,16 +126,19 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
         super().__init__()
         self.language = language
     
-    def score(self, predictions: List, references: List) -> dict:
+    def score(self, predictions: List, references: List, test_set: List) -> dict:
         tot_bleu, tot_rouge = 0, 0
         for pred, ans in zip(predictions, references):
             bleu_score, rouge_score = self.get_rouge_bleu(pred, ans, self.language)
             tot_bleu += bleu_score
             tot_rouge += rouge_score
-        return {
+        ragas_report = self.get_ragas_score(predictions, references, test_set)
+        report = {
             "bleu": tot_bleu / len(predictions),
-            "rouge": tot_rouge / len(predictions)
+            "rouge": tot_rouge / len(predictions),
+            "ragas": ragas_report 
         }
+        return report
     
     def get_rouge_bleu(self, pred, answer, language='en'):
         rouge = Rouge()
@@ -157,16 +160,25 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
             bleu_score, rouge_score = 0.0, 0.0
         return bleu_score, rouge_score
 
+    def get_ragas_score(self, predictions, references, test_set) -> dict:
+        from opencompass.ragas.judge import calculate_score
+        reference = [{"id": idx, "question": question, "answer": ref} 
+                            for idx, (question, ref) in enumerate(zip(test_set['question'], references))]
+        answers = [{"id": idx, "question": question, "answer": ans} 
+                            for idx, (question, ans) in enumerate(zip(test_set['question'], predictions))]
+        report = calculate_score(reference, answers)
+        return report
+
 class OpsEvalRagasEvaluator(BaseEvaluator):
 
-    def __init__(self):
+    def __init__(self, language='en'):
         super().__init__()
 
-    def score(self, predictions: List, references: List) -> dict:
-        from opencompass.ragas.judge import calculate_scores
-        reference = {"id": idx, "answer": ref
-                            for idx, ref in enumerate(references)}
-        answers = {"id": idx, "answer": ans
-                            for idx, ans in enumerate(predictions)}
-        report = calculate_scores(reference, answers)
+    def score(self, predictions: List, references: List, test_set: List) -> dict:
+        from opencompass.ragas.judge import calculate_score
+        reference = [{"id": idx, "question": question, "answer": ref} 
+                            for idx, (question, ref) in enumerate(zip(test_set['question'], references))]
+        answers = [{"id": idx, "question": question, "answer": ans} 
+                            for idx, (question, ans) in enumerate(zip(test_set['question'], predictions))]
+        report = calculate_score(reference, answers)
         return report

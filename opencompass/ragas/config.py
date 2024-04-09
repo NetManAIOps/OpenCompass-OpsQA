@@ -4,15 +4,17 @@ import logging
 from pip._vendor import tomli
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.embeddings import Embeddings
+from mmengine.config import read_base
 
-CONFIG_PATH = os.getenv('CONFIG_PATH', 'config/config.toml')
+CURRENT_PATH = os.path.dirname(__file__)
+CONFIG_PATH = os.path.join(CURRENT_PATH, '../../configs', 'ragas_config.toml')
 
 logger = logging.getLogger(__name__)
 
 
 def load_config() -> dict:
     if not os.path.exists(CONFIG_PATH):
-        logger.error('Config file does not exist')
+        logger.error(f'Config file {CONFIG_PATH} does not exist')
         sys.exit(1)
 
     with open(CONFIG_PATH, 'r') as f:

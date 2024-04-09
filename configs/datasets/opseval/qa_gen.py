@@ -2,7 +2,7 @@
 from opencompass.openicl.icl_prompt_template import PromptTemplate
 from opencompass.openicl.icl_retriever import FixKRetriever, ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer, SCInferencer, CoTInferencer
-from opencompass.openicl.icl_evaluator import AccEvaluator, BleuRougeEvaluator, OpsEvalGenQAEvaluator
+from opencompass.openicl.icl_evaluator import AccEvaluator, BleuRougeEvaluator, OpsEvalGenQAEvaluator, OpsEvalRagasEvaluator
 from opencompass.utils.text_postprocessors import first_capital_postprocess_multi
 from opencompass.openicl.icl_retriever import ZeroRetriever
 from opencompass.openicl.icl_inferencer import PPLInferencer

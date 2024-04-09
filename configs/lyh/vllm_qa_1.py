@@ -62,6 +62,6 @@ eval = dict(
     partitioner=dict(type=NaivePartitioner),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
+        max_num_workers=1,
         task=dict(type=OpenICLEvalTask)),
 )

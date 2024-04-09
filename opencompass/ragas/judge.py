@@ -3,7 +3,7 @@ import json
 import logging
 import argparse
 import pandas as pd
-from config import config, load_llm, load_embeddings
+from opencompass.ragas.config import config, load_llm, load_embeddings
 from datasets import Dataset
 
 logger = logging.getLogger(__name__)
@@ -141,7 +141,7 @@ def compute_scores(df: pd.DataFrame) -> list[dict]:
         os.environ["LANGCHAIN_ENDPOINT"] = langsmith_config.get('endpoint')
 
     from ragas import evaluate, RunConfig
-    from metric import answer_correctness
+    from opencompass.ragas.metric import answer_correctness
     from langchain.callbacks.tracers import LangChainTracer
     
     new_df = df.copy()
