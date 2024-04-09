@@ -59,9 +59,9 @@ eos_tokens_dict = {
 model_dict = {
     "huggingface": """dict(
             type=$INFERENCE_MODEL$,
-            abbr=model_abbr,
-            path=model_path,
-            tokenizer_path=model_path,
+            abbr='$MODEL_ABBR$',
+            path='$MODEL_PATH$',
+            tokenizer_path='$MODEL_PATH$',
             tokenizer_kwargs=dict(padding_side='left',
                                 truncation_side='left',
                                 trust_remote_code=True,
@@ -76,8 +76,8 @@ model_dict = {
         )""",
     "lmdeploy": """dict(
             type=$INFERENCE_MODEL$,
-            abbr=model_abbr,
-            path=model_path,
+            abbr='$MODEL_ABBR$',
+            path='$MODEL_PATH$',
             engine_config=dict(session_len=2048,
                            max_batch_size=8),
             gen_config=dict(top_k=1, top_p=0.8,
@@ -88,7 +88,21 @@ model_dict = {
             run_cfg=dict(num_gpus=$NUM_GPUS$, num_procs=1),
             meta_template=$META_TEMPLATE$,
             end_str='<|im_end|>'
-        )"""
+        )""",
+    "vllm": """dict(
+            type=$INFERENCE_MODEL$,
+            abbr='$MODEL_ABBR$',
+            path='$MODEL_PATH$',
+            max_out_len=400,
+            max_seq_len=2048,
+            batch_size=8,
+            run_cfg=dict(num_gpus=$NUM_GPUS$, num_procs=1),
+            meta_template=$META_TEMPLATE$,
+            model_kwargs=dict(trust_remote_code=True, max_model_len=2000, tensor_parallel_size=$NUM_GPUS$, gpu_memory_utilization=0.95),
+            generation_kwargs=dict(stop_token_ids=$EOS_TOKEN_IDS$),
+            mode='none',
+            use_fastchat_template=False
+        )""",
 }
 
 def check_model_category(name: str, model_card):
@@ -159,7 +173,7 @@ def determine_num_gpus():
     print(f"[EVAL] {model_size=}, set {num_gpus=}")
     return str(num_gpus)
 
-def determine_inference_model():
+def determine_inference_model(task_type: str):
     # Check inference model
     inference_model = "HuggingFaceCausalLM"
     generation_kwargs = eos_tokens_dict['default']
@@ -169,28 +183,40 @@ def determine_inference_model():
         with open("/mnt/home/opsfm-xz/model_card.json") as f:
             model_card = json.load(f)
         model_category = check_model_category(model_name, model_card)
-        if model_category in ['qwen', 'yi']:
-            inference_model = 'TurboMindModel'
-        # elif model_category in ['qwen1.5']:
-        #     inference_model = 'LmdeployPytorchModel'
+        if task_type == 'gen':
+            if model_category in ['qwen', 'yi']:
+                inference_model = 'TurboMindModel'
+            elif model_category in ['qwen1.5']:
+                inference_model = 'VLLM'
+        elif task_type == 'ppl':
+            if model_category in ['qwen', 'yi']:
+                inference_model = 'TurboMindModel'
+            elif model_category in ['qwen1.5']:
+                inference_model = 'HuggingFaceCausalLM'
         
         # Check generation_kwargs
         if model_category in eos_tokens_dict:
             eos_tokens = eos_tokens_dict[model_category]
-    print(f"[EVAL] Set {inference_model=}")
-    print(f"[EVAL] Set {eos_tokens=}")
+    print(f"[EVAL] Set {task_type} {inference_model=}")
+    print(f"[EVAL] Set {task_type} {eos_tokens=}")
     
     # Check template type
     model_template_type = "lmdeploy"
     if inference_model in ['HuggingFaceCausalLM']:
         model_template_type = "huggingface"
+    elif inference_model in ['VLLM']:
+        model_template_type = "vllm"
     model_template = model_dict[model_template_type]
-    print(f"[EVAL] Set {model_template_type=}")
+    print(f"[EVAL] Set {task_type} {model_template_type=}")
     
     return inference_model, model_template, eos_tokens
 
-inference_model, model_template, eos_tokens = determine_inference_model()
+gen_inference_model, gen_model_template, gen_eos_tokens = determine_inference_model('gen')
+ppl_inference_model, ppl_model_template, ppl_eos_tokens = determine_inference_model('ppl')
+
+gen_template = gen_model_template.replace('$INFERENCE_MODEL$', gen_inference_model).replace('$EOS_TOKEN_IDS$', gen_eos_tokens)
+ppl_template = ppl_model_template.replace('$INFERENCE_MODEL$', ppl_inference_model).replace('$EOS_TOKEN_IDS$', ppl_eos_tokens)
 
 with open('/mnt/tenant-home_speed/lyh/opseval-configs/xz/runconfig_base.py') as fi, open('/mnt/tenant-home_speed/lyh/opseval-configs/xz/runconfig.py', 'wt') as fo:
-    content = fi.read().replace('$MODEL_TEMPLATE$', model_template).replace('$MODEL$', model_name).replace('$MODEL_ABBR$', model_abbr).replace('$MODEL_PATH$', model_path).replace('$DATASETS$', datasets).replace('$META_TEMPLATE$', check_meta_template()).replace('$NUM_GPUS$', determine_num_gpus()).replace('$INFERENCE_MODEL$', inference_model).replace('$EOS_TOKEN_IDS$', eos_tokens)
+    content = fi.read().replace('$GEN_MODEL_TEMPLATE$', gen_template).replace('$PPL_MODEL_TEMPLATE$', ppl_template).replace('$MODEL$', model_name).replace('$MODEL_ABBR$', model_abbr).replace('$MODEL_PATH$', model_path).replace('$DATASETS$', datasets).replace('$META_TEMPLATE$', check_meta_template()).replace('$NUM_GPUS$', determine_num_gpus())
     fo.write(content)

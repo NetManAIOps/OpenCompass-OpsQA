@@ -9,7 +9,7 @@ with read_base():
     # Models
     from ..local_models.google.t5 import t5_base
     from ..local_models.bert.bert import bert_large_cased
-    from ..local_models.qwen.qwen_vllm import qwen_1_5b_14b_chat_vllm
+    from ..local_models.qwen.qwen import qwen_1_5_chat_vllm
 
     from ..paths import ROOT_DIR
 
@@ -23,7 +23,7 @@ datasets = [
 ]
 
 models = [
-    t5_base,
+    # t5_base,
     # bert_large_cased,
     qwen_1_5b_14b_chat_vllm,
     # *vicuna_bases,

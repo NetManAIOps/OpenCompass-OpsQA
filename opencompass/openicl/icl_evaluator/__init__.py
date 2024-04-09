@@ -10,5 +10,5 @@ from .icl_misc_evaluator import AveragePPLEvaluator  # noqa
 from .icl_plugin_evaluator import TEvalEvaluator  # noqa
 from .icl_toxic_evaluator import ToxicEvaluator  # noqa
 from .icl_stat_evaluator import *  # noqa
-from .opseval_gen_evaluator import OpsEvalGenMCEvaluator, OpsEvalGenQAEvaluator  # noqa
+from .opseval_gen_evaluator import *  # noqa
 from .lm_evaluator import LMEvaluator  # noqa

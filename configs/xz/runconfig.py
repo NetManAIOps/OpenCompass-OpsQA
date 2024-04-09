@@ -2,7 +2,7 @@ from mmengine.config import read_base
 from opencompass.partitioners import SizePartitioner, NaivePartitioner
 from opencompass.runners import LocalRunner
 from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
-from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel, LmdeployPytorchModel
+from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel, LmdeployPytorchModel, VLLM
 
 with read_base():
     # Datasets
@@ -12,21 +12,21 @@ with read_base():
     from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
     from ..datasets.ppl_qa.rzy_qa import rzy_ppl_qa_datasets
     from ..datasets.zte.zte import zte_naive
-datasets = [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*owl_qa_gen,*owl_qa_ppl,*rzy_qa_gen,*rzy_qa_ppl]
-model_name = 'yi-34b-dsir_150000-full-owl-network-sft-2000steps'
-model_abbr = 'nm_yi_34b_dsir_150000_full_owl_network_sft_2000steps'
-model_path = '/mnt/tenant-home_speed/xz/sft_checkpoint/yi-34b-dsir_150000-full-owl-network-sft-2000steps/merged_model'
 
-if model_name is None:
-    raise NotImplementedError("Model is none!")
-models = [dict(
-            type=TurboMindModel,
-            abbr=model_abbr,
-            path=model_path,
-            engine_config=dict(session_len=2048,
-                           max_batch_size=8),
-            gen_config=dict(top_k=1, top_p=0.8,
-                        max_new_tokens=100, stop_words=[2, 7]),
+
+# models = [$MODEL_TEMPLATE$]
+
+# for model in models:
+#     # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
+#     # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
+#     # model['run_cfg'] = dict(num_gpus=1, num_procs=1)
+#     pass
+
+model_dataset_combinations = [{
+    'models': [dict(
+            type=VLLM,
+            abbr='nm_qwen1.5_32b_dsir_new_10000_full_owl_network_sft_800steps',
+            path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
@@ -36,19 +36,45 @@ models = [dict(
             dict(role="HUMAN", begin='<|im_start|>user\n', end='<|im_end|>'),
             dict(role="BOT", begin="<|im_start|>assistant\n", end='<|im_end|>', generate=True),
         ],
+        reserved_roles=[dict(role='SYSTEM', begin="<|im_start|>system\nYou are a helpful assistant.", end="<|im_end|>"),]
     ),
-            end_str='<|im_end|>'
-        )]
-
-for model in models:
-    # model['path'] = model['path'].replace('/mnt/mfs/opsgpt/','/gpudata/home/cbh/opsgpt/')
-    # model['tokenizer_path'] = model['tokenizer_path'].replace('/mnt/mfs/opsgpt/', '/gpudata/home/cbh/opsgpt/')
-    # model['run_cfg'] = dict(num_gpus=1, num_procs=1)
-    pass
+            model_kwargs=dict(trust_remote_code=True, max_model_len=2000, tensor_parallel_size=1, gpu_memory_utilization=0.95),
+            generation_kwargs=dict(stop_token_ids=[151643, 151645]),
+            mode='none',
+            use_fastchat_template=False
+        )],
+    'datasets': []
+}, {
+    'models': [dict(
+            type=HuggingFaceCausalLM,
+            abbr='nm_qwen1.5_32b_dsir_new_10000_full_owl_network_sft_800steps',
+            path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
+            tokenizer_path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
+            tokenizer_kwargs=dict(padding_side='left',
+                                truncation_side='left',
+                                trust_remote_code=True,
+                                use_fast=False,),
+            max_out_len=400,
+            max_seq_len=2048,
+            batch_size=8,
+            model_kwargs=dict(device_map='auto', trust_remote_code=True),
+            run_cfg=dict(num_gpus=1, num_procs=1),
+            meta_template=dict(
+        round=[
+            dict(role="HUMAN", begin='<|im_start|>user\n', end='<|im_end|>'),
+            dict(role="BOT", begin="<|im_start|>assistant\n", end='<|im_end|>', generate=True),
+        ],
+        reserved_roles=[dict(role='SYSTEM', begin="<|im_start|>system\nYou are a helpful assistant.", end="<|im_end|>"),]
+    ),
+            generation_kwargs=dict(eos_token_id=[151643, 151645])
+        )],
+    'datasets': []
+}]
 
 zeroshot_datasets = []
 fewshot_datasets = []
-for dataset in datasets:
+
+for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*owl_qa_gen,*owl_qa_ppl,*rzy_qa_gen,*rzy_qa_ppl]:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/evaluation','/mnt/home/opseval/evaluation/')
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
@@ -68,11 +94,19 @@ for dataset in datasets:
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
         dataset['sample_setting'] = dict(load_list='/mnt/tenant-home_speed/lyh/evaluation/opseval/network/network_annotated.json')
-    if '3-shot' in dataset['abbr']:
-        fewshot_datasets.append(dataset)
+    
+    if 'ppl' in dataset['abbr']:
+        model_dataset_combinations[1]['datasets'].append(dataset)
     else:
-        zeroshot_datasets.append(dataset)
-datasets = fewshot_datasets + zeroshot_datasets
+        model_dataset_combinations[0]['datasets'].append(dataset)
+#     if '3-shot' in dataset['abbr']:
+#         fewshot_datasets.append(dataset)
+#     else:
+#         zeroshot_datasets.append(dataset)
+# datasets = fewshot_datasets + zeroshot_datasets
+
+models = [*model_dataset_combinations[0]['models'], *model_dataset_combinations[1]['models']]
+datasets = [*model_dataset_combinations[0]['datasets'], *model_dataset_combinations[1]['datasets']]
 
 infer = dict(
     partitioner=dict(

@@ -1,0 +1,46 @@
+# 数据目录路径，用于存放评测服务所需的数据文件
+data_dir = "./data"
+
+[judge]
+# 是否启用评测功能
+enabled = true
+# 最大工作线程数，用于并行处理评测任务
+max_workers = 2
+# 正确答案的分数阈值，用于判断提交的答案是否正确
+correct_threshold = 0.6
+
+[langsmith]
+# 是否启用 LangSmith 集成，用于查看 LangChain 日志 (https://langsmith.com)
+enabled = false
+# Langsmith API的密钥，用于访问 LangSmith 提供的服务
+api_key = "YOUR_LANGSMITH_API_KEY"
+# 项目名称，用于在 LangSmith 平台上区分不同的项目
+project_name = "aiops-2024-judge"
+# LangSmith 服务的 API 端点 (一般无需改动)
+endpoint = "https://api.smith.langchain.com"
+
+[models]
+# 大语言模型的类型，默认采用 OpenAI
+llm_type = "openai"
+# 具体使用的大语言模型名称
+llm_model = "/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen1.5-72B-Chat"
+# 嵌入模型的类型，默认采用 OpenAI
+emb_type = "huggingface"
+# 具体使用的嵌入模型名称
+embeddings_model = "/mnt/tenant-home_speed/gaozhengwei/projects/LLM/embeddings/bge-large-zh-v1___5"
+
+
+# OpenAI API 的密钥，用于访问 OpenAI 提供的服务
+openai_api_key = "EMPTY"
+# OpenAI API 的根 URL
+openai_api_base = "http://10.55.33.23:31554/v1"
+
+[ranklist_updater]
+# 是否启用排行榜更新功能
+enabled = false
+# 更新间隔，以秒为单位
+interval = 60 # seconds
+# 排行榜服务的访问令牌
+token = "YOUR_RANKLIST_SERVICE_TOKEN"
+# 排行榜服务的 API 端点
+endpoint = "https://competition.aiops-challenge.com/api/cms/rank/import/1/0"

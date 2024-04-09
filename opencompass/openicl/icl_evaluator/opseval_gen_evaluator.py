@@ -156,3 +156,17 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
             print(f"[WARNING] Error when calculating bleu and rouge: {err}")
             bleu_score, rouge_score = 0.0, 0.0
         return bleu_score, rouge_score
+
+class OpsEvalRagasEvaluator(BaseEvaluator):
+
+    def __init__(self):
+        super().__init__()
+
+    def score(self, predictions: List, references: List) -> dict:
+        from opencompass.ragas.judge import calculate_scores
+        reference = {"id": idx, "answer": ref
+                            for idx, ref in enumerate(references)}
+        answers = {"id": idx, "answer": ans
+                            for idx, ans in enumerate(predictions)}
+        report = calculate_scores(reference, answers)
+        return report
