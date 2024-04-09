@@ -69,7 +69,7 @@ def get_mc_gen_datasets(dataset_name, path, langs=['zh'], qtypes=['single']):
                 ice_template=mc_abcd_cot_ice_template(prompt_hint, cot_think_hint, cot_conclude_hint),
                 prompt_template=mc_abcd_cot_prompt_template(prompt_hint, cot_think_hint),
                 retriever=retriever_dict,
-                inferencer=get_cot_inferencer(sc_size=SAMPLE_SIZE, cot_prompts=cot_conclude_hint),
+                inferencer=get_cot_inferencer(sc_size=SAMPLE_SIZE, cot_prompts=[cot_conclude_hint]),
             ),
             eval_cfg=dict(evaluator=dict(type=OpsEvalGenMCEvaluator)))
         for shot_abbr, shot_hint_id, retriever_dict in zip(
