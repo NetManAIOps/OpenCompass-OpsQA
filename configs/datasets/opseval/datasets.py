@@ -2,8 +2,8 @@ from mmengine import read_base
 with read_base():
     from .mc_gen import get_mc_gen_datasets
     from .mc_ppl import get_mc_ppl_datasets
-    from .qa_gen import get_qa_gen_datasets
-    from .qa_ppl import get_qa_ppl_datasets
+    from .qa_gen import get_qa_gen_datasets, get_qa_long_gen_datasets
+    from .qa_ppl import get_qa_ppl_datasets, get_qa_long_ppl_datasets
     from ...paths import ROOT_DIR
 
 def get_all_datasets(name, path, langs, qtypes):
@@ -102,11 +102,16 @@ rzy_qa_ppl = get_selected_datasets([get_qa_ppl_datasets], 'rzy', f'{ROOT_DIR}dat
 rzy_qa_gen = get_selected_datasets([get_qa_gen_datasets], 'rzy', f'{ROOT_DIR}data/opseval/rzy/splitted_v2', langs=['zh'], qtypes=None)
 rzy_qa = rzy_qa_ppl + rzy_qa_gen
 
+zedx_qa_ppl = get_selected_datasets([get_qa_long_ppl_datasets], 'zedx', f'{ROOT_DIR}data/opseval/zedx', langs=['zh'], qtypes=None)
+zedx_qa_gen = get_selected_datasets([get_qa_long_gen_datasets], 'zedx', f'{ROOT_DIR}data/opseval/zedx', langs=['zh'], qtypes=None)
+zedx_qa = zedx_qa_ppl + zedx_qa_gen
+
 all_ppl_mc = zte_mc_ppl + oracle_mc_ppl + owl_mc_ppl + network_mc_ppl + company_mc_ppl
 all_gen_mc = zte_mc_gen + oracle_mc_gen + owl_mc_gen + network_mc_gen + company_mc_gen
 
-all_ppl_qa = owl_qa_ppl + company_qa_ppl
-all_gen_qa = owl_qa_gen + company_qa_gen
+all_ppl_qa = owl_qa_ppl + company_qa_ppl + zedx_qa_ppl
+all_gen_qa = owl_qa_gen + company_qa_gen + zedx_qa_gen
+all_qa = all_ppl_qa + all_gen_qa
 
 ceval_mc_ppl = get_selected_datasets([get_mc_ppl_datasets], 'ceval', f'{ROOT_DIR}data/opseval/ceval/splitted_dev', langs=['zh'], qtypes=['single'])
 ceval_mc_gen = get_selected_datasets([get_mc_gen_datasets], 'ceval', f'{ROOT_DIR}data/opseval/ceval/splitted_dev', langs=['zh'], qtypes=['single'])

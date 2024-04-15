@@ -116,15 +116,24 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
             correct += not_sc(pred, ans)
             sc_correct += sc_cot(pred, ans)
         return {
-            'Accuracy': correct / tot * 100,
-            'SC-Accuracy': sc_correct / tot * 100,
+            'accuracy': correct / tot * 100,
+            'sc-accuracy': sc_correct / tot * 100,
         }
 
 class OpsEvalGenQAEvaluator(BaseEvaluator):
     
-    def __init__(self, language='en'):
+    def __init__(self, 
+        language='en',
+        ragas_config=None,
+        ):
         super().__init__()
         self.language = language
+        self.ragas_config = ragas_config
+        if self.ragas_config == None:
+            self.ragas_config = dict(
+                api_ip='localhost',
+                api_port=12310, # 12310 ~ 12313
+            )
     
     def score(self, predictions: List, references: List, test_set: List) -> dict:
         tot_bleu, tot_rouge = 0, 0
@@ -136,7 +145,9 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
         report = {
             "bleu": tot_bleu / len(predictions),
             "rouge": tot_rouge / len(predictions),
-            "ragas": ragas_report 
+            "ragas_score": ragas_report["score"],
+            "ragas_acc": ragas_report["accuracy"],
+            "ragas_report": ragas_report 
         }
         return report
     
@@ -166,7 +177,7 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
                             for idx, (question, ref) in enumerate(zip(test_set['question'], references))]
         answers = [{"id": idx, "question": question, "answer": ans} 
                             for idx, (question, ans) in enumerate(zip(test_set['question'], predictions))]
-        report = calculate_score(reference, answers)
+        report = calculate_score(reference, answers, self.ragas_config)
         return report
 
 class OpsEvalRagasEvaluator(BaseEvaluator):
@@ -180,5 +191,9 @@ class OpsEvalRagasEvaluator(BaseEvaluator):
                             for idx, (question, ref) in enumerate(zip(test_set['question'], references))]
         answers = [{"id": idx, "question": question, "answer": ans} 
                             for idx, (question, ans) in enumerate(zip(test_set['question'], predictions))]
-        report = calculate_score(reference, answers)
+        try:
+            report = calculate_score(reference, answers)
+        except Exception as err:
+            print(f"[OpsEvalRagasEvaluator] {err}")
+            report = {}
         return report

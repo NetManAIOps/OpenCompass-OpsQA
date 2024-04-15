@@ -65,19 +65,28 @@ class OpenICLEvalTask(BaseTask):
     log_subdir = 'logs/eval'
     output_subdir = 'results'
 
-    def __init__(self, cfg: ConfigDict):
+    def __init__(self, cfg: ConfigDict, tid: int, ragas_id: int = None):
         super().__init__(cfg)
+        self.tid = tid
+        self.ragas_id = ragas_id
         self.logger = get_logger()
         self.num_gpus = max(
             c.get('eval_cfg', {}).get('num_gpus', 0)
             for c in sum(self.dataset_cfgs, []))
+        self.need_ragas = max(
+            c.get('eval_cfg', {}).get('need_ragas', False)
+            for c in sum(self.dataset_cfgs, [])
+        )
         self.dump_details = cfg.get('eval', {}).get('runner', {}).get(
             'task', {}).get('dump_details', False)
 
     def get_command(self, cfg_path, template):
         script_path = __file__
         python = 'python3' if which('python3') else 'python'
-        command = f'{python} {script_path} {cfg_path}'
+        if hasattr(self, 'ragas_id'):
+            command = f'{python} {script_path} {cfg_path} {self.tid} {self.ragas_id}'
+        else:
+            command = f'{python} {script_path} {cfg_path} {self.tid}'
         return template.format(task_cmd=command)
 
     def run(self):
@@ -200,6 +209,16 @@ class OpenICLEvalTask(BaseTask):
                 ]
 
             icl_evaluator = ICL_EVALUATORS.build(self.eval_cfg['evaluator'])
+
+            #TODO: assign the evaluator with different port
+            self.logger.info(f"[DEBUG OpenICLEvalTask] tid: {self.tid}")
+            if hasattr(icl_evaluator, 'ragas_config'):
+                icl_evaluator.ragas_config['ragas_port'] = 12310 + (self.tid % 4) 
+                if hasattr(self, 'ragas_id') and self.ragas_id:
+                    self.logger.info(f"[DEBUG OpenICLEvalTask] Allocated ragas_id: {self.ragas_id}")
+                    icl_evaluator.ragas_config['ragas_port'] = 12310 + (int(self.ragas_id) % 4) 
+                self.logger.info(f"[DEBUG OpenICLEvalTask] Setting ragas_port to: {icl_evaluator.ragas_config['ragas_port']}")
+
             # need results dir to save other files
             out_path = get_infer_output_path(
                 self.model_cfg, self.dataset_cfg,
@@ -351,6 +370,8 @@ class OpenICLEvalTask(BaseTask):
 def parse_args():
     parser = argparse.ArgumentParser(description='Score Calculator')
     parser.add_argument('config', help='Config file path')
+    parser.add_argument('tid', help='Task ID', default=0, type=int)
+    parser.add_argument('ragas_id', help='RAGAS ID', default=None)
     args = parser.parse_args()
     return args
 
@@ -358,8 +379,10 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     cfg = Config.fromfile(args.config)
+    tid = args.tid
+    ragas_id = args.ragas_id
     start_time = time.time()
-    inferencer = OpenICLEvalTask(cfg)
+    inferencer = OpenICLEvalTask(cfg, tid, ragas_id)
     inferencer.run()
     end_time = time.time()
     get_logger().info(f'time elapsed: {end_time - start_time:.2f}s')

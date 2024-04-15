@@ -6,7 +6,7 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel,
 
 with read_base():
     # Datasets
-    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen, owl_qa_gen, owl_qa_ppl, rzy_qa_gen, rzy_qa_ppl, oracle_mc_gen, oracle_mc_ppl, company_mc_gen, company_mc_ppl
+    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen, owl_qa_gen, owl_qa_ppl, rzy_qa_gen, rzy_qa_ppl, zedx_qa_gen, zedx_qa_ppl, oracle_mc_gen, oracle_mc_ppl, company_mc_gen, company_mc_ppl
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
     from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
@@ -25,8 +25,8 @@ with read_base():
 model_dataset_combinations = [{
     'models': [dict(
             type=VLLM,
-            abbr='nm_qwen1.5_32b_dsir_new_10000_full_owl_network_sft_800steps',
-            path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
+            abbr='nm_qwen1.5_32b_zedx_full_2000step_sft_2000step',
+            path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
@@ -47,9 +47,9 @@ model_dataset_combinations = [{
 }, {
     'models': [dict(
             type=HuggingFaceCausalLM,
-            abbr='nm_qwen1.5_32b_dsir_new_10000_full_owl_network_sft_800steps',
-            path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
-            tokenizer_path='/mnt/home/opsfm-xz/sft_checkpoint/xz/qwen1.5-32b-dsir_new_10000-full-owl-network-sft-2000steps/checkpoint-800/merged_model',
+            abbr='nm_qwen1.5_32b_zedx_full_2000step_sft_2000step',
+            path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
+            tokenizer_path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
             tokenizer_kwargs=dict(padding_side='left',
                                 truncation_side='left',
                                 trust_remote_code=True,
@@ -74,7 +74,7 @@ model_dataset_combinations = [{
 zeroshot_datasets = []
 fewshot_datasets = []
 
-for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*owl_qa_gen,*owl_qa_ppl,*rzy_qa_gen,*rzy_qa_ppl]:
+for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*zedx_qa_gen,*zedx_qa_ppl]:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/evaluation','/mnt/home/opseval/evaluation/')
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
@@ -82,14 +82,17 @@ for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc
     dataset['infer_cfg']['inferencer']['max_out_len'] = 20
     # dataset['infer_cfg']['inferencer']['generation_kwargs'] = {'stopping_criteria': ['<|im_end|>', '<|endoftext|>']}
     if 'qa' in dataset['abbr'].replace('-', '_').split('_'):
-        dataset['infer_cfg']['inferencer']['max_out_len'] = 50
+        if 'zedx' in dataset['abbr']:
+            dataset['infer_cfg']['inferencer']['max_out_len'] = 100
+        else:
+            dataset['infer_cfg']['inferencer']['max_out_len'] = 50
     if 'en' in dataset['abbr'].replace('-', '_').split('_'):
         continue
     if 'sc+cot' in dataset['abbr']:
         continue
     if 'mc' in dataset['abbr'].replace('-', '_').split('_'):
         dataset['sample_setting']= dict(sample_size=500)
-    if 'owl_qa' in dataset['abbr']:
+    if 'qa' in dataset['abbr'].replace('-', '_').split('_') and 'ppl' not in dataset['abbr']:
         dataset['sample_setting']= dict(sample_size=500)
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
@@ -127,6 +130,6 @@ eval = dict(
     partitioner=dict(type=NaivePartitioner),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
+        max_num_workers=8,
         task=dict(type=OpenICLEvalTask)),
 )

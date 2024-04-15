@@ -63,7 +63,7 @@ def preprocess_data(ground_truth: pd.DataFrame, predictions: pd.DataFrame) -> pd
     return ground_truth.merge(predictions, on='id', how='left').fillna('')
 
 
-def calculate_score(reference: list[dict], answers: list[dict]) -> dict:
+def calculate_score(reference: list[dict], answers: list[dict], ragas_config: dict) -> dict:
     """
     Calculate the score of the team's answers based on the reference answers.
 
@@ -79,7 +79,7 @@ def calculate_score(reference: list[dict], answers: list[dict]) -> dict:
     gt_df = pd.DataFrame(reference)
     preds_df = pd.DataFrame(validate_and_format_answers(answers))
     data = preprocess_data(gt_df, preds_df)
-    res_df = compute_scores(data)
+    res_df = compute_scores(data, ragas_config)
     detail = res_df.to_dict(orient='records')
 
     overall_score = sum([item['score'] for item in detail]) / len(detail)
@@ -131,7 +131,7 @@ def calculate_score(reference: list[dict], answers: list[dict]) -> dict:
 
     return report
 
-def compute_scores(df: pd.DataFrame) -> list[dict]:
+def compute_scores(df: pd.DataFrame, ragas_config: dict) -> list[dict]:
     langsmith_config = config.get('langsmith', {})
     langsmith_enabled = langsmith_config.get('enabled', False)
 
@@ -154,15 +154,18 @@ def compute_scores(df: pd.DataFrame) -> list[dict]:
         tracer = LangChainTracer(project_name=langsmith_config.get('project_name'))
         callbacks.append(tracer)
 
+    print("[DEBUG RAGAS] ragas_config", ragas_config)
+
     result = evaluate(
         dataset,
         metrics=[
             answer_correctness,
         ],
-        llm=load_llm(),
-        embeddings=load_embeddings(),
+        llm=load_llm(ragas_config),
+        embeddings=load_embeddings(ragas_config),
         run_config=RunConfig(max_workers=judge_config.get('max_workers', 16)),
         callbacks=callbacks,
+        raise_exceptions=False
     )
 
     res_df = result.to_pandas()

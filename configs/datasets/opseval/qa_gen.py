@@ -35,7 +35,7 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
                 inferencer=get_gen_inferencer(sc=False),
             ),
             # eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
-            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang))
+            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang), need_ragas=True)
             )
             for shot_abbr, shot_hint_id, retriever_dict in zip(
                 ['Zero-shot', '3-shot'],
@@ -47,6 +47,46 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
                 [
                     f"你是一名运维专家，请用一句话回答下面这个问题：\n",
                     f"You are an IT operations expert, please answer the following question in one sentence: \n"
+                ],
+                [
+                    "答案：",
+                    "Answer:"
+                ]
+            )
+    ]
+    datasets = naive_gen_datasets
+    selected = []
+    for lang in langs:
+        selected.extend([d for d in datasets if f'{lang}' in d['abbr'].replace('_', '-').split('-')])
+    return selected
+
+def get_qa_long_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
+    naive_gen_datasets = [
+        dict(
+            type=OpsEvalQADataset,
+            abbr=f'{dataset_name}-qa-{shot_abbr}-{lang}-sc-gen',
+            path=path, 
+            name=f'{dataset_name}_qa_{lang}',
+            reader_cfg=qa_gen_reader_cfg,
+            infer_cfg=dict(
+                ice_template=qa_gen_ice_template(prompt_hint, answer_hint),
+                prompt_template=qa_gen_prompt_template(prompt_hint, answer_hint),
+                retriever=retriever_dict,
+                inferencer=get_gen_inferencer(sc=False),
+            ),
+            # eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
+            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang), need_ragas=True)
+            )
+            for shot_abbr, shot_hint_id, retriever_dict in zip(
+                ['Zero-shot', '3-shot'],
+                [0, 1],
+                [dict(type=ZeroRetriever), dict(type=FixKRetriever, fix_id_list=[0,1,2])]
+            )
+            for lang, prompt_hint, answer_hint in zip(
+                ['zh', 'en'],
+                [
+                    f"你是一名运维专家，请回答下面这个问题：\n",
+                    f"You are an IT operations expert, please answer the following question: \n"
                 ],
                 [
                     "答案：",

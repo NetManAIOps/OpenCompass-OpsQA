@@ -27,7 +27,7 @@ class OpenICLInferTask(BaseTask):
     log_subdir = 'logs/infer'
     output_subdir = 'predictions'
 
-    def __init__(self, cfg: ConfigDict):
+    def __init__(self, cfg: ConfigDict, tid: int = 0):
         super().__init__(cfg)
         run_cfg = self.model_cfgs[0].get('run_cfg', {})
         self.num_gpus = run_cfg.get('num_gpus', 0)

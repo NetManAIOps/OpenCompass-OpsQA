@@ -6,7 +6,7 @@ from opencompass.models import HuggingFace, HuggingFaceCausalLM, TurboMindModel,
 
 with read_base():
     # Datasets
-    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen, owl_qa_gen, owl_qa_ppl, rzy_qa_gen, rzy_qa_ppl, oracle_mc_gen, oracle_mc_ppl, company_mc_gen, company_mc_ppl
+    from ..datasets.opseval.datasets import ceval_mc_ppl, network_mc_ppl, zte_mc_ppl, owl_mc_ppl, ceval_mc_gen, network_mc_gen, zte_mc_gen, owl_mc_gen, owl_qa_gen, owl_qa_ppl, rzy_qa_gen, rzy_qa_ppl, zedx_qa_gen, zedx_qa_ppl, oracle_mc_gen, oracle_mc_ppl, company_mc_gen, company_mc_ppl
     from ..datasets.simple_qa.owl_qa import owl_qa_datasets
     from ..datasets.ppl_qa.owl_qa import owl_ppl_qa_datasets
     from ..datasets.simple_qa.rzy_qa import rzy_qa_datasets
@@ -41,14 +41,17 @@ for dataset in [$DATASETS$]:
     dataset['infer_cfg']['inferencer']['max_out_len'] = 20
     # dataset['infer_cfg']['inferencer']['generation_kwargs'] = {'stopping_criteria': ['<|im_end|>', '<|endoftext|>']}
     if 'qa' in dataset['abbr'].replace('-', '_').split('_'):
-        dataset['infer_cfg']['inferencer']['max_out_len'] = 50
+        if 'zedx' in dataset['abbr']:
+            dataset['infer_cfg']['inferencer']['max_out_len'] = 100
+        else:
+            dataset['infer_cfg']['inferencer']['max_out_len'] = 50
     if 'en' in dataset['abbr'].replace('-', '_').split('_'):
         continue
     if 'sc+cot' in dataset['abbr']:
         continue
     if 'mc' in dataset['abbr'].replace('-', '_').split('_'):
         dataset['sample_setting']= dict(sample_size=500)
-    if 'owl_qa' in dataset['abbr']:
+    if 'qa' in dataset['abbr'].replace('-', '_').split('_') and 'ppl' not in dataset['abbr']:
         dataset['sample_setting']= dict(sample_size=500)
     dataset['eval_cfg']['sc_size'] = 1
     if 'network' in dataset['abbr']:
@@ -86,6 +89,6 @@ eval = dict(
     partitioner=dict(type=NaivePartitioner),
     runner=dict(
         type=LocalRunner,
-        max_num_workers=32,
+        max_num_workers=8,
         task=dict(type=OpenICLEvalTask)),
 )

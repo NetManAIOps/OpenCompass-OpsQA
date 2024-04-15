@@ -26,12 +26,19 @@ def load_config() -> dict:
 config = load_config()
 
 
-def load_llm() -> BaseLanguageModel:
+def load_llm(ragas_config: dict) -> BaseLanguageModel:
     models_config = config.get('models')
     llm_type = models_config.get('llm_type', 'openai')
     if llm_type == 'openai':
         os.environ["OPENAI_API_BASE"] = models_config.get('openai_api_base', '')
         os.environ["OPENAI_API_KEY"] = models_config.get('openai_api_key', '')
+
+        if 'api_ip' in ragas_config and 'api_port' in ragas_config:
+            api_ip = ragas_config['api_ip']
+            api_port = ragas_config['api_port']
+            if 'ragas_port' in ragas_config:
+                api_port = ragas_config['ragas_port']
+            os.environ["OPENAI_API_BASE"] = f"http://{api_ip}:{api_port}/v1"
 
         from langchain_openai.chat_models import ChatOpenAI
 
@@ -49,7 +56,7 @@ def load_llm() -> BaseLanguageModel:
     sys.exit(1)
 
 
-def load_embeddings() -> Embeddings:
+def load_embeddings(ragas_config: dict) -> Embeddings:
     models_config = config.get('models')
     emb_type = models_config.get('emb_type', 'openai')
     if emb_type == 'openai':

@@ -51,10 +51,12 @@ class LocalRunner(BaseRunner):
                  max_num_workers: int = 16,
                  debug: bool = False,
                  max_workers_per_gpu: int = 1,
+                 max_workers_per_ragas: int = 1,
                  lark_bot_url: str = None):
         super().__init__(task=task, debug=debug, lark_bot_url=lark_bot_url)
         self.max_num_workers = max_num_workers
         self.max_workers_per_gpu = max_workers_per_gpu
+        self.max_workers_per_ragas = max_workers_per_ragas
 
     def launch(self, tasks: List[Dict[str, Any]]) -> List[Tuple[str, int]]:
         """Launch multiple tasks.
@@ -78,7 +80,8 @@ class LocalRunner(BaseRunner):
             all_gpu_ids = list(range(torch.cuda.device_count()))
 
         if self.debug:
-            for task in tasks:
+            # OpsEval: give ID to each task
+            for tid, task in enumerate(tasks):
                 task = TASKS.build(dict(cfg=task, type=self.task_cfg['type']))
                 task_name = task.name
                 num_gpus = task.num_gpus
@@ -125,19 +128,52 @@ class LocalRunner(BaseRunner):
 
             print('DEBUG: ', gpus)
 
+            # ragas ports !AD HOC!
+            all_ragas_ids = [0,1]
+            ragases = np.zeros(max(all_ragas_ids)+1, dtype=np.uint)
+            ragases[all_ragas_ids] = self.max_workers_per_ragas
+            ragas_lock = np.zeros(1)
+            non_ragas_lock = np.zeros(1)
+
             pbar = tqdm(total=len(tasks))
             lock = Lock()
 
             def submit(task, index):
-                task = TASKS.build(dict(cfg=task, type=self.task_cfg['type']))
+                # OpsEval: give id to each task
+                get_logger().info(f"[LocalRunner] running a new task with index: {index}")
+                task = TASKS.build(dict(cfg=task, type=self.task_cfg['type'], tid=index))
                 num_gpus = task.num_gpus
+                need_ragas = 1 if hasattr(task, 'need_ragas') and task.need_ragas else 0
+
                 assert len(gpus) >= num_gpus
 
                 while True:
                     lock.acquire()
-                    if sum(gpus > 0) >= num_gpus:
+                    # If ragas_lock > 0 and not need_ragas: wait
+                    if ragas_lock[0] > 0 and not need_ragas:
+                        # get_logger().info(f"[LocalRunner] ragas_lock {ragas_lock} non_ragas_lock {non_ragas_lock} trying to run {need_ragas}")
+                        lock.release()
+                        time.sleep(1)
+                        continue
+                    # If non_ragas_lock > 0 and need_ragas: wait
+                    if non_ragas_lock[0] > 0 and need_ragas:
+                        # get_logger().info(f"[LocalRunner] ragas_lock {ragas_lock} non_ragas_lock {non_ragas_lock} trying to run {need_ragas}")
+                        lock.release()
+                        time.sleep(1)
+                        continue
+
+                    if sum(gpus > 0) >= num_gpus and sum(ragases > 0) >= need_ragas:
                         gpu_ids = np.where(gpus)[0][:num_gpus]
                         gpus[gpu_ids] -= 1
+
+                        ragas_ids = np.where(ragases)[0][:1]
+                        ragases[ragas_ids] -= 1
+
+                        if need_ragas:
+                            ragas_lock[0] += 1
+                        else:
+                            non_ragas_lock[0] += 1
+
                         lock.release()
                         break
                     lock.release()
@@ -148,12 +184,23 @@ class LocalRunner(BaseRunner):
                                ','.join(map(str, gpu_ids)))
                 else:
                     tqdm.write(f'launch {task.name} on CPU ')
+                
+                if need_ragas:
+                    tqdm.write(f'launch {task.name} on RAGAS id {ragas_ids[0]}')
+                
+                if len(ragas_ids):
+                    task.ragas_id = ragas_ids[0]
 
-                res = self._launch(task, gpu_ids, index)
+                res = self._launch(task, gpu_ids, ragas_ids, index)
                 pbar.update()
 
                 with lock:
                     gpus[gpu_ids] += 1
+                    ragases[ragas_ids] += 1
+                    if need_ragas:
+                        ragas_lock[0] -= 1
+                    else:
+                        non_ragas_lock[0] -= 1
 
                 return res
 
@@ -163,7 +210,7 @@ class LocalRunner(BaseRunner):
 
         return status
 
-    def _launch(self, task, gpu_ids, index):
+    def _launch(self, task, gpu_ids, ragas_ids, index):
         """Launch a single task.
 
         Args:
