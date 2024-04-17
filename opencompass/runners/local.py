@@ -51,7 +51,7 @@ class LocalRunner(BaseRunner):
                  max_num_workers: int = 16,
                  debug: bool = False,
                  max_workers_per_gpu: int = 1,
-                 max_workers_per_ragas: int = 1,
+                 max_workers_per_ragas: int = 10,
                  lark_bot_url: str = None):
         super().__init__(task=task, debug=debug, lark_bot_url=lark_bot_url)
         self.max_num_workers = max_num_workers
@@ -129,7 +129,7 @@ class LocalRunner(BaseRunner):
             print('DEBUG: ', gpus)
 
             # ragas ports !AD HOC!
-            all_ragas_ids = [0,1]
+            all_ragas_ids = [0]
             ragases = np.zeros(max(all_ragas_ids)+1, dtype=np.uint)
             ragases[all_ragas_ids] = self.max_workers_per_ragas
             ragas_lock = np.zeros(1)

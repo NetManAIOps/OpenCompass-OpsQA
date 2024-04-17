@@ -173,6 +173,8 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
 
     def get_ragas_score(self, predictions, references, test_set) -> dict:
         from opencompass.ragas.judge import calculate_score
+        for ref, q in zip(references, test_set):
+            assert ref == q['answer'], 'Reference and test set not match!'
         reference = [{"id": idx, "question": question, "answer": ref} 
                             for idx, (question, ref) in enumerate(zip(test_set['question'], references))]
         answers = [{"id": idx, "question": question, "answer": ans} 

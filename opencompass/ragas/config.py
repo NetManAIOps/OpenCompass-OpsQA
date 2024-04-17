@@ -51,6 +51,19 @@ def load_llm(ragas_config: dict) -> BaseLanguageModel:
 
         return ChatTongyi(model=models_config.get('llm_model', 'qwen1.5-72b-chat'))
 
+    elif llm_type == 'vllm':
+
+        from langchain_community.llms import VLLM
+
+        llm = VLLM(model="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen1.5-72B-Chat",
+                   trust_remote_code=True,
+                   vllm_kwargs={
+                    #    "tensor_parallel_size": 4,
+                       "gpu_memory_utilization": 0.8,
+                       "max_model_len": 2048,
+                   }
+                   )
+        return llm
 
     logger.error(f'Unsupported LLM model: {llm_type}')
     sys.exit(1)

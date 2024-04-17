@@ -79,8 +79,13 @@ def calculate_score(reference: list[dict], answers: list[dict], ragas_config: di
     gt_df = pd.DataFrame(reference)
     preds_df = pd.DataFrame(validate_and_format_answers(answers))
     data = preprocess_data(gt_df, preds_df)
+    # data.to_csv("/mnt/home/lyh/ragas_data.csv")
     res_df = compute_scores(data, ragas_config)
+    # res_df.to_csv("/mnt/home/lyh/ragas_res.csv")
     detail = res_df.to_dict(orient='records')
+    # with open("/mnt/home/lyh/ragas_detail.json", 'w') as f:
+    #     import json
+    #     json.dump(detail, f, indent=4, ensure_ascii=False)
 
     overall_score = sum([item['score'] for item in detail]) / len(detail)
     accuracy = sum([item['correct'] for item in detail]) / len(detail)
@@ -163,7 +168,9 @@ def compute_scores(df: pd.DataFrame, ragas_config: dict) -> list[dict]:
         ],
         llm=load_llm(ragas_config),
         embeddings=load_embeddings(ragas_config),
-        run_config=RunConfig(max_workers=judge_config.get('max_workers', 16)),
+        run_config=RunConfig(max_workers=judge_config.get('max_workers', 16), 
+                                timeout=judge_config.get('timeout', 300),
+                                max_wait=judge_config.get('max_wait', 300)),
         callbacks=callbacks,
         raise_exceptions=False
     )

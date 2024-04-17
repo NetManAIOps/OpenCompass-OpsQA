@@ -19,7 +19,7 @@ datasets = [
     *owl_qa_ppl,
     *rzy_qa_gen,
     *rzy_qa_ppl,
-    *zedx_qa_gen,
+    # *zedx_qa_gen,
 ]
 
 datasets = [
@@ -46,7 +46,7 @@ for dataset in datasets:
     dataset['infer_cfg']['inferencer']['sc_size'] = 2
     dataset['infer_cfg']['inferencer']['max_token_len'] = 200
     dataset['eval_cfg']['sc_size'] = 2
-    dataset['sample_setting'] = dict(sample_size=5)     # !!!WARNING: Use for testing only!!!
+    dataset['sample_setting'] = dict(sample_size=100)     # !!!WARNING: Use for testing only!!!
     
 
 infer = dict(

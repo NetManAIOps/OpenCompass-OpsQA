@@ -74,7 +74,7 @@ model_dataset_combinations = [{
 zeroshot_datasets = []
 fewshot_datasets = []
 
-for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*zedx_qa_gen,*zedx_qa_ppl]:
+for dataset in [*ceval_mc_ppl,*ceval_mc_gen,*zedx_qa_gen,*zedx_qa_ppl]:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/evaluation','/mnt/home/opseval/evaluation/')
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
@@ -131,5 +131,6 @@ eval = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=8,
+        max_workers_per_ragas=10,
         task=dict(type=OpenICLEvalTask)),
 )

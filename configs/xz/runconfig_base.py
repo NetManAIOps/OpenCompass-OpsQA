@@ -90,5 +90,6 @@ eval = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=8,
+        max_workers_per_ragas=10,
         task=dict(type=OpenICLEvalTask)),
 )
