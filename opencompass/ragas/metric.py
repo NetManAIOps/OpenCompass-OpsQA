@@ -108,6 +108,10 @@ class AnswerCorrectness(MetricWithLLM, MetricWithEmbeddings):
             gt_keywords, overlapping_keywords = [
                 item if isinstance(item, list) else np.nan for item in prediction
             ]
+            if gt_keywords is None or (type(gt_keywords) == float and np.isnan(gt_keywords)):
+                logger.warning('[gt_keywords] gt_keywords is nan!')
+                gt_keywords = []
+            logger.warning(f"[gt_keywords] {gt_keywords}")
             gt_keywords = [k.lower() for k in gt_keywords]
             overlapping_keywords = [k.lower() for k in overlapping_keywords]
             overlapping_keywords = [k for k in overlapping_keywords if self.match(gt_keywords, k)]
@@ -136,13 +140,18 @@ class AnswerCorrectness(MetricWithLLM, MetricWithEmbeddings):
 
         q, a, g = row["question"], row["answer"], row["ground_truth"]
         p_value = self.correctness_prompt.format(question=q, ground_truth=g, answer=a)
+
+        # TODO: add chat_template
+        p_value.prompt_str = '<|im_start|>system\nYou are a helpful assistant.<|im_end|><|im_start|>user\n' + p_value.prompt_str + '<|im_end|><|im_start|>assistant\n'
+
         is_statement_present = await self.llm.generate(
-            p_value, callbacks=callbacks, is_async=is_async
+            p_value, callbacks=callbacks, is_async=is_async, stop=['<|im_end|>', '<|endoftext|>']
         )
 
         prediction = await json_loader.safe_load(
             is_statement_present.generations[0][0].text, self.llm, is_async=is_async
         )
+        logger.warning(f"\n-------------------------------------\n[prompt] {p_value}\n[prediction] {prediction}")
         f1_score = self._compute_statement_presence(prediction)
 
         if self.weights[1] == 0:

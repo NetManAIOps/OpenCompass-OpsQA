@@ -24,9 +24,13 @@ with read_base():
 
 model_dataset_combinations = [{
     'models': [dict(
-            type=VLLM,
-            abbr='nm_qwen1.5_32b_zedx_full_2000step_sft_2000step',
-            path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
+            type=TurboMindModel,
+            abbr='nm_yi_34b_zedx_full_nostream_2000step_sharegpt_owl_sft_2000step',
+            path='/mnt/tenant-home_speed/xz/sft_checkpoint/yi-34b-zedx-full-nostream-2000step-sharegpt-owl-sft-2000step/merged_model',
+            engine_config=dict(session_len=2048,
+                           max_batch_size=8),
+            gen_config=dict(top_k=1, top_p=0.8,
+                        max_new_tokens=100, stop_words=[2, 7]),
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
@@ -36,37 +40,30 @@ model_dataset_combinations = [{
             dict(role="HUMAN", begin='<|im_start|>user\n', end='<|im_end|>'),
             dict(role="BOT", begin="<|im_start|>assistant\n", end='<|im_end|>', generate=True),
         ],
-        reserved_roles=[dict(role='SYSTEM', begin="<|im_start|>system\nYou are a helpful assistant.", end="<|im_end|>"),]
     ),
-            model_kwargs=dict(trust_remote_code=True, max_model_len=2000, tensor_parallel_size=1, gpu_memory_utilization=0.95),
-            generation_kwargs=dict(stop_token_ids=[151643, 151645]),
-            mode='none',
-            use_fastchat_template=False
+            end_str='<|im_end|>'
         )],
     'datasets': []
 }, {
     'models': [dict(
-            type=HuggingFaceCausalLM,
-            abbr='nm_qwen1.5_32b_zedx_full_2000step_sft_2000step',
-            path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
-            tokenizer_path='/mnt/tenant-home_speed/xz/sft_checkpoint/qwen1.5-32b-zedx-full-2000step-sft-2000step/merged_model',
-            tokenizer_kwargs=dict(padding_side='left',
-                                truncation_side='left',
-                                trust_remote_code=True,
-                                use_fast=False,),
+            type=TurboMindModel,
+            abbr='nm_yi_34b_zedx_full_nostream_2000step_sharegpt_owl_sft_2000step',
+            path='/mnt/tenant-home_speed/xz/sft_checkpoint/yi-34b-zedx-full-nostream-2000step-sharegpt-owl-sft-2000step/merged_model',
+            engine_config=dict(session_len=2048,
+                           max_batch_size=8),
+            gen_config=dict(top_k=1, top_p=0.8,
+                        max_new_tokens=100, stop_words=[2, 7]),
             max_out_len=400,
             max_seq_len=2048,
             batch_size=8,
-            model_kwargs=dict(device_map='auto', trust_remote_code=True),
             run_cfg=dict(num_gpus=1, num_procs=1),
             meta_template=dict(
         round=[
             dict(role="HUMAN", begin='<|im_start|>user\n', end='<|im_end|>'),
             dict(role="BOT", begin="<|im_start|>assistant\n", end='<|im_end|>', generate=True),
         ],
-        reserved_roles=[dict(role='SYSTEM', begin="<|im_start|>system\nYou are a helpful assistant.", end="<|im_end|>"),]
     ),
-            generation_kwargs=dict(eos_token_id=[151643, 151645])
+            end_str='<|im_end|>'
         )],
     'datasets': []
 }]
@@ -74,7 +71,7 @@ model_dataset_combinations = [{
 zeroshot_datasets = []
 fewshot_datasets = []
 
-for dataset in [*ceval_mc_ppl,*network_mc_ppl,*zte_mc_ppl,*owl_mc_ppl,*oracle_mc_ppl,*company_mc_ppl,*ceval_mc_gen,*network_mc_gen,*zte_mc_gen,*owl_mc_gen,*oracle_mc_gen,*company_mc_gen,*zedx_qa_gen,*zedx_qa_ppl]:
+for dataset in [*ceval_mc_ppl,*ceval_mc_gen,*zedx_qa_gen,*zedx_qa_ppl]:
     # dataset['path'] = dataset['path'].replace('/mnt/mfs/opsgpt/evaluation','/mnt/home/opseval/evaluation/')
     dataset['sample_setting'] = dict()
     dataset['infer_cfg']['inferencer']['save_every'] = 8
@@ -131,5 +128,6 @@ eval = dict(
     runner=dict(
         type=LocalRunner,
         max_num_workers=8,
+        max_workers_per_ragas=10,
         task=dict(type=OpenICLEvalTask)),
 )
