@@ -443,26 +443,27 @@ class HuggingFace(BaseModel):
         if self.end_str:
             decodeds = [token.split(self.end_str)[0] for token in decodeds]
             
-        with open('/mnt/home/opsfm-xz/opencompass.log', 'at+') as f:
-            try:
-                original_decoded = self.tokenizer.batch_decode(outputs)
-                f.write(f"""--------------------------------------------------------
-                        {inputs=}
-                        {input_ids=}
-                        {max_out_len=}
-                        {kwargs=}
-                        {outputs=}
-                        {decodeds=}
-                        {original_decoded=}\n""")
-            except Exception as err:
-                f.write(f"""-----------------ERROR!!!!!!-----------------------------
-                        {err=}
-                        {inputs=}
-                        {input_ids=}
-                        {max_out_len=}
-                        {kwargs=}
-                        {outputs=}
-                        {decodeds=}""")
+        if os.path.exists('/mnt/home/opsfm-xz'):    
+            with open('/mnt/home/opsfm-xz/opencompass.log', 'at+') as f:
+                try:
+                    original_decoded = self.tokenizer.batch_decode(outputs)
+                    f.write(f"""--------------------------------------------------------
+                            {inputs=}
+                            {input_ids=}
+                            {max_out_len=}
+                            {kwargs=}
+                            {outputs=}
+                            {decodeds=}
+                            {original_decoded=}\n""")
+                except Exception as err:
+                    f.write(f"""-----------------ERROR!!!!!!-----------------------------
+                            {err=}
+                            {inputs=}
+                            {input_ids=}
+                            {max_out_len=}
+                            {kwargs=}
+                            {outputs=}
+                            {decodeds=}""")
             
         return decodeds
 

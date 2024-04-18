@@ -35,7 +35,7 @@ def get_qa_gen_datasets(dataset_name, path, langs=['zh'], qtypes=None):
                 inferencer=get_gen_inferencer(sc=False),
             ),
             # eval_cfg=dict(evaluator=dict(type=BleuRougeEvaluator))
-            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang), need_ragas=True)
+            eval_cfg=dict(evaluator=dict(type=OpsEvalGenQAEvaluator, language=lang), need_ragas=True, num_gpus=4)
             )
             for shot_abbr, shot_hint_id, retriever_dict in zip(
                 ['Zero-shot', '3-shot'],

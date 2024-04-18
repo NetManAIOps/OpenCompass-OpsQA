@@ -50,6 +50,23 @@ def load_llm(ragas_config: dict) -> BaseLanguageModel:
         from langchain_community.chat_models.tongyi import ChatTongyi
 
         return ChatTongyi(model=models_config.get('llm_model', 'qwen1.5-72b-chat'))
+    
+    elif llm_type == 'vllm':
+        # TODO
+
+        from langchain_community.llms import VLLM
+
+        llm = VLLM(model="/home/junetheriver/models/qwen/Qwen1.5-32B-Chat",
+                   trust_remote_code=True,
+                   tensor_parallel_size=4,
+                   vllm_kwargs={
+                       "gpu_memory_utilization": 0.7,
+                       "max_model_len": 1024,
+                    #    "enforce_eager": True,
+                   } 
+                   )
+        
+        return llm
 
 
     logger.error(f'Unsupported LLM model: {llm_type}')

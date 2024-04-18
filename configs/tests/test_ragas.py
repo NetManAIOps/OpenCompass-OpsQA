@@ -19,7 +19,7 @@ datasets = [
     *owl_qa_ppl,
     *rzy_qa_gen,
     *rzy_qa_ppl,
-    *zedx_qa_gen,
+    # *zedx_qa_gen,
 ]
 
 datasets = [
