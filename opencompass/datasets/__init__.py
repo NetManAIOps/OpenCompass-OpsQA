@@ -12,7 +12,7 @@ from .opseval import OpsEvalMCDataset, OpsEvalQADataset  # noqa: F401, F403
 # from .others.anli import AnliDataset  # noqa: F401, F403
 # from .others.arc import *  # noqa: F401, F403
 # from .others.ax import *  # noqa: F401, F403
-# from .others.bbh import *  # noqa: F401, F403
+from .others.bbh import *  # noqa: F401, F403
 # from .others.boolq import *  # noqa: F401, F403
 # from .others.bustum import *  # noqa: F401, F403
 # from .others.c3 import *  # noqa: F401, F403
@@ -35,8 +35,8 @@ from .opseval import OpsEvalMCDataset, OpsEvalQADataset  # noqa: F401, F403
 # from .others.flores import *  # noqa: F401, F403
 # from .others.GaokaoBench import *  # noqa: F401, F403
 # from .others.govrepcrs import *  # noqa: F401, F403
-# from .others.gsm8k import *  # noqa: F401, F403
-# from .others.hellaswag import *  # noqa: F401, F403
+from .others.gsm8k import *  # noqa: F401, F403
+from .others.hellaswag import *  # noqa: F401, F403
 # from .others.huggingface import *  # noqa: F401, F403
 # from .others.humaneval import *  # noqa: F401, F403
 # from .others.humanevalx import *  # noqa: F401, F403
