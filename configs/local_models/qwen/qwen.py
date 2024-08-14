@@ -140,6 +140,7 @@ qwen1_5_chat_vllm_models = [
     get_vllm_model(
         abbr=f"qwen1.5-{quant}b-chat", 
         meta_template=qwen_meta_template, 
+        gpu_memory_utilization=0.7 if "72" not in quant else 0.9,
         num_gpus=1 if "72" not in quant else 4,
         path=f"{ROOT_DIR}models/Qwen/Qwen1.5-{quant}B-Chat")
         for quant in ["0.5", "1.8", "4", "7", "14", "72"]

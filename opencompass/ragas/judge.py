@@ -172,7 +172,7 @@ def compute_scores(df: pd.DataFrame, ragas_config: dict) -> list[dict]:
                                 timeout=judge_config.get('timeout', 300),
                                 max_wait=judge_config.get('max_wait', 300)),
         callbacks=callbacks,
-        raise_exceptions=False
+        raise_exceptions=judge_config.get('raise_exceptions', False),
     )
 
     res_df = result.to_pandas()

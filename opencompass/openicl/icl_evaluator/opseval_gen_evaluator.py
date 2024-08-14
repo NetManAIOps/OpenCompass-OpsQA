@@ -118,6 +118,7 @@ class OpsEvalGenMCEvaluator(BaseEvaluator):
         return {
             'accuracy': correct / tot * 100,
             'sc-accuracy': sc_correct / tot * 100,
+            'tot': tot,
         }
 
 class OpsEvalGenQAEvaluator(BaseEvaluator):
@@ -131,8 +132,7 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
         self.ragas_config = ragas_config
         if self.ragas_config == None:
             self.ragas_config = dict(
-                api_ip='localhost',
-                api_port=12310, # 12310 ~ 12313
+                ragas_id = 0,
             )
     
     def score(self, predictions: List, references: List, test_set: List) -> dict:
@@ -147,7 +147,8 @@ class OpsEvalGenQAEvaluator(BaseEvaluator):
             "rouge": tot_rouge / len(predictions),
             "ragas_score": ragas_report["score"],
             "ragas_acc": ragas_report["accuracy"],
-            "ragas_report": ragas_report 
+            "ragas_report": ragas_report,
+            "tot": len(predictions), 
         }
         return report
     
@@ -195,6 +196,7 @@ class OpsEvalRagasEvaluator(BaseEvaluator):
                             for idx, (question, ans) in enumerate(zip(test_set['question'], predictions))]
         try:
             report = calculate_score(reference, answers)
+            report['tot'] = len(predictions)
         except Exception as err:
             print(f"[OpsEvalRagasEvaluator] {err}")
             report = {}

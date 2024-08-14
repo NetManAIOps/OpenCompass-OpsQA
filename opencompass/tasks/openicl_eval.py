@@ -69,6 +69,8 @@ class OpenICLEvalTask(BaseTask):
         super().__init__(cfg)
         self.tid = tid
         self.ragas_id = ragas_id
+        if self.ragas_id:
+            self.ragas_id = int(self.ragas_id)
         self.logger = get_logger()
         self.num_gpus = max(
             c.get('eval_cfg', {}).get('num_gpus', 0)
@@ -210,14 +212,12 @@ class OpenICLEvalTask(BaseTask):
 
             icl_evaluator = ICL_EVALUATORS.build(self.eval_cfg['evaluator'])
 
-            #TODO: assign the evaluator with different port
+            # Assign the evaluator with different port
             self.logger.info(f"[DEBUG OpenICLEvalTask] tid: {self.tid}")
             if hasattr(icl_evaluator, 'ragas_config'):
-                icl_evaluator.ragas_config['ragas_port'] = 12310 + (self.tid % 4) 
                 if hasattr(self, 'ragas_id') and self.ragas_id:
                     self.logger.info(f"[DEBUG OpenICLEvalTask] Allocated ragas_id: {self.ragas_id}")
-                    icl_evaluator.ragas_config['ragas_port'] = 12310 + (int(self.ragas_id) % 4) 
-                self.logger.info(f"[DEBUG OpenICLEvalTask] Setting ragas_port to: {icl_evaluator.ragas_config['ragas_port']}")
+                    icl_evaluator.ragas_config['ragas_id'] = self.ragas_id
 
             # need results dir to save other files
             out_path = get_infer_output_path(

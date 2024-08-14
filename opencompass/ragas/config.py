@@ -30,19 +30,21 @@ def load_llm(ragas_config: dict) -> BaseLanguageModel:
     models_config = config.get('models')
     llm_type = models_config.get('llm_type', 'openai')
     if llm_type == 'openai':
-        os.environ["OPENAI_API_BASE"] = models_config.get('openai_api_base', '')
-        os.environ["OPENAI_API_KEY"] = models_config.get('openai_api_key', '')
+        openai_config = config.get('openai')
 
-        if 'api_ip' in ragas_config and 'api_port' in ragas_config:
-            api_ip = ragas_config['api_ip']
-            api_port = ragas_config['api_port']
-            if 'ragas_port' in ragas_config:
-                api_port = ragas_config['ragas_port']
-            os.environ["OPENAI_API_BASE"] = f"http://{api_ip}:{api_port}/v1"
+        os.environ["OPENAI_API_KEY"] = openai_config.get('openai_api_key', '')
+        openai_api_base_ip = openai_config.get('openai_api_base_ip', 'localhost')
+        openai_api_base_port = openai_config.get('openai_api_base_port', 8000)
+
+        if 'ragas_id' in ragas_config:
+            ragas_id = ragas_config['ragas_id']
+            assert isinstance(ragas_id, int), f"ragas_id should be an integer, got {type(ragas_id).__name__}"
+            openai_api_base_port += ragas_id
+        os.environ["OPENAI_API_BASE"] = f"http://{openai_api_base_ip}:{openai_api_base_port}/v1"
 
         from langchain_openai.chat_models import ChatOpenAI
 
-        return ChatOpenAI(model=models_config.get('llm_model', 'gpt-3.5-turbo-16k'))
+        return ChatOpenAI(model=openai_config.get('openai_model', 'gpt-3.5-turbo-16k'))
     
     elif llm_type == 'tongyi':
         os.environ["DASHSCOPE_API_KEY"] = models_config.get('dashscope_api_key', '')
@@ -52,34 +54,30 @@ def load_llm(ragas_config: dict) -> BaseLanguageModel:
         return ChatTongyi(model=models_config.get('llm_model', 'qwen1.5-72b-chat'))
     
     elif llm_type == 'vllm':
-        # TODO
-
         from langchain_community.llms import VLLM
-
-        llm = VLLM(model="/home/junetheriver/models/qwen/Qwen1.5-32B-Chat",
+        vllm_config = config.get('vllm')
+        llm = VLLM(model=vllm_config.get('vllm_model'),
                    trust_remote_code=True,
-                   tensor_parallel_size=4,
+                   tensor_parallel_size=vllm_config.get('vllm_tp', 4),
                    vllm_kwargs={
-                       "gpu_memory_utilization": 0.7,
-                       "max_model_len": 1024,
+                       "gpu_memory_utilization": vllm_config.get('vllm_gpu_memory_utilization', 0.8),
+                       "max_model_len": vllm_config.get('vllm_max_model_len', 2048),
                     #    "enforce_eager": True,
                    } 
                    )
         
         return llm
 
-    elif llm_type == 'vllm':
-
-        from langchain_community.llms import VLLM
-
-        llm = VLLM(model="/mnt/tenant-home_speed/gaozhengwei/projects/LLM/models/Qwen/Qwen1.5-72B-Chat",
-                   trust_remote_code=True,
-                   vllm_kwargs={
-                    #    "tensor_parallel_size": 4,
-                       "gpu_memory_utilization": 0.8,
-                       "max_model_len": 2048,
-                   }
-                   )
+    elif llm_type == 'lmdeploy':
+        raise NotImplementedError
+    elif llm_type == 'hfmodel':
+        from langchain_community.llms import HuggingFaceModel
+        huggingface_config = config.get('huggingface')
+        llm = HuggingFaceModel(model=huggingface_config.get('hf_model'),
+                               trust_remote_code=True,
+                                
+                               )
+        
         return llm
 
     logger.error(f'Unsupported LLM model: {llm_type}')

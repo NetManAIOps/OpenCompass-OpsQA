@@ -52,11 +52,13 @@ class LocalRunner(BaseRunner):
                  debug: bool = False,
                  max_workers_per_gpu: int = 1,
                  max_workers_per_ragas: int = 10,
+                 num_ragas_port: int = 1,
                  lark_bot_url: str = None):
         super().__init__(task=task, debug=debug, lark_bot_url=lark_bot_url)
         self.max_num_workers = max_num_workers
         self.max_workers_per_gpu = max_workers_per_gpu
         self.max_workers_per_ragas = max_workers_per_ragas
+        self.num_ragas_port = num_ragas_port
 
     def launch(self, tasks: List[Dict[str, Any]]) -> List[Tuple[str, int]]:
         """Launch multiple tasks.
@@ -128,8 +130,8 @@ class LocalRunner(BaseRunner):
 
             print('DEBUG: ', gpus)
 
-            # ragas ports !AD HOC!
-            all_ragas_ids = [0]
+            # ragas ports
+            all_ragas_ids = [i for i in range(0, self.num_ragas_port)]
             ragases = np.zeros(max(all_ragas_ids)+1, dtype=np.uint)
             ragases[all_ragas_ids] = self.max_workers_per_ragas
             ragas_lock = np.zeros(1)

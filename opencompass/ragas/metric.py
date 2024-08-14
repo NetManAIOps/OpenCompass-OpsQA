@@ -111,9 +111,13 @@ class AnswerCorrectness(MetricWithLLM, MetricWithEmbeddings):
             if gt_keywords is None or (type(gt_keywords) == float and np.isnan(gt_keywords)):
                 logger.warning('[gt_keywords] gt_keywords is nan!')
                 gt_keywords = []
-            logger.warning(f"[gt_keywords] {gt_keywords}")
-            gt_keywords = [k.lower() for k in gt_keywords]
-            overlapping_keywords = [k.lower() for k in overlapping_keywords]
+            # logger.warning(f"[gt_keywords] {gt_keywords}")
+            gt_keywords = [k.lower() if isinstance(k, str) else str(k).lower() for k in gt_keywords]
+
+            if overlapping_keywords is None or (type(overlapping_keywords) == float and np.isnan(overlapping_keywords)):
+                logger.warning('[overlapping_keywords] overlapping_keywords is nan!')
+                overlapping_keywords = []
+            overlapping_keywords = [k.lower() if isinstance(k, str) else str(k).lower() for k in overlapping_keywords]
             overlapping_keywords = [k for k in overlapping_keywords if self.match(gt_keywords, k)]
             num_ok = len(overlapping_keywords)
             num_all = len(gt_keywords)
