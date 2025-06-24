@@ -10,6 +10,7 @@ with read_base():
     from ..local_models.google.t5 import t5_base
     from ..local_models.bert.bert import bert_large_cased
     from ..local_models.anthropic.claude import claude_3_opus
+    from ..local_models.azure.azure import models as azure_models
 
     from ..paths import ROOT_DIR
 
@@ -19,11 +20,12 @@ datasets = [
 ]
 
 datasets = [
-    dataset for dataset in datasets if 'Zero-shot' in dataset['abbr'] and 'zh' in dataset['abbr']
+    dataset for dataset in datasets if 'Zero-shot' in dataset['abbr'] and 'zh' in dataset['abbr'] and 'gen' in dataset['abbr']
 ]
 
 models = [
-    claude_3_opus,
+    *azure_models
+    # claude_3_opus,
     # t5_base,
     # bert_large_cased,
     # *vicuna_bases,

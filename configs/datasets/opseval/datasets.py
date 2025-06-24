@@ -63,15 +63,16 @@ network_mc_gen = get_selected_datasets([get_mc_gen_datasets], 'network', f'{ROOT
 network_mc = network_mc_ppl + network_mc_gen
 
 company_mc_list = [
-    ('bosc', f'{ROOT_DIR}data/opseval/bosc/splitted_v2', ['zh'], ['single', 'multiple']),
+    ('bosc', f'{ROOT_DIR}data/opseval/bosc/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
     # ('dfcdata', f'{ROOT_DIR}data/opseval/dfcdata/splitted', ['zh'], ['single']),
-    ('gtja',  f'{ROOT_DIR}data/opseval/gtja/splitted_v2', ['zh'], ['single', 'multiple']),
-    ('huaweicloud', f'{ROOT_DIR}data/opseval/huaweicloud/splitted', ['zh'], ['single', 'multiple']),
-    ('lenovo', f'{ROOT_DIR}data/opseval/lenovo/splitted', ['zh'], ['single', 'multiple']),
-    ('pufa', f'{ROOT_DIR}data/opseval/pufa/splitted_v2', ['zh'], ['single', 'multiple']),
-    ('rzy', f'{ROOT_DIR}data/opseval/rzy/splitted_v2', ['zh'], ['single', 'multiple']),
-    ('zabbix', f'{ROOT_DIR}data/opseval/zabbix/splitted_v2', ['zh'], ['single', 'multiple']),
-    ('zjyd', f'{ROOT_DIR}data/opseval/zjyd/splitted_v2', ['zh'], ['single', 'multiple']),
+    ('gtja',  f'{ROOT_DIR}data/opseval/gtja/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
+    ('huaweicloud', f'{ROOT_DIR}data/opseval/huaweicloud/splitted', ['zh', 'en'], ['single', 'multiple']),
+    ('lenovo', f'{ROOT_DIR}data/opseval/lenovo/splitted', ['zh', 'en'], ['single', 'multiple']),
+    ('pufa', f'{ROOT_DIR}data/opseval/pufa/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
+    ('rzy', f'{ROOT_DIR}data/opseval/rzy/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
+    ('zabbix', f'{ROOT_DIR}data/opseval/zabbix/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
+    ('zjyd', f'{ROOT_DIR}data/opseval/zjyd/splitted_v2', ['zh', 'en'], ['single', 'multiple']),
+    ('inspur', f'{ROOT_DIR}data/opseval/inspur', ['zh', 'en'], ['single']),
 ]
 
 company_qa_list = [

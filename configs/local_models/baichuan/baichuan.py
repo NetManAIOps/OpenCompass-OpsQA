@@ -1,4 +1,4 @@
-from opencompass.models import HuggingFaceCausalLM, BaichuanAPI
+from opencompass.models import HuggingFaceCausalLM, BaiChuan
 
 from mmengine import read_base
 with read_base():
@@ -34,11 +34,11 @@ baichuan2_chats_vllm = [baichuan2_7b_chat_vllm, baichuan2_13b_chat_vllm]
 
 
 baichuan2_turbo = dict(abbr='Baichuan2-Turbo',
-        type=BaichuanAPI, path='Baichuan2-Turbo', key=baichuan_key,
+        type=BaiChuan, path='Baichuan2-Turbo', api_key=baichuan_key,
         max_out_len=100, max_seq_len=2048, batch_size=1)
 
 baichuan3 = dict(abbr='Baichuan3',
-        type=BaichuanAPI, path='Baichuan3', key=baichuan_key,
+        type=BaiChuan, path='Baichuan3', api_key=baichuan_key,
         max_out_len=100, max_seq_len=2048, batch_size=1)
 
 baichuan_apis = [baichuan2_turbo, baichuan3]

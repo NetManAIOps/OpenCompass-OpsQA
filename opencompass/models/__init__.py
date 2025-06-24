@@ -1,3 +1,6 @@
+from .nullmodel import NullModel  # noqa: F401
+from .hisense import Hisense  # noqa: F401
+from .chmobile import CHMobile  # noqa: F401
 from .accessory import LLaMA2AccessoryModel  # noqa: F401
 from .ai360_api import AI360GPT  # noqa: F401
 from .alaya import AlayaLM  # noqa: F401
@@ -43,3 +46,4 @@ from .vllm import VLLM  # noqa: F401
 from .xunfei_api import XunFei  # noqa: F401
 from .zhipuai_api import ZhiPuAI  # noqa: F401
 # from .zhipuai_v2_api import ZhiPuV2AI  # noqa: F401
+from .azure_api import OpenAIAzure  # noqa: F401

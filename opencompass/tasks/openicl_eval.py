@@ -65,7 +65,7 @@ class OpenICLEvalTask(BaseTask):
     log_subdir = 'logs/eval'
     output_subdir = 'results'
 
-    def __init__(self, cfg: ConfigDict, tid: int, ragas_id: int = None):
+    def __init__(self, cfg: ConfigDict, tid: int, ragas_id: int = 0):
         super().__init__(cfg)
         self.tid = tid
         self.ragas_id = ragas_id
@@ -381,6 +381,8 @@ if __name__ == '__main__':
     cfg = Config.fromfile(args.config)
     tid = args.tid
     ragas_id = args.ragas_id
+    if not ragas_id:
+        ragas_id = 0
     start_time = time.time()
     inferencer = OpenICLEvalTask(cfg, tid, ragas_id)
     inferencer.run()

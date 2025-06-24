@@ -128,6 +128,8 @@ class SCInferencer(BaseInferencer):
         logger.info('Starting inference process...')
         for datum in tqdm(dataloader, disable=not self.is_main_process):
             if ds_reader.output_column:
+                print("[SC DEBUG]: ds_reader.output_column", ds_reader.output_column)
+                print("[SC DEBUG]: datum", datum)
                 entry, golds = list(zip(*datum))
             else:
                 entry = datum
