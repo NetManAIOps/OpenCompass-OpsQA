@@ -5,25 +5,14 @@ from opencompass.tasks import OpenICLInferTask, OpenICLEvalTask
 
 with read_base():
     # Datasets
-    from ..datasets.opseval.datasets import company_mc_gen, oracle_mc_gen, network_mc_gen, zte_mc_gen
+    from ..datasets.opseval.datasets import company_mc_gen, oracle_mc_gen, network_mc_gen, zte_mc_gen, opseval2_mc_gen, opseval2_qa_gen
     # Models
     # from ..local_models.company.chmobile import chmobile
     from ..local_models.nullmodel import models as nullmodel_models
     # ROOT_DIR
     from ..paths import ROOT_DIR
 
-
-datasets = [
-    dataset for dataset in company_mc_gen if 'zjyd' in dataset['abbr'] or 'huaweicloud' in dataset['abbr']
-]
-
-datasets += oracle_mc_gen
-datasets += network_mc_gen
-datasets += zte_mc_gen
-
-datasets = [
-    dataset for dataset in datasets if 'multiple' not in dataset['abbr'] and 'cot' not in dataset['abbr']
-]
+datasets = [*opseval2_mc_gen, *opseval2_qa_gen]
 
 # datasets = [
 #     dataset for dataset in datasets if 'zh' in dataset['abbr'].split('-')

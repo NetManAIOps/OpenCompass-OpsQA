@@ -107,6 +107,14 @@ zedx_qa_ppl = get_selected_datasets([get_qa_long_ppl_datasets], 'zedx', f'{ROOT_
 zedx_qa_gen = get_selected_datasets([get_qa_long_gen_datasets], 'zedx', f'{ROOT_DIR}data/opseval/zedx', langs=['zh'], qtypes=None)
 zedx_qa = zedx_qa_ppl + zedx_qa_gen
 
+opseval2_mc_ppl = get_selected_datasets([get_mc_ppl_datasets], 'opseval2', f'{ROOT_DIR}data/opseval/opseval2.0', langs=['zh'], qtypes=['single'])
+opseval2_mc_gen = get_selected_datasets([get_mc_gen_datasets], 'opseval2', f'{ROOT_DIR}data/opseval/opseval2.0', langs=['zh'], qtypes=['single'])
+opseval2_mc = opseval2_mc_ppl + opseval2_mc_gen
+
+opseval2_qa_ppl = get_selected_datasets([get_qa_ppl_datasets], 'opseval2', f'{ROOT_DIR}data/opseval/opseval2.0', langs=['zh'], qtypes=None)
+opseval2_qa_gen = get_selected_datasets([get_qa_gen_datasets], 'opseval2', f'{ROOT_DIR}data/opseval/opseval2.0', langs=['zh'], qtypes=None)
+opseval2_qa = opseval2_qa_ppl + opseval2_qa_gen
+
 all_ppl_mc = zte_mc_ppl + oracle_mc_ppl + owl_mc_ppl + network_mc_ppl + company_mc_ppl
 all_gen_mc = zte_mc_gen + oracle_mc_gen + owl_mc_gen + network_mc_gen + company_mc_gen
 
